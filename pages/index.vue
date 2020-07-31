@@ -4,7 +4,7 @@
       <!-- lead -->
       <div class="row">
         <div class="col-12 col-md-11 mx-auto text-center">
-          <h1 class="display-4 font-weight-normal">
+          <h1 class="display-md-4 display-5 font-weight-normal">
             Launch Your Workflow into Hyperspace with
             <span class="text-danger">Saastronautics</span>
           </h1>
@@ -21,7 +21,7 @@
             <div class="col-8">
               <input
                 type="password"
-                class="form-control form-round border-0 px-3"
+                class="form-control form-round form-gray border-0 px-3"
                 placeholder="Enter your email address"
               />
             </div>
@@ -64,7 +64,7 @@
           <img src="~/assets/images/we-do.png" alt="We Do" />
         </div>
         <div class="col-12 col-md-6">
-          <h2 class="font-weight-bold">What We Do?</h2>
+          <h2 class="font-weight-bold mb-4">What We Do?</h2>
           <p>
             Saastronautics gives SaaS tool developers and organizations a
             platform to promote their tech solutions to early adopters.
@@ -83,7 +83,9 @@
       <div class="container">
         <div class="row px-md-4">
           <div class="col-12 mb-5">
-            <h2 class="text-center font-weight-bold">Why We Are Different?</h2>
+            <h2 class="text-center font-weight-bold">
+              Why We Are Different?
+            </h2>
           </div>
           <div class="col-12 col-md-3" v-for="item in why" :key="item.title">
             <img :src="item.image" :alt="item.title" />
@@ -100,7 +102,7 @@
       <div class="container">
         <div class="row">
           <div class="col-12 text-center mt-5 pt-5">
-            <h2 class="font-weight-bold">Our Customers Love What We Do</h2>
+            <h2 class="font-weight-bold mb-4">Our Customers Love What We Do</h2>
             <p>
               Our platform offers intelligent, intuitive, and innovative SaaS
               solutions to professionals in all fields
@@ -111,18 +113,29 @@
       <no-ssr placeholder="Loading...">
         <flickity class="comment py-5 mb-5" :options="flickityOptions">
           <div
-            class="comment-item my-5 mx-5 d-flex align-items-center justify-content-center p-5"
+            class="comment-item my-5 mx-0 mx-md-5 p-3 p-md-0"
             v-for="item in feedback"
             :key="item.name"
           >
-            <div class="row">
-              <div class="col-12">
-                <p class="border-bottom pb-5">{{ item.comment }}</p>
-              </div>
-              <div class="col-12 d-flex justify-content-between">
-                <div class="customer-info">
-                  <img :src="item.photo" :alt="item.name" class="avatar" />
-                  <span class="font-weight-bold pl-2">{{ item.name }}</span>
+            <div
+              class="inner d-flex align-items-center justify-content-center pt-5 px-5"
+            >
+              <div class="row">
+                <div class="col-12">
+                  <p class="border-bottom pb-5">{{ item.comment }}</p>
+                </div>
+                <div
+                  class="col-12 d-flex justify-content-between align-items-center pb-md-4"
+                >
+                  <div class="customer-info pb-3 pb-md-0">
+                    <img
+                      :src="item.photo"
+                      :alt="item.name"
+                      class="avatar d-none d-md-inline"
+                    />
+                    <span class="font-weight-bold pl-2">{{ item.name }}</span>
+                  </div>
+                  <rating class="d-none d-md-block " />
                 </div>
               </div>
             </div>
@@ -130,10 +143,84 @@
         </flickity>
       </no-ssr>
     </div>
+    <!-- best selling -->
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h2 class="font-weight-bold mb-4">Best Selling Deals</h2>
+        </div>
+        <div class="col-12 col-md-8 mx-auto text-center">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam quis nostrud exercitation ullamco.
+          </p>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div
+          class="col-12 col-md-4 product mb-5 px-4 pb-3"
+          v-for="item in bestDeals"
+          :key="item.id"
+        >
+          <div class="product-image mb-3">
+            <img :src="item.image" :alt="item.name" />
+          </div>
+          <div class="mb-3">
+            <span class="badge badge-info text-uppercase p-2">{{
+              item.tag
+            }}</span>
+          </div>
+          <h6 class="font-weight-bold">{{ item.name }}</h6>
+          <rating size="sm" space="mr-1" class="mb-5" />
+          <nuxt-link :to="`product/detail/${item.id}`"
+            >Learn More &#8594;</nuxt-link
+          >
+        </div>
+      </div>
+    </div>
+    <!-- subscribe -->
+    <div class="container">
+      <div class="row">
+        <div
+          class="col-12 col-md-7 mx-auto p-5 subscribe my-5 d-flex align-items-center"
+        >
+          <div class="row">
+            <div class="col-12 col-md-4">
+              <img src="~/assets/images/gift-icon.png" alt="Gift Illustrator" />
+            </div>
+            <div class="col-12 col-md-8 text-center">
+              <h3 class="font-weight-bold">
+                Sign Up and Launch Your Workflow into Hyperspace!
+              </h3>
+              <p class="py-2">
+                Stay in the loop of the latest innovations to manage and improve
+                your digital transformation.
+              </p>
+              <form class="row d-flex justify-content-center">
+                <div class="col-7 pr-0 mr-0">
+                  <input
+                    type="password"
+                    class="form-control form-round border-0 px-3"
+                    placeholder="Enter your email address"
+                  />
+                </div>
+                <div class="col-3 px-0">
+                  <button type="submit" class="btn btn-primary btn-md px-4">
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import Rating from '~/components/Rating.vue'
 export default {
   data() {
     return {
@@ -184,7 +271,7 @@ export default {
         }
       ],
       flickityOptions: {
-        initialIndex: 3,
+        initialIndex: 1,
         prevNextButtons: false,
         pageDots: false,
         wrapAround: true
@@ -218,10 +305,50 @@ export default {
           rating: 5,
           photo: 'https://api.adorable.io/avatars/200/abott@adorable'
         }
+      ],
+      bestDeals: [
+        {
+          image: require('~/assets/dummy/product-capture-1.png'),
+          tag: 'coming soon',
+          name: 'Product Name',
+          id: 'product-id-1'
+        },
+        {
+          image: require('~/assets/dummy/product-capture-2.png'),
+          tag: 'coming soon',
+          name: 'Product Name',
+          id: 'product-id-2'
+        },
+        {
+          image: require('~/assets/dummy/product-capture-3.png'),
+          tag: 'coming soon',
+          name: 'Product Name',
+          id: 'product-id-3'
+        },
+        {
+          image: require('~/assets/dummy/product-capture-4.png'),
+          tag: 'coming soon',
+          name: 'Product Name',
+          id: 'product-id-4'
+        },
+        {
+          image: require('~/assets/dummy/product-capture-5.png'),
+          tag: 'coming soon',
+          name: 'Product Name',
+          id: 'product-id-5'
+        },
+        {
+          image: require('~/assets/dummy/product-capture-6.png'),
+          tag: 'coming soon',
+          name: 'Product Name',
+          id: 'product-id-6'
+        }
       ]
     }
   },
-  components: {}
+  components: {
+    Rating
+  }
 }
 </script>
 
@@ -252,28 +379,68 @@ export default {
   .comment {
     .comment-item {
       width: 65%;
-      height: 350px;
-      background: #ffffff 0% 0% no-repeat padding-box;
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.33);
-      border-radius: 10px;
-      position: relative;
-      &:after {
-        content: '”';
-        display: block;
-        position: absolute;
-        color: #aee6ff;
-        top: 50px;
-        font-size: 200px;
-        line-height: 0;
-        font-weight: 700;
-      }
-      .customer-info {
-        .avatar {
-          border-radius: 100%;
-          width: 50px;
+      min-height: 350px;
+      .inner {
+        background: #ffffff 0% 0% no-repeat padding-box;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.33);
+        border-radius: 10px;
+        position: relative;
+        &:after {
+          content: '”';
+          display: block;
+          position: absolute;
+          color: #aee6ff;
+          top: 50px;
+          font-size: 200px;
+          line-height: 0;
+          font-weight: 700;
+        }
+        .customer-info {
+          .avatar {
+            border-radius: 100%;
+            width: 50px;
+          }
         }
       }
     }
+  }
+}
+.product {
+  .product-image {
+    overflow: hidden;
+    height: 215px;
+    border-radius: 5px;
+    img {
+      width: 100%;
+    }
+  }
+  a {
+    color: #ff4370;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .badge-info {
+    border-radius: 5px;
+    background-color: #12e3ff;
+  }
+}
+.subscribe {
+  background-color: #f5f4f8;
+  border-radius: 5px;
+  img {
+    width: 100%;
+  }
+  h3 {
+    color: #4b028c;
+  }
+}
+@media (max-width: 768px) {
+  .flickity-viewport {
+    height: auto !important;
+  }
+  .feedback .comment .comment-item {
+    width: 80%;
   }
 }
 </style>
