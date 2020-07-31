@@ -17,7 +17,8 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
-        rel: 'stylesheet',
+        rel: 'preload',
+        as: 'style',
         href:
           'https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap'
       }
@@ -34,7 +35,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [{ src: '~/plugins/flickity', ssr: false }],
   /*
    ** Nuxt.js dev-modules
    */

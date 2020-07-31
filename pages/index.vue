@@ -10,9 +10,11 @@
           </h1>
         </div>
         <div class="col-12 col-md-10 mx-auto text-center">
-          <p
-            class="px-md-4 py-4"
-          >Join our online community of entrepreneurs and digital marketers to receive the best deals on software solutions designed to grow your business.</p>
+          <p class="px-md-4 py-4">
+            Join our online community of entrepreneurs and digital marketers to
+            receive the best deals on software solutions designed to grow your
+            business.
+          </p>
         </div>
         <div class="col-12 col-md-5 mx-auto">
           <form class="row">
@@ -24,7 +26,9 @@
               />
             </div>
             <div class="col px-0">
-              <button type="submit" class="btn btn-primary btn-md px-4">Submit</button>
+              <button type="submit" class="btn btn-primary btn-md px-4">
+                Submit
+              </button>
             </div>
           </form>
         </div>
@@ -38,12 +42,20 @@
       <!-- main feature -->
       <div class="row features px-md-4 py-5">
         <div class="col-12 py-5">
-          <h2 class="text-center font-weight-bold">What Can You Do with Saastronautics?</h2>
+          <h2 class="text-center font-weight-bold">
+            What Can You Do with Saastronautics?
+          </h2>
         </div>
-        <div class="col-12 col-md-4 text-left px-4" v-for="item in features" :key="item.title">
+        <div
+          class="col-12 col-md-4 text-left px-4"
+          v-for="item in features"
+          :key="item.title"
+        >
           <img :src="item.image" :alt="item.title" />
-          <h5 class="text-capitalize font-weight-bold py-4">{{item.title}}</h5>
-          <p class="py-0">{{item.description}}</p>
+          <h5 class="text-capitalize font-weight-bold py-4">
+            {{ item.title }}
+          </h5>
+          <p class="py-0">{{ item.description }}</p>
         </div>
       </div>
       <!-- what we do -->
@@ -53,8 +65,16 @@
         </div>
         <div class="col-12 col-md-6">
           <h2 class="font-weight-bold">What We Do?</h2>
-          <p>Saastronautics gives SaaS tool developers and organizations a platform to promote their tech solutions to early adopters.</p>
-          <p>We provide the support in selecting, executing, and reviewing the SaaS tools on our platform. You get real-world feedback from our user base, allowing you to make adjustments to your tools to meet your customers’ expectations.</p>
+          <p>
+            Saastronautics gives SaaS tool developers and organizations a
+            platform to promote their tech solutions to early adopters.
+          </p>
+          <p>
+            We provide the support in selecting, executing, and reviewing the
+            SaaS tools on our platform. You get real-world feedback from our
+            user base, allowing you to make adjustments to your tools to meet
+            your customers’ expectations.
+          </p>
         </div>
       </div>
     </div>
@@ -67,11 +87,48 @@
           </div>
           <div class="col-12 col-md-3" v-for="item in why" :key="item.title">
             <img :src="item.image" :alt="item.title" />
-            <h5 class="text-capitalize font-weight-bold pt-4 pb-2">{{item.title}}</h5>
-            <p class="py-0">{{item.description}}</p>
+            <h5 class="text-capitalize font-weight-bold pt-4 pb-2">
+              {{ item.title }}
+            </h5>
+            <p class="py-0">{{ item.description }}</p>
           </div>
         </div>
       </div>
+    </div>
+    <!-- customer feedback -->
+    <div class="feedback mt-5 pb-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center mt-5 pt-5">
+            <h2 class="font-weight-bold">Our Customers Love What We Do</h2>
+            <p>
+              Our platform offers intelligent, intuitive, and innovative SaaS
+              solutions to professionals in all fields
+            </p>
+          </div>
+        </div>
+      </div>
+      <no-ssr placeholder="Loading...">
+        <flickity class="comment py-5 mb-5" :options="flickityOptions">
+          <div
+            class="comment-item my-5 mx-5 d-flex align-items-center justify-content-center p-5"
+            v-for="item in feedback"
+            :key="item.name"
+          >
+            <div class="row">
+              <div class="col-12">
+                <p class="border-bottom pb-5">{{ item.comment }}</p>
+              </div>
+              <div class="col-12 d-flex justify-content-between">
+                <div class="customer-info">
+                  <img :src="item.photo" :alt="item.name" class="avatar" />
+                  <span class="font-weight-bold pl-2">{{ item.name }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </flickity>
+      </no-ssr>
     </div>
   </div>
 </template>
@@ -125,6 +182,42 @@ export default {
           description:
             'Our 30-day money-back guarantee ensures you get the value you need or you don’t pay.'
         }
+      ],
+      flickityOptions: {
+        initialIndex: 3,
+        prevNextButtons: false,
+        pageDots: false,
+        wrapAround: true
+      },
+      feedback: [
+        {
+          name: 'Maharucha',
+          comment:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad miniveniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+          rating: 5,
+          photo: 'https://api.adorable.io/avatars/200/abott@adorable'
+        },
+        {
+          name: 'Mahardika',
+          comment:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad miniveniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+          rating: 4,
+          photo: 'https://api.adorable.io/avatars/200/abott@adorable'
+        },
+        {
+          name: 'Alan Abdurrahman',
+          comment:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad miniveniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.',
+          rating: 4.8,
+          photo: 'https://api.adorable.io/avatars/200/abott@adorable'
+        },
+        {
+          name: 'Rajj Ibn Abdillah',
+          comment:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad miniveniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+          rating: 5,
+          photo: 'https://api.adorable.io/avatars/200/abott@adorable'
+        }
       ]
     }
   },
@@ -153,6 +246,34 @@ export default {
   background-color: #f5f4f8;
   img {
     height: 70px;
+  }
+}
+.feedback {
+  .comment {
+    .comment-item {
+      width: 65%;
+      height: 350px;
+      background: #ffffff 0% 0% no-repeat padding-box;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.33);
+      border-radius: 10px;
+      position: relative;
+      &:after {
+        content: '”';
+        display: block;
+        position: absolute;
+        color: #aee6ff;
+        top: 50px;
+        font-size: 200px;
+        line-height: 0;
+        font-weight: 700;
+      }
+      .customer-info {
+        .avatar {
+          border-radius: 100%;
+          width: 50px;
+        }
+      }
+    }
   }
 }
 </style>

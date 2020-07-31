@@ -13,18 +13,19 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "nuxt": "^2.0.0",
     "@nuxtjs/axios": "^5.3.6",
-    "@nuxtjs/pwa": "^3.0.0-0",
     "@nuxtjs/dotenv": "^1.4.0",
+    "@nuxtjs/pwa": "^3.0.0-0",
     "@vue/test-utils": "^1.0.0-beta.27",
     "babel-jest": "^24.1.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-prettier": "^3.1.2",
     "jest": "^24.1.0",
     "node-sass": "^4.14.1",
+    "nuxt": "^2.0.0",
     "prettier": "^1.19.1",
     "sass-loader": "^9.0.2",
+    "vue-flickity": "^1.2.1",
     "vue-jest": "^4.0.0-0"
   }
 }
