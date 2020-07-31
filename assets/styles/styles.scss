@@ -39,6 +39,11 @@ h5 {
     .nav-link {
       color: #474747;
       font-size: 0.875rem;
+
+      &.nuxt-link-active,
+      &:hover {
+        color: #ff4370;
+      }
     }
   }
 }
@@ -85,6 +90,10 @@ input {
 footer {
   background-color: #121538;
   font-size: 0.875rem;
+
+  &.nuxt-link-active {
+    color: #ff4370;
+  }
   img {
     width: 150px;
   }

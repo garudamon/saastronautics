@@ -4,7 +4,11 @@
       <!-- lead -->
       <div class="row">
         <div class="col-12 col-md-11 mx-auto text-center">
-          <h1 class="display-md-4 display-5 font-weight-normal">
+          <h1 class="display-4 font-weight-normal d-none d-md-block">
+            Launch Your Workflow into Hyperspace with
+            <span class="text-danger">Saastronautics</span>
+          </h1>
+          <h1 class="display-5 font-weight-normal d-block d-md-none">
             Launch Your Workflow into Hyperspace with
             <span class="text-danger">Saastronautics</span>
           </h1>
@@ -198,7 +202,7 @@
                 your digital transformation.
               </p>
               <form class="row d-flex justify-content-center">
-                <div class="col-7 pr-0 mr-0">
+                <div class="col-7 pr-0 mr-2">
                   <input
                     type="password"
                     class="form-control form-round border-0 px-3"
