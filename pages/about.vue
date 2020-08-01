@@ -23,7 +23,7 @@
       </div>
       <!-- what we do -->
       <LazyImageParagraphSideBySide
-        :imageUrl="imageWhatWeDo"
+        :imageUrl="imageWhyWeDo"
         title="What We Do?"
         :descriptions="[
           'Saastronautics is changing the way SaaS companies and providers are marketing and promoting their tools. Gain a core user base of people and companies interested in using your SaaS tools to boost their business. We provide early adopters with new tech that can help then automate workflows and processes.',
@@ -61,7 +61,9 @@
           </p>
         </div>
       </div>
+      <LazyTeamMember class="py-5 mb-0 mb-md-5" :member="member" />
     </div>
+    <LazySubscribePanel />
   </div>
 </template>
 
@@ -71,6 +73,7 @@ export default {
   data() {
     return {
       imageWhatWeDo: require('~/assets/images/about/we-do.png'),
+      imageWhyWeDo: require('~/assets/images/about/why-we-do.png'),
       offer: [
         {
           image: require('~/assets/images/about/offer-3.png'),
@@ -89,6 +92,29 @@ export default {
           title: 'Boost Your Business',
           description:
             'We have a comprehensive listing of the best SaaS solutions available with special pricing that allows you to benefit from savings on your SaaS tools.'
+        }
+      ],
+      member: [
+        {
+          imageUrl: 'https://api.adorable.io/avatars/200/abott@adorable',
+          name: 'Alan Syamsul',
+          position: 'CEO',
+          description:
+            'Lorem ipsum dolor sit amet consecte tur adipiscing elit, sed do eiusmod temp incididunt ut labore et dolore magna.'
+        },
+        {
+          imageUrl: 'https://api.adorable.io/avatars/200/abott@adorable',
+          name: 'Syamsul Ulum',
+          position: 'CTO',
+          description:
+            'Lorem ipsum dolor sit amet consecte tur adipiscing elit, sed do eiusmod temp incididunt ut labore et dolore magna.'
+        },
+        {
+          imageUrl: 'https://api.adorable.io/avatars/200/abott@adorable',
+          name: 'Ulum Alam',
+          position: 'COO',
+          description:
+            'Lorem ipsum dolor sit amet consecte tur adipiscing elit, sed do eiusmod temp incididunt ut labore et dolore magna.'
         }
       ]
     }

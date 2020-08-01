@@ -44,7 +44,7 @@ p {
       color: #474747;
       font-size: 0.875rem;
 
-      &.nuxt-link-active,
+      &.nuxt-link-exact-active,
       &:hover {
         color: #ff4370;
       }
@@ -127,4 +127,21 @@ footer {
   img {
     height: 70px;
   }
+}
+
+// subscribe panel
+.subscribe-panel {
+  background-color: #f5f4f8;
+  border-radius: 5px;
+  img {
+    width: 100%;
+  }
+  h3 {
+    color: #4b028c;
+  }
+}
+
+//
+.text-red {
+  color: #ff4370;
 }

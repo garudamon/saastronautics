@@ -23,8 +23,7 @@
             <li
               :class="{
                 'nav-item': true,
-                'mx-lg-3': true,
-                active: $route.path == link.path
+                'mx-lg-3': true
               }"
               v-for="(link, index) in topLink"
               :key="index"
