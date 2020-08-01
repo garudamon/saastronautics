@@ -187,7 +187,7 @@
     <div class="container">
       <div class="row">
         <div
-          class="col-12 col-md-7 mx-auto p-5 subscribe my-5 d-flex align-items-center"
+          class="col-12 col-md-7 mx-auto p-md-5 p-3 p-md- subscribe my-5 d-flex align-items-center"
         >
           <div class="row">
             <div class="col-12 col-md-4">
