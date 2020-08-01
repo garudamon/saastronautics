@@ -63,44 +63,17 @@
         </div>
       </div>
       <!-- what we do -->
-      <div class="row what-we-do py-5 d-flex align-items-center px-md-4 my-5">
-        <div class="col-12 col-md-6">
-          <img src="~/assets/images/we-do.png" alt="We Do" />
-        </div>
-        <div class="col-12 col-md-6">
-          <h2 class="font-weight-bold mb-4">What We Do?</h2>
-          <p>
-            Saastronautics gives SaaS tool developers and organizations a
-            platform to promote their tech solutions to early adopters.
-          </p>
-          <p>
-            We provide the support in selecting, executing, and reviewing the
-            SaaS tools on our platform. You get real-world feedback from our
-            user base, allowing you to make adjustments to your tools to meet
-            your customers’ expectations.
-          </p>
-        </div>
-      </div>
+      <ImageParagraphSideBySide
+        :imageUrl="imageWhatWeDo"
+        title="What We Do?"
+        :descriptions="[
+          'Saastronautics gives SaaS tool developers and organizations a platform to promote their tech solutions to early adopters.',
+          'We provide the support in selecting, executing, and reviewing the SaaS tools on our platform. You get real-world feedback from our user base, allowing you to make adjustments to your tools to meet your customers’ expectations.'
+        ]"
+      />
     </div>
     <!-- why we're different -->
-    <div class="why py-5">
-      <div class="container">
-        <div class="row px-md-4">
-          <div class="col-12 mb-5">
-            <h2 class="text-center font-weight-bold">
-              Why We Are Different?
-            </h2>
-          </div>
-          <div class="col-12 col-md-3" v-for="item in why" :key="item.title">
-            <img :src="item.image" :alt="item.title" />
-            <h5 class="text-capitalize font-weight-bold pt-4 pb-2">
-              {{ item.title }}
-            </h5>
-            <p class="py-0">{{ item.description }}</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <LazyFeatureGray title="Why We Are Different?" :items="why" />
     <!-- customer feedback -->
     <div class="feedback mt-5 pb-5">
       <div class="container">
@@ -114,7 +87,7 @@
           </div>
         </div>
       </div>
-      <no-ssr placeholder="Loading...">
+      <client-only placeholder="Loading...">
         <flickity class="comment py-5 mb-5" :options="flickityOptions">
           <div
             class="comment-item my-5 mx-0 mx-md-5 p-3 p-md-0"
@@ -139,13 +112,13 @@
                     />
                     <span class="font-weight-bold pl-2">{{ item.name }}</span>
                   </div>
-                  <rating class="d-none d-md-block " />
+                  <LazyRating class="d-none d-md-block " />
                 </div>
               </div>
             </div>
           </div>
         </flickity>
-      </no-ssr>
+      </client-only>
     </div>
     <!-- best selling -->
     <div class="container">
@@ -224,7 +197,6 @@
 </template>
 
 <script>
-import Rating from '~/components/Rating.vue'
 export default {
   data() {
     return {
@@ -347,12 +319,11 @@ export default {
           name: 'Product Name',
           id: 'product-id-6'
         }
-      ]
+      ],
+      imageWhatWeDo: require('~/assets/images/we-do.png')
     }
   },
-  components: {
-    Rating
-  }
+  components: {}
 }
 </script>
 
@@ -364,17 +335,6 @@ export default {
   }
 }
 .features {
-  img {
-    height: 70px;
-  }
-}
-.what-we-do {
-  img {
-    width: 90%;
-  }
-}
-.why {
-  background-color: #f5f4f8;
   img {
     height: 70px;
   }

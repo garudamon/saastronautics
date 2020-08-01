@@ -28,6 +28,10 @@ h4,
 h5 {
   font-family: 'Didact Gothic', sans-serif;
 }
+p {
+  font-weight: 300;
+  font-size: 1rem;
+}
 
 .navbar {
   .navbar-brand {
@@ -107,5 +111,20 @@ footer {
         color: white;
       }
     }
+  }
+}
+
+// image and paragraph side by side
+.img-p-sbs {
+  img {
+    width: 90%;
+  }
+}
+
+// feature list with gray background
+.gray-feature {
+  background-color: #f5f4f8;
+  img {
+    height: 70px;
   }
 }
