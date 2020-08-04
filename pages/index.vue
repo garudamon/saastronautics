@@ -30,9 +30,7 @@
               />
             </div>
             <div class="col px-0">
-              <button type="submit" class="btn btn-primary btn-md px-4">
-                Submit
-              </button>
+              <button type="submit" class="btn btn-primary btn-md px-4">Submit</button>
             </div>
           </form>
         </div>
@@ -46,19 +44,11 @@
       <!-- main feature -->
       <div class="row features px-md-4 py-5">
         <div class="col-12 py-5">
-          <h2 class="text-center font-weight-bold">
-            What Can You Do with Saastronautics?
-          </h2>
+          <h2 class="text-center font-weight-bold">What Can You Do with Saastronautics?</h2>
         </div>
-        <div
-          class="col-12 col-md-4 text-left px-4"
-          v-for="item in features"
-          :key="item.title"
-        >
+        <div class="col-12 col-md-4 text-left px-4" v-for="item in features" :key="item.title">
           <img :src="item.image" :alt="item.title" />
-          <h5 class="text-capitalize font-weight-bold py-4">
-            {{ item.title }}
-          </h5>
+          <h5 class="text-capitalize font-weight-bold py-4">{{ item.title }}</h5>
           <p class="py-0">{{ item.description }}</p>
         </div>
       </div>
@@ -75,51 +65,7 @@
     <!-- why we're different -->
     <LazyFeatureGray title="Why We Are Different?" :items="why" />
     <!-- customer feedback -->
-    <div class="feedback mt-5 pb-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 text-center mt-5 pt-5">
-            <h2 class="font-weight-bold mb-4">Our Customers Love What We Do</h2>
-            <p>
-              Our platform offers intelligent, intuitive, and innovative SaaS
-              solutions to professionals in all fields
-            </p>
-          </div>
-        </div>
-      </div>
-      <client-only placeholder="Loading...">
-        <flickity class="comment py-5 mb-5" :options="flickityOptions">
-          <div
-            class="comment-item my-5 mx-0 mx-md-5 p-3 p-md-0"
-            v-for="item in feedback"
-            :key="item.name"
-          >
-            <div
-              class="inner d-flex align-items-center justify-content-center pt-5 px-5"
-            >
-              <div class="row">
-                <div class="col-12">
-                  <p class="border-bottom pb-5">{{ item.comment }}</p>
-                </div>
-                <div
-                  class="col-12 d-flex justify-content-between align-items-center pb-md-4"
-                >
-                  <div class="customer-info pb-3 pb-md-0">
-                    <img
-                      :src="item.photo"
-                      :alt="item.name"
-                      class="avatar d-none d-md-inline"
-                    />
-                    <span class="font-weight-bold pl-2">{{ item.name }}</span>
-                  </div>
-                  <LazyRating class="d-none d-md-block " />
-                </div>
-              </div>
-            </div>
-          </div>
-        </flickity>
-      </client-only>
-    </div>
+    <LazyCustomerFeedback :feedback="feedback" />
     <!-- best selling -->
     <div class="container">
       <div class="row">
@@ -129,7 +75,7 @@
         <div class="col-12 col-md-8 mx-auto text-center">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            eiusmod tempor incididunt ut labo re et dolore magna aliqua. Ut enim
             ad minim veniam quis nostrud exercitation ullamco.
           </p>
         </div>
@@ -144,15 +90,15 @@
             <img :src="item.image" :alt="item.name" />
           </div>
           <div class="mb-3">
-            <span class="badge badge-info text-uppercase p-2">{{
+            <span class="badge badge-info text-uppercase p-2">
+              {{
               item.tag
-            }}</span>
+              }}
+            </span>
           </div>
           <h6 class="font-weight-bold">{{ item.name }}</h6>
           <rating size="sm" space="mr-1" class="mb-5" />
-          <nuxt-link :to="`product/detail/${item.id}`"
-            >Learn More &#8594;</nuxt-link
-          >
+          <nuxt-link :to="`product/detail/${item.id}`">Learn More &#8594;</nuxt-link>
         </div>
       </div>
     </div>
@@ -211,12 +157,6 @@ export default {
             'Our 30-day money-back guarantee ensures you get the value you need or you don’t pay.'
         }
       ],
-      flickityOptions: {
-        initialIndex: 1,
-        prevNextButtons: false,
-        pageDots: false,
-        wrapAround: true
-      },
       feedback: [
         {
           name: 'Maharucha',
@@ -302,36 +242,6 @@ export default {
 .features {
   img {
     height: 70px;
-  }
-}
-.feedback {
-  .comment {
-    .comment-item {
-      width: 65%;
-      min-height: 350px;
-      .inner {
-        background: #ffffff 0% 0% no-repeat padding-box;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.33);
-        border-radius: 10px;
-        position: relative;
-        &:after {
-          content: '”';
-          display: block;
-          position: absolute;
-          color: #aee6ff;
-          top: 50px;
-          font-size: 200px;
-          line-height: 0;
-          font-weight: 700;
-        }
-        .customer-info {
-          .avatar {
-            border-radius: 100%;
-            width: 50px;
-          }
-        }
-      }
-    }
   }
 }
 .product {

@@ -9,21 +9,15 @@
             <img
               src="~/assets/images/about/gift-icon.png"
               alt="Gift Illustrator"
-              v-if="$route.path == '/about'"
+              v-if="['/about', '/partners'].indexOf($route.path) > -1"
             />
-            <img
-              src="~/assets/images/gift-icon.png"
-              alt="Gift Illustrator"
-              v-else
-            />
+            <img src="~/assets/images/gift-icon.png" alt="Gift Illustrator" v-else />
           </div>
           <div class="col-12 col-md-8 text-center">
-            <h3 class="font-weight-bold">
-              Sign Up and Launch Your Workflow into Hyperspace!
-            </h3>
+            <h3 class="font-weight-bold">Sign Up and Launch Your Workflow into Hyperspace!</h3>
             <p class="py-2">
               Stay in the loop of the latest innovations to manage and improve
-              your digital transformation.
+              your digital transformation.
             </p>
             <form class="row d-flex justify-content-center">
               <div class="col-7 pr-0 mr-2">
@@ -34,9 +28,7 @@
                 />
               </div>
               <div class="col-3 px-0">
-                <button type="submit" class="btn btn-primary btn-md px-4">
-                  Submit
-                </button>
+                <button type="submit" class="btn btn-primary btn-md px-4">Submit</button>
               </div>
             </form>
           </div>
