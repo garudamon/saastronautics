@@ -10,16 +10,24 @@
               class="badge badge-primary text-uppercase mx-2 py-2 px-3"
               v-for="text in productdetail.category"
               :key="text"
-            >{{text}}</span>
+              >{{ text }}</span
+            >
           </h6>
-          <h1 class="display-4 font-weight-bold d-none d-md-block">{{productdetail.name}}</h1>
-          <h1 class="display-5 font-weight-normal d-block d-md-none">{{productdetail.name}}</h1>
+          <h1 class="display-4 font-weight-bold d-none d-md-block">
+            {{ productdetail.name }}
+          </h1>
+          <h1 class="display-5 font-weight-normal d-block d-md-none">
+            {{ productdetail.name }}
+          </h1>
         </div>
         <div class="col-12 col-md-10 mx-auto text-center">
-          <p class="px-md-4 py-4">{{productdetail.description}}</p>
+          <p class="px-md-4 py-4">{{ productdetail.description }}</p>
         </div>
         <div class="col-12 col-md-9 mx-auto py-4 text-center">
-          <img :src="productdetail.overviewImage" :alt="`Overview ${productdetail.name}`" />
+          <img
+            :src="productdetail.overviewImage"
+            :alt="`Overview ${productdetail.name}`"
+          />
         </div>
       </div>
       <div class="row pt-5">
@@ -34,16 +42,23 @@
       <LazyImageParagraphSideBySide
         title="Lorem Ipsum Dolor Sit Amet Adispiscing"
         :imageUrl="image1"
-        :descriptions="['Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deser unt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste na tus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.']"
+        :descriptions="[
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+          'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deser unt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste na tus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.'
+        ]"
       />
       <LazyImageParagraphSideBySide
         :rtl="true"
         title="Sit Amet Adispiscing Lorem Ipsum Dolor "
         :imageUrl="image2"
-        :descriptions="['Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deser unt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste na tus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.']"
+        :descriptions="[
+          'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deser unt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste na tus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.'
+        ]"
       />
     </div>
     <LazyPricingTable />
+    <LazyReviewQuestion />
+    <LazySubscribePanel />
   </div>
 </template>
 
@@ -71,5 +86,4 @@ export default {
 }
 </script>
 
-<style>
-</style>
+<style></style>

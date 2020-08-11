@@ -13,17 +13,18 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-12 col-lg-10 mx-auto">
+        <div class="col-12 col-lg-10 mx-auto mt-5">
           <div class="row">
             <div
-              class="col-12 col-md-4 py-3"
-              v-for="data in pricingList"
+              class="col-12 col-md-4 pb-3 px-4 item pt-5"
+              v-for="(data, idx) in pricingList"
               :key="data.title"
               :class="{'border-right': data.title=='single', 'border': data.title=='multiple'}"
             >
-              <p class="h6 text-uppercase text-center">{{data.title}}</p>
+              <div class="ribbon" v-if="idx == pricingList.length - 1"></div>
+              <p class="h6 text-uppercase text-center pkg font-weight-bold my-0">{{data.title}}</p>
               <p
-                class="h1 text-uppercase font-weight-bold pb-4 text-center border-bottom"
+                class="h1 text-uppercase font-weight-bold pb-4 text-center border-bottom price"
               >{{data.price}}</p>
               <div
                 v-for="(isTrue, text) in data.feature"
@@ -32,7 +33,10 @@
               >
                 <span v-if="isTrue" class="fa fa-check text-success d-block"></span>
                 <span v-else class="fa fa-times text-danger d-block"></span>
-                <div class="flex-grow-1 pl-2">{{text}}</div>
+                <div class="flex-grow-1 pl-2 font-weight-light">{{text}}</div>
+              </div>
+              <div class="pt-4 text-center">
+                <nuxt-link to="#" class="btn btn-primary">{{data.textLink}}</nuxt-link>
               </div>
             </div>
           </div>
@@ -49,7 +53,8 @@ export default {
       pricingList: [
         {
           title: 'single',
-          price: 49,
+          price: '$49',
+          textLink: 'Buy 1 Code',
           feature: {
             'All Features Included 5 Custom Domains': true,
             'All Features Included 5 Custom Domains': true,
@@ -62,7 +67,8 @@ export default {
         },
         {
           title: 'double',
-          price: 60,
+          price: '$60',
+          textLink: 'Buy 2 Codes',
           feature: {
             'All Features Included 5 Custom Domains': true,
             'All Features Included 5 Custom Domains': true,
@@ -75,7 +81,8 @@ export default {
         },
         {
           title: 'multiple',
-          price: 100,
+          price: '$100',
+          textLink: 'Buy 3 Codes',
           feature: {
             'All Features Included 5 Custom Domains': true,
             'All Features Included 5 Custom Domains': true,
@@ -95,10 +102,56 @@ export default {
 <style lang="scss" scoped>
 .pricing {
   background-color: #f5f4f8;
-  .border {
-    border-radius: 10px;
-    > div:last-child {
-      border-bottom: none !important;
+  .item {
+    position: relative;
+    &:last-child {
+      background-color: white;
+      overflow: hidden;
+      border-color: #fcc2d0 !important;
+    }
+    .pkg {
+      color: #610588;
+    }
+    .price {
+      color: #ff436f;
+    }
+    &.border {
+      border-radius: 10px;
+    }
+    .border-bottom {
+      border-bottom-color: rgba($color: #000000, $alpha: 0.06) !important;
+      > div:last-child {
+        border-bottom: none !important;
+      }
+    }
+
+    .ribbon {
+      width: 24px;
+      height: 35px;
+      background: transparent linear-gradient(180deg, #ff4370 0%, #4b028c 100%)
+        0% 0% no-repeat padding-box;
+      position: absolute;
+      right: 30px;
+      top: -350px;
+      animation: drop forwards 0.8s 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+      &:before {
+        content: '';
+        position: absolute;
+        z-index: 2;
+        left: 0;
+        bottom: -12px;
+        border-left: 12px solid #4b028c;
+        border-right: 12px solid #4b028c;
+        border-bottom: 12px solid transparent;
+      }
+    }
+    @keyframes drop {
+      0% {
+        top: -350px;
+      }
+      100% {
+        top: 0;
+      }
     }
   }
 }

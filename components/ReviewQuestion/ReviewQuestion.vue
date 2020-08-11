@@ -1,0 +1,34 @@
+<template>
+  <div class="container review-question pb-5">
+    <div class="row">
+      <div class="col-12 pt-5 mt-0 mt-md-5 px-0 font-weight-bold">
+        <ul class="nav nav-tabs border-none">
+          <li class="nav-item">
+            <a class="nav-link py-4 px-5" href="#">Reviews</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link py-4 px-5 active" href="#">Question</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-12 p-5 post-comment">
+        <LazyReviewQuestionPost />
+        <h2 class="font-weight-bold my-5">Recent Reviews</h2>
+        <LazyCommentItem class="mt-3" />
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'ReviewQuestion'
+}
+</script>
+
+<style lang="scss" scoped>
+.post-comment {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.33);
+  border-radius: 10px;
+}
+</style>

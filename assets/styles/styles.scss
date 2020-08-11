@@ -16,6 +16,12 @@ html {
 
 body {
   background-color: white;
+  color: #474747;
+}
+:root {
+  --primary-color-red: #ff4874;
+  --primary-color-purple: #4b028c;
+  --primary-gray-smooth: #f5f4f8;
 }
 
 p,
@@ -147,4 +153,44 @@ footer {
 //
 .text-red {
   color: #ff4370;
+}
+
+// emoji picker
+span.emoji {
+  &.border {
+    border: none !important;
+  }
+}
+
+.nav-tabs {
+  border-bottom: none !important;
+  .nav-link {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border: none;
+    color: #474747;
+    &.active,
+    &:hover {
+      color: var(--primary-color-red);
+    }
+  }
+}
+
+.review-question {
+  .nav-link {
+    &.active {
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.33);
+      position: relative;
+      &::before {
+        content: ' ';
+        position: absolute;
+        height: 20px;
+        bottom: -15px;
+        left: 0px;
+        right: 0px;
+        background: white;
+        z-index: 1;
+      }
+    }
+  }
 }

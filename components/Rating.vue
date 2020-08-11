@@ -55,6 +55,10 @@ export default {
     space: {
       type: String,
       default: 'ml-1'
+    },
+    callback: {
+      type: Function,
+      default: null
     }
   }
 }
