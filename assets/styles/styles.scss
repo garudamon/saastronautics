@@ -63,6 +63,18 @@ img {
 
 #wrapper {
   padding-top: 80px;
+  aside {
+    width: 200px;
+    background-color: white;
+    border-top-right-radius: 10px;
+  }
+}
+
+.container-fluid {
+  background: var(--primary-gray-smooth);
+  #wrapper {
+    padding-top: 20px;
+  }
 }
 
 .btn {
@@ -119,6 +131,12 @@ footer {
       &:hover {
         color: white;
       }
+    }
+  }
+  a {
+    color: white;
+    &:hover {
+      color: white;
     }
   }
 }
