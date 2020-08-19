@@ -22,6 +22,7 @@ body {
   --primary-color-red: #ff4874;
   --primary-color-purple: #4b028c;
   --primary-gray-smooth: #f5f4f8;
+  --primary-link-color: #474747;
 }
 
 p,
@@ -50,7 +51,7 @@ img {
   }
   .navbar-nav {
     .nav-link {
-      color: #474747;
+      color: vae(--primary-link-color);
       font-size: 0.875rem;
 
       &.nuxt-link-exact-active,
@@ -67,6 +68,39 @@ img {
     width: 200px;
     background-color: white;
     border-top-right-radius: 10px;
+    img {
+      max-width: 60px;
+      border-radius: 50%;
+    }
+    ul {
+      padding-top: 32px;
+    }
+    a {
+      padding: 16px 32px;
+      color: rgba(#000000, 0.3);
+      position: relative;
+      &:before {
+        content: ' ';
+        width: 3px;
+        background-color: var(--primary-color-red);
+        position: absolute;
+        right: 0px;
+        bottom: 8px;
+        top: 8px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        visibility: hidden;
+      }
+      &.nuxt-link-exact-active,
+      &:hover {
+        .fa {
+          color: var(--primary-color-red);
+        }
+        &:before {
+          visibility: visible;
+        }
+      }
+    }
   }
 }
 
