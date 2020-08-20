@@ -5,71 +5,29 @@
       <table>
         <thead>
           <tr>
-            <th class="col-xs-2">#</th>
-            <th class="col-xs-8">Name</th>
-            <th class="col-xs-2">Points</th>
+            <th class="text-uppercase text-secondary" colspan="2">deal name</th>
+            <th class="text-uppercase text-secondary" width="165">purchase date</th>
+            <th class="text-uppercase text-secondary" width="100">status</th>
+            <th class="text-uppercase text-secondary" width="100">total</th>
+            <th class="text-uppercase text-secondary"></th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td class="col-xs-2">1</td>
-            <td class="col-xs-8">Mike Adams</td>
-            <td class="col-xs-2">23</td>
-          </tr>
-          <tr>
-            <td class="col-xs-2">2</td>
-            <td class="col-xs-8">Holly Galivan</td>
-            <td class="col-xs-2">44</td>
-          </tr>
-          <tr>
-            <td class="col-xs-2">3</td>
-            <td class="col-xs-8">Mary Shea</td>
-            <td class="col-xs-2">86</td>
-          </tr>
-          <tr>
-            <td class="col-xs-2">4</td>
-            <td class="col-xs-8">Jim Adams</td>
-            <td>23</td>
-          </tr>
-          <tr>
-            <td class="col-xs-2">5</td>
-            <td class="col-xs-8">Henry Galivan</td>
-            <td class="col-xs-2">44</td>
-          </tr>
-          <tr>
-            <td class="col-xs-2">6</td>
-            <td class="col-xs-8">Bob Shea</td>
-            <td class="col-xs-2">26</td>
-          </tr>
-          <tr>
-            <td class="col-xs-2">7</td>
-            <td class="col-xs-8">Andy Parks</td>
-            <td class="col-xs-2">56</td>
-          </tr>
-          <tr>
-            <td class="col-xs-2">8</td>
-            <td class="col-xs-8">Bob Skelly</td>
-            <td class="col-xs-2">96</td>
-          </tr>
-          <tr>
-            <td class="col-xs-2">9</td>
-            <td class="col-xs-8">William Defoe</td>
-            <td class="col-xs-2">13</td>
-          </tr>
-          <tr>
-            <td class="col-xs-2">10</td>
-            <td class="col-xs-8">Will Tripp</td>
-            <td class="col-xs-2">16</td>
-          </tr>
-          <tr>
-            <td class="col-xs-2">11</td>
-            <td class="col-xs-8">Bill Champion</td>
-            <td class="col-xs-2">44</td>
-          </tr>
-          <tr>
-            <td class="col-xs-2">12</td>
-            <td class="col-xs-8">Lastly Jane</td>
-            <td class="col-xs-2">6</td>
+          <tr v-for="(item, key) in items" :key="key">
+            <td width="250">
+              <img src="~/assets/dummy/05023f8915f4a6a0ddd3c6642bb0522d-4.png" alt />
+            </td>
+            <td>
+              <h6 class="font-weight-bold">{{item.name}}</h6>
+              <h6 class="font-weight-bold text-red">{{item.price}}</h6>
+              <LazyRating size="sm" />
+            </td>
+            <td>purchase date</td>
+            <td>status</td>
+            <td>total</td>
+            <td>
+              <DashboardMoreAction />
+            </td>
           </tr>
         </tbody>
       </table>
@@ -79,7 +37,19 @@
 
 <script>
 export default {
-  layout: 'account'
+  layout: 'account',
+  data() {
+    return {
+      items: Array(30).fill({
+        name: 'Product Name',
+        price: 500,
+        rating: 5,
+        purchase_date: 'July 15, 2020',
+        status: 'Redeemed',
+        total: 500
+      })
+    }
+  }
 }
 </script>
 
@@ -87,22 +57,34 @@ export default {
 .table-fixed {
   overflow-y: auto;
   height: 300px;
-  thead th {
-    position: sticky;
-    top: 0;
+  table {
+    border-collapse: separate;
+    border-spacing: 0 15px;
+    width: 100%;
+    thead th {
+      position: sticky;
+      top: 0;
+      background: #f5f4f8;
+    }
+    tbody {
+      tr {
+        width: 100%;
+        td {
+          margin-bottom: 10px;
+          background-color: white;
+          padding: 10px;
+          font-weight: 300;
+          &:first-child {
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+          }
+          &:last-child {
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+          }
+        }
+      }
+    }
   }
-}
-
-/* Just common table stuff. Really. */
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-th,
-td {
-  padding: 8px 16px;
-}
-th {
-  background: #eee;
 }
 </style>
