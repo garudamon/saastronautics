@@ -65,6 +65,7 @@ export default {
       position: sticky;
       top: 0;
       background: #f5f4f8;
+      z-index: 3;
     }
     tbody {
       tr {
