@@ -1,8 +1,8 @@
 <template>
   <div class="more-actions">
-    <span class="fa fa-2x fa-ellipsis-v text-red" @click="show = !show"></span>
+    <span class="fa fa-2x fa-ellipsis-v text-red more-actions-trigger" @click="show = !show"></span>
     <transition name="slide-fade">
-      <ul v-if="show">
+      <ul v-if="show" class="more-actions-list">
         <li>
           <nuxt-link to>
             <span class="fa fa-fw fa-trophy text-red"></span>
@@ -34,10 +34,13 @@ export default {
     }
   },
   mounted() {
-    window.addEventListener('click', function(e) {
-      if (!document.querySelector('.more-actions').contains(e.target)) {
-        console.log('Clicked outside the box')
-      }
+    window.addEventListener('click', e => {
+      e.preventDefault()
+      if (
+        !document.querySelector('.more-actions-list').contains(e.target) &&
+        !e.target.classList.contains('more-actions-trigger')
+      )
+        this.show = false
     })
   }
 }

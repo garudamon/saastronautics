@@ -56,7 +56,7 @@ export default {
 <style lang="scss" scoped>
 .table-fixed {
   overflow-y: auto;
-  height: 300px;
+  height: 550px;
   table {
     border-collapse: separate;
     border-spacing: 0 15px;
