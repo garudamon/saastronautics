@@ -81,6 +81,24 @@ export default {
           tag: 'coming soon',
           name: 'Product Name',
           id: 'product-id-3'
+        },
+        {
+          image: require('~/assets/dummy/product-capture-1.png'),
+          tag: 'coming soon',
+          name: 'Product Name',
+          id: 'product-id-1'
+        },
+        {
+          image: require('~/assets/dummy/product-capture-2.png'),
+          tag: 'coming soon',
+          name: 'Product Name',
+          id: 'product-id-2'
+        },
+        {
+          image: require('~/assets/dummy/product-capture-3.png'),
+          tag: 'coming soon',
+          name: 'Product Name',
+          id: 'product-id-3'
         }
       ]
     }
