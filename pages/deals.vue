@@ -11,7 +11,7 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitse d do eiusmod tempor incididunt ut labore et dolore magil na aliqua. Ut enim ad minim veniam, quis nostrud exercita tion ullamco laboris nisi ut aliquip ex ea.</p>
           <button type="submit" class="btn btn-primary btn-md px-5 mt-1">Learn More</button>
         </div>
-        <div class="col-12 col-md-6 text-right">
+        <div class="col-12 col-md-6 text-md-right text-center mt-md-0 mt-5">
           <img src="~/assets/dummy/product-capture-7.png" />
         </div>
       </div>
@@ -19,7 +19,7 @@
     <!-- live deals -->
     <div class="container">
       <div class="row">
-        <div class="col-12 offset-md-7 col-md-5 mt-2">
+        <div class="col-12 offset-md-7 col-md-5 mt-md-2">
           <form>
               <input
                 type="password"

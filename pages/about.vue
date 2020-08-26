@@ -96,25 +96,32 @@ export default {
       ],
       member: [
         {
-          imageUrl: 'https://api.adorable.io/avatars/200/abott@adorable',
-          name: 'Alan Syamsul',
-          position: 'CEO',
+          imageUrl: require('~/assets/images/about/joon-k-lee.jpeg'),
+          name: 'Joon K Lee',
+          position: 'Co-Founder & CEO',
           description:
-            'Lorem ipsum dolor sit amet consecte tur adipiscing elit, sed do eiusmod temp incididunt ut labore et dolore magna.'
+            'Joon is the founder and CEO of Saastronautics and has many successful business ventures under his belt, including Inquivix. Inquivix is Korea’s leading digital marketing agency that helps large-sized global enterprises enter the Korean market.'
         },
         {
-          imageUrl: 'https://api.adorable.io/avatars/200/abott@adorable',
-          name: 'Syamsul Ulum',
-          position: 'CTO',
+          imageUrl: require('~/assets/images/about/parker-casio.jpeg'),
+          name: 'Parker Casio',
+          position: 'Co-Founder & Head of Growth',
           description:
-            'Lorem ipsum dolor sit amet consecte tur adipiscing elit, sed do eiusmod temp incididunt ut labore et dolore magna.'
+            'Head of Marketing at Saastronautics, Casio is the founder and owner of DRBRAND, through which he has worked with over 350 businesses. Parker is a self-described growth hacker who understands how to reach a big audience.'
         },
         {
-          imageUrl: 'https://api.adorable.io/avatars/200/abott@adorable',
-          name: 'Ulum Alam',
-          position: 'COO',
+          imageUrl: require('~/assets/images/about/frank-valensco.jpeg'),
+          name: 'Frank Valensco',
+          position: 'Head of Product',
           description:
-            'Lorem ipsum dolor sit amet consecte tur adipiscing elit, sed do eiusmod temp incididunt ut labore et dolore magna.'
+            'Head of Development at Saastronautics. CEO and Co- founder of Sekawan Solution, an IT consultant company based in Jakarta, Indonesia. Have been working on developing solutions and products for the last 7 years to help clients grow their business.'
+        },
+        {
+          imageUrl: require('~/assets/images/about/gerard-brand.jpeg'),
+          name: 'Gerard Brand',
+          position: 'Head of Design',
+          description:
+            'Head of Design at Saastronautics. Gerard has over 10 years of experience in graphic design and videography. He won first place in the GO VIDEO national competition by Gojek for the Best Video Documentary award.'
         }
       ]
     }
