@@ -19,7 +19,16 @@
     <!-- live deals -->
     <div class="container">
       <div class="row">
-        <div class="col-12 text-center">
+        <div class="col-12 offset-md-7 col-md-5 mt-2">
+          <form>
+              <input
+                type="password"
+                class="form-control form-round form-gray border-0 px-3"
+                placeholder="Search Deals"
+              />
+          </form>
+        </div>
+        <div class="col-12 text-center mt-5">
           <h2 class="font-weight-bold mb-4">Live Deals</h2>
         </div>
       </div>
