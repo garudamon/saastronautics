@@ -11,7 +11,7 @@
         </div>
         <p class="font-weight-bold mt-3 mb-0">{{ item.name }}</p>
         <p class="text-uppercase text-red m-0">{{ item.position }}</p>
-        <p class="py-4">{{ item.description }}</p>
+        <p class="py-4 mb-4">{{ item.description }}</p>
         <div class="bottom-div pb-3">
           <p>
             <a href="#">
