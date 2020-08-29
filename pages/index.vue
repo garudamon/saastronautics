@@ -21,16 +21,22 @@
           </p>
         </div>
         <div class="col-12 col-md-5 mx-auto">
-          <form class="row">
+          <form class="row" @submit="subscribe">
             <div class="col-8">
               <input
-                type="password"
-                class="form-control form-round form-gray border-0 px-3"
+                type="email"
+                :class="{
+                  'form-control form-round form-gray border-0 px-3': true,
+                  error: error.email ? true : false
+                }"
                 placeholder="Enter your email address"
+                v-model="email"
               />
             </div>
             <div class="col px-0">
-              <button type="submit" class="btn btn-primary btn-md px-4">Submit</button>
+              <button type="submit" class="btn btn-primary btn-md px-4">
+                Submit
+              </button>
             </div>
           </form>
         </div>
@@ -44,11 +50,19 @@
       <!-- main feature -->
       <div class="row features px-md-4 py-5">
         <div class="col-12 py-5">
-          <h2 class="text-center font-weight-bold">What Can You Do with Saastronautics?</h2>
+          <h2 class="text-center font-weight-bold">
+            What Can You Do with Saastronautics?
+          </h2>
         </div>
-        <div class="col-12 col-md-4 text-left px-4" v-for="item in features" :key="item.title">
+        <div
+          class="col-12 col-md-4 text-left px-4"
+          v-for="item in features"
+          :key="item.title"
+        >
           <img :src="item.image" :alt="item.title" />
-          <h5 class="text-capitalize font-weight-bold py-4">{{ item.title }}</h5>
+          <h5 class="text-capitalize font-weight-bold py-4">
+            {{ item.title }}
+          </h5>
           <p class="py-0">{{ item.description }}</p>
         </div>
       </div>
@@ -90,15 +104,15 @@
             <img :src="item.image" :alt="item.name" />
           </div>
           <div class="mb-3">
-            <span class="badge badge-info text-uppercase p-2">
-              {{
+            <span class="badge badge-info text-uppercase p-2">{{
               item.tag
-              }}
-            </span>
+            }}</span>
           </div>
           <h6 class="font-weight-bold">{{ item.name }}</h6>
           <rating size="sm" space="mr-1" class="mb-5" />
-          <nuxt-link :to="`product/detail/${item.id}`">Learn More &#8594;</nuxt-link>
+          <nuxt-link :to="`product/detail/${item.id}`"
+            >Learn More &#8594;</nuxt-link
+          >
         </div>
       </div>
     </div>
@@ -225,10 +239,47 @@ export default {
           id: 'product-id-6'
         }
       ],
-      imageWhatWeDo: require('~/assets/images/we-do.png')
+      imageWhatWeDo: require('~/assets/images/we-do.png'),
+      email: '',
+      error: {}
     }
   },
-  components: {}
+  components: {},
+  watch: {
+    email: function(val) {
+      if (!this.validEmail(val))
+        this.error = { ...this.error, email: 'Email not valid' }
+      else delete this.error['email']
+    }
+  },
+  methods: {
+    validEmail: function(email) {
+      var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      return re.test(email)
+    },
+    subscribe(e) {
+      e.preventDefault()
+      if (!this.validEmail(this.email)) {
+        this.error = { ...this.error, email: 'Email not valid' }
+      } else {
+        this.$axios
+          .post('/emailcommunity/insert/', { email: this.email })
+          .then(response => {
+            if (response.data.success) {
+              this.email = ''
+              this.$swal(
+                'Welcome to our community!',
+                `${response.data.message}`,
+                'success'
+              )
+            } else {
+              this.$swal('Ooh dude!', `${response.data.message}`, 'error')
+            }
+          })
+      }
+      return false
+    }
+  }
 }
 </script>
 

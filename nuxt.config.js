@@ -43,7 +43,11 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [{ src: '~/plugins/flickity', ssr: false }],
+  plugins: [
+    { src: '~/plugins/flickity', ssr: false },
+    { src: '~/plugins/swal', ssr: false },
+    '~/plugins/axios'
+  ],
   /*
    ** Nuxt.js dev-modules
    */
@@ -74,5 +78,8 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
+  },
+  env: {
+    baseUrl: 'http://13.212.30.207:81/api'
   }
 }
