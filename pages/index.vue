@@ -97,19 +97,19 @@
       <div class="row mt-5">
         <div
           class="col-12 col-md-4 product mb-5 px-4 pb-3"
-          v-for="item in bestDeals"
+          v-for="item in bestSellingProduct"
           :key="item.id"
         >
           <div class="product-image mb-3">
-            <img :src="item.image" :alt="item.name" />
+            <img :src="item.productMaster.imageBanner" :alt="item.name" />
           </div>
-          <div class="mb-3">
+          <div class="mb-3" v-if="item.productMaster.tag">
             <span class="badge badge-info text-uppercase p-2">{{
               item.tag
             }}</span>
           </div>
-          <h6 class="font-weight-bold">{{ item.name }}</h6>
-          <rating size="sm" space="mr-1" class="mb-5" />
+          <h6 class="font-weight-bold">{{ item.productMaster.name }}</h6>
+          <rating size="sm" space="mr-1" class="mb-5" :value="item.rating" />
           <nuxt-link :to="`product/detail/${item.id}`"
             >Learn More &#8594;</nuxt-link
           >
@@ -241,7 +241,8 @@ export default {
       ],
       imageWhatWeDo: require('~/assets/images/we-do.png'),
       email: '',
-      error: {}
+      error: {},
+      bestSellingProduct: []
     }
   },
   components: {},
@@ -252,8 +253,21 @@ export default {
       else delete this.error['email']
     }
   },
+  mounted() {
+    this.loadBestSellingProduct()
+  },
   methods: {
-    validEmail: function(email) {
+    loadBestSellingProduct() {
+      this.$axios.get('/product/bestselling/all?limit=6').then(response => {
+        let {
+          data: { data, success }
+        } = response
+        if (success) {
+          this.bestSellingProduct = [...data]
+        }
+      })
+    },
+    validEmail(email) {
       var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
       return re.test(email)
     },
