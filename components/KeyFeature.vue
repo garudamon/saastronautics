@@ -1,9 +1,9 @@
 <template>
   <div class="d-flex align-items-center class key-feature p-3">
-    <div>
+    <div class="icon">
       <img src="~/assets/images/detail/icon-check.png" alt="Checked" />
     </div>
-    <div class="flex-grow-1 pl-3">{{description}}</div>
+    <div class="pl-3">{{ description }}</div>
   </div>
 </template>
 
@@ -19,5 +19,11 @@ export default {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.33);
   border-radius: 10px;
   overflow: hidden;
+  .icon {
+    img {
+      width: 25px;
+      max-width: 25px;
+    }
+  }
 }
 </style>

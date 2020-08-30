@@ -46,7 +46,8 @@ export default {
   plugins: [
     { src: '~/plugins/flickity', ssr: false },
     { src: '~/plugins/swal', ssr: false },
-    '~/plugins/axios'
+    '~/plugins/axios',
+    '~/plugins/helper'
   ],
   /*
    ** Nuxt.js dev-modules

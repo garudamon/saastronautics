@@ -16,27 +16,39 @@
         <div class="col-12 col-lg-10 mx-auto mt-5">
           <div class="row">
             <div
-              class="col-12 col-md-4 pb-3 px-4 item pt-5"
+              class="col-12 col-md-4 px-4 pt-5 item"
               v-for="(data, idx) in pricingList"
               :key="data.title"
-              :class="{'border-right': data.title=='single', 'border': data.title=='multiple'}"
+              :class="{
+                'border-right': data.title.toLowerCase() == 'single',
+                border: data.title.toLowerCase() == 'multiple'
+              }"
             >
               <div class="ribbon" v-if="idx == pricingList.length - 1"></div>
-              <p class="h6 text-uppercase text-center pkg font-weight-bold my-0">{{data.title}}</p>
+              <p
+                class="h6 text-uppercase text-center pkg font-weight-bold my-0"
+              >
+                {{ data.title.toLowerCase() }}
+              </p>
               <p
                 class="h1 text-uppercase font-weight-bold pb-4 text-center border-bottom price"
-              >{{data.price}}</p>
+              >
+                {{ `USD ${data.activePrice}` }}
+              </p>
               <div
-                v-for="(isTrue, text) in data.feature"
-                :key="text"
+                v-for="feature in data.productPriceFeatureMaster"
+                :key="feature.id"
                 class="py-3 d-flex align-items-center border-bottom"
               >
-                <span v-if="isTrue" class="fa fa-check text-success d-block"></span>
-                <span v-else class="fa fa-times text-danger d-block"></span>
-                <div class="flex-grow-1 pl-2 font-weight-light">{{text}}</div>
+                <span class="fa fa-check text-success d-block"></span>
+                <div class="flex-grow-1 pl-2 font-weight-light">
+                  {{ feature.description }}
+                </div>
               </div>
-              <div class="pt-4 text-center">
-                <nuxt-link to="#" class="btn btn-primary">{{data.textLink}}</nuxt-link>
+              <div class="pt-4 text-center action">
+                <nuxt-link to="#" class="btn btn-primary">{{
+                  `Buy ${data.codes} ${data.codes > 1 ? 'codes' : 'code'}`
+                }}</nuxt-link>
               </div>
             </div>
           </div>
@@ -48,53 +60,10 @@
 
 <script>
 export default {
+  name: 'PricingTable',
+  props: ['pricingList'],
   data() {
-    return {
-      pricingList: [
-        {
-          title: 'single',
-          price: '$49',
-          textLink: 'Buy 1 Code',
-          feature: {
-            'All Features Included 5 Custom Domains': true,
-            'All Features Included 5 Custom Domains': true,
-            'Unlimited Forms And Surveys': false,
-            'Unlimited Responses': false,
-            'Real-Time Polls And Survey Results': false,
-            'Paypal Payments': false,
-            'Page Break And Logic Jumps': false
-          }
-        },
-        {
-          title: 'double',
-          price: '$60',
-          textLink: 'Buy 2 Codes',
-          feature: {
-            'All Features Included 5 Custom Domains': true,
-            'All Features Included 5 Custom Domains': true,
-            'Unlimited Forms And Surveys': true,
-            'Unlimited Responses': true,
-            'Real-Time Polls And Survey Results': true,
-            'Paypal Payments': false,
-            'Page Break And Logic Jumps': false
-          }
-        },
-        {
-          title: 'multiple',
-          price: '$100',
-          textLink: 'Buy 3 Codes',
-          feature: {
-            'All Features Included 5 Custom Domains': true,
-            'All Features Included 5 Custom Domains': true,
-            'Unlimited Forms And Surveys': true,
-            'Unlimited Responses': true,
-            'Real-Time Polls And Survey Results': true,
-            'Paypal Payments': true,
-            'Page Break And Logic Jumps': true
-          }
-        }
-      ]
-    }
+    return {}
   }
 }
 </script>
@@ -104,6 +73,13 @@ export default {
   background-color: #f5f4f8;
   .item {
     position: relative;
+    padding-bottom: 60px;
+    .action {
+      position: absolute;
+      bottom: 15px;
+      left: 0px;
+      right: 0px;
+    }
     &:last-child {
       background-color: white;
       overflow: hidden;

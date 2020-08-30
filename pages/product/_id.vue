@@ -1,42 +1,45 @@
 <template>
-  <div>
+  <div v-if="bestSellingDetail.productMaster">
     <div class="container">
       <!-- lead -->
       <div class="row">
         <div class="col-12 col-md-11 mx-auto text-center">
-          <Rating />
+          <Rating :value="bestSellingDetail.rating" />
           <h6 class="mb-4 mt-5">
             <span
               class="badge badge-primary text-uppercase mx-2 py-2 px-3"
-              v-for="text in productdetail.category"
-              :key="text"
-              >{{ text }}</span
+              v-for="tag in bestSellingDetail.productMaster.productTagMaster"
+              :key="tag.id"
+              >{{ tag.name }}</span
             >
           </h6>
+
           <h1 class="display-4 font-weight-bold d-none d-md-block">
-            {{ productdetail.name }}
+            {{ bestSellingDetail.productMaster.name }}
           </h1>
           <h1 class="display-5 font-weight-normal d-block d-md-none">
-            {{ productdetail.name }}
+            {{ bestSellingDetail.productMaster.name }}
           </h1>
         </div>
         <div class="col-12 col-md-10 mx-auto text-center">
-          <p class="px-md-4 py-4">{{ productdetail.description }}</p>
+          <p class="px-md-4 py-4">
+            {{ bestSellingDetail.productMaster.longDescription }}
+          </p>
         </div>
-        <div class="col-12 col-md-9 mx-auto py-4 text-center">
+        <div class="col-12 col-md-9 mx-auto py-4 text-center hero-image">
           <img
-            :src="productdetail.overviewImage"
-            :alt="`Overview ${productdetail.name}`"
+            :src="$getImage(bestSellingDetail.productMaster.id)"
+            :alt="`Overview ${bestSellingDetail.productMaster.name}`"
           />
         </div>
       </div>
       <div class="row pt-5">
         <div
           class="col-12 col-md-6 mb-4"
-          v-for="(feature, idx) in productdetail.keyFeature"
-          :key="idx"
+          v-for="feature in bestSellingDetail.productMaster.productTLDRMaster"
+          :key="feature.id"
         >
-          <LazyKeyFeature :description="feature" />
+          <LazyKeyFeature :description="feature.description" />
         </div>
       </div>
       <LazyImageParagraphSideBySide
@@ -56,7 +59,9 @@
         ]"
       />
     </div>
-    <LazyPricingTable />
+    <LazyPricingTable
+      :pricingList="bestSellingDetail.productMaster.productPriceMaster"
+    />
     <LazyReviewQuestion />
     <LazySubscribePanel />
   </div>
@@ -64,6 +69,7 @@
 
 <script>
 export default {
+  name: 'ProductDetail',
   data() {
     return {
       image1: require('~/assets/images/we-do.png'),
@@ -80,10 +86,35 @@ export default {
           'Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo',
           'U do nt exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat exercitation ullamco laboris nisi ut aliquip ex ea commodo'
         ]
+      },
+      bestSellingDetail: {}
+    }
+  },
+  async fetch() {
+    this.getDetail()
+  },
+  mounted() {},
+  methods: {
+    getDetail() {
+      if (typeof this.$route.params.id != 'undefined') {
+        this.$axios
+          .get(`/product/bestselling/detail/${this.$route.params.id}`)
+          .then(response => {
+            let {
+              data: { success, data }
+            } = response
+            if (success) this.bestSellingDetail = { ...data }
+          })
       }
     }
   }
 }
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.hero-image {
+  img {
+    border-radius: 20px;
+  }
+}
+</style>

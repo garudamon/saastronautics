@@ -101,7 +101,7 @@
           :key="item.id"
         >
           <div class="product-image mb-3">
-            <img :src="item.productMaster.imageBanner" :alt="item.name" />
+            <img :src="$getImage(item.productMaster.id)" :alt="item.name" />
           </div>
           <div class="mb-3" v-if="item.productMaster.tag">
             <span class="badge badge-info text-uppercase p-2">{{
@@ -110,9 +110,7 @@
           </div>
           <h6 class="font-weight-bold">{{ item.productMaster.name }}</h6>
           <rating size="sm" space="mr-1" class="mb-5" :value="item.rating" />
-          <nuxt-link :to="`product/detail/${item.id}`"
-            >Learn More &#8594;</nuxt-link
-          >
+          <nuxt-link :to="`product/${item.id}`">Learn More &#8594;</nuxt-link>
         </div>
       </div>
     </div>
@@ -201,44 +199,6 @@ export default {
           photo: 'https://api.adorable.io/avatars/200/abott@adorable'
         }
       ],
-      bestDeals: [
-        {
-          image: require('~/assets/dummy/product-capture-1.png'),
-          tag: 'coming soon',
-          name: 'Product Name',
-          id: 'product-id-1'
-        },
-        {
-          image: require('~/assets/dummy/product-capture-2.png'),
-          tag: 'coming soon',
-          name: 'Product Name',
-          id: 'product-id-2'
-        },
-        {
-          image: require('~/assets/dummy/product-capture-3.png'),
-          tag: 'coming soon',
-          name: 'Product Name',
-          id: 'product-id-3'
-        },
-        {
-          image: require('~/assets/dummy/product-capture-4.png'),
-          tag: 'coming soon',
-          name: 'Product Name',
-          id: 'product-id-4'
-        },
-        {
-          image: require('~/assets/dummy/product-capture-5.png'),
-          tag: 'coming soon',
-          name: 'Product Name',
-          id: 'product-id-5'
-        },
-        {
-          image: require('~/assets/dummy/product-capture-6.png'),
-          tag: 'coming soon',
-          name: 'Product Name',
-          id: 'product-id-6'
-        }
-      ],
       imageWhatWeDo: require('~/assets/images/we-do.png'),
       email: '',
       error: {},
@@ -314,8 +274,11 @@ export default {
     overflow: hidden;
     height: 215px;
     border-radius: 5px;
+    display: flex;
+    align-items: center;
     img {
-      width: 100%;
+      max-width: 100% !important;
+      border-radius: 5px;
     }
   }
   a {
