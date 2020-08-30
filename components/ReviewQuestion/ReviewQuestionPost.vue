@@ -9,8 +9,13 @@
       </no-ssr>
     </div>
     <div class="d-flex justify-content-between pt-3">
-      <button class="btn btn-primary">Post your review</button>
-      <div class="d-flex align-items-center">
+      <button class="btn btn-primary" v-if="isLogin">
+        Post your {{ `${question ? 'question' : 'review'}` }}
+      </button>
+      <nuxt-link v-else to="/auth/signin" class="btn btn-primary">
+        Signin first for {{ `${question ? 'question' : 'review'}` }}
+      </nuxt-link>
+      <div class="d-flex align-items-center" v-if="!question">
         <h6 class="font-weight-bold m-0 pr-2">Rate Our Product</h6>
         <LazyRating size="sm" :callback="() => {}" />
       </div>
@@ -20,15 +25,25 @@
 
 <script>
 import VEmojiPicker from 'v-emoji-picker'
+import { mapState } from 'vuex'
 export default {
   name: 'ReviewQuestionPost',
   components: {
     VEmojiPicker
   },
+  props: {
+    question: {
+      type: Boolean,
+      default: false
+    }
+  },
   data: () => ({
-    comment: 'Hello there',
+    comment: '',
     showEmoji: false
   }),
+  computed: {
+    ...mapState(['isLogin'])
+  },
   methods: {
     selectEmoji(emoji) {
       this.showEmoji = false

@@ -10,7 +10,7 @@
       <div class="flex-grow-1">
         <div class="d-flex justify-content-between align-items-center">
           <h5 class="font-weight-bold m-0">Rahul</h5>
-          <LazyRating size="sm" />
+          <LazyRating size="sm" v-if="!question" />
         </div>
         <p>17 August 2020</p>
         <p class="">
@@ -68,7 +68,40 @@
 
 <script>
 export default {
-  name: 'CommentItem'
+  name: 'CommentItem',
+  props: {
+    question: {
+      type: Boolean,
+      default: false
+    }
+  },
+  mounted() {
+    this.getData()
+  },
+  methods: {
+    getData() {
+      if (typeof this.$route.params.id != 'undefined') {
+        if (!this.question)
+          this.$axios
+            .get(`/product/review/product/${this.$route.params.id}`)
+            .then(response => {
+              let {
+                data: { success, data }
+              } = response
+              if (success) this.bestSellingDetail = { ...data }
+            })
+        else
+          this.$axios
+            .get(`/product/question/product/${this.$route.params.id}`)
+            .then(response => {
+              let {
+                data: { success, data }
+              } = response
+              if (success) this.bestSellingDetail = { ...data }
+            })
+      }
+    }
+  }
 }
 </script>
 
