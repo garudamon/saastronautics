@@ -81,6 +81,6 @@ export default {
     extend(config, ctx) {}
   },
   env: {
-    baseUrl: 'http://13.212.30.207:81/api'
+    baseUrl: 'http://13.251.43.229:81/api'
   }
 }

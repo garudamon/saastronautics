@@ -12,7 +12,8 @@ export default function({ $axios, redirect, store }) {
     // if (store.state.auth)
     //   config.headers.common.Authorization =
     //     'Bearer ' + store.state.auth.accessToken
-    config.url = `${process.env.API_URL}${config.url}`
+    console.log('process.env.baseUrl', process.env.baseUrl)
+    config.url = `${process.env.baseUrl}${config.url}`
   })
 
   $axios.onError((error, store) => {
