@@ -6,10 +6,7 @@
           <h2 class="font-weight-bold mb-4">Pricing</h2>
         </div>
         <div class="col-12 col-md-8 mx-auto">
-          <p>
-            Our platform offers intelligent, intuitive, and innovative SaaS
-            solutions to professionals in all fields
-          </p>
+          <p>{{ desc }}</p>
         </div>
       </div>
       <div class="row">
@@ -61,7 +58,7 @@
 <script>
 export default {
   name: 'PricingTable',
-  props: ['pricingList'],
+  props: ['pricingList', 'desc'],
   data() {
     return {}
   }

@@ -10,7 +10,7 @@
               class="badge badge-primary text-uppercase mx-2 py-2 px-3"
               v-for="tag in bestSellingDetail.productMaster.productTagMaster"
               :key="tag.id"
-              >{{ tag.name }}</span
+              >{{ tag.tagMaster && tag.tagMaster.name }}</span
             >
           </h6>
 
@@ -61,6 +61,7 @@
     </div>
     <LazyPricingTable
       :pricingList="bestSellingDetail.productMaster.productPriceMaster"
+      :desc="bestSellingDetail.productMaster.shortDescription"
     />
     <LazyReviewQuestion />
     <LazySubscribePanel />
