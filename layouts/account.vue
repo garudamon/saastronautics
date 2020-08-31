@@ -87,7 +87,7 @@
           </li>
         </ul>
       </aside>
-      <div class="content flex-grow-1 px-4 pb-4">
+      <div class="content flex-grow-1 px-5 pb-4">
         <nuxt />
       </div>
     </div>

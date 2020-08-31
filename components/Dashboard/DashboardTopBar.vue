@@ -32,7 +32,7 @@ export default {
 
 <style lang="scss" scoped>
 .dashboard-top-bar {
-  height: 225px;
+  height: 190px;
   border-radius: 20px;
   position: relative;
   overflow: hidden;
@@ -59,7 +59,7 @@ export default {
   }
   .background-gift {
     width: 634px;
-    background: transparent url('../../assets/images/react-out-half.png') 0% 0%
+    background: transparent url('../../assets/images/react-out-half.png') 0% 0% / 85%
       no-repeat padding-box;
     position: absolute;
     top: 0px;
