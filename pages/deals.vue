@@ -20,13 +20,14 @@
     <div class="container">
       <div class="row">
         <div class="col-12 offset-md-7 col-md-5 mt-md-2">
-          <form>
-              <input
-                type="password"
-                class="form-control form-round form-gray border-0 px-3"
-                placeholder="Search Deals"
-              />
-          </form>
+          <div class="input-group">
+            <input type="text" class="form-control pl-3" placeholder="Search Product" />
+            <div class="input-group-append">
+              <span class="input-group-text bg-transparent">
+                <i class="fa fa-search"></i>
+              </span>
+            </div>
+          </div>
         </div>
         <div class="col-12 text-center mt-5">
           <h2 class="font-weight-bold mb-4">Live Deals</h2>
@@ -35,22 +36,22 @@
       <div class="row mt-5">
         <div
           class="col-12 col-md-4 product mb-5 px-4 pb-3"
-          v-for="item in liveDeals"
+          v-for="item in liveDealsProduct"
           :key="item.id"
         >
           <div class="product-image mb-3">
-            <img :src="item.image" :alt="item.name" />
+            <img :src="$getImage(item.id)" :alt="item.name" />
           </div>
-          <div class="mb-3">
+          <div class="mb-3" v-if="item.productTagMaster">
             <span class="badge badge-info text-uppercase p-2">
               {{
-              item.tag
+              item.productTagMaster.tagMaster && item.productTagMaster.tagMaster.name
               }}
             </span>
           </div>
           <h6 class="font-weight-bold">{{ item.name }}</h6>
-          <rating size="sm" space="mr-1" class="mb-5" />
-          <nuxt-link :to="`product/detail/${item.id}`">Learn More &#8594;</nuxt-link>
+          <rating size="sm" space="mr-1" class="mb-5" :value="item.rating" />
+          <nuxt-link :to="`deals-detail/${item.id}`">Learn More &#8594;</nuxt-link>
         </div>
       </div>
     </div>
@@ -63,44 +64,22 @@
 export default {
   data() {
     return {
-      liveDeals: [
-        {
-          image: require('~/assets/dummy/product-capture-6.png'),
-          tag: 'coming soon',
-          name: 'Product Name',
-          id: 'product-id-1'
-        },
-        {
-          image: require('~/assets/dummy/product-capture-5.png'),
-          tag: 'coming soon',
-          name: 'Product Name',
-          id: 'product-id-2'
-        },
-        {
-          image: require('~/assets/dummy/product-capture-4.png'),
-          tag: 'coming soon',
-          name: 'Product Name',
-          id: 'product-id-3'
-        },
-        {
-          image: require('~/assets/dummy/product-capture-1.png'),
-          tag: 'coming soon',
-          name: 'Product Name',
-          id: 'product-id-1'
-        },
-        {
-          image: require('~/assets/dummy/product-capture-2.png'),
-          tag: 'coming soon',
-          name: 'Product Name',
-          id: 'product-id-2'
-        },
-        {
-          image: require('~/assets/dummy/product-capture-3.png'),
-          tag: 'coming soon',
-          name: 'Product Name',
-          id: 'product-id-3'
+      liveDealsProduct: []
+    }
+  },
+  mounted() {
+    this.loadLiveDealsProduct()
+  },
+  methods: {
+    loadLiveDealsProduct() {
+      this.$axios.get('/product/all?limit=6').then(response => {
+        let {
+          data: { data, success }
+        } = response
+        if (success) {
+          this.liveDealsProduct = [...data]
         }
-      ]
+      })
     }
   }
 }
@@ -133,5 +112,27 @@ export default {
 .badge-info {
   border-radius: 5px;
   background-color: #12e3ff;
+}
+
+.input-group {
+  border-radius: 33px;
+  background-color: white;
+  overflow: hidden;
+  border: 1.5px solid gray;
+  max-width: 450px;
+  input {
+    border: none;
+    outline: none;
+  }
+  .input-group-append {
+    border: none;
+    cursor: pointer;
+    .input-group-text {
+      border: none;
+      .fa {
+        color: var(--primary-color-red);
+      }
+    }
+  }
 }
 </style>
