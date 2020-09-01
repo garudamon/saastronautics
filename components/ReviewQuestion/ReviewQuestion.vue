@@ -37,12 +37,12 @@
         <div :class="{ active: active == 'reviews' }">
           <LazyReviewQuestionPost key="reviews" :product="product" />
           <h2 class="font-weight-bold my-5">Recent Reviews</h2>
-          <LazyCommentItem key="reviews-items" class="mt-3" />
+          <LazyCommentItem key="reviews-items" class="mt-3" :product="product" />
         </div>
         <div :class="{ active: active == 'question' }">
           <LazyReviewQuestionPost :question="true" key="question" :product="product" />
           <h2 class="font-weight-bold my-5">Recent Questions</h2>
-          <LazyCommentItem class="mt-3" :question="true" key="question-items" />
+          <LazyCommentItem class="mt-3" :question="true" key="question-items" :product="product" />
         </div>
       </div>
     </div>
