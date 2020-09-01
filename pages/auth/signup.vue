@@ -51,6 +51,7 @@
 <script>
 export default {
   layout: 'auth',
+  loading: false,
   data: () => ({
     form: {
       firstName: '',
@@ -65,20 +66,38 @@ export default {
     },
     signUp() {
       console.log(this.form)
-      this.$axios
-        .post('/customer/register', this.form)
-        .then(res => {
-          //Perform Success Action
-          this.$router.push('/auth/signin')
-          console.log(res.data)
-        })
-        .catch(error => {
-          // error.response.status Check status code
-          console.log(error)
-        })
-        // .finally(() => {
-          //Perform action in always
-        // })
+      this.$swal({
+        title: 'Customer',
+        text: 'Are you sure want to save ?',
+        icon: 'warning',
+        buttons: true,
+        dangerMode: true
+      }).then(willSave => {
+        if (willSave) {
+          this.loading = true
+          this.$axios
+            .post('/customer/register', this.form)
+            .then(res => {
+              //Perform Success Action
+              if (res.data.success) {
+                this.$swal('Success', res.data.message, 'success').then(() => {
+                  this.$router.push('/auth/signin')
+                })
+              } else {
+                this.callError(res.data.message)
+              }
+            })
+            .catch(error => {
+              // error.response.status Check status code
+              this.callError('Call Administrator')
+              console.log(error)
+            })
+            .finally(() => {
+              // Perform action in always
+              this.loading = false
+            })
+        }
+      })
     }
   }
 }
