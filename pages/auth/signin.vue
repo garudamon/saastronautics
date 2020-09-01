@@ -21,9 +21,7 @@
           <nuxt-link to="/auth/signup">Don't have an account?</nuxt-link>
         </p>
 
-        <button type="submit" class="btn btn-primary btn-md px-4">
-          Sign in
-        </button>
+        <button type="submit" class="btn btn-primary btn-md px-4">Sign in</button>
       </div>
     </form>
   </div>
@@ -31,6 +29,7 @@
 
 <script>
 import { mapMutations } from 'vuex'
+const Cookie = require('js-cookie')
 export default {
   layout: 'auth',
   name: 'SignIn',
@@ -59,7 +58,7 @@ export default {
             data: { data, success }
           } = response
           if (success) {
-            localStorage.setItem('_token', data)
+            Cookie.set('_token', data)
             this.setLogin(true)
             this.$router.push('/account')
           }

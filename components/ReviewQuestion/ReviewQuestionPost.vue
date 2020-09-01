@@ -4,20 +4,24 @@
       <textarea rows="13" class="p-3" v-model="comment"></textarea>
       <span class="fa fa-smile-o" @click="showEmoji = !showEmoji"></span>
       <span class="fa fa-paperclip"></span>
-      <no-ssr>
+      <client-only>
         <VEmojiPicker v-if="showEmoji" @select="selectEmoji" />
-      </no-ssr>
+      </client-only>
     </div>
     <div class="d-flex justify-content-between pt-3">
-      <button class="btn btn-primary" v-if="isLogin">
-        Post your {{ `${question ? 'question' : 'review'}` }}
-      </button>
-      <nuxt-link v-else to="/auth/signin" class="btn btn-primary">
-        Signin first for {{ `${question ? 'question' : 'review'}` }}
-      </nuxt-link>
+      <button
+        class="btn btn-primary"
+        v-if="isLogin"
+        @click="submit"
+      >Post your {{ `${question ? 'question' : 'review'}` }}</button>
+      <nuxt-link
+        v-else
+        to="/auth/signin"
+        class="btn btn-primary"
+      >Signin first for {{ `${question ? 'question' : 'review'}` }}</nuxt-link>
       <div class="d-flex align-items-center" v-if="!question">
         <h6 class="font-weight-bold m-0 pr-2">Rate Our Product</h6>
-        <LazyRating size="sm" :callback="() => {}" />
+        <LazyRating size="sm" :callback="(i) => {setStar(i)}" />
       </div>
     </div>
   </div>
@@ -35,11 +39,15 @@ export default {
     question: {
       type: Boolean,
       default: false
+    },
+    product: {
+      type: Object
     }
   },
   data: () => ({
     comment: '',
-    showEmoji: false
+    showEmoji: false,
+    star: 0
   }),
   computed: {
     ...mapState(['isLogin'])
@@ -48,6 +56,26 @@ export default {
     selectEmoji(emoji) {
       this.showEmoji = false
       this.comment = `${this.comment} ${emoji.data}`
+    },
+    setStar(i) {
+      this.star = i
+    },
+    submit() {
+      if (!this.question) {
+        this.$axios
+          .post('/product/review', {
+            productMasterID: this.product.id,
+            review: this.comment,
+            star: this.star
+          })
+          .then(response => {
+            if (response.data.success) {
+              this.comment = ''
+              this.$swal('Success!', `${response.data.message}`, 'success')
+            }
+          })
+      }
+      return false
     }
   }
 }
@@ -79,7 +107,7 @@ export default {
   .emoji-picker {
     position: absolute;
     right: 2em;
-    top: 2em;
+    bottom: 3.5em;
     height: 280px;
   }
 }

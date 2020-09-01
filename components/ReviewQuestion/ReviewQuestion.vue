@@ -15,8 +15,7 @@
                   return false
                 }
               "
-              >Reviews</a
-            >
+            >Reviews</a>
           </li>
           <li class="nav-item">
             <a
@@ -30,21 +29,20 @@
                   return false
                 }
               "
-              >Question</a
-            >
+            >Question</a>
           </li>
         </ul>
       </div>
       <div class="col-12 p-5 post-comment">
         <div :class="{ active: active == 'reviews' }">
-          <LazyReviewQuestionPost key="reviews" />
+          <LazyReviewQuestionPost key="reviews" :product="product" />
           <h2 class="font-weight-bold my-5">Recent Reviews</h2>
-          <LazyCommentItem key="reviews" class="mt-3" />
+          <LazyCommentItem key="reviews-items" class="mt-3" />
         </div>
         <div :class="{ active: active == 'question' }">
-          <LazyReviewQuestionPost :question="true" key="question" />
+          <LazyReviewQuestionPost :question="true" key="question" :product="product" />
           <h2 class="font-weight-bold my-5">Recent Questions</h2>
-          <LazyCommentItem class="mt-3" :question="true" key="question" />
+          <LazyCommentItem class="mt-3" :question="true" key="question-items" />
         </div>
       </div>
     </div>
@@ -54,6 +52,7 @@
 <script>
 export default {
   name: 'ReviewQuestion',
+  props: ['product'],
   data: () => ({
     active: 'reviews'
   })
