@@ -157,7 +157,7 @@ export default {
         },
         {
           text: 'Get Started',
-          path: '/get-started',
+          path: '/auth/signin',
           isButton: true
         }
       ]
