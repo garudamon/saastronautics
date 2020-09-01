@@ -1,7 +1,7 @@
 <template>
   <div class="row">
     <div
-      class="col-12 col-md-3 text-center mb-5"
+      class="col-12 col-md-6 text-center mb-5"
       v-for="item in member"
       :key="`${item.name}-${item.position}`"
     >
