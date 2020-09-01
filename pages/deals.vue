@@ -18,7 +18,7 @@
     </div>
     <!-- live deals -->
     <div class="container">
-      <div class="row">
+      <div class="row px-md-4">
         <div class="col-12 offset-md-7 col-md-5 mt-md-2">
           <div class="input-group">
             <input type="text" class="form-control pl-3" placeholder="Search Product" />
