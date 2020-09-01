@@ -67,11 +67,10 @@ export default {
     signUp() {
       console.log(this.form)
       this.$swal({
-        title: 'Customer',
-        text: 'Are you sure want to save ?',
+        title: 'Sign Up',
+        text: 'Are you sure?',
         icon: 'warning',
-        buttons: true,
-        dangerMode: true
+        buttons: true
       }).then(willSave => {
         if (willSave) {
           this.loading = true
@@ -103,11 +102,14 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 p {
   font-size: 0.8rem;
 }
 a {
   color: var(--primary-color-red);
+}
+.swal-button--cancel {
+  color: white;
 }
 </style>
