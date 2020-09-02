@@ -16,9 +16,7 @@
           <img src="~/assets/images/logo.png" alt />
         </a>
 
-        <div
-          :class="{ collapse: true, 'navbar-collapse': true, show: expandNav }"
-        >
+        <div :class="{ collapse: true, 'navbar-collapse': true, show: expandNav }">
           <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
             <li
               :class="{
@@ -37,8 +35,13 @@
                   'mt-lg-1': link.isButton
                 }"
                 :to="link.path"
-                >{{ link.text }}</nuxt-link
-              >
+              >{{ link.text }}</nuxt-link>
+            </li>
+            <li class="nav-item mx-lg-3" v-if="!isLogin">
+              <nuxt-link class="btn btn-primary btn-sm mt-lg-1" to="/auth/signin">Get Started</nuxt-link>
+            </li>
+            <li class="nav-item mx-lg-3" v-else>
+              <nuxt-link class="btn btn-primary btn-sm mt-lg-1" to="/account">my account</nuxt-link>
             </li>
           </ul>
         </div>
@@ -51,12 +54,10 @@
       <div class="container">
         <div class="row">
           <div class="col-12 col-md-3 pb-5 px-2 px-md-3">
-            <img src="~/assets/images/logo-white.png" alt="" />
+            <img src="~/assets/images/logo-white.png" alt />
           </div>
           <div class="col-12 col-md-2">
-            <div class="text-uppercase text-white font-weight-bold pb-3">
-              sitemap
-            </div>
+            <div class="text-uppercase text-white font-weight-bold pb-3">sitemap</div>
             <ul>
               <li v-for="item in topLink" :key="item.text" class="py-1">
                 <nuxt-link :to="item.path">{{ item.text }}</nuxt-link>
@@ -64,9 +65,7 @@
             </ul>
           </div>
           <div class="col-12 col-md-3">
-            <div class="text-uppercase text-white font-weight-bold pb-3">
-              account
-            </div>
+            <div class="text-uppercase text-white font-weight-bold pb-3">account</div>
             <ul>
               <li class="py-1">
                 <nuxt-link :to="''">Terms and Conditions</nuxt-link>
@@ -75,14 +74,12 @@
                 <nuxt-link :to="''">Privacy Policy</nuxt-link>
               </li>
               <li class="py-1">
-                <nuxt-link :to="''">Frequently Asked </nuxt-link>
+                <nuxt-link :to="''">Frequently Asked</nuxt-link>
               </li>
             </ul>
           </div>
           <div class="col-12 col-md">
-            <div class="text-uppercase text-white font-weight-bold pb-3">
-              LOREM IPSUM
-            </div>
+            <div class="text-uppercase text-white font-weight-bold pb-3">LOREM IPSUM</div>
             <ul>
               <li class="py-1">
                 <nuxt-link :to="''">Fruits</nuxt-link>
@@ -108,6 +105,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   data() {
     return {
@@ -137,14 +135,12 @@ export default {
           text: 'Support',
           path: '/support',
           isButton: false
-        },
-        {
-          text: 'Get Started',
-          path: '/auth/signin',
-          isButton: true
         }
       ]
     }
+  },
+  computed: {
+    ...mapState(['isLogin'])
   },
   components: {}
 }

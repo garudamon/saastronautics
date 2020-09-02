@@ -36,6 +36,12 @@
               :to="link.path"
             >{{ link.text }}</nuxt-link>
           </li>
+          <li class="nav-item mx-lg-3" v-if="!isLogin">
+            <nuxt-link class="btn btn-primary btn-sm mt-lg-1" to="/auth/signin">Get Started</nuxt-link>
+          </li>
+          <li class="nav-item mx-lg-3" v-else>
+            <button class="btn btn-primary btn-sm mt-lg-1" @click="signout">Sign out</button>
+          </li>
         </ul>
       </div>
     </nav>
@@ -125,7 +131,14 @@
 </template>
 
 <script>
+const Cookie = require('js-cookie')
+import { mapState, mapMutations } from 'vuex'
 export default {
+  name: 'AccountLayout',
+  middleware: 'authenticated',
+  head: {
+    titleTemplate: 'My Account - %s'
+  },
   data() {
     return {
       expandNav: false,
@@ -154,16 +167,23 @@ export default {
           text: 'Support',
           path: '/support',
           isButton: false
-        },
-        {
-          text: 'Get Started',
-          path: '/auth/signin',
-          isButton: true
         }
       ]
     }
   },
-  components: {}
+  computed: {
+    ...mapState(['isLogin'])
+  },
+  components: {},
+  methods: {
+    ...mapMutations(['setLogin']),
+    signout() {
+      Cookie.remove('_token')
+      this.setLogin(false)
+      this.$router.push('/')
+      return false
+    }
+  }
 }
 </script>
 

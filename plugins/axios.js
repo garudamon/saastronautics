@@ -5,12 +5,6 @@ export default function({ $axios, redirect, store }) {
   if (Cookie !== undefined && Cookie.get('_token') != null)
     _token = Cookie.get('_token')
 
-  if (_token != '') {
-    // $axios.setHeader('Authorization', `Bearer ${_token}`)
-    store.state._token = _token
-    store.state.isLogin = true
-  }
-
   $axios.onRequest(config => {
     if (store.state._token)
       config.headers['Authorization'] = 'Bearer ' + store.state._token

@@ -5,7 +5,10 @@
 </template>
 
 <script>
-export default {}
+export default {
+  name: 'AuthLayout',
+  middleware: 'unauthenticated'
+}
 </script>
 
 <style lang="scss" scoped>
