@@ -7,15 +7,16 @@
             <a
               :class="{
                 'nav-link py-4 px-5': true,
-                active: active == 'reviews'
+                active: active == 'review'
               }"
               @click="
                 () => {
-                  active = 'reviews'
+                  active = 'review'
                   return false
                 }
               "
-            >Reviews</a>
+              >Review</a
+            >
           </li>
           <li class="nav-item">
             <a
@@ -29,20 +30,39 @@
                   return false
                 }
               "
-            >Question</a>
+              >Question</a
+            >
           </li>
         </ul>
       </div>
       <div class="col-12 p-5 post-comment">
-        <div :class="{ active: active == 'reviews' }">
-          <LazyReviewQuestionPost key="reviews" :product="product" />
-          <h2 class="font-weight-bold my-5">Recent Reviews</h2>
-          <LazyCommentItem key="reviews-items" class="mt-3" :product="product" />
+        <div :class="{ active: active == 'review' }">
+          <LazyReviewQuestionPost
+            key="review"
+            :product="product"
+            :afterPost="() => fetchData('review')"
+          />
+          <h2 class="font-weight-bold my-5">Recent Review</h2>
+          <LazyCommentItem
+            :items="items['review']"
+            key="review-items"
+            class="mt-3"
+          />
         </div>
         <div :class="{ active: active == 'question' }">
-          <LazyReviewQuestionPost :question="true" key="question" :product="product" />
+          <LazyReviewQuestionPost
+            :question="true"
+            key="question"
+            :product="product"
+            :afterPost="() => fetchData('question')"
+          />
           <h2 class="font-weight-bold my-5">Recent Questions</h2>
-          <LazyCommentItem class="mt-3" :question="true" key="question-items" :product="product" />
+          <LazyCommentItem
+            :items="items['question']"
+            class="mt-3"
+            :question="true"
+            key="question-items"
+          />
         </div>
       </div>
     </div>
@@ -54,8 +74,37 @@ export default {
   name: 'ReviewQuestion',
   props: ['product'],
   data: () => ({
-    active: 'reviews'
-  })
+    active: 'review',
+    items: {
+      review: [],
+      question: []
+    }
+  }),
+  mounted() {
+    this.fetchData('review')
+    this.fetchData('question')
+  },
+  methods: {
+    fetchData(uri) {
+      if (typeof this.product.id != 'undefined') {
+        this.$axios
+          .get(`/product/${uri}/product/${this.product.id}`)
+          .then(response => {
+            let {
+              data: { data, success }
+            } = response
+            if (success) {
+              console.log(uri, data)
+              if (data != null) {
+                let temp = this.items
+                temp[`${uri}`] = [...data]
+                this.items = { ...temp }
+              }
+            }
+          })
+      }
+    }
+  }
 }
 </script>
 

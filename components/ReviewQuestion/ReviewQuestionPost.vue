@@ -1,27 +1,35 @@
 <template>
   <div>
     <div class="post">
-      <textarea rows="13" class="p-3" v-model="comment"></textarea>
-      <span class="fa fa-smile-o" @click="showEmoji = !showEmoji"></span>
+      <textarea
+        rows="13"
+        class="p-3"
+        v-model="comment"
+        :readonly="!isLogin"
+      ></textarea>
+      <span class="fa fa-smile-o" @click="openEmoji"></span>
       <span class="fa fa-paperclip"></span>
       <client-only>
         <VEmojiPicker v-if="showEmoji" @select="selectEmoji" />
       </client-only>
     </div>
     <div class="d-flex justify-content-between pt-3">
-      <button
-        class="btn btn-primary"
-        v-if="isLogin"
-        @click="submit"
-      >Post your {{ `${question ? 'question' : 'review'}` }}</button>
-      <nuxt-link
-        v-else
-        to="/auth/signin"
-        class="btn btn-primary"
-      >Signin first for {{ `${question ? 'question' : 'review'}` }}</nuxt-link>
+      <button class="btn btn-primary" v-if="isLogin" @click="submit">
+        Post your {{ `${question ? 'question' : 'review'}` }}
+      </button>
+      <nuxt-link v-else to="/auth/signin" class="btn btn-primary"
+        >Login To Post {{ `${question ? 'question' : 'review'}` }}</nuxt-link
+      >
       <div class="d-flex align-items-center" v-if="!question">
         <h6 class="font-weight-bold m-0 pr-2">Rate Our Product</h6>
-        <LazyRating size="sm" :callback="(i) => {setStar(i)}" />
+        <LazyRating
+          size="sm"
+          :callback="
+            i => {
+              setStar(i)
+            }
+          "
+        />
       </div>
     </div>
   </div>
@@ -42,6 +50,9 @@ export default {
     },
     product: {
       type: Object
+    },
+    afterPost: {
+      type: Function
     }
   },
   data: () => ({
@@ -54,7 +65,6 @@ export default {
   },
   methods: {
     selectEmoji(emoji) {
-      this.showEmoji = false
       this.comment = `${this.comment} ${emoji.data}`
     },
     setStar(i) {
@@ -71,11 +81,30 @@ export default {
           .then(response => {
             if (response.data.success) {
               this.comment = ''
+              this.afterPost()
+              this.$swal('Success!', `${response.data.message}`, 'success')
+            }
+          })
+      } else {
+        this.$axios
+          .post('/product/question', {
+            productMasterID: this.product.id,
+            description: this.comment
+          })
+          .then(response => {
+            if (response.data.success) {
+              this.comment = ''
+              this.afterPost()
               this.$swal('Success!', `${response.data.message}`, 'success')
             }
           })
       }
       return false
+    },
+    openEmoji() {
+      if (this.isLogin) {
+        this.showEmoji = !this.showEmoji
+      }
     }
   }
 }
