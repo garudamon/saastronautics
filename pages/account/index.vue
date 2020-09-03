@@ -20,12 +20,12 @@ export default {
     return {
       items: [
         {
-          image: require('~/assets/images/disk.svg'),
+          image: require('~/assets/images/analytic.svg'),
           header: 'profile setting',
           desc: 'Lorem ipsum dolor sit amet consectetur'
         },
         {
-          image: require('~/assets/images/analytic.svg'),
+          image: require('~/assets/images/disk.svg'),
           header: 'my deals',
           desc: 'Lorem ipsum dolor sit amet consectetur'
         },

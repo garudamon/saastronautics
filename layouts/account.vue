@@ -115,13 +115,13 @@
           <nuxt-link :to="`#`">Frequently Ask Questions</nuxt-link>
         </div>
         <div>
-          <a href="#" class="px-2">
+          <a href="#" class="px-3">
             <span class="fa fa-facebook"></span>
           </a>
-          <a href="#" class="px-2">
+          <a href="#" class="px-3">
             <span class="fa fa-twitter"></span>
           </a>
-          <a href="#" class="px-2">
+          <a href="#" class="px-3">
             <span class="fa fa-instagram"></span>
           </a>
         </div>
