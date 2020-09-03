@@ -20,7 +20,7 @@
           <li
             :class="{
                 'nav-item': true,
-                'mx-lg-3': true
+                'mx-lg-4': true
               }"
             v-for="(link, index) in topLink"
             :key="index"
@@ -40,7 +40,7 @@
             <nuxt-link class="btn btn-primary btn-sm mt-lg-1" to="/auth/signin">Get Started</nuxt-link>
           </li>
           <li class="nav-item mx-lg-3" v-else>
-            <button class="btn btn-primary btn-sm mt-lg-1" @click="signout">Sign out</button>
+            <button class="btn btn-primary btn-lg mt-lg-1" @click="signout">Sign out</button>
           </li>
         </ul>
       </div>
