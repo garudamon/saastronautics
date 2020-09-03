@@ -12,12 +12,6 @@
         required
       />
       <input
-        type="text"
-        class="form-control form-round form-gray border-0 mb-4"
-        placeholder="enter your last name"
-        v-model="form.lastName"
-      />
-      <input
         type="email"
         class="form-control form-round form-gray border-0 mb-4"
         placeholder="enter your email address"
@@ -55,7 +49,6 @@ export default {
   data: () => ({
     form: {
       firstName: '',
-      lastName: '',
       email: '',
       newPassword: ''
     }

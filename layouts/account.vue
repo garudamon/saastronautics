@@ -97,7 +97,7 @@
         <nuxt />
       </div>
     </div>
-    <footer class="p-5">
+    <footer class="p-3">
       <div class="d-flex justify-content-around align-items-center">
         <div>
           <img src="~/assets/images/logo-white.png" alt />

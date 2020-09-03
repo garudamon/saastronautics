@@ -50,7 +50,7 @@
     <div id="wrapper" class="px-3 px-md-0">
       <nuxt />
     </div>
-    <footer class="mt-5 p-5">
+    <footer class="mt-5 p-1">
       <div class="container">
         <div class="row">
           <div class="col-12 col-md-3 pb-5 px-2 px-md-3">

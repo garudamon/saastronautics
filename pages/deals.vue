@@ -72,7 +72,7 @@ export default {
   },
   methods: {
     loadLiveDealsProduct() {
-      this.$axios.get('/product/all?limit=6').then(response => {
+      this.$axios.get('/product/all?limit=50').then(response => {
         let {
           data: { data, success }
         } = response
