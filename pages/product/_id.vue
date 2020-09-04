@@ -1,39 +1,39 @@
 <template>
-  <div v-if="bestSellingDetail.productMaster">
+  <div v-if="productMaster.id">
     <div class="container">
       <!-- lead -->
       <div class="row">
         <div class="col-12 col-md-11 mx-auto text-center">
-          <Rating :value="bestSellingDetail.rating" />
+          <Rating :value="productMaster.rating" />
           <h6 class="mb-4 mt-5">
             <span
               class="badge badge-primary text-uppercase mx-2 py-2 px-3"
-              v-for="tag in bestSellingDetail.productMaster.productTagMaster"
+              v-for="tag in productMaster.productTagMaster"
               :key="tag.id"
             >{{ tag.tagMaster && tag.tagMaster.name }}</span>
           </h6>
 
           <h1
             class="display-4 font-weight-bold d-none d-md-block"
-          >{{ bestSellingDetail.productMaster.name }}</h1>
+          >{{ productMaster.name }}</h1>
           <h1
             class="display-5 font-weight-normal d-block d-md-none"
-          >{{ bestSellingDetail.productMaster.name }}</h1>
+          >{{ productMaster.name }}</h1>
         </div>
         <div class="col-12 col-md-10 mx-auto text-center">
-          <p class="px-md-4 py-4">{{ bestSellingDetail.productMaster.longDescription }}</p>
+          <p class="px-md-4 py-4">{{ productMaster.longDescription }}</p>
         </div>
         <div class="col-12 col-md-9 mx-auto py-4 text-center hero-image">
           <img
-            :src="$getImage(bestSellingDetail.productMaster.id)"
-            :alt="`Overview ${bestSellingDetail.productMaster.name}`"
+            :src="$getImage(productMaster.id)"
+            :alt="`Overview ${productMaster.name}`"
           />
         </div>
       </div>
       <div class="row pt-5">
         <div
           class="col-12 col-md-6 mb-4"
-          v-for="feature in bestSellingDetail.productMaster.productTLDRMaster"
+          v-for="feature in productMaster.productTLDRMaster"
           :key="feature.id"
         >
           <LazyKeyFeature :description="feature.description" />
@@ -56,12 +56,12 @@
         ]"
       />
     </div>
-    <LazyPricingTable
-      :pricingList="bestSellingDetail.productMaster.productPriceMaster"
-      :desc="bestSellingDetail.productMaster.shortDescription"
+     <LazyPricingTable
+      :pricingList="productMaster.productPriceMaster"
+      :desc="productMaster.shortDescription"
     />
-    <LazyReviewQuestion :product="bestSellingDetail.productMaster" />
-    <LazySubscribePanel />
+  <LazyReviewQuestion :product="this.productMaster" /> 
+    <LazySubscribePanel /> 
   </div>
 </template>
 
@@ -85,23 +85,25 @@ export default {
           'U do nt exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat exercitation ullamco laboris nisi ut aliquip ex ea commodo'
         ]
       },
-      bestSellingDetail: {}
+      productMaster: {}
     }
   },
   async fetch() {
+    console.log('console '+this.$route.params.id);
     this.getDetail()
   },
   mounted() {},
   methods: {
+
     getDetail() {
       if (typeof this.$route.params.id != 'undefined') {
         this.$axios
-          .get(`/product/bestselling/detail/${this.$route.params.id}`)
+          .get(`/product/detail/${this.$route.params.id}`)
           .then(response => {
             let {
               data: { success, data }
             } = response
-            if (success) this.bestSellingDetail = { ...data }
+            if (success) this.productMaster = { ...data }
           })
       }
     }

@@ -51,7 +51,7 @@
           </div>
           <h6 class="font-weight-bold">{{ item.name }}</h6>
           <rating size="sm" space="mr-1" class="mb-5" :value="item.rating" />
-          <nuxt-link :to="`deals-detail/${item.id}`">Learn More &#8594;</nuxt-link>
+          <nuxt-link :to="`product/${item.id}`">Learn More &#8594;</nuxt-link>
         </div>
       </div>
     </div>
