@@ -60,12 +60,13 @@ export default {
           if (success) {
             Cookie.set('_token', data)
             this.setLogin(true)
+            this.setToken(data)
             this.$router.push('/account')
           }
         })
       return false
     },
-    ...mapMutations(['setLogin'])
+    ...mapMutations(['setLogin', 'setToken'])
   }
 }
 </script>

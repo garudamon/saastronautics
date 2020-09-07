@@ -67,7 +67,7 @@ export default {
       liveDealsProduct: []
     }
   },
-  mounted() {
+  fetch() {
     this.loadLiveDealsProduct()
   },
   methods: {

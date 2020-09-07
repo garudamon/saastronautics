@@ -6,7 +6,7 @@
           <h2 class="font-weight-bold mb-4">Pricing</h2>
         </div>
         <div class="col-12 col-md-8 mx-auto">
-          <p>{{ desc }}</p>
+          <p>{{ product.shortDescription }}</p>
         </div>
       </div>
       <div class="row">
@@ -14,38 +14,34 @@
           <div class="row">
             <div
               class="col-12 col-md-4 px-4 pt-5 item"
-              v-for="(data, idx) in pricingList"
+              v-for="(data, idx) in product.productPriceMaster"
               :key="data.title"
               :class="{
                 'border-right': data.title.toLowerCase() == 'single',
                 border: data.title.toLowerCase() == 'multiple'
               }"
             >
-              <div class="ribbon" v-if="idx == pricingList.length - 1"></div>
+              <div class="ribbon" v-if="idx == product.productPriceMaster.length - 1"></div>
               <p
                 class="h6 text-uppercase text-center pkg font-weight-bold my-0"
-              >
-                {{ data.title.toLowerCase() }}
-              </p>
+              >{{ data.title.toLowerCase() }}</p>
               <p
                 class="h1 text-uppercase font-weight-bold pb-4 text-center border-bottom price"
-              >
-                {{ `USD ${data.activePrice}` }}
-              </p>
+              >{{ `USD ${data.activePrice}` }}</p>
               <div
                 v-for="feature in data.productPriceFeatureMaster"
                 :key="feature.id"
                 class="py-3 d-flex align-items-center border-bottom"
               >
                 <span class="fa fa-check text-success d-block"></span>
-                <div class="flex-grow-1 pl-2 font-weight-light">
-                  {{ feature.description }}
-                </div>
+                <div class="flex-grow-1 pl-2 font-weight-light">{{ feature.description }}</div>
               </div>
               <div class="pt-4 text-center action">
-                <nuxt-link to="#" class="btn btn-primary">{{
+                <button class="btn btn-primary" @click="buy(data)">
+                  {{
                   `Buy ${data.codes} ${data.codes > 1 ? 'codes' : 'code'}`
-                }}</nuxt-link>
+                  }}
+                </button>
               </div>
             </div>
           </div>
@@ -56,11 +52,42 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   name: 'PricingTable',
-  props: ['pricingList', 'desc'],
+  props: ['product'],
   data() {
     return {}
+  },
+  computed: { ...mapState(['isLogin']) },
+  methods: {
+    buy(selectedPrice) {
+      if (!this.isLogin) {
+        this.$router.push('/auth/signin')
+      } else {
+        let param = {
+          productMasterID: selectedPrice.productMasterID,
+          productPriceMasterID: selectedPrice.id,
+          quantity: selectedPrice.codes,
+          price: selectedPrice.activePrice,
+          discount: 0,
+          discountCode: '',
+          description: selectedPrice.title
+        }
+        this.$axios.post('/cart', param).then(response => {
+          let {
+            data: { success, message }
+          } = response
+          if (success) {
+            this.$swal('Done!', `${message}`, 'success').then(() => {
+              this.$router.push('/cart')
+            })
+          } else {
+            this.$swal('Oops!', `${message}`, 'error')
+          }
+        })
+      }
+    }
   }
 }
 </script>

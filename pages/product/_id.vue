@@ -13,21 +13,14 @@
             >{{ tag.tagMaster && tag.tagMaster.name }}</span>
           </h6>
 
-          <h1
-            class="display-4 font-weight-bold d-none d-md-block"
-          >{{ productMaster.name }}</h1>
-          <h1
-            class="display-5 font-weight-normal d-block d-md-none"
-          >{{ productMaster.name }}</h1>
+          <h1 class="display-4 font-weight-bold d-none d-md-block">{{ productMaster.name }}</h1>
+          <h1 class="display-5 font-weight-normal d-block d-md-none">{{ productMaster.name }}</h1>
         </div>
         <div class="col-12 col-md-10 mx-auto text-center">
           <p class="px-md-4 py-4">{{ productMaster.longDescription }}</p>
         </div>
         <div class="col-12 col-md-9 mx-auto py-4 text-center hero-image">
-          <img
-            :src="$getImage(productMaster.id)"
-            :alt="`Overview ${productMaster.name}`"
-          />
+          <img :src="$getImage(productMaster.id)" :alt="`Overview ${productMaster.name}`" />
         </div>
       </div>
       <div class="row pt-5">
@@ -56,12 +49,9 @@
         ]"
       />
     </div>
-     <LazyPricingTable
-      :pricingList="productMaster.productPriceMaster"
-      :desc="productMaster.shortDescription"
-    />
-  <LazyReviewQuestion :product="this.productMaster" /> 
-    <LazySubscribePanel /> 
+    <LazyPricingTable :product="productMaster" />
+    <LazyReviewQuestion :product="this.productMaster" />
+    <LazySubscribePanel />
   </div>
 </template>
 
@@ -88,13 +78,25 @@ export default {
       productMaster: {}
     }
   },
-  async fetch() {
-    console.log('console '+this.$route.params.id);
+  head() {
+    return {
+      titleTemplate: this.productMaster.id
+        ? `${this.productMaster.name} - %s`
+        : `%s`,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.productMaster.longDescription
+        }
+      ]
+    }
+  },
+  fetch() {
     this.getDetail()
   },
   mounted() {},
   methods: {
-
     getDetail() {
       if (typeof this.$route.params.id != 'undefined') {
         this.$axios
