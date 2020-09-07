@@ -7,6 +7,9 @@ const Helper = {
     }),
       (Vue.prototype.$formattedDate = string => {
         return moment(string).format('DD MMMM YYYY')
+      }),
+      (Vue.prototype.$formattedMoney = number => {
+        return '$' + number.toLocaleString()
       })
   }
 }

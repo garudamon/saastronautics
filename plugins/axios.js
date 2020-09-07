@@ -21,7 +21,7 @@ export default function({ $axios, redirect, store }) {
       Cookie.remove('_token')
       store.commit('setLogin', false)
       store.commit('setToken', '')
-      redirect('/auth/login')
+      redirect('/auth/signin')
     }
   })
 
@@ -32,7 +32,7 @@ export default function({ $axios, redirect, store }) {
     }
     if (code === 401) {
       Cookie.remove('_token')
-      location.href = '/auth/login'
+      location.href = '/auth/signin'
     }
     if (code === 502) {
       location.href = '/502'

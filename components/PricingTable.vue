@@ -27,7 +27,7 @@
               >{{ data.title.toLowerCase() }}</p>
               <p
                 class="h1 text-uppercase font-weight-bold pb-4 text-center border-bottom price"
-              >{{ `USD ${data.activePrice}` }}</p>
+              >{{ $formattedMoney(data.activePrice) }}</p>
               <div
                 v-for="feature in data.productPriceFeatureMaster"
                 :key="feature.id"

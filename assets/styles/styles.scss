@@ -159,6 +159,11 @@ img {
   background: transparent linear-gradient(238deg, #ff4370 0%, #4b028c 100%) 0%
     0% no-repeat padding-box;
   opacity: 1;
+
+  &.swal-button--cancel {
+    background: rgba(#000000, 0.2) !important;
+    color: #000;
+  }
 }
 
 input {
@@ -284,4 +289,22 @@ span.emoji {
   border: none;
   box-shadow: 0px 3px 99px #7a7a7a29;
   border-radius: 10px;
+}
+
+.card {
+  border-color: var(--primary-color-red);
+  border-radius: 0.8em;
+  overflow: hidden;
+  .card-header {
+    border-color: var(--primary-color-red);
+    background-color: var(--primary-color-red);
+    color: white;
+  }
+}
+
+a {
+  color: var(--primary-color-red);
+  &:hover {
+    color: var(--primary-color-red);
+  }
 }
