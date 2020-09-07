@@ -11,6 +11,20 @@ export default function({ $axios, redirect, store }) {
     config.url = `${process.env.baseUrl}${config.url}`
   })
 
+  $axios.onResponse(response => {
+    console.log('response from axios', response)
+    let {
+      data: { success, message }
+    } = response
+    console.log('teretttt', success, message)
+    if (!success && message == 'Token is invalid') {
+      Cookie.remove('_token')
+      store.commit('setLogin', false)
+      store.commit('setToken', '')
+      redirect('/auth/login')
+    }
+  })
+
   $axios.onError((error, store) => {
     const code = parseInt(error.response && error.response.status)
     if (code === 400) {
