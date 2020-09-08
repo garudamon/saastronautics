@@ -151,6 +151,11 @@ export default {
           text: 'Instagram',
           path: 'https://www.instagram.com/saastronautics/',
           isButton: false
+        },
+        {
+          text: 'Blog',
+          path: 'https://blog.saastronautics.com/',
+          isButton: false
         }
       ]
     }
