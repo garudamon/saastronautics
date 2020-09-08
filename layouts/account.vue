@@ -106,13 +106,13 @@
           <nuxt-link :to="`#`">Sitemap</nuxt-link>
         </div>
         <div>
-          <nuxt-link :to="`#`">Terms and Conditions</nuxt-link>
+          <nuxt-link :to="'/terms'">Terms and Conditions</nuxt-link>
         </div>
         <div>
-          <nuxt-link :to="`#`">Privacy Policy</nuxt-link>
+          <nuxt-link :to="'/privacy'">Privacy Policy</nuxt-link>
         </div>
         <div>
-          <nuxt-link :to="`#`">Frequently Ask Questions</nuxt-link>
+          <nuxt-link :to="'support'">Frequently Ask Questions</nuxt-link>
         </div>
         <div>
           <a href="#" class="px-3">

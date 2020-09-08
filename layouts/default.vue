@@ -67,14 +67,8 @@
           <div class="col-12 col-md-3">
             <div class="text-uppercase text-white font-weight-bold pb-3">account</div>
             <ul>
-              <li class="py-1">
-                <nuxt-link :to="''">Terms and Conditions</nuxt-link>
-              </li>
-              <li class="py-1">
-                <nuxt-link :to="''">Privacy Policy</nuxt-link>
-              </li>
-              <li class="py-1">
-                <nuxt-link :to="''">Frequently Asked</nuxt-link>
+              <li v-for="item in accountLink" :key="item.text" class="py-1">
+                <nuxt-link :to="item.path">{{ item.text }}</nuxt-link>
               </li>
             </ul>
           </div>
@@ -133,6 +127,23 @@ export default {
         },
         {
           text: 'Support',
+          path: '/support',
+          isButton: false
+        }
+      ],
+      accountLink: [
+        {
+          text: 'Terms and Conditions',
+          path: '/terms',
+          isButton: false
+        },
+        {
+          text: 'Privacy Policy',
+          path: '/privacy',
+          isButton: false
+        },
+        {
+          text: 'Frequently Asked Questions',
           path: '/support',
           isButton: false
         }
