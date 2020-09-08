@@ -99,6 +99,7 @@ ol {
 ol > li {
   display: table;
   counter-increment: item;
+  margin-bottom: 0.6em;
 }
 
 ol > li:before {
@@ -108,7 +109,7 @@ ol > li:before {
 }
 
 li ol > li {
-  margin: 0 0 0.6em 0;
+  margin: 0;
 }
 
 li ol > li:before {

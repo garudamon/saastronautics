@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <h2 class="font-weight-bold mb-3">My Cart</h2>
     <div class="row">
       <div class="col-12 col-md-8">
         <div class="card">
@@ -174,6 +175,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.card {
+  border-radius: 0.2em;
+}
 table {
   .fa-external-link {
     font-size: 0.7em;

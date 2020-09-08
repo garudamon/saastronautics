@@ -145,7 +145,7 @@
             </li>
           </ol>
         </div>
-        <div class="col-12">
+        <div class="col-12 mt-5">
           <h1 class="font-weight-bold mb-3">Cookies Policy</h1>
           <p>We incorporate cookies in our system to ease your encounter on our site as well as protect you from fraud and other irregular practices that take place online. The file asks for your permission to download the file to your hard drive. The minute you authorize this process, cookies will be automatically added and it will begin analyzing the traffic on the internet and especially so on the sites you visit. Cookies gather your details and personalize your experience on each site that you visit. Every detail about your preferences that you key in is stored and used later on to make suggestions that are likable to you. All our cookies are session-based.</p>
           <p>We are using following type of cookies:</p>
@@ -177,6 +177,7 @@ ol {
 ol > li {
   display: table;
   counter-increment: item;
+  margin-bottom: 0.6em;
 }
 
 ol > li:before {
@@ -186,7 +187,7 @@ ol > li:before {
 }
 
 li ol > li {
-  margin: 0 0 0.6em 0;
+  margin: 0;
 }
 
 li ol > li:before {

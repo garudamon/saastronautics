@@ -73,22 +73,10 @@
             </ul>
           </div>
           <div class="col-12 col-md">
-            <div class="text-uppercase text-white font-weight-bold pb-3">LOREM IPSUM</div>
+            <div class="text-uppercase text-white font-weight-bold pb-3">social media</div>
             <ul>
-              <li class="py-1">
-                <nuxt-link :to="''">Fruits</nuxt-link>
-              </li>
-              <li class="py-1">
-                <nuxt-link :to="''">Cupcake</nuxt-link>
-              </li>
-              <li class="py-1">
-                <nuxt-link :to="''">Tea</nuxt-link>
-              </li>
-              <li class="py-1">
-                <nuxt-link :to="''">Coffee</nuxt-link>
-              </li>
-              <li class="py-1">
-                <nuxt-link :to="''">Mineral</nuxt-link>
+              <li v-for="item in sosmedLink" :key="item.text" class="py-1">
+                <a :href="item.path" target="_blank">{{ item.text }}</a>
               </li>
             </ul>
           </div>
@@ -145,6 +133,23 @@ export default {
         {
           text: 'Frequently Asked Questions',
           path: '/support',
+          isButton: false
+        }
+      ],
+      sosmedLink: [
+        {
+          text: 'Facebook',
+          path: 'https://web.facebook.com/saastronautics',
+          isButton: false
+        },
+        {
+          text: 'Twitter',
+          path: 'https://twitter.com/saastronautics',
+          isButton: false
+        },
+        {
+          text: 'Instagram',
+          path: 'https://www.instagram.com/saastronautics/',
           isButton: false
         }
       ]

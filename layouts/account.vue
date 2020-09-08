@@ -100,7 +100,7 @@
     <footer class="p-3">
       <div class="d-flex justify-content-around align-items-center">
         <div>
-          <img src="~/assets/images/logo-white.png" alt />
+          <img src="~/assets/images/logo-white.png" alt="logo-saastronautics" />
         </div>
         <div>
           <nuxt-link :to="`#`">Sitemap</nuxt-link>
@@ -115,13 +115,13 @@
           <nuxt-link :to="'support'">Frequently Ask Questions</nuxt-link>
         </div>
         <div>
-          <a href="#" class="px-3">
+          <a href="https://web.facebook.com/saastronautics" target="_blank" class="px-3">
             <span class="fa fa-facebook"></span>
           </a>
-          <a href="#" class="px-3">
+          <a href="https://twitter.com/saastronautics" target="_blank" class="px-3">
             <span class="fa fa-twitter"></span>
           </a>
-          <a href="#" class="px-3">
+          <a href="https://www.instagram.com/saastronautics/" target="_blank" class="px-3">
             <span class="fa fa-instagram"></span>
           </a>
         </div>
