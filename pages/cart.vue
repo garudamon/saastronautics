@@ -175,6 +175,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.container {
+  padding: 0 2rem 0 2rem;
+}
 .card {
   border-radius: 0.2em;
 }
