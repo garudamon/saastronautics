@@ -12,8 +12,8 @@
               href="/privacy"
             >Privacy Policy</a> to find more about the processing of your personal data.
           </p>
-          <p>BY COMPLETING A REGISTRATION FORM AND SELECTING THE &ldquo;I ACCEPT&rdquo; CHECKBOX DURING ACCOUNT REGISTRATION PROCESS OR BY USING THE WEBSITE, YOU AGREE TO BE.</p>
-          <p>YOU ASSERT THAT YOU ARE EITHER LEGAL AGE (18 YEARS OLD) AND HAVE THE POWER AND COMPETENCY TO ENTER INTO AND COMPLY WITH THESE TERMS OF SERVICE. THIS WEBSITE IS NOT FOR PERSONS UNDER THE AGE OF 18 YEARS OLD. IF YOU ARE UNDER THE AGE OF 18 YEARS OLD, DO NOT USE THIS WEBSITE AND EXIT IMMEDIATELY.</p>
+          <p>By completing a registration form and selectiong the &ldquo;i accept&rdquo; checkbox during account registration process or by using the website, you agree to be.</p>
+          <p>You assert that you are eithe legal age (18 years old) and have the power and competency to enter into and comply with these terms of service. This website is not for persons under the age of 18 years old. If you are under the age of 18 years old, do not use this website and exit immediately.</p>
           <ol>
             <li>
               General
