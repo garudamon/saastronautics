@@ -41,6 +41,9 @@ export default {
     password: ''
   }),
   methods: {
+    callError(error = '') {
+      this.$swal('Failed', error, 'error')
+    },
     signIn() {
       this.$axios
         .post(
@@ -62,6 +65,8 @@ export default {
             this.setLogin(true)
             this.setToken(data)
             this.$router.push('/account')
+          } else {
+            this.callError('Your email or password were incorrect.')
           }
         })
       return false
