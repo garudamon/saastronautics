@@ -44,12 +44,4 @@ export default {
     background-color: #12e3ff;
   }
 }
-@media (max-width: 768px) {
-  .flickity-viewport {
-    height: auto !important;
-  }
-  .feedback .comment .comment-item {
-    width: 80%;
-  }
-}
 </style>
