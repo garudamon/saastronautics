@@ -194,32 +194,6 @@ export default {
           photo: 'https://api.adorable.io/avatars/200/abott@adorable'
         }
       ],
-      bestDeals: [
-        {
-          image: require('~/assets/images/saastrobot-comingsoon-01.png'),
-          tag: 'coming soon',
-          name: 'Product Name',
-          id: 'product-id-1'
-        },
-        {
-          image: require('~/assets/images/saastrobot-comingsoon-01.png'),
-          tag: 'coming soon',
-          name: 'Product Name',
-          id: 'product-id-2'
-        },
-        {
-          image: require('~/assets/images/saastrobot-comingsoon-01.png'),
-          tag: 'coming soon',
-          name: 'Product Name',
-          id: 'product-id-3'
-        },
-        {
-          image: require('~/assets/images/saastrobot-comingsoon-01.png'),
-          tag: 'coming soon',
-          name: 'Product Name',
-          id: 'product-id-4'
-        }
-      ],
       imageWhatWeDo: require('~/assets/images/we-do.png'),
       email: '',
       error: {},
