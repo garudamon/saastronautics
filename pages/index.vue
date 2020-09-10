@@ -34,9 +34,7 @@
               />
             </div>
             <div class="col px-0">
-              <button type="submit" class="btn btn-primary btn-md px-4">
-                Submit
-              </button>
+              <button type="submit" class="btn btn-primary btn-md px-4">Submit</button>
             </div>
           </form>
         </div>
@@ -50,19 +48,11 @@
       <!-- main feature -->
       <div class="row features px-md-4 py-5">
         <div class="col-12 py-5">
-          <h2 class="text-center font-weight-bold">
-            What Can You Do with Saastronautics?
-          </h2>
+          <h2 class="text-center font-weight-bold">What Can You Do with Saastronautics?</h2>
         </div>
-        <div
-          class="col-12 col-md-4 text-left px-4"
-          v-for="item in features"
-          :key="item.title"
-        >
+        <div class="col-12 col-md-4 text-left px-4" v-for="item in features" :key="item.title">
           <img :src="item.image" :alt="item.title" />
-          <h5 class="text-capitalize font-weight-bold py-4">
-            {{ item.title }}
-          </h5>
+          <h5 class="text-capitalize font-weight-bold py-4">{{ item.title }}</h5>
           <p class="py-0">{{ item.description }}</p>
         </div>
       </div>
@@ -104,13 +94,18 @@
             <img :src="$getImage(item.productMaster.id)" :alt="item.name" />
           </div>
           <div class="mb-3" v-if="item.productMaster.tag">
-            <span class="badge badge-info text-uppercase p-2">{{
+            <span class="badge badge-info text-uppercase p-2">
+              {{
               item.tag
-            }}</span>
+              }}
+            </span>
           </div>
           <h6 class="font-weight-bold">{{ item.productMaster.name }}</h6>
           <rating size="sm" space="mr-1" class="mb-5" :value="item.rating" />
           <nuxt-link :to="`product/${item.productMaster.id}`">Learn More &#8594;</nuxt-link>
+        </div>
+        <div class="col-12 col-md-4 product mb-5 px-4 pb-3">
+          <LazyComingSoon />
         </div>
       </div>
     </div>
@@ -197,6 +192,32 @@ export default {
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad miniveniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
           rating: 5,
           photo: 'https://api.adorable.io/avatars/200/abott@adorable'
+        }
+      ],
+      bestDeals: [
+        {
+          image: require('~/assets/images/saastrobot-comingsoon-01.png'),
+          tag: 'coming soon',
+          name: 'Product Name',
+          id: 'product-id-1'
+        },
+        {
+          image: require('~/assets/images/saastrobot-comingsoon-01.png'),
+          tag: 'coming soon',
+          name: 'Product Name',
+          id: 'product-id-2'
+        },
+        {
+          image: require('~/assets/images/saastrobot-comingsoon-01.png'),
+          tag: 'coming soon',
+          name: 'Product Name',
+          id: 'product-id-3'
+        },
+        {
+          image: require('~/assets/images/saastrobot-comingsoon-01.png'),
+          tag: 'coming soon',
+          name: 'Product Name',
+          id: 'product-id-4'
         }
       ],
       imageWhatWeDo: require('~/assets/images/we-do.png'),
