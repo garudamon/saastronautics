@@ -104,7 +104,7 @@
           <rating size="sm" space="mr-1" class="mb-5" :value="item.rating" />
           <nuxt-link :to="`product/${item.productMaster.id}`">Learn More &#8594;</nuxt-link>
         </div>
-        <div class="col-12 col-md-4 product mb-5 px-4 pb-3">
+        <div v-for="n in (6 - this.bestSellingProduct.length)" :key="n" class="col-12 col-md-4 product mb-5 px-4 pb-3">
           <LazyComingSoon />
         </div>
       </div>
