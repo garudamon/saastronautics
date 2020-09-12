@@ -15,44 +15,64 @@
         <img src="~/assets/images/logo.png" alt />
       </a>
 
-      <div :class="{ collapse: true, 'navbar-collapse': true, show: expandNav }">
+      <div
+        :class="{ collapse: true, 'navbar-collapse': true, show: expandNav }"
+      >
         <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
           <li
             :class="{
-                'nav-item': true,
-                'mx-lg-4': true
-              }"
+              'nav-item': true,
+              'mx-lg-4': true
+            }"
             v-for="(link, index) in topLink"
             :key="index"
           >
             <nuxt-link
               :class="{
-                  'nav-link': !link.isButton,
-                  btn: link.isButton,
-                  'btn-primary': link.isButton,
-                  'btn-sm': link.isButton,
-                  'mt-lg-1': link.isButton
-                }"
+                'nav-link': !link.isButton,
+                btn: link.isButton,
+                'btn-primary': link.isButton,
+                'btn-sm': link.isButton,
+                'mt-lg-1': link.isButton
+              }"
               :to="link.path"
-            >{{ link.text }}</nuxt-link>
+              >{{ link.text }}</nuxt-link
+            >
           </li>
           <li class="nav-item mx-lg-3" v-if="!isLogin">
-            <nuxt-link class="btn btn-primary btn-sm mt-lg-1" to="/auth/signin">Get Started</nuxt-link>
+            <nuxt-link class="btn btn-primary btn-sm mt-lg-1" to="/auth/signin"
+              >Get Started</nuxt-link
+            >
           </li>
-          <li class="nav-item mx-lg-3" v-else>
-            <button class="btn btn-primary btn-lg mt-lg-1" @click="signout">Sign out</button>
-          </li>
+          <template v-else>
+            <li class="nav-item mx-lg-3">
+              <button class="btn btn-primary btn-lg mt-lg-1" @click="signout">
+                Sign out
+              </button>
+            </li>
+            <li class="nav-item mx-lg-3 d-flex align-items-center cart">
+              <nuxt-link to="/cart">
+                <span class="fa fa-shopping-cart mr-2 fa-lg"></span>
+                <span class="count-buble" v-if="cart.quantity > 0">{{
+                  cart.quantity
+                }}</span>
+              </nuxt-link>
+            </li>
+          </template>
         </ul>
       </div>
     </nav>
     <div id="wrapper" class="px-3 px-md-0 d-flex">
       <aside class="py-4">
         <div
-          class="d-flex align-items-center justify-content-center flex-column border-bottom pb-4"
+          class="d-flex align-items-center justify-content-center flex-column border-bottom pb-4 px-3 profile-info"
         >
-          <img src="https://randomuser.me/api/portraits/med/men/75.jpg" alt="profile photo" />
-          <h6 class="font-weight-bold pt-3 my-0">John Mess</h6>
-          <p class="py-0 my-0">@john_mess</p>
+          <img
+            src="https://randomuser.me/api/portraits/med/men/75.jpg"
+            alt="profile photo"
+          />
+          <h6 class="font-weight-bold pt-3 my-0">{{ profile.email }}</h6>
+          <p class="py-0 my-0">{{ profile.email }}</p>
         </div>
         <ul class="nav flex-column">
           <li class="nav-item">
@@ -115,13 +135,25 @@
           <nuxt-link :to="'support'">Frequently Ask Questions</nuxt-link>
         </div>
         <div>
-          <a href="https://web.facebook.com/saastronautics" target="_blank" class="px-3">
+          <a
+            href="https://web.facebook.com/saastronautics"
+            target="_blank"
+            class="px-3"
+          >
             <span class="fa fa-facebook"></span>
           </a>
-          <a href="https://twitter.com/saastronautics" target="_blank" class="px-3">
+          <a
+            href="https://twitter.com/saastronautics"
+            target="_blank"
+            class="px-3"
+          >
             <span class="fa fa-twitter"></span>
           </a>
-          <a href="https://www.instagram.com/saastronautics/" target="_blank" class="px-3">
+          <a
+            href="https://www.instagram.com/saastronautics/"
+            target="_blank"
+            class="px-3"
+          >
             <span class="fa fa-instagram"></span>
           </a>
         </div>
@@ -172,19 +204,67 @@ export default {
     }
   },
   computed: {
-    ...mapState(['isLogin'])
+    ...mapState(['isLogin', 'profile', 'cart'])
   },
   components: {},
   methods: {
-    ...mapMutations(['setLogin']),
+    ...mapMutations(['setLogin', 'setProfile', 'setCart']),
     signout() {
       Cookie.remove('_token')
       this.setLogin(false)
       this.$router.push('/')
       return false
+    },
+    getProfile() {
+      this.$axios.get('/user/myprofile').then(response => {
+        let {
+          data: { success, data }
+        } = response
+        if (success) {
+          this.setProfile(data)
+        }
+      })
+
+      this.$axios.get('/cart/my').then(response => {
+        let {
+          data: { data, success }
+        } = response
+        if (success) {
+          this.setCart(data)
+        }
+      })
     }
+  },
+  mounted() {
+    this.getProfile()
   }
 }
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+aside {
+  .profile-info {
+    > * {
+      overflow: hidden !important;
+      text-overflow: ellipsis;
+      max-width: 100%;
+    }
+  }
+}
+.cart {
+  position: relative;
+  .count-buble {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #ff9800;
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 0.7rem;
+    text-align: center;
+    color: white;
+    font-size: 0.8rem;
+    border: solid 2px var(--primary-gray-smooth);
+  }
+}
+</style>

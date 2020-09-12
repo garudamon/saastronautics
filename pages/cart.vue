@@ -6,7 +6,7 @@
         <div class="card">
           <div class="card-header">Deals</div>
           <div class="card-body">
-            <table class="table table-borderless" v-if="cartData != null">
+            <table class="table table-borderless" v-if="cart.myCartLine">
               <thead>
                 <tr>
                   <th scope="col" width="150"></th>
@@ -18,7 +18,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr v-for="item in cartData.myCartLine" :key="item.id">
+                <tr v-for="item in cart.myCartLine" :key="item.id">
                   <th scope="row">
                     <img
                       :src="$getImage(item.productMaster.id)"
@@ -28,13 +28,19 @@
                   </th>
                   <td class="font-weight-bold align-middle">
                     <nuxt-link :to="`/product/${item.productMaster.id}`">
-                      {{item.productMaster.name}}
+                      {{ item.productMaster.name }}
                       <span class="fa fa-external-link ml-1"></span>
                     </nuxt-link>
                   </td>
-                  <td class="align-middle">{{item.productPriceMaster.title}}</td>
-                  <td class="align-middle">{{item.productPriceMaster.codes}}</td>
-                  <td class="align-middle">{{$formattedMoney(item.subTotal)}}</td>
+                  <td class="align-middle">
+                    {{ item.productPriceMaster.title }}
+                  </td>
+                  <td class="align-middle">
+                    {{ item.productPriceMaster.codes }}
+                  </td>
+                  <td class="align-middle">
+                    {{ $formattedMoney(item.subTotal) }}
+                  </td>
                   <td class="align-middle">
                     <a href="#" class="text-warning" @click="deleteCart(item)">
                       <span class="fa fa-trash"></span>
@@ -51,17 +57,27 @@
         <div class="card">
           <div class="card-header">Summary</div>
           <div class="card-body">
-            <template v-if="cartData != null">
-              <div class="d-flex justify-content-between font-weight-light py-2">
+            <template v-if="Object.keys(cart).length > 0">
+              <div
+                class="d-flex justify-content-between font-weight-light py-2"
+              >
                 <span>Subtotal</span>
-                <span>{{$formattedMoney(cartData.subTotal)}}</span>
+                <span>{{ $formattedMoney(cart.subTotal) }}</span>
               </div>
-              <div class="d-flex justify-content-between font-weight-bold py-2 border-top">
+              <div
+                class="d-flex justify-content-between font-weight-bold py-2 border-top"
+              >
                 <span>Total</span>
-                <span class="text-success">{{$formattedMoney(cartData.grandTotal)}}</span>
+                <span class="text-success">{{
+                  $formattedMoney(cart.grandTotal)
+                }}</span>
               </div>
-              <nuxt-link to="#" class="btn btn-primary btn-block pt-2 mt-4">Proceed to Checkout</nuxt-link>
-              <nuxt-link to="/deals" class="btn btn-success btn-block py-2 mt-3">Continue Shooping</nuxt-link>
+              <nuxt-link to="#" class="btn btn-primary btn-block pt-2 mt-4"
+                >Proceed to Checkout</nuxt-link
+              >
+              <nuxt-link to="/deals" class="btn btn-success btn-block py-2 mt-3"
+                >Continue Shooping</nuxt-link
+              >
             </template>
             <p class="text-center font-italic" v-else>Your cart empty</p>
           </div>
@@ -78,9 +94,10 @@
                 src="https://appsumo2.b-cdn.net/static/images/svg/calendar.svg"
               />
               <span class="pl-2">
-                <b>Try any product risk free.</b> We offer an industry-best 60-day money-back guarantee
-                — no matter the reason. So go ‘head and take any of our products for a spin to see if they’re
-                a good fit for your business.
+                <b>Try any product risk free.</b> We offer an industry-best
+                60-day money-back guarantee — no matter the reason. So go ‘head
+                and take any of our products for a spin to see if they’re a good
+                fit for your business.
               </span>
             </li>
 
@@ -93,8 +110,9 @@
               />
               <span class="pl-2">
                 <b>World-class customer support.</b> There’s customer support,
-                and then there’s AppSumo customer support. We take pride in going
-                above and beyond to solve issues and keep our community happy.
+                and then there’s AppSumo customer support. We take pride in
+                going above and beyond to solve issues and keep our community
+                happy.
               </span>
             </li>
             <li class="d-flex">
@@ -105,9 +123,9 @@
                 src="https://appsumo2.b-cdn.net/static/images/svg/message-text.svg"
               />
               <span class="pl-2">
-                <b>Access to founders and CEOs.</b> As an early adopter,
-                you have the CEO’s ear — ask your burning questions on
-                any active deal and have them answered by the product founders themselves.
+                <b>Access to founders and CEOs.</b> As an early adopter, you
+                have the CEO’s ear — ask your burning questions on any active
+                deal and have them answered by the product founders themselves.
               </span>
             </li>
           </ul>
@@ -118,23 +136,28 @@
 </template>
 
 <script>
+import { mapMutations, mapState } from 'vuex'
 export default {
   name: 'Cart',
   middleware: 'authenticated',
   data: () => ({
     cartData: null
   }),
+  computed: {
+    ...mapState(['cart'])
+  },
   mounted() {
     this.getMyCart()
   },
   methods: {
+    ...mapMutations(['setCart']),
     getMyCart() {
       this.$axios.get('/cart/my').then(response => {
         let {
           data: { data, success }
         } = response
         if (success) {
-          this.cartData = { ...data }
+          this.setCart(data)
         }
       })
     },
