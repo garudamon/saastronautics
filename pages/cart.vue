@@ -32,15 +32,9 @@
                       <span class="fa fa-external-link ml-1"></span>
                     </nuxt-link>
                   </td>
-                  <td class="align-middle">
-                    {{ item.productPriceMaster.title }}
-                  </td>
-                  <td class="align-middle">
-                    {{ item.productPriceMaster.codes }}
-                  </td>
-                  <td class="align-middle">
-                    {{ $formattedMoney(item.subTotal) }}
-                  </td>
+                  <td class="align-middle">{{ item.productPriceMaster.title }}</td>
+                  <td class="align-middle">{{ item.productPriceMaster.codes }}</td>
+                  <td class="align-middle">{{ $formattedMoney(item.subTotal) }}</td>
                   <td class="align-middle">
                     <a href="#" class="text-warning" @click="deleteCart(item)">
                       <span class="fa fa-trash"></span>
@@ -58,26 +52,23 @@
           <div class="card-header">Summary</div>
           <div class="card-body">
             <template v-if="Object.keys(cart).length > 0">
-              <div
-                class="d-flex justify-content-between font-weight-light py-2"
-              >
+              <div class="d-flex justify-content-between font-weight-light py-2">
                 <span>Subtotal</span>
                 <span>{{ $formattedMoney(cart.subTotal) }}</span>
               </div>
-              <div
-                class="d-flex justify-content-between font-weight-bold py-2 border-top"
-              >
+              <div class="d-flex justify-content-between font-weight-bold py-2 border-top">
                 <span>Total</span>
-                <span class="text-success">{{
+                <span class="text-success">
+                  {{
                   $formattedMoney(cart.grandTotal)
-                }}</span>
+                  }}
+                </span>
               </div>
-              <nuxt-link to="#" class="btn btn-primary btn-block pt-2 mt-4"
-                >Proceed to Checkout</nuxt-link
-              >
-              <nuxt-link to="/deals" class="btn btn-success btn-block py-2 mt-3"
-                >Continue Shooping</nuxt-link
-              >
+              <button
+                class="btn btn-primary btn-block pt-2 mt-4"
+                @click="checkout()"
+              >Proceed to Checkout</button>
+              <nuxt-link to="/deals" class="btn btn-success btn-block py-2 mt-3">Continue Shooping</nuxt-link>
             </template>
             <p class="text-center font-italic" v-else>Your cart empty</p>
           </div>
@@ -140,9 +131,7 @@ import { mapMutations, mapState } from 'vuex'
 export default {
   name: 'Cart',
   middleware: 'authenticated',
-  data: () => ({
-    cartData: null
-  }),
+  data: () => ({}),
   computed: {
     ...mapState(['cart'])
   },
@@ -191,6 +180,37 @@ export default {
           })
         }
       })
+      return false
+    },
+    checkout() {
+      // console.log(this.cart)
+      this.$axios
+        .post('/payment/testcheckout', {
+          // url will be replace after stable backend, this just for test only
+          customer: this.cart.customerID,
+          cart: this.cart.id
+        })
+        .then(res => {
+          let {
+            data: { success, data, message }
+          } = res
+          if (success) {
+            // move to checkout
+            this.$router.push({
+              name: 'checkout',
+              params: {
+                id: data
+              }
+            })
+            this.$router.push(`/checkout/${data}`)
+          } else {
+            this.$swal('Failed', message, 'error')
+          }
+        })
+        .catch(e => {
+          this.$swal('Faield', 'Silahkan hubungi administrator', 'error')
+        })
+
       return false
     }
   }
