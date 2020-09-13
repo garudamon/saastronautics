@@ -7,7 +7,7 @@
           <div class="card-header">1. Account Verification</div>
           <div class="card-body">
             <p>Your order confirmation will be emailed to:</p>
-            <p class="text-info">{{profile.email}}</p>
+            <p class="text-info">{{ profile.email }}</p>
           </div>
         </div>
         <div class="card my-4">
@@ -44,7 +44,11 @@
             <div class="card-list">
               <template v-if="data.cardViews && data.cardViews.length > 0">
                 <p class="font-weight-bold">Choose Existing Card</p>
-                <div class="form-check mb-2" v-for="(item, i) in data.cardViews" :key="i">
+                <div
+                  class="form-check mb-2"
+                  v-for="(item, i) in data.cardViews"
+                  :key="i"
+                >
                   <input
                     class="form-check-input"
                     type="radio"
@@ -55,7 +59,9 @@
                   />
                   <label class="form-check-label" for="payment-paypal">
                     <span>**** **** {{ item.lastFour }}</span>
-                    <span class="text-muted">{{ item.month }} / {{ item.year }}</span>
+                    <span class="text-muted"
+                      >{{ item.month }} / {{ item.year }}</span
+                    >
                   </label>
                 </div>
               </template>
@@ -68,7 +74,9 @@
                   value="newCard"
                   v-model="selectedCard"
                 />
-                <label class="form-check-label" for="payment-paypal">New Card</label>
+                <label class="form-check-label" for="payment-paypal"
+                  >New Card</label
+                >
               </div>
               <div
                 v-show="selectedCard == 'newCard'"
@@ -84,23 +92,32 @@
           <div class="card-header">Summary</div>
           <div class="card-body">
             <template v-if="Object.keys(data).length > 0">
-              <div class="d-flex justify-content-between font-weight-light py-2">
+              <div
+                class="d-flex justify-content-between font-weight-light py-2"
+              >
                 <span>Subtotal</span>
                 <span>{{ $formattedMoney(data.subTotal) }}</span>
               </div>
-              <div class="d-flex justify-content-between font-weight-light py-2">
+              <div
+                class="d-flex justify-content-between font-weight-light py-2"
+              >
                 <span>Discount</span>
                 <span>{{ $formattedMoney(data.totalDiscount) }}</span>
               </div>
-              <div class="d-flex justify-content-between font-weight-bold py-2 border-top">
+              <div
+                class="d-flex justify-content-between font-weight-bold py-2 border-top"
+              >
                 <span>Total</span>
                 <span class="text-success">
-                  {{
-                  $formattedMoney(data.grandTotal)
-                  }}
+                  {{ $formattedMoney(data.grandTotal) }}
                 </span>
               </div>
-              <button class="btn btn-primary btn-block pt-2 mt-4" @click="pay()">Pay</button>
+              <button
+                class="btn btn-primary btn-block pt-2 mt-4"
+                @click="pay()"
+              >
+                Pay
+              </button>
             </template>
           </div>
         </div>
@@ -265,7 +282,7 @@ export default {
             'Your transaction successfully paid',
             'success'
           ).then(() => {
-            me.$route.push('/account')
+            me.$router.push('/account')
           })
         })
     }
