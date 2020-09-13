@@ -71,7 +71,9 @@
             src="https://randomuser.me/api/portraits/med/men/75.jpg"
             alt="profile photo"
           />
-          <h6 class="font-weight-bold pt-3 my-0">{{ profile.email }}</h6>
+          <h6 class="font-weight-bold pt-3 my-0">
+            {{ profile.customer && profile.customer.firstName }}
+          </h6>
           <p class="py-0 my-0">{{ profile.email }}</p>
         </div>
         <ul class="nav flex-column">
@@ -249,22 +251,6 @@ aside {
       text-overflow: ellipsis;
       max-width: 100%;
     }
-  }
-}
-.cart {
-  position: relative;
-  .count-buble {
-    position: absolute;
-    top: -5px;
-    right: -5px;
-    background: #ff9800;
-    width: 1.4rem;
-    height: 1.4rem;
-    border-radius: 0.7rem;
-    text-align: center;
-    color: white;
-    font-size: 0.8rem;
-    border: solid 2px var(--primary-gray-smooth);
   }
 }
 </style>

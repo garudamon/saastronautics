@@ -12,11 +12,10 @@ export default function({ $axios, redirect, store }) {
   })
 
   $axios.onResponse(response => {
-    console.log('response from axios', response)
     let {
       data: { success, message }
     } = response
-    console.log('teretttt', success, message)
+
     if (!success && message == 'Token is invalid') {
       Cookie.remove('_token')
       store.commit('setLogin', false)

@@ -16,7 +16,9 @@
           <img src="~/assets/images/logo.png" alt />
         </a>
 
-        <div :class="{ collapse: true, 'navbar-collapse': true, show: expandNav }">
+        <div
+          :class="{ collapse: true, 'navbar-collapse': true, show: expandNav }"
+        >
           <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
             <li
               :class="{
@@ -35,14 +37,31 @@
                   'mt-lg-1': link.isButton
                 }"
                 :to="link.path"
-              >{{ link.text }}</nuxt-link>
+                >{{ link.text }}</nuxt-link
+              >
             </li>
             <li class="nav-item mx-lg-3" v-if="!isLogin">
-              <nuxt-link class="btn btn-primary btn-sm mt-lg-1" to="/auth/signin">Get Started</nuxt-link>
+              <nuxt-link
+                class="btn btn-primary btn-sm mt-lg-1"
+                to="/auth/signin"
+                >Get Started</nuxt-link
+              >
             </li>
-            <li class="nav-item mx-lg-3" v-else>
-              <nuxt-link class="btn btn-primary btn-sm mt-lg-1" to="/account">my account</nuxt-link>
-            </li>
+            <template v-else>
+              <li class="nav-item mx-lg-3">
+                <nuxt-link class="btn btn-primary btn-sm mt-lg-1" to="/account"
+                  >my account</nuxt-link
+                >
+              </li>
+              <li class="nav-item mx-lg-3 d-flex align-items-center cart">
+                <nuxt-link to="/cart">
+                  <span class="fa fa-shopping-cart mr-2 fa-lg"></span>
+                  <span class="count-buble" v-if="cart && cart.quantity > 0">{{
+                    cart.quantity
+                  }}</span>
+                </nuxt-link>
+              </li>
+            </template>
           </ul>
         </div>
       </nav>
@@ -57,7 +76,9 @@
             <img src="~/assets/images/logo-white.png" alt />
           </div>
           <div class="col-12 col-md-2">
-            <div class="text-uppercase text-white font-weight-bold pb-3">sitemap</div>
+            <div class="text-uppercase text-white font-weight-bold pb-3">
+              sitemap
+            </div>
             <ul>
               <li v-for="item in topLink" :key="item.text" class="py-1">
                 <nuxt-link :to="item.path">{{ item.text }}</nuxt-link>
@@ -65,7 +86,9 @@
             </ul>
           </div>
           <div class="col-12 col-md-3">
-            <div class="text-uppercase text-white font-weight-bold pb-3">account</div>
+            <div class="text-uppercase text-white font-weight-bold pb-3">
+              account
+            </div>
             <ul>
               <li v-for="item in accountLink" :key="item.text" class="py-1">
                 <nuxt-link :to="item.path">{{ item.text }}</nuxt-link>
@@ -73,7 +96,9 @@
             </ul>
           </div>
           <div class="col-12 col-md">
-            <div class="text-uppercase text-white font-weight-bold pb-3">social media</div>
+            <div class="text-uppercase text-white font-weight-bold pb-3">
+              social media
+            </div>
             <ul>
               <li v-for="item in sosmedLink" :key="item.text" class="py-1">
                 <a :href="item.path" target="_blank">{{ item.text }}</a>
@@ -162,7 +187,7 @@ export default {
     }
   },
   computed: {
-    ...mapState(['isLogin'])
+    ...mapState(['isLogin', 'cart'])
   },
   mounted() {
     if (this.isLogin) this.getProfile()

@@ -175,7 +175,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapMutations } from 'vuex'
 export default {
   name: 'Checkout',
   head() {
@@ -199,6 +199,7 @@ export default {
     ...mapState(['profile'])
   },
   methods: {
+    ...mapMutations(['setCart']),
     getDetail() {
       this.$axios.get(`/payment/detail/${this.$route.params.id}`).then(res => {
         let {
@@ -283,6 +284,7 @@ export default {
             'success'
           ).then(() => {
             me.$router.push('/account')
+            me.setCart({})
           })
         })
     }
