@@ -15,16 +15,20 @@
         <tbody>
           <tr v-for="(item, key) in items" :key="key">
             <td width="250">
-              <img src="~/assets/dummy/05023f8915f4a6a0ddd3c6642bb0522d-4.png" alt />
+              <img :src="$getImage(item.id)" alt />
             </td>
             <td>
               <h6 class="font-weight-bold">{{item.name}}</h6>
-              <h6 class="font-weight-bold text-red">{{item.price}}</h6>
-              <LazyRating size="sm" />
+              <h6 class="font-weight-bold text-red">{{$formattedMoney(item.price)}}</h6>
+              <LazyRating size="sm" :value="item.rating" />
             </td>
-            <td>purchase date</td>
-            <td>status</td>
-            <td>total</td>
+            <td>{{$formattedDate(item.mycartcreatedat)}}</td>
+            <td>
+              <span
+                :class="{'badge':true, 'badge-secondary':item.status!=1, 'badge-success':item.status==1}"
+              >{{item.status==1?'active':'inactive'}}</span>
+            </td>
+            <td>{{$formattedMoney(item.subtotal)}}</td>
             <td>
               <DashboardMoreAction />
             </td>
@@ -40,15 +44,21 @@ export default {
   layout: 'account',
   data() {
     return {
-      items: Array(30).fill({
-        name: 'Product Name',
-        price: 500,
-        rating: 5,
-        purchase_date: 'July 15, 2020',
-        status: 'Redeemed',
-        total: 500
+      items: []
+    }
+  },
+  methods: {
+    getData() {
+      this.$axios.get(`/product/mydeals?limit=25&skip=0`).then(res => {
+        let {
+          data: { success, data }
+        } = res
+        if (success) this.items = [...data]
       })
     }
+  },
+  mounted() {
+    this.getData()
   }
 }
 </script>
