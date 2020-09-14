@@ -37,6 +37,7 @@ export default {
     window.addEventListener('click', e => {
       e.preventDefault()
       if (
+        document.querySelector('.more-actions-list') &&
         !document.querySelector('.more-actions-list').contains(e.target) &&
         !e.target.classList.contains('more-actions-trigger')
       )
