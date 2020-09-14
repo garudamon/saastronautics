@@ -6,7 +6,8 @@
         <thead>
           <tr>
             <th class="text-uppercase text-secondary" colspan="2">deal name</th>
-            <th class="text-uppercase text-secondary" width="165">purchase date</th>
+            <th class="text-uppercase text-secondary" width="180"></th>
+            <th class="text-uppercase text-secondary" width="185">purchase date</th>
             <th class="text-uppercase text-secondary" width="100">status</th>
             <th class="text-uppercase text-secondary" width="100">total</th>
             <th class="text-uppercase text-secondary"></th>
@@ -21,6 +22,17 @@
               <h6 class="font-weight-bold">{{item.name}}</h6>
               <h6 class="font-weight-bold text-red">{{$formattedMoney(item.price)}}</h6>
               <LazyRating size="sm" :value="item.rating" />
+            </td>
+            <td>
+              <button
+                class="btn btn-info btn-sm"
+                @click="toggleCode(key)"
+              >{{`${item.show?'Hide':'Show'} ${item.quantity} ${item.quantity>1?'codes':'code'}`}}</button>
+              <ul v-show="item.show" class="list-unstyled pt-2">
+                <ul>
+                  <li v-for="license in item.lincecode" :key="license._id">{{license.code}}</li>
+                </ul>
+              </ul>
             </td>
             <td>{{$formattedDate(item.mycartcreatedat)}}</td>
             <td>
@@ -42,6 +54,7 @@
 <script>
 export default {
   layout: 'account',
+  name: 'MyDeals',
   data() {
     return {
       items: []
@@ -55,6 +68,11 @@ export default {
         } = res
         if (success) this.items = [...data]
       })
+    },
+    toggleCode(key) {
+      let finding = this.items
+      finding[key]['show'] = finding[key]['show'] ? !finding[key]['show'] : true
+      this.items = [...finding]
     }
   },
   mounted() {
@@ -92,6 +110,12 @@ export default {
           &:last-child {
             border-top-right-radius: 20px;
             border-bottom-right-radius: 20px;
+          }
+          button {
+            font-size: 0.6rem;
+          }
+          ul {
+            font-size: 0.8rem;
           }
         }
       }
