@@ -5,7 +5,7 @@
     </div>
     <div class="col-12">
       <div class="card">
-        <div class="card-header">Registered Account</div>
+        <div class="card-header">Registered Method</div>
         <div class="card-body">
           <table class="table table-borderless" v-if="items.length > 0">
             <thead>
@@ -36,6 +36,7 @@
 
 <script>
 export default {
+  name: 'PaymentMethod',
   layout: 'account',
   data: () => ({
     items: []
@@ -54,7 +55,7 @@ export default {
       let _this = this
       this.$swal({
         title: 'Sure?',
-        text: `Are you sure to remove ${item.lastFour} from your account?`,
+        text: `Are you sure to remove ${item.lastFour} from your payment method?`,
         icon: 'warning',
         buttons: ['No, cancel it!', 'Yes, I am sure!'],
         dangerMode: true
