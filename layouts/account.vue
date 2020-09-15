@@ -15,9 +15,7 @@
         <img src="~/assets/images/logo.png" alt />
       </a>
 
-      <div
-        :class="{ collapse: true, 'navbar-collapse': true, show: expandNav }"
-      >
+      <div :class="{ collapse: true, 'navbar-collapse': true, show: expandNav }">
         <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
           <li
             :class="{
@@ -36,26 +34,23 @@
                 'mt-lg-1': link.isButton
               }"
               :to="link.path"
-              >{{ link.text }}</nuxt-link
-            >
+            >{{ link.text }}</nuxt-link>
           </li>
           <li class="nav-item mx-lg-3" v-if="!isLogin">
-            <nuxt-link class="btn btn-primary btn-sm mt-lg-1" to="/auth/signin"
-              >Get Started</nuxt-link
-            >
+            <nuxt-link class="btn btn-primary btn-sm mt-lg-1" to="/auth/signin">Get Started</nuxt-link>
           </li>
           <template v-else>
             <li class="nav-item mx-lg-3">
-              <button class="btn btn-primary btn-lg mt-lg-1" @click="signout">
-                Sign out
-              </button>
+              <button class="btn btn-primary btn-lg mt-lg-1" @click="signout">Sign out</button>
             </li>
             <li class="nav-item mx-lg-3 d-flex align-items-center cart">
               <nuxt-link to="/cart">
                 <span class="fa fa-shopping-cart mr-2 fa-lg"></span>
-                <span class="count-buble" v-if="cart.quantity > 0">{{
+                <span class="count-buble" v-if="cart.quantity > 0">
+                  {{
                   cart.quantity
-                }}</span>
+                  }}
+                </span>
               </nuxt-link>
             </li>
           </template>
@@ -67,13 +62,10 @@
         <div
           class="d-flex align-items-center justify-content-center flex-column border-bottom pb-4 px-3 profile-info"
         >
-          <img
-            src="https://randomuser.me/api/portraits/med/men/75.jpg"
-            alt="profile photo"
-          />
-          <h6 class="font-weight-bold pt-3 my-0">
-            {{ profile.customer && profile.customer.firstName }}
-          </h6>
+          <img src="https://randomuser.me/api/portraits/med/men/75.jpg" alt="profile photo" />
+          <h6
+            class="font-weight-bold pt-3 my-0"
+          >{{ profile.customer && profile.customer.firstName }}</h6>
           <p class="py-0 my-0">{{ profile.email }}</p>
         </div>
         <ul class="nav flex-column">
@@ -100,6 +92,12 @@
               <span class="fa fa-user-o mr-2"></span>
               Account Detail
             </a>
+          </li>
+          <li class="nav-item">
+            <nuxt-link to="/account/payment" class="nav-link">
+              <span class="fa fa-credit-card mr-2"></span>
+              Payment
+            </nuxt-link>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">
@@ -137,25 +135,13 @@
           <nuxt-link :to="'support'">Frequently Ask Questions</nuxt-link>
         </div>
         <div>
-          <a
-            href="https://web.facebook.com/saastronautics"
-            target="_blank"
-            class="px-3"
-          >
+          <a href="https://web.facebook.com/saastronautics" target="_blank" class="px-3">
             <span class="fa fa-facebook"></span>
           </a>
-          <a
-            href="https://twitter.com/saastronautics"
-            target="_blank"
-            class="px-3"
-          >
+          <a href="https://twitter.com/saastronautics" target="_blank" class="px-3">
             <span class="fa fa-twitter"></span>
           </a>
-          <a
-            href="https://www.instagram.com/saastronautics/"
-            target="_blank"
-            class="px-3"
-          >
+          <a href="https://www.instagram.com/saastronautics/" target="_blank" class="px-3">
             <span class="fa fa-instagram"></span>
           </a>
         </div>
