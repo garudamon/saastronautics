@@ -55,6 +55,9 @@
 export default {
   layout: 'account',
   name: 'MyDeals',
+  head: () => ({
+    titleTemplate: 'My Deals - %s'
+  }),
   data() {
     return {
       items: []

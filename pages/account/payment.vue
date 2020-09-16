@@ -38,6 +38,9 @@
 export default {
   name: 'PaymentMethod',
   layout: 'account',
+  head: () => ({
+    titleTemplate: 'Payment Method - %s'
+  }),
   data: () => ({
     items: []
   }),
