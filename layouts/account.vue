@@ -72,7 +72,7 @@
           <li class="nav-item">
             <nuxt-link to="/account" class="nav-link">
               <span class="fa fa-fw fa-dashboard mr-2"></span>
-              Dasboard
+              Dashboard
             </nuxt-link>
           </li>
           <li class="nav-item">
