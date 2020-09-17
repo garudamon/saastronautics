@@ -1,6 +1,25 @@
 <template>
   <div>
     <LazyDashboardTopBar mascot="gift" :input="true" />
+    <div class="modal fade show" id="exampleModalLive" tabindex="-1" aria-labelledby="exampleModalLiveLabel" aria-modal="true" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLiveLabel">{{action.type}}</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Woohoo, you're reading this text in a modal!</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="table-fixed mt-4">
       <table>
         <thead>
@@ -42,7 +61,7 @@
             </td>
             <td>{{$formattedMoney(item.subtotal)}}</td>
             <td>
-              <DashboardMoreAction />
+              <DashboardMoreAction :onClick="selectData" :data="item" />
             </td>
           </tr>
         </tbody>
@@ -60,10 +79,17 @@ export default {
   }),
   data() {
     return {
-      items: []
+      items: [],
+      action: {
+        type: '',
+        selectedDeal: {}
+      }
     }
   },
   methods: {
+    selectData(type, selectedDeal) {
+      this.action = {...this.action, type, selectedDeal}
+    },
     getData() {
       this.$axios.get(`/product/mydeals?limit=25&skip=0`).then(res => {
         let {

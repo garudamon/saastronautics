@@ -4,16 +4,16 @@
     <transition name="slide-fade">
       <ul v-if="show" class="more-actions-list">
         <li>
-          <nuxt-link to>
+          <a href="#" @click="clicked('redeem')">
             <span class="fa fa-fw fa-trophy text-red"></span>
             Redeem
-          </nuxt-link>
+          </a>
         </li>
         <li>
-          <nuxt-link to>
+          <a href="#" @click="clicked('refund')">
             <span class="fa fa-fw fa-long-arrow-right text-red"></span>
             Refund
-          </nuxt-link>
+          </a>
         </li>
         <li>
           <nuxt-link to>
@@ -31,6 +31,12 @@ export default {
   data() {
     return {
       show: false
+    }
+  },
+  props: ["data", "onClick"],
+  methods: {
+    clicked(type) {
+      this.onClick(type, this.data)
     }
   },
   mounted() {
