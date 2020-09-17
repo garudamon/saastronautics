@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid px-0">
+  <div class="container-fluid px-0 h-100">
     <nav class="navbar navbar-expand-sm navbar-light px-5">
       <button
         class="navbar-toggler"
@@ -70,12 +70,6 @@
         </div>
         <ul class="nav flex-column">
           <li class="nav-item">
-            <nuxt-link to="/account" class="nav-link">
-              <span class="fa fa-fw fa-dashboard mr-2"></span>
-              Dasboard
-            </nuxt-link>
-          </li>
-          <li class="nav-item">
             <nuxt-link to="/account/my-deals" class="nav-link">
               <span class="fa fa-fw fa-tags mr-2"></span>
               My Deals
@@ -102,12 +96,6 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">
-              <span class="fa fa-fw fa-shopping-cart mr-2"></span>
-              My Cart
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
               <span class="fa fa-fw fa-bell-o mr-2"></span>
               Notifications
             </a>
@@ -118,7 +106,7 @@
         <nuxt />
       </div>
     </div>
-    <footer class="p-3">
+    <footer class="p-3 fixed-bottom">
       <div class="d-flex justify-content-around align-items-center">
         <div>
           <img src="~/assets/images/logo-white.png" alt="logo-saastronautics" />
