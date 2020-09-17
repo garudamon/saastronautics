@@ -62,7 +62,7 @@
         <div
           class="d-flex align-items-center justify-content-center flex-column border-bottom pb-4 px-3 profile-info"
         >
-          <img src="https://randomuser.me/api/portraits/med/men/75.jpg" alt="profile photo" />
+          <img v-if="profile.customer" :src="$getProfile(profile.customer.id)" alt="profile photo" />
           <h6
             class="font-weight-bold pt-3 my-0"
           >{{ profile.customer && profile.customer.firstName }}</h6>
@@ -70,16 +70,16 @@
         </div>
         <ul class="nav flex-column">
           <li class="nav-item">
+            <nuxt-link to="/account" class="nav-link">
+              <span class="fa fa-fw fa-dashboard mr-2"></span>
+              Dasboard
+            </nuxt-link>
+          </li>
+          <li class="nav-item">
             <nuxt-link to="/account/my-deals" class="nav-link">
               <span class="fa fa-fw fa-tags mr-2"></span>
               My Deals
             </nuxt-link>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span class="fa fa-fw fa-download mr-2"></span>
-              Download
-            </a>
           </li>
           <li class="nav-item">
             <nuxt-link class="nav-link" to="/account/profile">

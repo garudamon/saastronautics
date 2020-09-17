@@ -35,6 +35,9 @@
                 <div class="col-12 col-md-6">
                   <input class="form-control form-round form-gray" disabled type="text" placeholder="Email" v-model="user.email">
                 </div>
+                <div class="col-12 col-md-6">
+                  <input class="form-control form-round form-gray" type="file" placeholder="Avatar" accept="image/jpeg, image/png" @change="handleAvatar">
+                </div>
               </div>
               <div class="row">
                 <div class="col-12 pt-3">
@@ -111,7 +114,8 @@ export default {
       oldPassword:"",
       newPassword:"",
       confirmNewPassword:"",
-    }
+    },
+    newAvatar: ""
   }),
   methods: {
     ...mapMutations(['setProfile']),
@@ -124,6 +128,15 @@ export default {
         else this.$swal('Oopss!', message, 'failed')
       })
     },
+    handleAvatar(e) {
+      const inputFile = e.target.files[0]
+      const reader = new FileReader()
+      reader.onload = (e) => {
+        console.log(e.target.result)
+        this.newAvatar = e.target.result
+      }
+      reader.readAsDataURL(inputFile)
+    },
     updateProfile(e) {
       let {firstName, lastName, email, title, id} = this.user
 
@@ -132,8 +145,7 @@ export default {
         lastName,
         email,
         title,
-        "newPassword": "",
-        "profilePicture": "",
+        "profilePictureBase": this.newAvatar,
         "roles": ""
       }
 
