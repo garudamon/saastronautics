@@ -1,21 +1,27 @@
 <template>
   <div>
     <LazyDashboardTopBar mascot="gift" :input="true" />
-    <div class="modal fade show" id="exampleModalLive" tabindex="-1" aria-labelledby="exampleModalLiveLabel" aria-modal="true" role="dialog">
+    <div class="modal fade show" id="redeemRefund" tabindex="-1" aria-labelledby="redeemRefundLabel" aria-modal="true" role="dialog" style="display: block;" v-show="showModal">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLiveLabel">{{action.type}}</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <h5 class="modal-title" id="redeemRefundLabel">Choose your code</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" @click="showModal = false">
               <span aria-hidden="true">×</span>
             </button>
           </div>
           <div class="modal-body">
-            <p>Woohoo, you're reading this text in a modal!</p>
+            <div v-for="item in action.selectedDeal.lincecode" :key="item.id">
+              <label @click="toggleSelectedCode(item)">
+                <input type="checkbox" :checked="codeSelected.indexOf(item.id) > -1" v-if="item.status == 1" />
+                <input type="checkbox" checked="checked" disabled v-else />
+                {{item.code}}
+              </label>
+            </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal" @click="showModal = false">Cancel</button>
+            <button type="button" class="btn btn-primary" @click="submitRequest">{{action.type}} Now</button>
           </div>
         </div>
       </div>
@@ -79,7 +85,9 @@ export default {
   }),
   data() {
     return {
+      showModal: false,
       items: [],
+      codeSelected: [],
       action: {
         type: '',
         selectedDeal: {}
@@ -87,8 +95,50 @@ export default {
     }
   },
   methods: {
+    toggleSelectedCode(item){
+      if(item.status == 1) {
+        let temp = [...this.codeSelected]
+        if(temp.indexOf(item.id) > -1) temp.splice(temp.indexOf(item.id),1)
+        else temp.push(item.id)
+        this.codeSelected = [...temp]
+      }
+    },
     selectData(type, selectedDeal) {
+      this.codeSelected = []
       this.action = {...this.action, type, selectedDeal}
+      this.showModal = true
+    },
+    submitRequest(){
+      if(this.codeSelected.length < 1) {
+        this.$swal('Info', `No code selected`, 'info')
+        return false
+      }
+      let param = {
+        "myCartID":this.action.selectedDeal.mycartid,
+        "myCartLineCodeID":[...this.codeSelected],
+        "reason":"requested_by_customer"
+      }
+      this.$axios.post(`/${this.action.type}`, param).then(response => {
+        let {
+          data: { success, message }
+        } = response
+        if (success) {
+          this
+            .$swal(
+              'Success!',
+              message,
+              'success'
+            )
+            .then(() => {
+              this.getData()
+              this.showModal = false
+            })
+        } else {
+          this.$swal('Oops!', `${message}`, 'error').then(() => {
+            this.showModal = false
+          })
+        }
+      })
     },
     getData() {
       this.$axios.get(`/product/mydeals?limit=25&skip=0`).then(res => {
