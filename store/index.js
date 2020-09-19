@@ -18,7 +18,8 @@ export const mutations = {
     state.profile = { ...payload }
   },
   setCart(state, payload) {
-    state.cart = { ...payload }
+    if (payload == null) state.cart = {}
+    else state.cart = { ...payload }
   }
 }
 
