@@ -11,12 +11,15 @@
             </button>
           </div>
           <div class="modal-body">
-            <div v-for="item in action.selectedDeal.lincecode" :key="item.id">
+            <div v-for="item in action.selectedDeal.lincecode" :key="item.id" class="d-flex justify-content-between">
               <label @click="toggleSelectedCode(item)">
                 <input type="checkbox" :checked="codeSelected.indexOf(item.id) > -1" v-if="item.status == 1" />
                 <input type="checkbox" checked="checked" disabled v-else />
                 {{item.code}}
               </label>
+              <div>
+                <span class="badge badge-soft">{{getStatus(item.status)}}</span>
+              </div>
             </div>
           </div>
           <div class="modal-footer">
@@ -152,6 +155,37 @@ export default {
       let finding = this.items
       finding[key]['show'] = finding[key]['show'] ? !finding[key]['show'] : true
       this.items = [...finding]
+    },
+    getStatus(statusInt) {
+      switch (statusInt) {
+        case 0:
+          return 'New'
+          break;
+        case 1:
+          return 'Active'
+          break;
+        case 2:
+          return 'Delete'
+          break;
+        case 3:
+          return 'InActive'
+          break;
+        case 4:
+          return 'Done'
+          break;
+        case 5:
+          return 'Failed'
+          break;
+        case 6:
+          return 'Redeem'
+          break;
+        case 7:
+          return 'Refund'
+          break;
+        default:
+          return 'Unknown'
+          break;
+      }
     }
   },
   mounted() {
@@ -200,5 +234,9 @@ export default {
       }
     }
   }
+}
+.badge-soft{
+  background: #F2EDF7;
+  border: solid 1px var(--primary-color-purple)
 }
 </style>
