@@ -184,6 +184,14 @@ input {
     background: #f0f0f0 0% 0% no-repeat padding-box;
     border: 0.20000000298023224px solid #d9d9d9;
   }
+  &.form-primary-purple {
+    background: white;
+    border: 0.20000000298023224px solid #b98df7;
+    &:disabled {
+      background: #f6f4fc 0% 0% no-repeat padding-box;
+      border-color: #f6f4fc;
+    }
+  }
   &.error {
     border: solid 1px tomato !important;
   }
