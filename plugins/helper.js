@@ -8,6 +8,9 @@ const Helper = {
       (Vue.prototype.$getProfile = id => {
         return `${process.env.baseUrl}/customer/image/profile/${id}`
       }),
+      (Vue.prototype.$getImageOther = (id, idx) => {
+        return `${process.env.baseUrl}/product/image/other/${id}/${idx}`
+      }),
       (Vue.prototype.$formattedDate = string => {
         return moment(string).format('DD MMMM YYYY')
       }),
