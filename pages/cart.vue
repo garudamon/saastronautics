@@ -4,13 +4,12 @@
     <div class="row">
       <div class="col-12 col-md-8">
         <div class="card">
-          <div class="card-header">Deals</div>
-          <div class="card-body">
+          <div class="card-body p-0">
             <table class="table table-borderless" v-if="cart.myCartLine">
               <thead>
                 <tr>
-                  <th scope="col" width="150"></th>
-                  <th scope="col">Product</th>
+                  <th scope="col" width="150">Product</th>
+                  <th scope="col"></th>
                   <th scope="col">Plan</th>
                   <th scope="col">Quantity</th>
                   <th scope="col">Price</th>
@@ -19,13 +18,13 @@
               </thead>
               <tbody>
                 <tr v-for="item in cart.myCartLine" :key="item.id">
-                  <th scope="row">
+                  <td scope="row">
                     <img
                       :src="$getImage(item.productMaster.id)"
                       :alt="`${item.productMaster.name} thumbnail`"
                       class="rounded"
                     />
-                  </th>
+                  </td>
                   <td class="font-weight-bold align-middle">
                     <nuxt-link :to="`/product/${item.productMaster.id}`">
                       {{ item.productMaster.name }}
@@ -34,93 +33,57 @@
                   </td>
                   <td class="align-middle">{{ item.productPriceMaster.title }}</td>
                   <td class="align-middle">{{ item.productPriceMaster.codes }}</td>
-                  <td class="align-middle">{{ $formattedMoney(item.subTotal) }}</td>
+                  <td class="align-middle font-weight-bold">{{ $formattedMoney(item.subTotal) }}</td>
                   <td class="align-middle">
-                    <a href="#" class="text-warning" @click="deleteCart(item)">
-                      <span class="fa fa-trash"></span>
+                    <a href="#" class="remove" @click="deleteCart(item)">
+                      <span class="fa fa-times"></span>
                     </a>
                   </td>
                 </tr>
               </tbody>
             </table>
-            <p class="text-center font-italic" v-else>Your cart empty</p>
+            <p class="text-center font-italic pt-4" v-else>Your cart empty</p>
           </div>
         </div>
       </div>
       <div class="col-12 col-md-4">
-        <div class="card">
-          <div class="card-header">Summary</div>
+        <div class="card soft-purple">
           <div class="card-body">
             <template v-if="Object.keys(cart).length > 0">
-              <div class="d-flex justify-content-between font-weight-light py-2">
-                <span>Subtotal</span>
-                <span>{{ $formattedMoney(cart.subTotal) }}</span>
+              <div class="row cart-summary d-flex flex-row-reverse">
+                <img src="~/assets/images/cart-mascot.png" alt="Cart Mascot">
+                <div class="summary-action">
+                  <div class="d-flex flex-column font-weight-bold">
+                    <div class="label">Total</div>
+                    <div class="text-red total">
+                      {{
+                      $formattedMoney(cart.grandTotal)
+                      }}
+                    </div>
+                  </div>
+                  <button
+                    class="btn btn-primary btn-block"
+                    @click="checkout()"
+                  >Check out</button>
+                  <nuxt-link to="/deals" class="btn btn-success btn-block">Continue Shooping</nuxt-link>
+                </div>
               </div>
-              <div class="d-flex justify-content-between font-weight-bold py-2 border-top">
-                <span>Total</span>
-                <span class="text-success">
-                  {{
-                  $formattedMoney(cart.grandTotal)
-                  }}
-                </span>
-              </div>
-              <button
-                class="btn btn-primary btn-block pt-2 mt-4"
-                @click="checkout()"
-              >Proceed to Checkout</button>
-              <nuxt-link to="/deals" class="btn btn-success btn-block py-2 mt-3">Continue Shooping</nuxt-link>
             </template>
-            <p class="text-center font-italic" v-else>Your cart empty</p>
+            <p class="text-center font-italic pt-4" v-else>Your cart empty</p>
           </div>
         </div>
 
-        <div class="cart-supplement d-none d-lg-block mt-5">
-          <p class="cart-supplement-header">Hustle with Confidence</p>
-          <ul class="list-inline mt-20">
-            <li class="d-flex">
-              <img
-                class="icon"
-                width="auto"
-                height="20px"
-                src="https://appsumo2.b-cdn.net/static/images/svg/calendar.svg"
-              />
-              <span class="pl-2">
-                <b>Try any product risk free.</b> We offer an industry-best
-                60-day money-back guarantee — no matter the reason. So go ‘head
-                and take any of our products for a spin to see if they’re a good
-                fit for your business.
-              </span>
-            </li>
-
-            <li class="d-flex">
-              <img
-                class="icon"
-                width="auto"
-                height="20px"
-                src="https://appsumo2.b-cdn.net/static/images/svg/lifebuoy.svg"
-              />
-              <span class="pl-2">
-                <b>World-class customer support.</b> There’s customer support,
-                and then there’s AppSumo customer support. We take pride in
-                going above and beyond to solve issues and keep our community
-                happy.
-              </span>
-            </li>
-            <li class="d-flex">
-              <img
-                class="icon"
-                width="auto"
-                height="20px"
-                src="https://appsumo2.b-cdn.net/static/images/svg/message-text.svg"
-              />
-              <span class="pl-2">
-                <b>Access to founders and CEOs.</b> As an early adopter, you
-                have the CEO’s ear — ask your burning questions on any active
-                deal and have them answered by the product founders themselves.
-              </span>
-            </li>
-          </ul>
+        <div class="card soft-purple d-none d-lg-block mt-4 cart-supplement">
+          <div class="card-body">
+            <p class="font-weight-bold">Hustle with Confidence</p>
+            <ul>
+              <li>* Try any product risk free. We offer an industry-best 60-day money-back guarantee — no matter the reason. So go ‘head and take any of our products for a spin to see if they’re a good fit for your business.  </li>
+              <li>* World-class customer support. There’s customer support, and then there’s AppSumo customer support. We take pride in going above and beyond to solve issues and keep our community happy.</li>
+              <li>* Access to founders and CEOs. As an early adopter, you have the CEO’s ear — ask your burning questions on any active deal and have them answered by the product founders themselves.</li>
+            </ul>
+          </div>
         </div>
+
       </div>
     </div>
   </div>
@@ -222,7 +185,11 @@ export default {
   padding: 0 2rem 0 2rem;
 }
 .card {
-  border-radius: 0.2em;
+  border-radius: 1em;
+  border-color: #F2EDF7;
+  &.soft-purple{
+    background-color: #F2EDF7;
+  }
 }
 table {
   .fa-external-link {
@@ -231,12 +198,54 @@ table {
   img {
     max-width: 100px;
   }
+  th{
+    background-color: #F2EDF7;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    padding: 15px 20px;
+  }
+  td{
+    font-size: 0.9rem;
+    padding: 15px 20px;
+    color: #4B4B4B;
+    a.remove{
+      color: #999;
+    }
+  }
 }
 .cart-supplement {
-  .list-inline {
-    li {
-      margin-bottom: 1em;
-      font-size: 0.8em;
+  ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li{
+      font-size: 0.8rem;
+      margin-bottom: .5rem;
+    }
+  }
+}
+.cart-summary{
+  position: relative;
+  img{
+    width: 72%;
+    position: absolute;
+    left: -15px;
+    top: -20px;
+  }
+  .summary-action{
+    width: 35%;
+    margin-right: 1rem;
+    z-index: 3;
+    padding-top: 2rem;
+    text-align: center;
+    margin-bottom: 0.7rem;
+    .btn{
+      font-size: 0.5rem;
+      padding: 8px 5px;
+    }
+    .total {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
     }
   }
 }
