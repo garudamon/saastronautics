@@ -249,4 +249,7 @@ label{
   margin-bottom: 0 !important;
   font-size: 0.8rem;
 }
+.card{
+  border-color: white !important;
+}
 </style>
