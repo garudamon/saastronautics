@@ -108,9 +108,7 @@ export default {
         let {
           data: { data, success }
         } = response
-        if (success) {
-          this.setCart(data)
-        }
+        this.setCart(data)
       })
     },
     deleteCart(item) {
