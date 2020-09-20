@@ -1,65 +1,74 @@
 <template>
-  <div class="col-12 col-md-3 card-bg-white text-center py-4">
-    <div class="px-5 py-3">
-      <img src="~/assets/images/logo.png" alt />
+  <div class="row">
+    <div class="col-md-6 px-0">
+      <img src="~/assets/images/saastro-welcome.png" alt />
     </div>
-    <ValidationObserver v-slot="{ handleSubmit }">
-      <form class="p-3" @submit.prevent="handleSubmit(signUp)">
-        <ValidationProvider name="Name" rules="required|alpha" v-slot="{ errors }">
-          <div class="form-group mb-4">
-            <input
-              type="text"
-              class="form-control form-round form-gray border-0"
-              placeholder="enter your first name"
-              v-model="form.firstName"
-            />
-            <small class="form-text text-left">{{ errors[0] }}</small>
+    <div class="col-12 col-md-5 card-bg-white py-4">
+      <div class="px-4 pt-4">
+        <h1>Sign Up</h1>
+        <p>
+          Already have an account?
+          <nuxt-link to="/auth/signin">Sign In</nuxt-link>
+        </p>
+      </div>
+      <ValidationObserver v-slot="{ handleSubmit }">
+        <form class="p-3" @submit.prevent="handleSubmit(signUp)">
+          <ValidationProvider name="Name" rules="required|alpha" v-slot="{ errors }">
+            <div class="form-group mb-4">
+              <input
+                type="text"
+                class="form-control form-round form-gray border-0"
+                placeholder="enter your first name"
+                v-model="form.firstName"
+              />
+              <small class="form-text text-left">{{ errors[0] }}</small>
+            </div>
+          </ValidationProvider>
+          <ValidationProvider name="E-mail" rules="required|email" v-slot="{ errors }">
+            <div class="form-group mb-4">
+              <input
+                type="email"
+                class="form-control form-round form-gray border-0"
+                placeholder="enter your email address"
+                v-model="form.email"
+              />
+              <small class="form-text text-left">{{ errors[0] }}</small>
+            </div>
+          </ValidationProvider>
+          <ValidationProvider name="Password" rules="required" v-slot="{ errors }">
+            <div class="form-group mb-4">
+              <input
+                type="password"
+                class="form-control form-round form-gray border-0"
+                placeholder="enter your password"
+                v-model="form.Password"
+                ref="password"
+              />
+              <small class="form-text text-left">{{ errors[0] }}</small>
+            </div>
+          </ValidationProvider>
+          <ValidationProvider
+            name="Password Confirmation"
+            rules="required|password:@Password"
+            v-slot="{ errors }"
+          >
+            <div class="form-group mb-4">
+              <input
+                type="password"
+                class="form-control form-round form-gray border-0"
+                placeholder="confirm your password"
+                v-model="form.newPassword"
+                data-vv-as="password"
+              />
+              <small class="form-text text-left">{{ errors[0] }}</small>
+            </div>
+          </ValidationProvider>
+          <div class="d-flex align-items-center">
+            <button type="submit" class="btn btn-primary btn-md px-4">Sign Up</button>
           </div>
-        </ValidationProvider>
-        <ValidationProvider name="E-mail" rules="required|email" v-slot="{ errors }">
-          <div class="form-group mb-4">
-            <input
-              type="email"
-              class="form-control form-round form-gray border-0"
-              placeholder="enter your email address"
-              v-model="form.email"
-            />
-            <small class="form-text text-left">{{ errors[0] }}</small>
-          </div>
-        </ValidationProvider>
-        <ValidationProvider name="Password" rules="required" v-slot="{ errors }">
-          <div class="form-group mb-4">
-            <input
-              type="password"
-              class="form-control form-round form-gray border-0"
-              placeholder="enter your password"
-              v-model="form.Password"
-              ref="password"
-            />
-            <small class="form-text text-left">{{ errors[0] }}</small>
-          </div>
-        </ValidationProvider>
-        <ValidationProvider name="Password Confirmation" rules="required|password:@Password" v-slot="{ errors }">
-          <div class="form-group mb-4">
-            <input
-              type="password"
-              class="form-control form-round form-gray border-0"
-              placeholder="confirm your password"
-              v-model="form.newPassword"
-              data-vv-as="password"
-            />
-            <small class="form-text text-left">{{ errors[0] }}</small>
-          </div>
-        </ValidationProvider>
-        <div class="d-flex align-items-center">
-          <p class="flex-grow-1 text-left m-0">
-            <nuxt-link to="/auth/signin">Already have an account?</nuxt-link>
-          </p>
-
-          <button type="submit" class="btn btn-primary btn-md px-4">Sign Up</button>
-        </div>
-      </form>
-    </ValidationObserver>
+        </form>
+      </ValidationObserver>
+    </div>
   </div>
 </template>
 
@@ -131,17 +140,26 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 p {
   font-size: 0.8rem;
 }
 a {
-  color: var(--primary-color-red);
+  color: var(--primary-color-blue);
 }
 small {
   color: var(--primary-color-red);
 }
 .swal-button--cancel {
   color: white;
+}
+img {
+  max-width: 105%;
+}
+.card-bg-white {
+  margin: 40px 0 100px 0;
+}
+.form-check {
+  color: #8d8c8c;
 }
 </style>
