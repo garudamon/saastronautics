@@ -2,24 +2,27 @@
   <div>
     <div class="container">
       <!-- lead -->
-      <div class="row mb-5">
-        <div class="col-12 col-md-12 mx-auto text-center">
-          <h1 class="faq-title font-weight-bold d-md-block">
-            Frequently Asked Questions
-          </h1>
+      <div class="row">
+        <!-- <div class="col-12 col-md-12 mx-auto text-center">
+          <h1 class="faq-title font-weight-bold d-md-block">Frequently Asked Questions</h1>
+        </div>-->
+        <div class="col-6 faq-img">
+          <img src="~/assets/images/saastrobot-working-01.png" alt />
+        </div>
+        <div class="col-6 faq-title pl-md-2">
+          <h1 class="font-weight-bold d-md-block mb-3">Frequently Asked Questions</h1>
+          <h2
+            class="font-weight-bold d-md-block"
+          >We always provide the best service for our customers.</h2>
         </div>
       </div>
       <!-- card FAQ -->
       <div class="row px-4 mb-5">
-        <div class="col-12 col-sm-6 mb-5 px-4" v-for="item in cardQuestion" :key="item.id">
-          <div class="card card-bg-white p-4">
+        <div class="col-12 col-sm-6 mb-5 px-md-3" v-for="item in cardQuestion" :key="item.id">
+          <div class="support-card card card-bg-white p-4">
             <div class="card-body">
-              <h6
-                class="card-title font-weight-bold mb-3"
-              >{{ item.title }}</h6>
-              <p
-                class="card-text"
-              >{{ item.description }}</p>
+              <h6 class="card-title font-weight-bold mb-3">{{ item.title }}</h6>
+              <p class="card-text">{{ item.description }}</p>
             </div>
           </div>
         </div>
@@ -64,7 +67,7 @@ export default {
           title: 'Lorem ipsum dolor sit amet adipiscing elit?',
           description:
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit tempora vel sapiente consectetur dicta, quia deserunt exercitationem cupiditate fugiat corporis perspiciatis magnam veniam sit nulla ad ipsam quo laboriosam. Iste, sunt.'
-        },
+        }
       ]
     }
   }
@@ -72,7 +75,27 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.faq-title{
-  font-size: 45px;
+.container {
+  margin-top: -40px;
+}
+.faq-title {
+  padding-top: 80px;
+  h1 {
+    font-size: 45px;
+  }
+  h2 {
+    color: #ff4370;
+  }
+}
+
+.faq-img {
+  img {
+    width: 90%;
+  }
+}
+
+.support-card {
+  box-shadow: 0px 3px 99px #7a7a7a29;
+  border-radius: 10px;
 }
 </style>
