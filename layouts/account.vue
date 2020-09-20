@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid px-0 h-100">
-    <nav class="navbar navbar-expand-sm navbar-light px-5">
+    <nav class="navbar navbar-expand-sm navbar-light px-5 fixed-top">
       <button
         class="navbar-toggler"
         type="button"
@@ -219,7 +219,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+nav{
+  background: var(--primary-gray-smooth);
+}
 aside {
+  position: fixed;
+  bottom: 0px;
+  top: 75px;
   .profile-info {
     > * {
       overflow: hidden !important;
@@ -227,5 +233,12 @@ aside {
       max-width: 100%;
     }
   }
+}
+.content{
+  background: var(--primary-gray-smooth);
+  margin-bottom: 100px;
+  margin-top: 80px;
+  padding-bottom: 30px;
+  margin-left: 225px;
 }
 </style>
