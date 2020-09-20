@@ -12,7 +12,7 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/">
           <img src="~/assets/images/logo.png" alt />
         </a>
 
