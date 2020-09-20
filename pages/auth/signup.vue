@@ -17,8 +17,8 @@
             <div class="form-group mb-4">
               <input
                 type="text"
-                class="form-control form-round form-gray border-0"
-                placeholder="enter your first name"
+                class="form-control form-gray border-0"
+                placeholder="First name"
                 v-model="form.firstName"
               />
               <small class="form-text text-left">{{ errors[0] }}</small>
@@ -28,8 +28,8 @@
             <div class="form-group mb-4">
               <input
                 type="email"
-                class="form-control form-round form-gray border-0"
-                placeholder="enter your email address"
+                class="form-control form-gray border-0"
+                placeholder="Email"
                 v-model="form.email"
               />
               <small class="form-text text-left">{{ errors[0] }}</small>
@@ -39,8 +39,8 @@
             <div class="form-group mb-4">
               <input
                 type="password"
-                class="form-control form-round form-gray border-0"
-                placeholder="enter your password"
+                class="form-control form-gray border-0"
+                placeholder="Password"
                 v-model="form.Password"
                 ref="password"
               />
@@ -55,8 +55,8 @@
             <div class="form-group mb-4">
               <input
                 type="password"
-                class="form-control form-round form-gray border-0"
-                placeholder="confirm your password"
+                class="form-control form-gray border-0"
+                placeholder="Type your password again"
                 v-model="form.newPassword"
                 data-vv-as="password"
               />

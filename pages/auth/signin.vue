@@ -14,14 +14,14 @@
       <form class="p-4" @submit.prevent="signIn">
         <input
           type="text"
-          class="form-control form-round form-gray border-0 mb-4"
-          placeholder="Enter your email address"
+          class="form-control form-gray border-0 mb-4"
+          placeholder="Email"
           v-model="email"
         />
         <input
           type="password"
-          class="form-control form-round form-gray border-0 mb-4"
-          placeholder="and your password"
+          class="form-control form-gray border-0 mb-4"
+          placeholder="Password"
           v-model="password"
         />
         <div class="d-flex pb-1">
