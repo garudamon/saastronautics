@@ -3,12 +3,12 @@
     <span class="fa fa-2x fa-ellipsis-v text-red more-actions-trigger" @click="show = !show"></span>
     <transition name="slide-fade">
       <ul v-if="show" class="more-actions-list">
-        <li>
+        <!-- <li>
           <a href="#" @click="clicked('redeem')">
             <span class="fa fa-fw fa-trophy text-red"></span>
             Redeem
           </a>
-        </li>
+        </li> -->
         <li>
           <a href="#" @click="clicked('refund')">
             <span class="fa fa-fw fa-long-arrow-right text-red"></span>

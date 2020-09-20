@@ -16,11 +16,13 @@
                     id="payment-paypal"
                     value="paypal"
                     v-model="paymentMethod"
+                    disabled
                   />
                   <label class="form-check-label" for="payment-paypal">
                     <img src="~/assets/images/payment/iconfinder_paypal_1220357.png" alt="Paypal Icon" class="icon">
                     Paypal
                   </label>
+                  <small>(Not Available)</small>
                 </div>
                 <div class="form-check mb-3 font-weight-bold">
                   <input
@@ -246,6 +248,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+small {
+  color: var(--primary-color-red);
+}
 .card-list {
   padding-left: 1.6rem;
   .form-check{
