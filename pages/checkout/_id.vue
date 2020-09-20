@@ -2,172 +2,122 @@
   <div class="container">
     <h2 class="font-weight-bold mb-3">Checkout</h2>
     <div class="row">
-      <div class="col-12 col-md-8">
-        <div class="card">
-          <div class="card-header">1. Account Verification</div>
-          <div class="card-body">
-            <p>Your order confirmation will be emailed to:</p>
-            <p class="text-info">{{ profile.email }}</p>
-          </div>
-        </div>
+      <div class="col-12">
         <div class="card my-4">
-          <div class="card-header">2. Payment Method</div>
-          <div class="card-body">
-            <div class="form-check mb-2">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="paymentMethod"
-                id="payment-paypal"
-                value="paypal"
-                v-model="paymentMethod"
-              />
-              <label class="form-check-label" for="payment-paypal">
-                <span class="fa fa-fw fa-paypal paypal-color mx-1"></span>
-                Paypal
-              </label>
-            </div>
-            <div class="form-check mb-2">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="paymentMethod"
-                id="payment-cc"
-                value="cc"
-                v-model="paymentMethod"
-              />
-              <label class="form-check-label" for="payment-cc">
-                <span class="fa fa-fw fa-credit-card cc-color mx-1"></span>
-                Credit or Debit Card
-              </label>
-            </div>
-            <div class="card-list">
-              <template v-if="data.cardViews && data.cardViews.length > 0">
-                <p class="font-weight-bold">Choose Existing Card</p>
-                <div
-                  class="form-check mb-2"
-                  v-for="(item, i) in data.cardViews"
-                  :key="i"
-                >
+          <div class="card-body p-5">
+            <div class="row">
+              <div class="col-12 col-md-7 pr-5">
+                <p class="h4 mb-4">Payment Method</p>
+                <div class="form-check mb-3 font-weight-bold">
                   <input
                     class="form-check-input"
                     type="radio"
-                    name="selectedCard"
+                    name="paymentMethod"
                     id="payment-paypal"
-                    :value="item.stripePaymentID"
-                    v-model="selectedCard"
+                    value="paypal"
+                    v-model="paymentMethod"
                   />
                   <label class="form-check-label" for="payment-paypal">
-                    <span>**** **** {{ item.lastFour }}</span>
-                    <span class="text-muted"
-                      >{{ item.month }} / {{ item.year }}</span
-                    >
+                    <img src="~/assets/images/payment/iconfinder_paypal_1220357.png" alt="Paypal Icon" class="icon">
+                    Paypal
                   </label>
                 </div>
-              </template>
-              <div class="form-check mb-2">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="selectedCard"
-                  id="payment-paypal"
-                  value="newCard"
-                  v-model="selectedCard"
-                />
-                <label class="form-check-label" for="payment-paypal"
-                  >New Card</label
-                >
+                <div class="form-check mb-3 font-weight-bold">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="paymentMethod"
+                    id="payment-cc"
+                    value="cc"
+                    v-model="paymentMethod"
+                  />
+                  <label class="form-check-label" for="payment-cc">
+                    <img src="~/assets/images/payment/icons8-mastercard-credit-card-96.png" alt="Card Icon" class="icon">
+                    Credit or Debit Card
+                  </label>
+                </div>
+                <div class="card-list">
+                  <template v-if="data.cardViews && data.cardViews.length > 0">
+                    <label 
+                      v-for="(item, i) in data.cardViews"
+                      :key="i"
+                      :class="{'form-check mb-2 d-flex justify-content-between align-items-center': true, 'active-card': selectedCard==item.stripePaymentID}"
+                    >
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="selectedCard"
+                        :value="item.stripePaymentID"
+                        v-model="selectedCard"
+                      />
+                        <div class="available-card">
+                          <img v-if="item.brand == 'visa'" src="~/assets/images/payment/visa-logo.png" alt="">
+                          <img v-if="item.brand == 'mastercard'" src="~/assets/images/payment/visa-logo.png" alt="">
+                          <span>**** **** {{ item.lastFour }}</span>
+                          <span class="text-muted">{{ item.month }} / {{ item.year }}</span>
+                        </div>
+                        <span class="fa fa-check-circle"></span>
+                    </label>
+                  </template>
+                  
+                </div>
+                <div class="form-check mb-3 font-weight-bold">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="paymentMethod"
+                    id="payment-new"
+                    value="newCard"
+                    v-model="selectedCard"
+                  />
+                  <label class="form-check-label" for="payment-new"
+                    >
+                    <img src="~/assets/images/payment/icons8-card-payment-96.png" alt="Card Icon" class="icon bigger">
+                    New Card</label
+                  >
+
+                  <div
+                    v-show="selectedCard == 'newCard'"
+                    style="margin-left: 3px; margin-top: 5px;"
+                    ref="cardelement"
+                  />
+                </div>
+
+                <div class="confirmation-info">
+                  Your order confirmation will be email to: <br>
+                  <span class="text-red font-weight-bold">{{data.customer && data.customer.email}}</span>
+                </div>
               </div>
-              <div
-                v-show="selectedCard == 'newCard'"
-                style="padding-left:1.3rem"
-                ref="cardelement"
-              />
+              <div class="col-12 col-md-5">
+                <p class="h4 mb-4">Summary</p>
+                <template v-if="Object.keys(data).length > 0">
+                  <div class="cart-line text-smaller">
+                    <div class="row" v-for="(item, idx) in data.myCartLine" :key="idx">
+                      <div class="col-8">
+                        <div class="font-weight-bold">{{item.productMaster.name}}</div>
+                        <div class="font-weight-light text-muted">{{`${item.productPriceMaster.title} (Qty ${item.productPriceMaster.codes})`}}</div>
+                      </div>
+                      <div class="col-4 text-right">{{$formattedMoney(item.subTotal)}}</div>
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between font-weight-bold py-3 border-top border-bottom text-smaller"
+                  >
+                    <span>Total</span>
+                    <span>
+                      {{ $formattedMoney(data.grandTotal) }}
+                    </span>
+                  </div>
+                  <button
+                    class="btn btn-primary btn-block pt-2 mt-4"
+                    @click="pay()"
+                  >
+                    Pay
+                  </button>
+                </template>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-4">
-        <div class="card">
-          <div class="card-header">Summary</div>
-          <div class="card-body">
-            <template v-if="Object.keys(data).length > 0">
-              <div
-                class="d-flex justify-content-between font-weight-light py-2"
-              >
-                <span>Subtotal</span>
-                <span>{{ $formattedMoney(data.subTotal) }}</span>
-              </div>
-              <div
-                class="d-flex justify-content-between font-weight-light py-2"
-              >
-                <span>Discount</span>
-                <span>{{ $formattedMoney(data.totalDiscount) }}</span>
-              </div>
-              <div
-                class="d-flex justify-content-between font-weight-bold py-2 border-top"
-              >
-                <span>Total</span>
-                <span class="text-success">
-                  {{ $formattedMoney(data.grandTotal) }}
-                </span>
-              </div>
-              <button
-                class="btn btn-primary btn-block pt-2 mt-4"
-                @click="pay()"
-              >
-                Pay
-              </button>
-            </template>
-          </div>
-        </div>
-
-        <div class="cart-supplement d-none d-lg-block mt-5">
-          <p class="cart-supplement-header">Hustle with Confidence</p>
-          <ul class="list-inline mt-20">
-            <li class="d-flex">
-              <img
-                class="icon"
-                width="auto"
-                height="20px"
-                src="https://appsumo2.b-cdn.net/static/images/svg/calendar.svg"
-              />
-              <span class="pl-2">
-                <b>Try any product risk free.</b> We offer an industry-best
-                60-day money-back guarantee — no matter the reason. So go ‘head
-                and take any of our products for a spin to see if they’re a good
-                fit for your business.
-              </span>
-            </li>
-
-            <li class="d-flex">
-              <img
-                class="icon"
-                width="auto"
-                height="20px"
-                src="https://appsumo2.b-cdn.net/static/images/svg/lifebuoy.svg"
-              />
-              <span class="pl-2">
-                <b>World-class customer support.</b> There’s customer support,
-                and then there’s AppSumo customer support. We take pride in
-                going above and beyond to solve issues and keep our community
-                happy.
-              </span>
-            </li>
-            <li class="d-flex">
-              <img
-                class="icon"
-                width="auto"
-                height="20px"
-                src="https://appsumo2.b-cdn.net/static/images/svg/message-text.svg"
-              />
-              <span class="pl-2">
-                <b>Access to founders and CEOs.</b> As an early adopter, you
-                have the CEO’s ear — ask your burning questions on any active
-                deal and have them answered by the product founders themselves.
-              </span>
-            </li>
-          </ul>
         </div>
       </div>
     </div>
@@ -296,15 +246,59 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.paypal-color {
-  color: #21aef3;
-  font-size: 1.2rem;
-}
-.cc-color {
-  color: #ff9800;
-  font-size: 1.2rem;
-}
 .card-list {
   padding-left: 1.6rem;
+  .form-check{
+    border: 1px solid #AFAFAF;
+    border-radius: 10px;
+    padding: 15px 20px;
+    max-width: 400px;
+    overflow: hidden;
+    .fa{
+      display: none;
+    }
+    input{
+      visibility: hidden;
+    }
+    &.active-card{
+      border: 1px solid #509CF5;
+      .fa{
+        color: #509CF5;
+        display: inline-block;
+        float: right;
+      }
+    }
+    .available-card{
+      img{
+        width: 35px;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+.icon{
+  width: 25px;
+  margin-right: 5px;
+  &.bigger{
+    width: 30px;
+    margin-right: 0px;
+  }
+}
+.card{
+  border-color: white !important;
+  box-shadow: 0px 3px 99px #7a7a7a29;
+}
+.cart-line{
+  min-height: 200px;
+}
+.text-smaller{
+  font-size: 0.9rem;
+}
+.confirmation-info{
+  background: #F2EDF7 0% 0% no-repeat padding-box;
+  border-radius: 20px;
+  padding: 30px 20px;
+  font-size: 0.9rem;
+  margin-top: 40px;
 }
 </style>
