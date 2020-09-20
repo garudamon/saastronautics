@@ -5,8 +5,11 @@
     </div>
     <div class="col-12">
       <div class="card">
-        <div class="card-header">Registered Method</div>
+        <!-- <div class="card-header">Registered Method</div> -->
         <div class="card-body">
+          <div class="pl-2">
+            <p class="h4 mb-4">Registered Method</p>
+          </div>
           <table class="table table-borderless" v-if="items.length > 0">
             <thead>
               <tr>
@@ -94,5 +97,8 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+.card {
+  border-color: white !important;
+}
 </style>

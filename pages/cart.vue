@@ -2,7 +2,7 @@
   <div class="container">
     <h2 class="font-weight-bold mb-3">My Cart</h2>
     <div class="row">
-      <div class="col-12 col-md-8">
+      <div class="col-12 col-md-7">
         <div class="card">
           <div class="card-body p-0">
             <table class="table table-borderless" v-if="cart.myCartLine">
@@ -11,7 +11,7 @@
                   <th scope="col" width="150">Product</th>
                   <th scope="col"></th>
                   <th scope="col">Plan</th>
-                  <th scope="col">Quantity</th>
+                  <th scope="col">QTY</th>
                   <th scope="col">Price</th>
                   <th scope="col"></th>
                 </tr>
@@ -46,7 +46,7 @@
           </div>
         </div>
       </div>
-      <div class="col-12 col-md-4">
+      <div class="col-12 col-md-5">
         <div class="card soft-purple">
           <div class="card-body">
             <template v-if="Object.keys(cart).length > 0">
@@ -225,10 +225,10 @@ table {
 .cart-summary{
   position: relative;
   img{
-    width: 72%;
+    width: 60%;
     position: absolute;
-    left: -15px;
-    top: -20px;
+    left: 0px;
+    top: -25px;
   }
   .summary-action{
     width: 35%;
