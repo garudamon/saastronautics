@@ -30,6 +30,7 @@
     "prettier": "^1.19.1",
     "sass-loader": "^9.0.2",
     "v-emoji-picker": "^2.3.0",
+    "v-video-embed": "^1.0.7",
     "vee-validate": "^3.3.9",
     "vue-flickity": "^1.2.1",
     "vue-jest": "^4.0.0-0",

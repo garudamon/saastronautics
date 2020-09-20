@@ -47,6 +47,13 @@
           productMaster.description3
         ]"
       />
+      <LazyImageParagraphSideBySide
+        :title="productMaster.videoTitle"
+        :videoUrl="productMaster.videoURL"
+        :descriptions="[
+          productMaster.videoDescription
+        ]"
+      />
     </div>
     <LazyPricingTable :product="productMaster" />
     <LazyReviewQuestion :product="this.productMaster" />

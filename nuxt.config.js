@@ -46,6 +46,7 @@ export default {
   plugins: [
     { src: '~/plugins/flickity', ssr: false },
     { src: '~/plugins/swal', ssr: false },
+    { src: '~/plugins/video-embed', ssr: false },
     '~/plugins/axios',
     '~/plugins/helper'
   ],
