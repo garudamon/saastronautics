@@ -2,7 +2,7 @@
   <div class="auth">
     <div class="container">
       <nav class="navbar navbar-expand-sm navbar-light px-0 px-md-3 py-2">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/">
           <img src="~/assets/images/logo.png" alt="logo saastronautics" />
         </a>
       </nav>
@@ -25,7 +25,8 @@ export default {
 
 <style lang="scss" scoped>
 .auth {
-  background: #f6f4fc 0% 0% no-repeat padding-box !important;
+  background: #f6f4fc;
+  height: 100%;
 
   .nav-back {
     a {
