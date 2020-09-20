@@ -1,29 +1,44 @@
 <template>
-  <div class="col-12 col-md-3 card-bg-white text-center py-4">
-    <div class="px-5 py-3">
-      <img src="~/assets/images/logo.png" alt />
+  <div class="row">
+    <div class="col-md-6 px-0">
+      <img src="~/assets/images/sign-in.png" alt />
     </div>
-    <form class="p-3" @submit.prevent="signIn">
-      <input
-        type="text"
-        class="form-control form-round form-gray border-0 mb-4"
-        placeholder="Enter your email address"
-        v-model="email"
-      />
-      <input
-        type="password"
-        class="form-control form-round form-gray border-0 mb-4"
-        placeholder="and your password"
-        v-model="password"
-      />
-      <div class="d-flex align-items-center">
-        <p class="flex-grow-1 text-left m-0">
-          <nuxt-link to="/auth/signup">Don't have an account?</nuxt-link>
+    <div class="col-12 col-md-5 card-bg-white py-4">
+      <div class="px-4 pt-4">
+        <h1>Sign In</h1>
+        <p>
+          Don't have an account?
+          <nuxt-link to="/auth/signup">Sign Up</nuxt-link>
         </p>
-
-        <button type="submit" class="btn btn-primary btn-md px-4">Sign in</button>
       </div>
-    </form>
+      <form class="p-4" @submit.prevent="signIn">
+        <input
+          type="text"
+          class="form-control form-round form-gray border-0 mb-4"
+          placeholder="Enter your email address"
+          v-model="email"
+        />
+        <input
+          type="password"
+          class="form-control form-round form-gray border-0 mb-4"
+          placeholder="and your password"
+          v-model="password"
+        />
+        <div class="d-flex pb-1">
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="check" />
+            <p class="form-check-p" for="check">Remember me</p>
+          </div>
+
+          <p class="flex-grow-1 text-right">
+            <nuxt-link to="#">Forget Password?</nuxt-link>
+          </p>
+        </div>
+        <div class="d-flex align-items-center">
+          <button type="submit" class="btn btn-primary btn-lg px-4">Sign in</button>
+        </div>
+      </form>
+    </div>
   </div>
 </template>
 
@@ -81,6 +96,15 @@ p {
   font-size: 0.8rem;
 }
 a {
-  color: var(--primary-color-red);
+  color: var(--primary-color-blue);
+}
+img {
+  max-width: 105%;
+}
+.card-bg-white {
+  margin: 40px 0 100px 0;
+}
+.form-check {
+  color: #8d8c8c;
 }
 </style>

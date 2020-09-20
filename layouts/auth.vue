@@ -1,6 +1,18 @@
 <template>
-  <div class="h-100 d-flex justify-content-center align-items-center auth">
-    <nuxt />
+  <div class="auth">
+    <div class="container">
+      <nav class="navbar navbar-expand-sm navbar-light px-0 px-md-3 py-2">
+        <a class="navbar-brand" href="/">
+          <img src="~/assets/images/logo.png" alt="logo saastronautics" />
+        </a>
+      </nav>
+      <!-- <div class="nav-back">
+        <a class="px-4" href="/">&#8592; Back to home</a>
+      </div> -->
+    </div>
+    <div class="container px-3 px-md-0">
+      <nuxt />
+    </div>
   </div>
 </template>
 
@@ -13,7 +25,18 @@ export default {
 
 <style lang="scss" scoped>
 .auth {
-  background: transparent linear-gradient(238deg, #ff4370 0%, #4b028c 100%) 0%
-    0% no-repeat padding-box;
+  background: #f6f4fc;
+  height: 100%;
+
+  .nav-back {
+    a {
+      color: #000;
+    }
+    a:hover {
+      color: var(--primary-color-red);
+      text-decoration: none;
+    }
+    
+  }
 }
 </style>

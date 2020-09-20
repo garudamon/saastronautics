@@ -28,6 +28,7 @@ body {
 :root {
   --primary-color-red: #ff4874;
   --primary-color-purple: #4b028c;
+  --primary-color-blue: #4297FA;
   --primary-gray-smooth: #f5f4f8;
   --primary-link-color: #474747;
 }
@@ -302,7 +303,7 @@ span.emoji {
 .card-bg-white {
   background: #ffffff 0% 0% no-repeat padding-box;
   border: none;
-  box-shadow: 0px 3px 99px #7a7a7a29;
+  box-shadow: 0px 0px 50px #0000001A;
   border-radius: 10px;
 }
 
