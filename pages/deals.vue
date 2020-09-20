@@ -21,8 +21,8 @@
       <div class="row px-md-4">
         <div class="col-12 offset-md-7 col-md-5 mt-md-2">
           <div class="input-group">
-            <input type="text" class="form-control pl-3" placeholder="Search Product" />
-            <div class="input-group-append">
+            <input type="text" class="form-control pl-3" placeholder="Search Product" v-model="keyword" @keyup.enter="loadLiveDealsProduct" />
+            <div class="input-group-append" @click="loadLiveDealsProduct">
               <span class="input-group-text bg-transparent">
                 <i class="fa fa-search"></i>
               </span>
@@ -64,7 +64,8 @@
 export default {
   data() {
     return {
-      liveDealsProduct: []
+      liveDealsProduct: [],
+      keyword: ''
     }
   },
   fetch() {
@@ -72,7 +73,11 @@ export default {
   },
   methods: {
     loadLiveDealsProduct() {
-      this.$axios.get('/product/all?limit=50').then(response => {
+      let url = `/product/all?limit=50`
+      
+      if(this.keyword.trim() != '') url += `&keyword=${keyword}`
+
+      this.$axios.get(url).then(response => {
         let {
           data: { data, success }
         } = response
