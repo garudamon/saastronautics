@@ -30,7 +30,7 @@
               </tr>
             </tbody>
           </table>
-          <p class="text-center font-italic" v-else>Your cart empty</p>
+          <p class="text-center font-italic" v-else>No method registered</p>
         </div>
       </div>
     </div>
