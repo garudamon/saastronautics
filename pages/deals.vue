@@ -46,7 +46,9 @@
           :key="item.id"
         >
           <div class="product-image mb-3">
-            <img :src="$getImage(item.id)" :alt="item.name" />
+            <a :href="'/product/' + item.id">
+              <img :src="$getImage(item.id)" :alt="item.name" />
+            </a>
           </div>
           <div class="mb-3" v-if="item.productTagMaster">
             <span class="badge badge-info text-uppercase p-2">
@@ -55,7 +57,11 @@
               }}
             </span>
           </div>
-          <h6 class="font-weight-bold">{{ item.name }}</h6>
+          <div class="title-link">
+            <a :href="'/product/' + item.id">
+              <h6 class="font-weight-bold">{{ item.name }}</h6>
+            </a>
+          </div>
           <rating size="sm" space="mr-1" class="mb-3" :value="item.rating" />
           <div class="price row mb-5">
             <div class="col-2 active-price font-weight-bold">
@@ -118,6 +124,15 @@ export default {
     border-radius: 5px;
     img {
       width: 100%;
+    }
+  }
+  .title-link {
+    a {
+      color: black;
+      &:hover {
+        color: var(--primary-color-purple);
+        text-decoration: none;
+      }
     }
   }
   a {

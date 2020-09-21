@@ -91,7 +91,9 @@
           :key="item.id"
         >
           <div class="product-image mb-3">
-            <img :src="$getImage(item.productMaster.id)" :alt="item.name" />
+            <a :href="'/product/' + item.productMaster.id">
+              <img :src="$getImage(item.productMaster.id)" :alt="item.name" />
+            </a>
           </div>
           <div class="mb-3" v-if="item.productMaster.tag">
             <span class="badge badge-info text-uppercase p-2">
@@ -100,7 +102,11 @@
               }}
             </span>
           </div>
-          <h6 class="font-weight-bold">{{ item.productMaster.name }}</h6>
+          <div class="title-link">
+            <a :href="'/product/' + item.id">
+              <h6 class="font-weight-bold">{{ item.productMaster.name }}</h6>
+            </a>
+          </div>
           <rating size="sm" space="mr-1" class="mb-3" :value="item.rating" />
           <div class="price row mb-5">
             <div class="col-2 active-price font-weight-bold">
@@ -112,7 +118,11 @@
           </div>
           <nuxt-link :to="`product/${item.productMaster.id}`">Learn More &#8594;</nuxt-link>
         </div>
-        <div v-for="n in (6 - this.bestSellingProduct.length)" :key="n" class="col-12 col-md-4 product mb-5 px-4 pb-3">
+        <div
+          v-for="n in (6 - this.bestSellingProduct.length)"
+          :key="n"
+          class="col-12 col-md-4 product mb-5 px-4 pb-3"
+        >
           <LazyComingSoon />
         </div>
       </div>
@@ -282,6 +292,15 @@ export default {
     img {
       max-width: 100% !important;
       border-radius: 5px;
+    }
+  }
+  .title-link {
+    a {
+      color: black;
+      &:hover {
+        color: var(--primary-color-purple);
+        text-decoration: none;
+      }
     }
   }
   a {

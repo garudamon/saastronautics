@@ -182,6 +182,11 @@ export default {
           text: 'Blog',
           path: 'https://blog.saastronautics.com/',
           isButton: false
+        },
+        {
+          text: 'Community',
+          path: 'https://www.facebook.com/groups/saastronautics/',
+          isButton: false
         }
       ]
     }
