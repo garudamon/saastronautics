@@ -17,34 +17,34 @@
             <div class="form-group mb-4">
               <input
                 type="text"
-                class="form-control form-gray border-0"
+                class="form-control form-round form-primary-purple"
                 placeholder="First name"
                 v-model="form.firstName"
               />
-              <small class="form-text text-left">{{ errors[0] }}</small>
+              <span class="form-error" v-if="errors.length > 0">{{ errors[0] }}</span>
             </div>
           </ValidationProvider>
           <ValidationProvider name="E-mail" rules="required|email" v-slot="{ errors }">
             <div class="form-group mb-4">
               <input
                 type="email"
-                class="form-control form-gray border-0"
+                class="form-control form-round form-primary-purple"
                 placeholder="Email"
                 v-model="form.email"
               />
-              <small class="form-text text-left">{{ errors[0] }}</small>
+              <span class="form-error" v-if="errors.length > 0">{{ errors[0] }}</span>
             </div>
           </ValidationProvider>
           <ValidationProvider name="Password" rules="required" v-slot="{ errors }">
             <div class="form-group mb-4">
               <input
                 type="password"
-                class="form-control form-gray border-0"
+                class="form-control form-round form-primary-purple"
                 placeholder="Password"
                 v-model="form.Password"
                 ref="password"
               />
-              <small class="form-text text-left">{{ errors[0] }}</small>
+              <span class="form-error" v-if="errors.length > 0">{{ errors[0] }}</span>
             </div>
           </ValidationProvider>
           <ValidationProvider
@@ -55,12 +55,12 @@
             <div class="form-group mb-4">
               <input
                 type="password"
-                class="form-control form-gray border-0"
+                class="form-control form-round form-primary-purple"
                 placeholder="Type your password again"
                 v-model="form.newPassword"
                 data-vv-as="password"
               />
-              <small class="form-text text-left">{{ errors[0] }}</small>
+              <span class="form-error" v-if="errors.length > 0">{{ errors[0] }}</span>
             </div>
           </ValidationProvider>
           <div class="d-flex align-items-center">
@@ -147,8 +147,10 @@ p {
 a {
   color: var(--primary-color-blue);
 }
-small {
-  color: var(--primary-color-red);
+.form-error{
+  font-size: 0.6rem !important;
+  padding-left: 0.8rem;
+  color: tomato;
 }
 .swal-button--cancel {
   color: white;
