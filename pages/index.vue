@@ -101,7 +101,15 @@
             </span>
           </div>
           <h6 class="font-weight-bold">{{ item.productMaster.name }}</h6>
-          <rating size="sm" space="mr-1" class="mb-5" :value="item.rating" />
+          <rating size="sm" space="mr-1" class="mb-3" :value="item.rating" />
+          <div class="price row mb-5">
+            <div class="col-2 active-price font-weight-bold">
+              <span>${{ item.productMaster.activePrice }}</span>
+            </div>
+            <div class="col inactive-price">
+              <span>${{ item.productMaster.inActivePrice }}</span>
+            </div>
+          </div>
           <nuxt-link :to="`product/${item.productMaster.id}`">Learn More &#8594;</nuxt-link>
         </div>
         <div v-for="n in (6 - this.bestSellingProduct.length)" :key="n" class="col-12 col-md-4 product mb-5 px-4 pb-3">

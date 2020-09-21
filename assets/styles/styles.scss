@@ -341,3 +341,14 @@ a {
     border: solid 2px var(--primary-gray-smooth);
   }
 }
+
+//price on deals
+.price {
+  .active-price {
+    border-right: 1px solid #ddd;
+  }
+  .inactive-price {
+    color: #868686;
+    text-decoration: line-through;
+  }
+}

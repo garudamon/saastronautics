@@ -47,7 +47,7 @@
           productMaster.description3
         ]"
       />
-      <LazyImageParagraphSideBySide
+      <LazyVideoEmbedDescription
         :title="productMaster.videoTitle"
         :videoUrl="productMaster.videoURL"
         :descriptions="[

@@ -21,7 +21,13 @@
       <div class="row px-md-4">
         <div class="col-12 offset-md-7 col-md-5 mt-md-2">
           <div class="input-group">
-            <input type="text" class="form-control pl-3" placeholder="Search Product" v-model="keyword" @keyup.enter="loadLiveDealsProduct" />
+            <input
+              type="text"
+              class="form-control pl-3"
+              placeholder="Search Product"
+              v-model="keyword"
+              @keyup.enter="loadLiveDealsProduct"
+            />
             <div class="input-group-append" @click="loadLiveDealsProduct">
               <span class="input-group-text bg-transparent">
                 <i class="fa fa-search"></i>
@@ -50,7 +56,15 @@
             </span>
           </div>
           <h6 class="font-weight-bold">{{ item.name }}</h6>
-          <rating size="sm" space="mr-1" class="mb-5" :value="item.rating" />
+          <rating size="sm" space="mr-1" class="mb-3" :value="item.rating" />
+          <div class="price row mb-5">
+            <div class="col-2 active-price font-weight-bold">
+              <span>${{ item.activePrice }}</span>
+            </div>
+            <div class="col inactive-price">
+              <span>${{ item.inActivePrice }}</span>
+            </div>
+          </div>
           <nuxt-link :to="`product/${item.id}`">Learn More &#8594;</nuxt-link>
         </div>
       </div>
@@ -74,8 +88,8 @@ export default {
   methods: {
     loadLiveDealsProduct() {
       let url = `/product/all?limit=50`
-      
-      if(this.keyword.trim() != '') url += `&keyword=${keyword}`
+
+      if (this.keyword.trim() != '') url += `&keyword=${keyword}`
 
       this.$axios.get(url).then(response => {
         let {
