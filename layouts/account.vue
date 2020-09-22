@@ -94,11 +94,8 @@
               Notifications
             </a>
           </li>
-          <li class="nav-item">
-            <br />
-          </li>
         </ul>
-        <div class="text-center" v-if="isLogin">
+        <div class="text-center mb-5" v-if="isLogin">
           <button class="btn btn-red btn-md mt-lg-1" @click="signout">
             Sign out
             <i class="fa fa-sign-out pl-2"></i>

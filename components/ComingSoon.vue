@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="product-image mb-3">
-      <img src="~/assets/images/saastrobot-comingsoon-02.jpg" alt="comingsoon" />
+      <img src="~/assets/images/saastrobot-comingsoon-03.jpg" alt="comingsoon" />
     </div>
    
   </div>
