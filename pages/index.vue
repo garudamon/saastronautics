@@ -4,9 +4,9 @@
       <!-- lead -->
       <div class="row">
         <div class="col-12 col-md-11 mx-auto text-center">
-          <h1 class="display-4 font-weight-normal d-none d-md-block">
+          <h1 class="title-1 display-4 font-weight-normal d-none d-md-block">
             Launch Your Workflow into Hyperspace with
-            <span class="text-danger">Saastronautics</span>
+            <span class="text-danger title">Saastronautics</span>
           </h1>
           <h1 class="display-5 font-weight-normal d-block d-md-none">
             Launch Your Workflow into Hyperspace with
@@ -48,11 +48,11 @@
       <!-- main feature -->
       <div class="row features px-md-4 py-5">
         <div class="col-12 py-5">
-          <h2 class="text-center font-weight-bold">What Can You Do with Saastronautics?</h2>
+          <h1 class="title-1 text-center">What Can You Do with Saastronautics?</h1>
         </div>
         <div class="col-12 col-md-4 text-left px-4" v-for="item in features" :key="item.title">
           <img :src="item.image" :alt="item.title" />
-          <h5 class="text-capitalize font-weight-bold py-4">{{ item.title }}</h5>
+          <h5 class="title-2 text-capitalize font-weight-bold py-4">{{ item.title }}</h5>
           <p class="py-0">{{ item.description }}</p>
         </div>
       </div>
@@ -74,9 +74,9 @@
     <div class="container">
       <div class="row">
         <div class="col-12 text-center">
-          <h2 class="font-weight-bold mb-4">Best Selling Deals</h2>
+          <h1 class="title-2 font-weight-bold mb-4">Best Selling Deals</h1>
         </div>
-        <div class="col-12 col-md-8 mx-auto text-center">
+        <div class="col-12 col-md-10 mx-auto text-center graphik-reg">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labo re et dolore magna aliqua. Ut enim
@@ -104,7 +104,7 @@
           </div>
           <div class="title-link">
             <a :href="'/product/' + item.id">
-              <h6 class="font-weight-bold">{{ item.productMaster.name }}</h6>
+              <h5 class="maison-demi font-weight-bold">{{ item.productMaster.name }}</h5>
             </a>
           </div>
           <rating size="sm" space="mr-1" class="mb-3" :value="item.rating" />
@@ -116,7 +116,7 @@
               <span>${{ item.productMaster.inActivePrice }}</span>
             </div>
           </div>
-          <nuxt-link :to="`product/${item.productMaster.id}`">Learn More &#8594;</nuxt-link>
+          <nuxt-link class="maison-demi" :to="`product/${item.productMaster.id}`">Learn More &#8594;</nuxt-link>
         </div>
         <div
           v-for="n in (6 - this.bestSellingProduct.length)"

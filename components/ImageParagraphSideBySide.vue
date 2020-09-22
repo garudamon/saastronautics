@@ -4,10 +4,10 @@
     v-if="rtl"
   >
     <div class="col-12 col-md-6 pr-0 pr-md-5">
-      <h2 class="font-weight-bold mb-4" v-if="typeof title == 'object'">
+      <h1 class="title-1 mb-4" v-if="typeof title == 'object'">
         <div v-for="text in title" :key="text">{{ text }}</div>
-      </h2>
-      <h2 class="font-weight-bold mb-4" v-else>{{ title }}</h2>
+      </h1>
+      <h1 class="title-1 mb-4" v-else>{{ title }}</h1>
       <p v-for="(text, i) in descriptions" :key="i">{{ text }}</p>
     </div>
     <div class="col-12 col-md-6 text-right">
@@ -21,10 +21,10 @@
       <img :src="imageUrl" :alt="title" v-else />
     </div>
     <div class="col-12 col-md-6">
-      <h2 class="font-weight-bold mb-4" v-if="typeof title == 'object'">
+      <h1 class="title-1 mb-4" v-if="typeof title == 'object'">
         <div v-for="text in title" :key="text">{{ text }}</div>
-      </h2>
-      <h2 class="font-weight-bold mb-4" v-else>{{ title }}</h2>
+      </h1>
+      <h1 class="title-1 mb-4" v-else>{{ title }}</h1>
       <p v-for="(text, i) in descriptions" :key="i">{{ text }}</p>
     </div>
   </div>

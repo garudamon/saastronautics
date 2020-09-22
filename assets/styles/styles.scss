@@ -28,7 +28,7 @@ body {
 :root {
   --primary-color-red: #ff4874;
   --primary-color-purple: #4b028c;
-  --primary-color-blue: #4297FA;
+  --primary-color-blue: #4297fa;
   --primary-gray-smooth: #f5f4f8;
   --primary-link-color: #474747;
 }
@@ -41,7 +41,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: 'Didact Gothic', sans-serif;
+  font-family: 'Maison-Neue', sans-serif;
 }
 p {
   font-weight: 300;
@@ -50,6 +50,51 @@ p {
 img {
   max-width: 95%;
 }
+
+@font-face {
+  font-family: 'Eina01-Bold';
+  src: url('../font/Eina01-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Maison-Neue';
+  src: url('../font/MaisonNeue-Book.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Maison-Neue-Demi';
+  src: url('../font/MaisonNeue-Demi.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Graphik-Regular';
+  src: url('../font/Graphik-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Graphik-Semibold';
+  src: url('../font/Graphik-Semibold.ttf') format('truetype');
+}
+
+//FONT
+
+.title-1 {
+  font-family:'Eina01-Bold', sans-serif;
+}
+
+.title-2 {
+  font-family:'Graphik-Semibold', sans-serif;
+}
+
+.graphik-reg {
+  font-family:'Graphik-Regular', sans-serif;
+}
+
+.maison-demi {
+  font-family:'Maison-Neue-Demi', sans-serif;
+}
+
+//
 
 .navbar {
   padding: 0rem 1rem;
@@ -303,7 +348,7 @@ span.emoji {
 .card-bg-white {
   background: #ffffff 0% 0% no-repeat padding-box;
   border: none;
-  box-shadow: 0px 0px 50px #0000001A;
+  box-shadow: 0px 0px 50px #0000001a;
   border-radius: 10px;
 }
 

@@ -18,7 +18,7 @@
             />
           </div>
           <div class="col-12 col-md-8 text-center">
-            <h3 class="font-weight-bold">
+            <h3 class="title-2">
               Sign Up and Launch Your Workflow into Hyperspace!
             </h3>
             <p class="py-2">
