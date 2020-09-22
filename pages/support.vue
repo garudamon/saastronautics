@@ -10,9 +10,9 @@
           <img src="~/assets/images/saastrobot-working-01.png" alt />
         </div>
         <div class="col-6 faq-title pl-md-2">
-          <h1 class="font-weight-bold d-md-block mb-3">Frequently Asked Questions</h1>
+          <h1 class="title-1 d-md-block mb-3">Frequently Asked Questions</h1>
           <h2
-            class="font-weight-bold d-md-block"
+            class="title-1 d-md-block"
           >We always provide the best service for our customers.</h2>
         </div>
       </div>
@@ -20,7 +20,7 @@
       <div class="row px-4 mb-5">
         <div class="col-12 col-sm-6 mb-5 px-md-3" v-for="item in cardQuestion" :key="item.id">
           <div class="support-card card card-bg-white p-4">
-            <div class="card-body">
+            <div class="card-body graphik-reg">
               <h6 class="card-title font-weight-bold mb-3">{{ item.title }}</h6>
               <p class="card-text">{{ item.description }}</p>
             </div>
@@ -75,9 +75,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.title-1 {
+  letter-spacing: 0.9px;
+}
+
 .container {
   margin-top: -40px;
 }
+
 .faq-title {
   padding-top: 80px;
   h1 {
