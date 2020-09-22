@@ -49,7 +49,7 @@
             <td width="260">
               <h6 class="gordita-bold">{{item.name}}</h6>
               <h6 class="font-weight-bold text-red">{{$formattedMoney(item.price)}}</h6>
-              <LazyRating size="sm" :value="item.rating" />
+              <LazyRating class="rating" size="sm" :value="item.rating" />
             </td>
             <td>
               <button
@@ -260,5 +260,8 @@ img {
 }
 .text-grey-smooth {
   color: #C0C0C0;
+}
+.rating {
+  margin-left: -3px;
 }
 </style>

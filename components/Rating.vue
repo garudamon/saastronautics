@@ -3,8 +3,8 @@
     <span v-for="i in 5" :key="i" :class="`star ${space}`" @mouseover="hover(i)">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="20.03"
-        height="20"
+        width="16.03"
+        height="16"
         viewBox="0 0 20.03 20"
         v-if="size == 'sm'"
       >

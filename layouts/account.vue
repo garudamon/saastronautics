@@ -42,7 +42,7 @@
           <template v-else>
             <li class="nav-item mx-lg-3 d-flex align-items-center cart">
               <nuxt-link to="/cart">
-                <span class="fa fa-shopping-cart mr-2 fa-lg"></span>
+                <span class="fa fa-shopping-cart mr-2 fa-xl"></span>
                 <span class="count-buble" v-if="cart.quantity > 0">
                   {{
                   cart.quantity
@@ -66,36 +66,36 @@
         <ul class="nav flex-column">
           <li class="nav-item">
             <nuxt-link to="/account" class="nav-link">
-              <span class="fa fa-fw fa-dashboard mr-2"></span>
+              <span class="fa fa-fw fa-dashboard fa-xl mr-2"></span>
               Dashboard
             </nuxt-link>
           </li>
           <li class="nav-item">
             <nuxt-link to="/account/my-deals" class="nav-link">
-              <span class="fa fa-fw fa-tags mr-2"></span>
+              <span class="fa fa-fw fa-tags fa-xl mr-2"></span>
               My Deals
             </nuxt-link>
           </li>
           <li class="nav-item">
             <nuxt-link class="nav-link" to="/account/profile">
-              <span class="fa fa-fw fa-user-o mr-2"></span>
+              <span class="fa fa-fw fa-user-o fa-xl mr-2"></span>
               Account Detail
             </nuxt-link>
           </li>
           <li class="nav-item">
             <nuxt-link to="/account/payment" class="nav-link">
-              <span class="fa fa-fw fa-credit-card mr-2"></span>
+              <span class="fa fa-fw fa-credit-card fa-xl mr-2"></span>
               Payment
             </nuxt-link>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" href="#">
-              <span class="fa fa-fw fa-bell-o mr-2"></span>
+              <span class="fa fa-fw fa-bell-o fa-xl mr-2"></span>
               Notifications
             </a>
-          </li>
+          </li> -->
         </ul>
-        <div class="text-center" v-if="isLogin">
+        <div class="text-center mt-3" v-if="isLogin">
           <button class="btn btn-red btn-md mt-lg-1" @click="signout">
             Sign out
             <i class="fa fa-sign-out pl-2"></i>
@@ -233,6 +233,9 @@ aside {
       max-width: 100%;
     }
   }
+  .fa-xl {
+    font-size: 1.45em;
+  }
 }
 .content {
   background: var(--primary-gray-smooth);
@@ -245,11 +248,12 @@ aside {
 .btn-red {
   background: #FF4370;
   color: white;
+  padding: 7px 45px;
 }
 
 footer {
   img {
-    width: 20%;
+    width: 18%;
   }
 }
 </style>
