@@ -1,6 +1,6 @@
 <template>
   <div>
-    <LazyDashboardTopBar mascot="gift" :input="true" />
+    <LazyDashboardTopBar mascot="gift" :input="true" :name="profile.customer && profile.customer.firstName" />
     <div class="modal fade show" id="redeemRefund" tabindex="-1" aria-labelledby="redeemRefundLabel" aria-modal="true" role="dialog" style="display: block;" v-show="showModal">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -80,6 +80,7 @@
 </template>
 
 <script>
+import { mapState, mapMutations } from 'vuex'
 export default {
   layout: 'account',
   name: 'MyDeals',
@@ -97,7 +98,21 @@ export default {
       }
     }
   },
+  computed: {
+    ...mapState(['profile'])
+  },
   methods: {
+    ...mapMutations(['setProfile']),
+    getProfile() {
+      this.$axios.get('/user/myprofile').then(response => {
+        let {
+          data: { success, data }
+        } = response
+        if (success) {
+          this.setProfile(data)
+        }
+      })
+    },
     toggleSelectedCode(item){
       if(item.status == 1) {
         let temp = [...this.codeSelected]

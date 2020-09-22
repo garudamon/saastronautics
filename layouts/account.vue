@@ -40,9 +40,6 @@
             <nuxt-link class="btn btn-primary btn-sm mt-lg-1" to="/auth/signin">Get Started</nuxt-link>
           </li>
           <template v-else>
-            <li class="nav-item mx-lg-3">
-              <button class="btn btn-primary btn-sm mt-lg-1" @click="signout">Sign out <i class="fa fa-sign-out pl-2"></i></button>
-            </li>
             <li class="nav-item mx-lg-3 d-flex align-items-center cart">
               <nuxt-link to="/cart">
                 <span class="fa fa-shopping-cart mr-2 fa-lg"></span>
@@ -63,9 +60,7 @@
           class="d-flex align-items-center justify-content-center flex-column border-bottom pb-4 px-3 profile-info"
         >
           <img v-if="profile.customer" :src="$getProfile(profile.customer.id)" alt="profile photo" />
-          <h6
-            class="title-1 pt-3 my-0"
-          >{{ profile.customer && profile.customer.firstName }}</h6>
+          <h6 class="title-1 pt-3 my-0">{{ profile.customer && profile.customer.firstName }}</h6>
           <p class="py-0 my-0">{{ profile.email }}</p>
         </div>
         <ul class="nav flex-column">
@@ -83,7 +78,6 @@
           </li>
           <li class="nav-item">
             <nuxt-link class="nav-link" to="/account/profile">
-
               <span class="fa fa-fw fa-user-o mr-2"></span>
               Account Detail
             </nuxt-link>
@@ -101,15 +95,21 @@
             </a>
           </li>
         </ul>
+        <div class="text-center" v-if="isLogin">
+          <button class="btn btn-red btn-md mt-lg-1" @click="signout">
+            Sign out
+            <i class="fa fa-sign-out pl-2"></i>
+          </button>
+        </div>
       </aside>
-      <div class="content flex-grow-1 px-5 pb-4">
+      <div class="content flex-grow-1 px-5">
         <nuxt />
       </div>
     </div>
     <footer class="p-3 fixed-bottom">
       <div class="d-flex justify-content-around align-items-center">
         <div>
-          <img src="~/assets/images/logo-white.png" alt="logo-saastronautics" />
+          <img class="ml-3" src="~/assets/images/white_logo.png" alt="logo-saastronautics" />
         </div>
         <div>
           <nuxt-link :to="`#`">Sitemap</nuxt-link>
@@ -219,7 +219,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-nav{
+nav {
   background: var(--primary-gray-smooth);
 }
 aside {
@@ -234,11 +234,22 @@ aside {
     }
   }
 }
-.content{
+.content {
   background: var(--primary-gray-smooth);
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   margin-top: 80px;
   padding-bottom: 30px;
   margin-left: 225px;
+}
+
+.btn-red {
+  background: #FF4370;
+  color: white;
+}
+
+footer {
+  img {
+    width: 20%;
+  }
 }
 </style>
