@@ -4,7 +4,7 @@
       <!-- lead -->
       <div class="row">
         <div class="col-12 col-md-11 mx-auto text-center">
-          <h1 class="title-1 display-4 font-weight-normal d-none d-md-block">
+          <h1 class="title-1 display-5 font-weight-normal d-none d-md-block">
             Launch Your Workflow into Hyperspace with
             <span class="text-red title-1">Saastronautics</span>
           </h1>
@@ -282,9 +282,7 @@ export default {
     height: 70px;
   }
 }
-.text-red {
-  color: #FF4370;
-}
+
 .product {
   .product-image {
     overflow: hidden;
