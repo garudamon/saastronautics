@@ -12,7 +12,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <a class="navbar-brand" href="#">
-        <img src="~/assets/images/logo.png" alt />
+        <img src="~/assets/images/logo_account.png" alt />
       </a>
 
       <div :class="{ collapse: true, 'navbar-collapse': true, show: expandNav }">
@@ -83,6 +83,7 @@
           </li>
           <li class="nav-item">
             <nuxt-link class="nav-link" to="/account/profile">
+
               <span class="fa fa-fw fa-user-o mr-2"></span>
               Account Detail
             </nuxt-link>
