@@ -64,7 +64,7 @@
         >
           <img v-if="profile.customer" :src="$getProfile(profile.customer.id)" alt="profile photo" />
           <h6
-            class="font-weight-bold pt-3 my-0"
+            class="title-1 pt-3 my-0"
           >{{ profile.customer && profile.customer.firstName }}</h6>
           <p class="py-0 my-0">{{ profile.email }}</p>
         </div>

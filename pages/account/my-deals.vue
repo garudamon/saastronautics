@@ -32,7 +32,7 @@
     <div class="table-fixed mt-4">
       <table>
         <thead>
-          <tr>
+          <tr class="gordita-bold">
             <th class="text-uppercase text-secondary" colspan="2">deal name</th>
             <th class="text-uppercase text-secondary" width="180"></th>
             <th class="text-uppercase text-secondary" width="185">purchase date</th>
@@ -46,8 +46,8 @@
             <td width="250">
               <img :src="$getImage(item.id)" alt />
             </td>
-            <td>
-              <h6 class="font-weight-bold">{{item.name}}</h6>
+            <td width="150">
+              <h6 class="gordita-bold">{{item.name}}</h6>
               <h6 class="font-weight-bold text-red">{{$formattedMoney(item.price)}}</h6>
               <LazyRating size="sm" :value="item.rating" />
             </td>

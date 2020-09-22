@@ -5,7 +5,7 @@
       <div class="col-12 col-md-4" v-for="item in items" :key="item.header">
         <div class="item py-5 px-3 d-flex flex-column justify-content-center align-items-center">
           <img :src="item.image" :alt="item.header" />
-          <h5 class="font-weight-bold text-capitalize pt-4">{{item.header}}</h5>
+          <h5 class="gordita-bold text-capitalize pt-4">{{item.header}}</h5>
           <p class="text-center">{{item.desc}}</p>
         </div>
       </div>
@@ -41,6 +41,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+h5 {
+  letter-spacing: 1px;
+}
 .item {
   border-radius: 20px;
   border: thin solid rgba($color: #bdbdbd, $alpha: 0.3);

@@ -10,7 +10,7 @@
           </h1>
           <h1 class="display-5 font-weight-normal d-block d-md-none">
             Launch Your Workflow into Hyperspace with
-            <span class="text-danger font-weight-bold">Saastronautics</span>
+            <span class="text-red title-1 font-weight-bold">Saastronautics</span>
           </h1>
         </div>
         <div class="col-12 col-md-10 mx-auto text-center">

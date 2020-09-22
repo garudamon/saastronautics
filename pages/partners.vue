@@ -3,24 +3,24 @@
     <div class="container">
       <!-- lead -->
       <div class="row">
-        <div class="col-12 col-md-11 mx-auto text-center">
-          <h1 class="display-4 font-weight-normal d-none d-md-block">
+        <div class="col-12 col-md-10 mx-auto text-center">
+          <h1 class="title-1 display-5 font-weight-normal d-none d-md-block">
             Reach More Users by Launching Your
             SaaS Tools with
             <span
-              class="text-danger"
+              class="text-red title-1"
             >Saastronautics</span>
           </h1>
-          <h1 class="display-5 font-weight-normal d-block d-md-none">
+          <h1 class="title-1 display-5 font-weight-normal d-block d-md-none">
             Reach More Users by Launching Your
             SaaS Tools with
             <span
-              class="text-danger"
+              class="text-red title-1"
             >Saastronautics</span>
           </h1>
         </div>
-        <div class="col-12 col-md-9 mx-auto text-center">
-          <p class="px-md-4 py-4">
+        <div class="col-12 col-md-10 mx-auto text-center">
+          <p class="px-md-3 py-4">
             Do you develop SaaS tools to help companies manage their digital transformation of the workplace? At Saastronautics,
             we understand that the future of business is automation and digitization.
           </p>
@@ -129,4 +129,14 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.text-red {
+  color: #FF4370;
+}
+
+.display-5 {
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+</style>

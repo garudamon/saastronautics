@@ -16,8 +16,8 @@ export default {
 <style lang="scss" scoped>
 .key-feature {
   background: #ffffff 0% 0% no-repeat padding-box;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.33);
-  border-radius: 10px;
+  box-shadow: 0 0 99px #0000001A;
+  border-radius: 5px;
   overflow: hidden;
   .icon {
     img {

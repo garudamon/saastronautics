@@ -6,7 +6,7 @@
           <li class="nav-item">
             <a
               :class="{
-                'nav-link py-4 px-5': true,
+                'title-1 nav-link py-4 px-5': true,
                 active: active == 'review'
               }"
               @click="
@@ -15,13 +15,13 @@
                   return false
                 }
               "
-              >Review</a
+              >Reviews</a
             >
           </li>
           <li class="nav-item">
             <a
               :class="{
-                'nav-link py-4 px-5': true,
+                'title-1 nav-link py-4 px-5': true,
                 active: active == 'question'
               }"
               @click="
@@ -30,7 +30,7 @@
                   return false
                 }
               "
-              >Question</a
+              >Questions</a
             >
           </li>
         </ul>
@@ -42,7 +42,7 @@
             :product="product"
             :afterPost="() => fetchData('review')"
           />
-          <h2 class="font-weight-bold my-5">Recent Review</h2>
+          <h2 class="title-1 my-5">Recent Review</h2>
           <LazyCommentItem
             :items="items['review']"
             key="review-items"
@@ -56,7 +56,7 @@
             :product="product"
             :afterPost="() => fetchData('question')"
           />
-          <h2 class="font-weight-bold my-5">Recent Questions</h2>
+          <h2 class="title-1 my-5">Recent Questions</h2>
           <LazyCommentItem
             :items="items['question']"
             class="mt-3"
@@ -121,5 +121,7 @@ export default {
 }
 .nav-link {
   cursor: pointer;
+  letter-spacing: 1px;
+  font-weight: normal;
 }
 </style>

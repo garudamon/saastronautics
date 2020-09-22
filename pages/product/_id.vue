@@ -13,7 +13,7 @@
             >{{ tag.tagMaster && tag.tagMaster.name }}</span>
           </h6>
 
-          <h1 class="display-4 font-weight-bold d-none d-md-block">{{ productMaster.name }}</h1>
+          <h1 class="title-1 display-4 d-none d-md-block">{{ productMaster.name }}</h1>
           <h1 class="display-5 font-weight-normal d-block d-md-none">{{ productMaster.name }}</h1>
         </div>
         <div class="col-12 col-md-10 mx-auto text-center">

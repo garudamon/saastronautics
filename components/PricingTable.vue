@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row text-center">
         <div class="col-12">
-          <h2 class="font-weight-bold mb-4">Pricing</h2>
+          <h2 class="title-1 mb-4">Pricing</h2>
         </div>
         <div class="col-12 col-md-8 mx-auto">
           <p>{{ product.shortDescription }}</p>

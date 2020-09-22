@@ -21,7 +21,7 @@
         >Login To Post {{ `${question ? 'question' : 'review'}` }}</nuxt-link
       >
       <div class="d-flex align-items-center" v-if="!question">
-        <h6 class="font-weight-bold m-0 pr-2">Rate Our Product</h6>
+        <h6 class="title-1 m-0 pr-2">Rate Our Product</h6>
         <LazyRating
           size="sm"
           :callback="

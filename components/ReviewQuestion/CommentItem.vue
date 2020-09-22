@@ -9,7 +9,7 @@
       </div>
       <div class="flex-grow-1">
         <div class="d-flex justify-content-between align-items-center">
-          <h5 class="font-weight-bold m-0">{{ item.customer.firstName }}</h5>
+          <h5 class="title-1 m-0">{{ item.customer.firstName }}</h5>
           <LazyRating size="sm" v-if="!question" :value="item.star" />
         </div>
         <p>{{ $formattedDate(item.createdAt) }}</p>

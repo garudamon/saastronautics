@@ -4,13 +4,13 @@
       <!-- lead -->
       <div class="row">
         <div class="col-12 col-md-12 mx-auto text-center">
-          <h1 class="display-4 font-weight-normal d-none d-md-block">
+          <h1 class="title-1 display-5 font-weight-normal d-none d-md-block">
             The tools you need to grow your business <br />
-            <span class="text-danger">shouldn't put you out of business</span>
+            <span class="text-red title-1">shouldn't put you out of business</span>
           </h1>
-          <h1 class="display-5 font-weight-normal d-block d-md-none">
+          <h1 class="title-1 display-5 font-weight-normal d-block d-md-none">
             The tools you need to grow your business <br />
-            <span class="text-danger">shouldn't put you out of business</span>
+            <span class="text-red title-1">shouldn't put you out of business</span>
           </h1>
         </div>
         <div class="col-12 col-md-9 mx-auto text-center">
@@ -52,7 +52,7 @@
       <!-- meet the teams -->
       <div class="row">
         <div class="col-12 text-center mt-5 pt-5">
-          <h2 class="font-weight-bold mb-4">Meet The Team</h2>
+          <h2 class="title-1 mb-4">Meet The Team</h2>
         </div>
         <div class="col-12 col-md-7 mx-auto text-center">
           <p>
@@ -112,7 +112,7 @@ export default {
         {
           imageUrl: require('~/assets/images/about/frank-valensco.jpeg'),
           name: 'Frank Valensco',
-          position: 'Co-Founder & Head of Development',
+          position: 'Co-Founder & Head of Dev',
           description:
             'Head of Development at Saastronautics. CEO and Co-founder of Sekawan Solution, a Creative IT Company based in Jakarta, Indonesia. Have been working on developing solutions and products for the last 7 years to help clients grow their business.'
         },
@@ -129,4 +129,14 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.text-red {
+  color: #FF4370;
+}
+
+.display-5 {
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+</style>
