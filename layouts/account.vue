@@ -94,6 +94,9 @@
               Notifications
             </a>
           </li>
+          <li class="nav-item">
+            <br />
+          </li>
         </ul>
         <div class="text-center" v-if="isLogin">
           <button class="btn btn-red btn-md mt-lg-1" @click="signout">
@@ -246,7 +249,7 @@ aside {
 }
 
 .btn-red {
-  background: #FF4370;
+  background: #ff4370;
   color: white;
   padding: 7px 45px;
 }
