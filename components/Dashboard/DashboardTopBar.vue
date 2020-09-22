@@ -20,6 +20,7 @@
 <script>
 export default {
   props: {
+    name: { type: String },
     mascot: {
       default: 'react-out'
     },
@@ -35,7 +36,7 @@ h2 {
   letter-spacing: 1px;
 }
 .dashboard-top-bar {
-  height: 190px;
+  height: 160px;
   border-radius: 20px;
   position: relative;
   overflow: hidden;
@@ -61,7 +62,7 @@ h2 {
     }
   }
   .background-gift {
-    width: 634px;
+    width: 525px;
     background: transparent url('../../assets/images/react-out-half.png') 0% 0% / 85%
       no-repeat padding-box;
     position: absolute;
@@ -70,7 +71,9 @@ h2 {
     bottom: 0px;
     z-index: 1;
     &.giving {
-      background: transparent url('../../assets/images/gift-half.png') 0% 0%;
+      width: 525px;
+      background: transparent url('../../assets/images/gift-half.png') 0% 0% / 85%
+      no-repeat padding-box;;
     }
   }
   .background-paw {
