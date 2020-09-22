@@ -83,7 +83,6 @@
           </li>
           <li class="nav-item">
             <nuxt-link class="nav-link" to="/account/profile">
-
               <span class="fa fa-fw fa-user-o mr-2"></span>
               Account Detail
             </nuxt-link>

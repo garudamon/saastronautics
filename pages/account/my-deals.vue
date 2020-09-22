@@ -43,17 +43,17 @@
         </thead>
         <tbody>
           <tr v-for="(item, key) in items" :key="key">
-            <td width="250">
+            <td width="220">
               <img :src="$getImage(item.id)" alt />
             </td>
-            <td width="150">
+            <td width="260">
               <h6 class="gordita-bold">{{item.name}}</h6>
               <h6 class="font-weight-bold text-red">{{$formattedMoney(item.price)}}</h6>
               <LazyRating size="sm" :value="item.rating" />
             </td>
             <td>
               <button
-                class="btn btn-info btn-sm"
+                class="btn btn-primary btn-sm mt-lg-1"
                 @click="toggleCode(key)"
               >{{`${item.show?'Hide':'Show'} ${item.quantity} ${item.quantity>1?'codes':'code'}`}}</button>
               <ul v-show="item.show" class="list-unstyled pt-2">

@@ -18,7 +18,7 @@
         <li>
           <nuxt-link to>
             <span class="fa fa-fw fa-check-circle text-red"></span>
-            Mark as Redeemed
+            Redeemed
           </nuxt-link>
         </li>
       </ul>
@@ -68,7 +68,7 @@ export default {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.33);
     background: white;
     border-radius: 10px;
-    font-size: 12px;
+    font-size: 16px;
     width: 150px;
     a {
       color: rgba(0, 0, 0, 0.33);
