@@ -1,6 +1,6 @@
 <template>
   <div>
-    <LazyDashboardTopBar />
+    <LazyDashboardTopBar :name="profile.customer && profile.customer.firstName" />
     <div class="row py-5">
       <div class="col-12 col-md-4" v-for="item in items" :key="item.header">
         <div class="item py-5 px-3 d-flex flex-column justify-content-center align-items-center">
@@ -14,6 +14,7 @@
 </template>
 
 <script>
+import { mapState, mapMutations } from 'vuex'
 export default {
   layout: 'account',
   data() {
@@ -36,6 +37,25 @@ export default {
         }
       ]
     }
+  },
+  computed: {
+    ...mapState(['profile'])
+  },
+  methods: {
+    ...mapMutations(['setProfile']),
+    getProfile() {
+      this.$axios.get('/user/myprofile').then(response => {
+        let {
+          data: { success, data }
+        } = response
+        if (success) {
+          this.setProfile(data)
+        }
+      })
+    }
+  },
+  mounted() {
+    this.getProfile()
   }
 }
 </script>
