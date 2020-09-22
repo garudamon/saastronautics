@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="product-image mb-3">
-      <img src="~/assets/images/saastrobot-comingsoon-01.png" alt="comingsoon" />
+      <img src="~/assets/images/saastrobot-comingsoon-02.jpg" alt="comingsoon" />
     </div>
    
   </div>
@@ -27,7 +27,7 @@ export default {
     display: flex;
     align-items: center;
     img {
-      max-width: 70% !important;
+      max-width: 100% !important;
       border-radius: 5px;
       margin-left: auto;
       margin-right: auto;

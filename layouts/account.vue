@@ -88,14 +88,14 @@
               Payment
             </nuxt-link>
           </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="#">
+          <li class="nav-item">
+            <a class="nav-link" href="/account/notifications">
               <span class="fa fa-fw fa-bell-o fa-xl mr-2"></span>
               Notifications
             </a>
-          </li> -->
+          </li>
         </ul>
-        <div class="text-center mt-3" v-if="isLogin">
+        <div class="text-center" v-if="isLogin">
           <button class="btn btn-red btn-md mt-lg-1" @click="signout">
             Sign out
             <i class="fa fa-sign-out pl-2"></i>
