@@ -33,12 +33,12 @@
       <table>
         <thead>
           <tr class="gordita-bold">
-            <th class="text-uppercase text-secondary" colspan="2">deal name</th>
-            <th class="text-uppercase text-secondary" width="180"></th>
-            <th class="text-uppercase text-secondary" width="185">purchase date</th>
-            <th class="text-uppercase text-secondary" width="100">status</th>
-            <th class="text-uppercase text-secondary" width="100">total</th>
-            <th class="text-uppercase text-secondary"></th>
+            <th class="text-uppercase text-grey-smooth" colspan="2">deal name</th>
+            <th class="text-uppercase text-grey-smooth" width="180"></th>
+            <th class="text-uppercase text-grey-smooth" width="185">purchase date</th>
+            <th class="text-uppercase text-grey-smooth" width="100">status</th>
+            <th class="text-uppercase text-grey-smooth" width="100">total</th>
+            <th class="text-uppercase text-grey-smooth"></th>
           </tr>
         </thead>
         <tbody>
@@ -225,6 +225,7 @@ img {
       top: 0;
       background: #f5f4f8;
       z-index: 3;
+      font-size: 14px;
     }
     tbody {
       tr {
@@ -256,5 +257,8 @@ img {
 .badge-soft{
   background: #F2EDF7;
   border: solid 1px var(--primary-color-purple)
+}
+.text-grey-smooth {
+  color: #C0C0C0;
 }
 </style>
