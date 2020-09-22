@@ -195,6 +195,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+img {
+  border-radius: 10px;
+}
+
 .table-fixed {
   overflow-y: auto;
   table {
