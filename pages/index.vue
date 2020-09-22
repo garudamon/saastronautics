@@ -6,11 +6,11 @@
         <div class="col-12 col-md-11 mx-auto text-center">
           <h1 class="title-1 display-4 font-weight-normal d-none d-md-block">
             Launch Your Workflow into Hyperspace with
-            <span class="text-danger title">Saastronautics</span>
+            <span class="text-danger title-1">Saastronautics</span>
           </h1>
           <h1 class="display-5 font-weight-normal d-block d-md-none">
             Launch Your Workflow into Hyperspace with
-            <span class="text-danger">Saastronautics</span>
+            <span class="text-danger font-weight-bold">Saastronautics</span>
           </h1>
         </div>
         <div class="col-12 col-md-10 mx-auto text-center">
