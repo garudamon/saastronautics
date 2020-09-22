@@ -5,8 +5,8 @@
       <div class="row img-p-sbs pt-2 pb-5 d-flex px-md-4 my-5 header">
         <div class="col-12 col-md-6 pr-0 pr-md-5">
           <span class="badge badge-info text-uppercase p-2">FEATURED DEALS</span>
-          <h1 class="font-weight-bold mt-4 mb-1 header-title">Lorem ipsum dolor</h1>
-          <h1 class="font-weight-bold header-subtitle">Sit Amet Consectetur</h1>
+          <h1 class="title-1 mt-4 mb-1 header-title">Lorem ipsum dolor</h1>
+          <h1 class="title-1 header-subtitle">Sit Amet Consectetur</h1>
           <rating size="sm" space="mr-3" class="my-4" />
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitse d do eiusmod tempor incididunt ut labore et dolore magil na aliqua. Ut enim ad minim veniam, quis nostrud exercita tion ullamco laboris nisi ut aliquip ex ea.</p>
           <button type="submit" class="btn btn-primary btn-md px-5 mt-1">Learn More</button>
@@ -36,7 +36,7 @@
           </div>
         </div>
         <div class="col-12 text-center mt-5">
-          <h2 class="font-weight-bold mb-4">Live Deals</h2>
+          <h2 class="title-1 mb-4">Live Deals</h2>
         </div>
       </div>
       <div class="row mt-5">
@@ -59,7 +59,7 @@
           </div>
           <div class="title-link">
             <a :href="'/product/' + item.id">
-              <h6 class="font-weight-bold">{{ item.name }}</h6>
+              <h6 class="maison-demi font-weight-bold">{{ item.name }}</h6>
             </a>
           </div>
           <rating size="sm" space="mr-1" class="mb-3" :value="item.rating" />
@@ -71,7 +71,7 @@
               <span>${{ item.inActivePrice }}</span>
             </div>
           </div>
-          <nuxt-link :to="`product/${item.id}`">Learn More &#8594;</nuxt-link>
+          <nuxt-link class="maison-demi" :to="`product/${item.id}`">Learn More &#8594;</nuxt-link>
         </div>
       </div>
     </div>

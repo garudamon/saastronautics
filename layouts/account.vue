@@ -41,7 +41,7 @@
           </li>
           <template v-else>
             <li class="nav-item mx-lg-3">
-              <button class="btn btn-primary btn-lg mt-lg-1" @click="signout">Sign out <i class="fa fa-sign-out"></i></button>
+              <button class="btn btn-primary btn-sm mt-lg-1" @click="signout">Sign out <i class="fa fa-sign-out pl-2"></i></button>
             </li>
             <li class="nav-item mx-lg-3 d-flex align-items-center cart">
               <nuxt-link to="/cart">
