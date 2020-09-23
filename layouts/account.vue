@@ -66,36 +66,31 @@
         <ul class="nav flex-column">
           <li class="nav-item">
             <nuxt-link to="/account" class="nav-link">
-              <span class="fa fa-fw fa-dashboard fa-xl mr-2"></span>
+              <span class="fa fa-fw fa-dashboard fa-xl mr-3"></span>
               Dashboard
             </nuxt-link>
           </li>
           <li class="nav-item">
             <nuxt-link to="/account/my-deals" class="nav-link">
-              <span class="fa fa-fw fa-tags fa-xl mr-2"></span>
+              <span class="fa fa-fw fa-tags fa-xl mr-3"></span>
               My Deals
             </nuxt-link>
           </li>
           <li class="nav-item">
             <nuxt-link class="nav-link" to="/account/profile">
-              <span class="fa fa-fw fa-user-o fa-xl mr-2"></span>
+              <span class="fa fa-fw fa-user-o fa-xl mr-3"></span>
               Account Detail
             </nuxt-link>
           </li>
           <li class="nav-item">
             <nuxt-link to="/account/payment" class="nav-link">
-              <span class="fa fa-fw fa-credit-card fa-xl mr-2"></span>
+              <span class="fa fa-fw fa-credit-card fa-xl mr-3"></span>
               Payment
             </nuxt-link>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/account/notifications">
-              <span class="fa fa-fw fa-bell-o fa-xl mr-2"></span>
-              Notifications
-            </a>
-          </li>
         </ul>
         <div class="text-center mb-5" v-if="isLogin">
+          <br>
           <button class="btn btn-red btn-md mt-lg-1" @click="signout">
             Sign out
             <i class="fa fa-sign-out pl-2"></i>
