@@ -95,7 +95,7 @@ export default {
     loadLiveDealsProduct() {
       let url = `/product/all?limit=50`
 
-      if (this.keyword.trim() != '') url += `&keyword=${keyword}`
+      if (this.keyword.trim() != '') url += `&keyword=${this.keyword}`
 
       this.$axios.get(url).then(response => {
         let {
