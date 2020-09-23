@@ -54,7 +54,8 @@
           productMaster.videoDescription
         ]"
       />
-      <div class="row px-md-4 mb-5">
+      <div class="border-plansfeature"></div>
+      <div class="row px-md-4 mb-5 pt-5">
         <div class="col">
           <h1 class="title-1">Plans and Features</h1>
           <h5 class="title-1">Deal Terms</h5>
@@ -150,12 +151,17 @@ li {
   padding-left: 0.3em;
 }
 li:before {
-  content: "\f00c"; /* FontAwesome Unicode */
+  content: '\f00c'; /* FontAwesome Unicode */
   font-family: FontAwesome;
   display: inline-block;
   margin-right: 0.5em;
   margin-left: -1.3em; /* same as padding-left set on li */
   width: 1.3em; /* same as padding-left set on li */
   color: var(--primary-color-red);
+}
+
+.border-plansfeature {
+  border-top: 1.7px solid gray;
+  margin: 0 1.7em;
 }
 </style>
