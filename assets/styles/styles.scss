@@ -84,23 +84,23 @@ img {
 //FONT
 
 .title-1 {
-  font-family:'Eina01-Bold', sans-serif;
+  font-family: 'Eina01-Bold', sans-serif;
 }
 
 .title-2 {
-  font-family:'Graphik-Semibold', sans-serif;
+  font-family: 'Graphik-Semibold', sans-serif;
 }
 
 .graphik-reg {
-  font-family:'Graphik-Regular', sans-serif;
+  font-family: 'Graphik-Regular', sans-serif;
 }
 
 .maison-demi {
-  font-family:'Maison-Neue-Demi', sans-serif;
+  font-family: 'Maison-Neue-Demi', sans-serif;
 }
 
 .gordita-bold {
-  font-family:'Gordita-Bold', sans-serif;
+  font-family: 'Gordita-Bold', sans-serif;
 }
 
 //
@@ -250,6 +250,13 @@ input {
   }
   &.error {
     border: solid 1px tomato !important;
+  }
+}
+span {
+  &.form-error {
+    font-size: 0.6rem !important;
+    padding-left: 0.8rem;
+    color: tomato;
   }
 }
 
@@ -410,7 +417,7 @@ a {
 }
 //font-color for header
 .text-red {
-  color: #FF4370;
+  color: #ff4370;
 }
 
 //custom size

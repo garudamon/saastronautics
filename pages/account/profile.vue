@@ -240,11 +240,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.form-error{
-  font-size: 0.6rem !important;
-  padding-left: 0.8rem;
-  color: tomato;
-}
 label{
   margin-bottom: 0 !important;
   font-size: 0.8rem;
