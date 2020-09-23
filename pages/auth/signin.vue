@@ -31,7 +31,7 @@
           </div>
 
           <p class="flex-grow-1 text-right">
-            <nuxt-link to="#">Forget Password?</nuxt-link>
+            <nuxt-link to="/auth/forgot-password">Forgot Password?</nuxt-link>
           </p>
         </div>
         <div class="d-flex align-items-center">
