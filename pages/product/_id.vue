@@ -54,6 +54,23 @@
           productMaster.videoDescription
         ]"
       />
+      <div class="row px-md-4 mb-5">
+        <div class="col">
+          <h1 class="title-1">Plans and Features</h1>
+          <h5 class="title-1">Deal Terms</h5>
+          <div v-for="dealterm in productMaster.productDealMaster" :key="dealterm.id">
+            <ul>
+              <li>{{ dealterm.description }}</li>
+            </ul>
+          </div>
+          <h5 class="title-1">Feature Included in All Plans</h5>
+          <div v-for="featuresinc in productMaster.productFeatureMaster" :key="featuresinc.id">
+            <ul>
+              <li>{{ featuresinc.description }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
     <LazyPricingTable :product="productMaster" />
     <LazyReviewQuestion :product="this.productMaster" />
@@ -124,5 +141,21 @@ export default {
   img {
     border-radius: 20px;
   }
+}
+
+ul {
+  list-style: none;
+}
+li {
+  padding-left: 0.3em;
+}
+li:before {
+  content: "\f00c"; /* FontAwesome Unicode */
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-right: 0.5em;
+  margin-left: -1.3em; /* same as padding-left set on li */
+  width: 1.3em; /* same as padding-left set on li */
+  color: var(--primary-color-red);
 }
 </style>
