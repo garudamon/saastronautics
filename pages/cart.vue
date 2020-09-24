@@ -157,13 +157,12 @@ export default {
           } = res
           if (success) {
             // move to checkout
-            this.$router.push({
-              name: 'checkout',
-              params: {
-                id: data
-              }
-            })
-            this.$router.push(`/checkout/${data}`)
+            if(this.cart.grandTotal == 0) {
+              this.$swal('Success', message, 'success').then(() => {
+                this.$router.push('/account/my-deals')
+              })
+            }
+            else this.$router.push(`/checkout/${data}`)
           } else {
             this.$swal('Failed', message, 'error')
           }

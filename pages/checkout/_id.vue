@@ -235,7 +235,7 @@ export default {
             'Your transaction successfully paid',
             'success'
           ).then(() => {
-            me.$router.push('/account')
+            me.$router.push('/account/my-deals')
             me.setCart({})
           })
         })
