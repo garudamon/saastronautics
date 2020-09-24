@@ -42,7 +42,7 @@
       <!-- hero image -->
       <div class="row hero">
         <div class="col-12 text-center pt-5 pb-4">
-          <img src="~/assets/images/hero-image.png" alt="Hero Image" />
+          <img src="~/assets/images/home-page-without-map.jpg" alt="Hero Image" />
         </div>
       </div>
       <!-- main feature -->
