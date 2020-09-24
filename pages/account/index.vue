@@ -23,17 +23,17 @@ export default {
         {
           image: require('~/assets/images/analytic.svg'),
           header: 'profile setting',
-          desc: 'Lorem ipsum dolor sit amet consectetur'
+          desc: 'Edit Name, Password and Profile Picture'
         },
         {
           image: require('~/assets/images/disk.svg'),
           header: 'my deals',
-          desc: 'Lorem ipsum dolor sit amet consectetur'
+          desc: 'Track, Redeem and Refund Deals'
         },
         {
           image: require('~/assets/images/nfc-card.svg'),
           header: 'payment setting',
-          desc: 'Lorem ipsum dolor sit amet consectetur'
+          desc: 'Manage Your Payment Method'
         }
       ]
     }
