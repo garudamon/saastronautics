@@ -1,6 +1,6 @@
 <template>
   <div class="comment">
-    <div class="d-flex" v-for="item in items" :key="item.id">
+    <div class="d-flex" v-for="(item, idx) in content" :key="item.id">
       <div class="d-none d-md-block pr-2 avatar">
         <img
           src="https://randomuser.me/api/portraits/men/40.jpg"
@@ -15,11 +15,11 @@
         <p>{{ $formattedDate(item.createdAt) }}</p>
         <p class v-html="item.description" v-if="question" />
         <p class v-html="item.review" v-else />
-        <div class="reply" v-show="false">
-          <h6 class="my-4">
+        <div class="reply" v-if="item.replyQty > 0">
+          <h6 class="my-4 show-replies" @click="showReplies(idx)">
             <span class="font-weight-bold">REPLIES</span>
             <span class="font-weight-light">(2)</span>
-            <span class="fa fa-angle-up"></span>
+            <span class="fa fa-angle-down"></span>
           </h6>
           <div class="d-flex mb-3" v-for="i in 3" :key="i">
             <div class="d-none d-md-block pr-2 avatar">
@@ -66,7 +66,25 @@ export default {
       type: Array
     }
   },
-  data: () => ({})
+  data: () => ({
+    content: []
+  }),
+  watch: {
+    items: {
+      handler(val){
+        this.content = [...val]
+      },
+      deep: true
+    }
+  },
+  mounted(){
+    this.content = [...this.items]
+  },
+  methods: {
+    showReplies(idx){
+      console.log(this.items[idx])
+    }
+  }
 }
 </script>
 
@@ -82,6 +100,9 @@ export default {
   .fa-angle-down,
   .fa-angle-up {
     color: var(--primary-color-red);
+  }
+  .show-replies{
+    cursor: pointer;
   }
 }
 </style>
