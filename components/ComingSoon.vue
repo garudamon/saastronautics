@@ -7,13 +7,12 @@
       <span class="badge badge-info text-uppercase p-2">Coming Soon</span>
     </div>
     <div class="title-link">
-      <a href="#">
+      <a href="#" class="disabled">
         <h5 class="maison-demi font-weight-bold">Product Name</h5>
       </a>
     </div>
     <rating size="sm" space="mr-1" class="mb-5" />
-    <!-- <nuxt-link class="maison-demi" :to="#">Learn More &#8594;</nuxt-link> -->
-    <nuxt-link class="maison-demi" :class="!disabled ? 'disabled' : ''" :to="`/`">Learn More &#8594;</nuxt-link>
+    <nuxt-link class="maison-demi disabled" :to="`/`">Learn More &#8594;</nuxt-link>
   </div>
 </template>
         
@@ -63,7 +62,6 @@ export default {
   }
 }
 .disabled {
-  color: lightgrey;
   pointer-events: none;
 }
 </style>
