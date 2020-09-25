@@ -97,14 +97,12 @@
               <img :src="$getImage(item.productMaster.id)" :alt="item.name" />
             </a>
           </div>
-          <div>
-            <h6 class="mb-4">
-              <span
-                class="badge badge-info text-uppercase mx-1 py-2 px-3"
-                v-for="tag in item.productMaster.productTagMaster"
-                :key="tag.id"
-              >{{ tag.tagMaster && tag.tagMaster.name }}</span>
-            </h6>
+          <div class="mb-4">
+            <span
+              class="badge badge-info text-uppercase mx-1 py-2 px-3"
+              v-for="tag in item.productMaster.productTagMaster"
+              :key="tag.id"
+            >{{ tag.tagMaster && tag.tagMaster.name }}</span>
           </div>
           <div class="title-link">
             <a :href="'/' + item.productMaster.uniqName">
