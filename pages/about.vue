@@ -112,7 +112,7 @@ export default {
         {
           imageUrl: require('~/assets/images/about/frank-valensco.jpeg'),
           name: 'Frank Valensco',
-          position: 'Head Of Development',
+          position: 'Head of Development',
           description:
             'Head of Development at Saastronautics. CEO and Co-founder of Sekawan Solution, a Creative IT Company based in Jakarta, Indonesia. Have been working on developing solutions and products for the last 7 years to help clients grow their business.'
         },
