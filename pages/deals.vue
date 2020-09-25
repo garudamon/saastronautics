@@ -45,7 +45,7 @@
           v-for="item in liveDealsProduct"
           :key="item.id"
         >
-          <div class="product-image mb-6">
+          <div class="product-image mb-6 ">
             <a :href="'/' + item.uniqName">
               <img :src="$getImage(item.id)" :alt="item.name" />
             </a>

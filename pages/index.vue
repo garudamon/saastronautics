@@ -10,7 +10,9 @@
           </h1>
           <h1 class="display-5 font-weight-normal d-block d-md-none">
             Launch Your Workflow into Hyperspace with
-            <span class="text-red title-1 font-weight-bold">Saastronautics</span>
+            <span
+              class="text-red title-1 font-weight-bold"
+            >Saastronautics</span>
           </h1>
         </div>
         <div class="col-12 col-md-10 mx-auto text-center">
@@ -95,12 +97,14 @@
               <img :src="$getImage(item.productMaster.id)" :alt="item.name" />
             </a>
           </div>
-          <div class="mb-3" v-if="item.productMaster.tag">
-            <span class="badge badge-info text-uppercase p-2">
-              {{
-              item.tag
-              }}
-            </span>
+          <div>
+            <h6 class="mb-4">
+              <span
+                class="badge badge-info text-uppercase mx-1 py-2 px-3"
+                v-for="tag in item.productMaster.productTagMaster"
+                :key="tag.id"
+              >{{ tag.tagMaster && tag.tagMaster.name }}</span>
+            </h6>
           </div>
           <div class="title-link">
             <a :href="'/' + item.productMaster.uniqName">
