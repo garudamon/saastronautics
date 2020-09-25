@@ -72,8 +72,8 @@ export default {
   components: {},
   data() {
     return {
-      imageWhatWeDo: require('~/assets/images/about/we-do.png'),
-      imageWhyWeDo: require('~/assets/images/about/why-we-do.png'),
+      imageWhatWeDo: require('~/assets/images/about/what-we-do.jpg'),
+      imageWhyWeDo: require('~/assets/images/about/why-we-do.jpg'),
       offer: [
         {
           image: require('~/assets/images/about/offer-3.png'),
