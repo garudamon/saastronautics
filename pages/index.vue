@@ -91,7 +91,7 @@
           :key="item.id"
         >
           <div class="product-image mb-3">
-            <a :href="'/product/' + item.productMaster.id">
+            <a :href="'/' + item.productMaster.uniqName">
               <img :src="$getImage(item.productMaster.id)" :alt="item.name" />
             </a>
           </div>
@@ -103,7 +103,7 @@
             </span>
           </div>
           <div class="title-link">
-            <a :href="'/product/' + item.id">
+            <a :href="'/' + item.productMaster.uniqName">
               <h5 class="maison-demi font-weight-bold">{{ item.productMaster.name }}</h5>
             </a>
           </div>
@@ -116,7 +116,7 @@
               <span>${{ item.productMaster.inActivePrice }}</span>
             </div>
           </div>
-          <nuxt-link class="maison-demi" :to="`product/${item.productMaster.id}`">Learn More &#8594;</nuxt-link>
+          <nuxt-link class="maison-demi" :to="`/${item.productMaster.uniqName}`">Learn More &#8594;</nuxt-link>
         </div>
         <div
           v-for="n in (6 - this.bestSellingProduct.length)"

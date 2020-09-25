@@ -46,7 +46,7 @@
           :key="item.id"
         >
           <div class="product-image mb-3">
-            <a :href="'/product/' + item.id">
+            <a :href="'/' + item.uniqName">
               <img :src="$getImage(item.id)" :alt="item.name" />
             </a>
           </div>
@@ -58,7 +58,7 @@
             </span>
           </div>
           <div class="title-link">
-            <a :href="'/product/' + item.id">
+             <a :href="'/' + item.uniqName">
               <h6 class="maison-demi font-weight-bold">{{ item.name }}</h6>
             </a>
           </div>
@@ -71,7 +71,7 @@
               <span>${{ item.inActivePrice }}</span>
             </div>
           </div>
-          <nuxt-link class="maison-demi" :to="`product/${item.id}`">Learn More &#8594;</nuxt-link>
+          <nuxt-link class="maison-demi" :to="`/${item.uniqName}`">Learn More &#8594;</nuxt-link>
         </div>
       </div>
     </div>
