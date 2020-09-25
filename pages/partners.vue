@@ -54,7 +54,7 @@ export default {
   components: {},
   data() {
     return {
-      imageTechIs: require('~/assets/images/partners/technology-is.png'),
+      imageTechIs: require('~/assets/images/partners/partners.jpg'),
       offer: [
         {
           image: require('~/assets/images/partners/expect-1.png'),
