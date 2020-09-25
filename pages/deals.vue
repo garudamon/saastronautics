@@ -45,20 +45,22 @@
           v-for="item in liveDealsProduct"
           :key="item.id"
         >
-          <div class="product-image mb-3">
+          <div class="product-image mb-6">
             <a :href="'/' + item.uniqName">
               <img :src="$getImage(item.id)" :alt="item.name" />
             </a>
           </div>
-          <div class="mb-3" v-if="item.productTagMaster">
-            <span class="badge badge-info text-uppercase p-2">
-              {{
-              item.productTagMaster.tagMaster && item.productTagMaster.tagMaster.name
-              }}
-            </span>
+          <div>
+            <h6 class="mb-4">
+              <span
+                class="badge badge-info text-uppercase mx-1 py-2 px-3"
+                v-for="tag in item.productTagMaster"
+                :key="tag.id"
+              >{{ tag.tagMaster && tag.tagMaster.name }}</span>
+            </h6>
           </div>
           <div class="title-link">
-             <a :href="'/' + item.uniqName">
+            <a :href="'/' + item.uniqName">
               <h6 class="maison-demi font-weight-bold">{{ item.name }}</h6>
             </a>
           </div>
