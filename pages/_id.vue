@@ -124,7 +124,7 @@ export default {
     getDetail() {
       if (typeof this.$route.params.id != 'undefined') {
         this.$axios
-          .get(`/product/detail/${this.$route.params.id}`)
+          .get(`/product/unique/${this.$route.params.id}`)
           .then(response => {
             let {
               data: { success, data }

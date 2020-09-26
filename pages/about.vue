@@ -72,8 +72,8 @@ export default {
   components: {},
   data() {
     return {
-      imageWhatWeDo: require('~/assets/images/about/we-do.png'),
-      imageWhyWeDo: require('~/assets/images/about/why-we-do.png'),
+      imageWhatWeDo: require('~/assets/images/about/what-we-do.svg'),
+      imageWhyWeDo: require('~/assets/images/about/why-we-do.svg'),
       offer: [
         {
           image: require('~/assets/images/about/offer-3.png'),
@@ -112,7 +112,7 @@ export default {
         {
           imageUrl: require('~/assets/images/about/frank-valensco.jpeg'),
           name: 'Frank Valensco',
-          position: 'Head OF Development',
+          position: 'Head of Development',
           description:
             'Head of Development at Saastronautics. CEO and Co-founder of Sekawan Solution, a Creative IT Company based in Jakarta, Indonesia. Have been working on developing solutions and products for the last 7 years to help clients grow their business.'
         },

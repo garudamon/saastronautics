@@ -5,31 +5,29 @@
       <div class="row">
         <div class="col-12 col-md-10 mx-auto text-center">
           <h1 class="title-1 display-5 font-weight-normal d-none d-md-block">
-            Reach More Users by Launching Your
-            SaaS Tools with
-            <span
-              class="text-red title-1"
-            >Saastronautics</span>
+            Reach More Users by Launching Your SaaS Tools with
+            <span class="text-red title-1">Saastronautics</span>
           </h1>
           <h1 class="title-1 display-5 font-weight-normal d-block d-md-none">
-            Reach More Users by Launching Your
-            SaaS Tools with
-            <span
-              class="text-red title-1"
-            >Saastronautics</span>
+            Reach More Users by Launching Your SaaS Tools with
+            <span class="text-red title-1">Saastronautics</span>
           </h1>
         </div>
         <div class="col-12 col-md-10 mx-auto text-center">
           <p class="px-md-3 py-4">
-            Do you develop SaaS tools to help companies manage their digital transformation of the workplace? At Saastronautics,
-            we understand that the future of business is automation and digitization.
+            Do you develop SaaS tools to help companies manage their digital
+            transformation of the workplace? At Saastronautics, we understand
+            that the future of business is automation and digitization.
           </p>
+          <nuxt-link class="btn btn-primary btn-lg" to="/partners-apply"
+            >Submit Your Product</nuxt-link
+          >
         </div>
       </div>
       <!-- what we do -->
       <LazyImageParagraphSideBySide
         :imageUrl="imageTechIs"
-        :title="[ 'Technology Is', 'Changing The Way', 'We Do Business']"
+        :title="['Technology Is', 'Changing The Way', 'We Do Business']"
         :descriptions="[
           'That\'s why we put together this platform from both developers and end-users. We want to create a platform that adds value to digital marketers, organizations, and developers.',
           'When your organization registers with our partner program, your company gets access to early adopters that provide you with the feedback you need to optimize your SaaS offering.'
@@ -54,7 +52,7 @@ export default {
   components: {},
   data() {
     return {
-      imageTechIs: require('~/assets/images/partners/technology-is.png'),
+      imageTechIs: require('~/assets/images/partners/partners.svg'),
       offer: [
         {
           image: require('~/assets/images/partners/expect-1.png'),
