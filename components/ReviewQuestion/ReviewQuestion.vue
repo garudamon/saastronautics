@@ -87,6 +87,7 @@ export default {
   methods: {
     fetchData(uri) {
       if (typeof this.product.id != 'undefined') {
+        let me = this
         this.$axios
           .get(`/product/${uri}/product/${this.product.id}`)
           .then(response => {
@@ -94,11 +95,18 @@ export default {
               data: { data, success }
             } = response
             if (success) {
-              console.log(uri, data)
               if (data != null) {
-                let temp = this.items
-                temp[`${uri}`] = [...data]
-                this.items = { ...temp }
+                let temp = data
+                let fetchReply = data.map(v => me.$axios.get(`/product/${uri}/reply/product${uri}/${v.id}`))
+                Promise.all(fetchReply).then(res => {
+                  res.map((result, idx) => {
+                    temp[idx].replyItems = []
+                    let {data:{success, data}} = result
+                    if(success)
+                      if(data != null) temp[idx].replyItems = [...data]
+                  })
+                  me.items[uri] = [...temp]
+                })
               }
             }
           })
