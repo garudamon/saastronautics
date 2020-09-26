@@ -144,7 +144,6 @@ export default {
   }
 }
 </script>
-
 <style lang="scss" scoped>
 p {
   font-size: 0.8rem;
