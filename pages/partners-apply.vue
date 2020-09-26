@@ -3,7 +3,7 @@
     <div class="gray-feature container-fluid py-5">
       <div class="row px-md-4 justify-content-md-center">
         <div class="col-12 my-3 text-center">
-          <h1 class="title-1">Become a Partner</h1>
+          <h1 class="title-1 display-5 font-weight-normal ">Become a Partner</h1>
         </div>
         <div class="col-8 text-center mb-3">
           <p>
