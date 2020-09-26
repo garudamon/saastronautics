@@ -285,6 +285,7 @@ export default {
 .features {
   img {
     height: 70px;
+     border-radius: 10px;
   }
 }
 

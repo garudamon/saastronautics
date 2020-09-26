@@ -127,8 +127,9 @@ export default {
   .product-image {
     overflow: hidden;
     height: 215px;
-    border-radius: 5px;
+
     img {
+      border-radius: 10px;
       width: 100%;
     }
   }
