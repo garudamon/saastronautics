@@ -230,6 +230,9 @@ export default {
   },
   mounted() {
     this.loadBestSellingProduct()
+    if(this.$route.query.aff){
+      this.$affiliateSet(this.$route.query.aff)
+    }
   },
   methods: {
     loadBestSellingProduct() {

@@ -98,6 +98,11 @@ export default {
       newPassword: ''
     }
   }),
+  mounted() {
+    if(this.$route.query.aff){
+      this.$affiliateSet(this.$route.query.aff)
+    }
+  },
   methods: {
     callError(error = '') {
       this.$swal('Failed', error, 'error')

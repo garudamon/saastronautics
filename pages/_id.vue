@@ -119,7 +119,11 @@ export default {
   fetch() {
     this.getDetail()
   },
-  mounted() {},
+  mounted() {
+    if(this.$route.query.aff){
+      this.$affiliateSet(this.$route.query.aff)
+    }
+  },
   methods: {
     getDetail() {
       if (typeof this.$route.params.id != 'undefined') {

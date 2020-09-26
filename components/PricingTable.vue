@@ -72,7 +72,8 @@ export default {
           price: selectedPrice.activePrice,
           discount: 0,
           discountCode: '',
-          description: selectedPrice.title
+          description: selectedPrice.title,
+          affiliateReference: this.$affiliateGet()
         }
         this.$axios.post('/cart', param).then(response => {
           let {

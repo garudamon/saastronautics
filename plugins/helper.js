@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import moment from 'moment'
+const Cookie = require('js-cookie')
 const Helper = {
   install(Vue) {
     ;(Vue.prototype.$getImage = id => {
@@ -17,6 +18,22 @@ const Helper = {
       (Vue.prototype.$formattedMoney = number => {
         if (number == null) number = 0
         return '$' + number.toLocaleString()
+      }),
+      (Vue.prototype.$affiliateSet = referral => {
+        let existing = Cookie.get('_ref')
+        if (existing != 'undefined') {
+          Cookie.set('_ref', referral, {
+            expires: 30
+          })
+        }
+      }),
+      (Vue.prototype.$affiliateGet = () => {
+        let existing = Cookie.get('_ref')
+        if (existing != 'undefined') {
+          return existing
+        } else {
+          return ''
+        }
       })
   }
 }
