@@ -230,7 +230,7 @@ export default {
   },
   mounted() {
     this.loadBestSellingProduct()
-    if(this.$route.query.aff){
+    if (this.$route.query.aff) {
       this.$affiliateSet(this.$route.query.aff)
     }
   },
@@ -289,6 +289,10 @@ export default {
 }
 
 .product {
+  transition: all 500ms;
+  &:hover {
+    transform: translateY(-10px);
+  }
   .product-image {
     overflow: hidden;
     height: 215px;

@@ -45,7 +45,7 @@
           v-for="item in liveDealsProduct"
           :key="item.id"
         >
-          <div class="product-image mb-6 ">
+          <div class="product-image mb-6">
             <a :href="'/' + item.uniqName">
               <img :src="$getImage(item.id)" :alt="item.name" />
             </a>
@@ -120,6 +120,10 @@ export default {
 }
 
 .product {
+  transition: all 500ms;
+  &:hover {
+    transform: translateY(-10px);
+  }
   .product-image {
     overflow: hidden;
     height: 215px;
