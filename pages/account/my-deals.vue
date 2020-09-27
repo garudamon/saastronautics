@@ -12,7 +12,7 @@
           </div>
           <div class="modal-body">
             <div v-for="item in action.selectedDeal.lincecode" :key="item.id" class="d-flex justify-content-between">
-              <label @click="toggleSelectedCode(item)">
+              <label @click="toggleSelectedCode(item)" class="code-check">
                 <input type="checkbox" :checked="codeSelected.indexOf(item.id) > -1" v-if="item.status == 1" />
                 <input type="checkbox" checked="checked" disabled v-else />
                 {{item.code}}
@@ -263,5 +263,16 @@ img {
 }
 .rating {
   margin-left: -3px;
+}
+.code-check{
+  position: relative;
+  &::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
 }
 </style>
