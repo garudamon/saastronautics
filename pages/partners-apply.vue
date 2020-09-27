@@ -3,41 +3,29 @@
     <div class="gray-feature container-fluid py-5">
       <div class="row px-md-4 justify-content-md-center">
         <div class="col-12 my-3 text-center">
-          <h1 class="title-1 display-5 font-weight-normal ">Become a Partner</h1>
+          <h1 class="title-1 display-5 font-weight-normal">Become a Partner</h1>
         </div>
         <div class="col-8 text-center mb-3">
           <p>
             Get paid to be promoted to millions of tech-savvy marketers,
             agencies, and entrepreneurs.
-            <span class="quote-highlight"
-              >Saastronautics is the #1 marketplace</span
-            >
+            <span
+              class="quote-highlight"
+            >Saastronautics is the #1 marketplace</span>
             for curated SaaS tools, educational content, and small business
             resources. Are you a good fit for an Saastronautics launch?
-            <span class="quote-highlight"
-              >Apply to become a partner below.</span
-            >
+            <span
+              class="quote-highlight"
+            >Apply to become a partner below.</span>
           </p>
           <div class="social-media pt-5">
-            <a
-              href="https://web.facebook.com/saastronautics"
-              target="_blank"
-              class=""
-            >
+            <a href="https://web.facebook.com/saastronautics" target="_blank" class>
               <span class="fa fa-facebook"></span>
             </a>
-            <a
-              href="https://twitter.com/saastronautics"
-              target="_blank"
-              class=""
-            >
+            <a href="https://twitter.com/saastronautics" target="_blank" class>
               <span class="fa fa-twitter"></span>
             </a>
-            <a
-              href="https://www.instagram.com/saastronautics/"
-              target="_blank"
-              class=""
-            >
+            <a href="https://www.instagram.com/saastronautics/" target="_blank" class>
               <span class="fa fa-instagram"></span>
             </a>
           </div>
@@ -54,10 +42,25 @@
           </div>
         </div>
         <div class="col-12 text-center">
-            <h3 class="title-1 py-3">
-              Partners Application
-            </h3>
-            <h5>Submit this form to begin the Saastronautics promotion process.</h5>
+          <h3 class="title-1 py-2">Partners Application</h3>
+          <h5>Submit this form to begin the Saastronautics promotion process.</h5>
+          <script id="jnqsmjrytsqlsw">
+  ;(function(a, b, c, e, f) {
+    var s = a.createElement('script')
+    s.src = b
+    s.setAttribute('data-form-id', e)
+    s.setAttribute('data-runner-id', c)
+    s.setAttribute('data-url-params', f)
+    s.setAttribute('data-scale', true)
+    a.head.appendChild(s)
+  })(
+    window.document,
+    'https://form.questionscout.com/qs-form-script.min.js',
+    'jnqsmjrytsqlsw',
+    '5f70323ffcba5123d97ed8bd',
+    '[]'
+  )
+          </script>
         </div>
       </div>
     </div>
