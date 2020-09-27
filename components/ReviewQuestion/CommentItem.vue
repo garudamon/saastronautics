@@ -2,10 +2,7 @@
   <div class="comment">
     <div class="d-flex" v-for="(item, idx) in content" :key="item.id">
       <div class="d-none d-md-block pr-2 avatar">
-        <img
-          src="https://randomuser.me/api/portraits/men/40.jpg"
-          alt="user ava"
-        />
+        <img :src="$getProfile(item.customer.id)" alt="profile photo" />
       </div>
       <div class="flex-grow-1">
         <div class="d-flex justify-content-between align-items-center">
@@ -20,13 +17,19 @@
             <h6 class="my-4 show-replies" @click="toggleShowReply(idx)">
               <span class="font-weight-bold">REPLIES</span>
               <span class="font-weight-light">({{item.replyItems.length}})</span>
-              <span :class="{'fa':true, 'fa-angle-down':!item.showReply, 'fa-angle-up':item.showReply}"></span>
+              <span
+                :class="{'fa':true, 'fa-angle-down':!item.showReply, 'fa-angle-up':item.showReply}"
+              ></span>
             </h6>
-            <div class="d-flex mb-3" v-for="reply in item.replyItems.slice(0, item.showReply?item.replyItems.length:3)" :key="reply.id">
+            <div
+              class="d-flex mb-3"
+              v-for="reply in item.replyItems.slice(0, item.showReply?item.replyItems.length:3)"
+              :key="reply.id"
+            >
               <div class="d-none d-md-block pr-2 avatar">
                 <img
-                  src="https://randomuser.me/api/portraits/men/40.jpg"
-                  alt="user ava"
+                  :src="$getProfile(reply.customer.id)"
+                  alt="profile photo"
                 />
               </div>
               <div class="flex-grow-1">
@@ -38,7 +41,7 @@
               </div>
             </div>
           </template>
-          <div class="row mb-3">
+          <div class="row mb-3" v-if="isLogin">
             <div class="col">
               <input
                 type="email"
@@ -48,7 +51,12 @@
               />
             </div>
             <div :class="{'px-0':true, 'col-1': isLogin, 'col-2': !isLogin}">
-              <button type="button" class="btn btn-primary btn-md px-4" @click="submitReply(idx)" v-if="isLogin">Reply</button>
+              <button
+                type="button"
+                class="btn btn-primary btn-md px-4"
+                @click="submitReply(idx)"
+                v-if="isLogin"
+              >Reply</button>
               <nuxt-link v-else to="/auth/signin" class="btn btn-primary">Login To Reply</nuxt-link>
             </div>
           </div>
@@ -82,52 +90,56 @@ export default {
   },
   watch: {
     items: {
-      handler(val){
+      handler(val) {
         this.content = [...val]
       },
       deep: true
     }
   },
-  mounted(){
-    let tmp = this.items.map((v) => ({...v, textReply: '', showReply: false}))
+  mounted() {
+    let tmp = this.items.map(v => ({ ...v, textReply: '', showReply: false }))
     this.content = [...tmp]
   },
   methods: {
-    toggleShowReply(idx){
+    toggleShowReply(idx) {
       let temp = this.content
       temp[idx].showReply = !temp[idx].showReply
       this.content = [...temp]
     },
     submitReply(idx) {
       let me = this
-      if(this.content[idx].textReply.trim() != '') {
+      if (this.content[idx].textReply.trim() != '') {
         let param = {
-          "productReviewID": this.content[idx].id,
-          "reply": this.content[idx].textReply.trim()
+          productReviewID: this.content[idx].id,
+          reply: this.content[idx].textReply.trim()
         }
-        if(this.question) {
+        if (this.question) {
           param = {
-            "productQuestionID": this.content[idx].id,
-            "reply": this.content[idx].textReply.trim()
+            productQuestionID: this.content[idx].id,
+            reply: this.content[idx].textReply.trim()
           }
         }
-        this.$axios.post(`/product/${this.question?'question':'review'}/reply/`, param)
+        this.$axios
+          .post(
+            `/product/${this.question ? 'question' : 'review'}/reply/`,
+            param
+          )
           .then(res => {
             let {
               data: { success, data, message }
             } = res
             if (success) {
               this.$swal('Success', message, 'success').then(() => {
-                me.content[idx].replyItems = [
-                  ...me.content[idx].replyItems, 
+                ;(me.content[idx].replyItems = [
+                  ...me.content[idx].replyItems,
                   {
-                    id:data, 
+                    id: data,
                     customer: me.profile.customer,
                     reply: me.content[idx].textReply,
                     createdAt: new Date().toISOString()
                   }
-                ],
-                me.content[idx].textReply = ''
+                ]),
+                  (me.content[idx].textReply = '')
               })
             } else {
               this.$swal('Failed', message, 'error')
@@ -152,10 +164,10 @@ export default {
   .fa-angle-up {
     color: var(--primary-color-red);
   }
-  .show-replies{
+  .show-replies {
     cursor: pointer;
   }
-  p{
+  p {
     margin-bottom: 0px;
   }
 }

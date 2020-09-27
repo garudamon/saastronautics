@@ -34,28 +34,30 @@
         <thead>
           <tr class="gordita-bold">
             <th class="text-uppercase text-grey-smooth" colspan="2">deal name</th>
-            <th class="text-uppercase text-grey-smooth" width="180"></th>
+            <th class="text-uppercase text-grey-smooth" width="220"></th>
             <th class="text-uppercase text-grey-smooth" width="185">purchase date</th>
-            <th class="text-uppercase text-grey-smooth" width="100">status</th>
+            <th class="text-uppercase text-grey-smooth" width="120">status</th>
             <th class="text-uppercase text-grey-smooth" width="100">total</th>
             <th class="text-uppercase text-grey-smooth"></th>
           </tr>
         </thead>
         <tbody>
-          <tr v-for="(item, key) in items" :key="key">
-            <td width="220">
+          <tr  v-for="(item, key) in items" :key="key" >
+            <td width="210">
               <img :src="$getImage(item.id)" alt />
             </td>
-            <td width="260">
+            <td width="220">
               <h6 class="gordita-bold">{{item.name}}</h6>
               <h6 class="font-weight-bold text-red">{{$formattedMoney(item.price)}}</h6>
               <LazyRating class="rating" size="sm" :value="item.rating" />
             </td>
             <td>
-              <button
-                class="btn btn-primary btn-sm mt-lg-1"
+              <h6
+                class="btn btn-red btn-sm mt-lg-1"
                 @click="toggleCode(key)"
-              >{{`${item.show?'Hide':'Show'} ${item.quantity} ${item.quantity>1?'codes':'code'}`}}</button>
+              >{{`${item.show?'Hide':'Show'} ${item.quantity} ${item.quantity>1?'codes':'code'}`}}
+                <i class="fa fa-eye pl-2"></i>
+              </h6>
               <ul v-show="item.show" class="list-unstyled pt-2">
                 <ul>
                   <li v-for="license in item.lincecode" :key="license._id">{{license.code}}</li>
@@ -65,8 +67,8 @@
             <td>{{$formattedDate(item.mycartcreatedat)}}</td>
             <td>
               <span
-                :class="{'badge':true, 'badge-secondary':item.status!=1, 'badge-success':item.status==1}"
-              >{{item.status==1?'active':'inactive'}}</span>
+                :class="{'badge':true, 'badge-secondary':item.status!=1, 'badge-info':item.status==1}"
+              >{{item.status==1?'Active':'Inactive'}}</span>
             </td>
             <td>{{$formattedMoney(item.subtotal)}}</td>
             <td>
@@ -230,10 +232,11 @@ img {
     tbody {
       tr {
         width: 100%;
+      
         td {
           margin-bottom: 10px;
           background-color: white;
-          padding: 10px;
+          padding: 12px;
           font-weight: 300;
           &:first-child {
             border-top-left-radius: 20px;

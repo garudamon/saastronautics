@@ -13,7 +13,7 @@ const Helper = {
         return `${process.env.baseUrl}/product/image/other/${id}/${idx}`
       }),
       (Vue.prototype.$formattedDate = string => {
-        return moment(string).format('DD MMMM YYYY')
+        return moment(string).format('MMM DD YYYY')
       }),
       (Vue.prototype.$formattedMoney = number => {
         if (number == null) number = 0
