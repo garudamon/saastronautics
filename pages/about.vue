@@ -6,11 +6,15 @@
         <div class="col-12 col-md-12 mx-auto text-center">
           <h1 class="title-1 display-5 font-weight-normal d-none d-md-block">
             The tools you need to grow your business <br />
-            <span class="text-red title-1">shouldn't put you out of business</span>
+            <span class="text-red title-1"
+              >shouldn't put you out of business</span
+            >
           </h1>
           <h1 class="title-1 display-5 font-weight-normal d-block d-md-none">
             The tools you need to grow your business <br />
-            <span class="text-red title-1">shouldn't put you out of business</span>
+            <span class="text-red title-1"
+              >shouldn't put you out of business</span
+            >
           </h1>
         </div>
         <div class="col-12 col-md-9 mx-auto text-center">
