@@ -6,7 +6,7 @@
           <h1 class="title-1">{{ title }}</h1>
           <p v-if="description">{{ description }}</p>
         </div>
-        <div :class="['col-12', size ]" v-for="item in items" :key="item.title"   data-aos="flip-up" data-aos-duration="100">
+        <div :class="['col-12', size ]" v-for="item in items" :key="item.title" >
           <img :src="item.image" :alt="item.title"  />
           <h5 class="title-2 text-capitalize font-weight-bold pt-4 pb-2" v-html="item.title" />
           <p class="py-0">{{ item.description }}</p>
