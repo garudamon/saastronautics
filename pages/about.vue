@@ -5,16 +5,14 @@
       <div class="row">
         <div class="col-12 col-md-12 mx-auto text-center">
           <h1 class="title-1 display-5 font-weight-normal d-none d-md-block">
-            The tools you need to grow your business <br />
-            <span class="text-red title-1"
-              >shouldn't put you out of business</span
-            >
+            The tools you need to grow your business
+            <br />
+            <span class="text-red title-1">shouldn't put you out of business</span>
           </h1>
           <h1 class="title-1 display-5 font-weight-normal d-block d-md-none">
-            The tools you need to grow your business <br />
-            <span class="text-red title-1"
-              >shouldn't put you out of business</span
-            >
+            The tools you need to grow your business
+            <br />
+            <span class="text-red title-1">shouldn't put you out of business</span>
           </h1>
         </div>
         <div class="col-12 col-md-9 mx-auto text-center">
@@ -33,8 +31,10 @@
           'Saastronautics is changing the way SaaS companies and providers are marketing and promoting their tools. Gain a core user base of people and companies interested in using your SaaS tools to boost their business. We provide early adopters with new tech that can help then automate workflows and processes.',
           'We act as a conduit to connect SaaS tool providers with end-users of the technology. With our dedicated user-base, you get access to qualified prospects looking for your SaaS solution right now.'
         ]"
+
       />
     </div>
+    
     <!-- What We Offer -->
     <LazyFeatureGray
       title="What We Offer"
@@ -43,6 +43,7 @@
     />
     <div class="container">
       <!-- why we do what we do -->
+
       <LazyImageParagraphSideBySide
         :imageUrl="imageWhatWeDo"
         :title="['Why We Do', 'What We Do']"
@@ -52,7 +53,9 @@
           'At Saastronautics, were always looking for innovations in technology that simplify the digital workplace.'
         ]"
         :rtl="true"
+        fadeType="fade-in"
       />
+
       <!-- meet the teams -->
       <div class="row">
         <div class="col-12 text-center mt-5 pt-5">
