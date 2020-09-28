@@ -1,5 +1,5 @@
 <template>
-  <div class="feedback mt-5 pb-5">
+  <div class="feedback mt-5 pb-5"  data-aos="fade-up" data-aos-duration="100">
     <div class="container">
       <div class="row">
         <div class="col-12 text-center mt-5 pt-5">

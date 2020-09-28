@@ -31,6 +31,7 @@
           'Saastronautics is changing the way SaaS companies and providers are marketing and promoting their tools. Gain a core user base of people and companies interested in using your SaaS tools to boost their business. We provide early adopters with new tech that can help then automate workflows and processes.',
           'We act as a conduit to connect SaaS tool providers with end-users of the technology. With our dedicated user-base, you get access to qualified prospects looking for your SaaS solution right now.'
         ]"
+        
 
       />
     </div>
@@ -53,7 +54,7 @@
           'At Saastronautics, were always looking for innovations in technology that simplify the digital workplace.'
         ]"
         :rtl="true"
-        fadeType="fade-in"
+        fadeType = "fade-left"
       />
 
       <!-- meet the teams -->

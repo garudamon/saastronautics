@@ -66,6 +66,7 @@
           'Saastronautics gives SaaS tool developers and organizations a platform to promote their tech solutions to early adopters.',
           'We provide the support in selecting, executing, and reviewing the SaaS tools on our platform. You get real-world feedback from our user base, allowing you to make adjustments to your tools to meet your customers’ expectations.'
         ]"
+        fadeType = "fade-right"
       />
     </div>
     <!-- why we're different -->
