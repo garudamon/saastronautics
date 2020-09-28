@@ -1,6 +1,6 @@
 <template>
   <div class="gray-feature py-5" >
-    <div class="container" data-aos="flip-up" data-aos-duration="1000">
+    <div class="container" >
       <div class="row px-md-4">
         <div class="col-12 mb-5 text-center">
           <h1 class="title-1">{{ title }}</h1>
