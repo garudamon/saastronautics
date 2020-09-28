@@ -6,9 +6,9 @@
         <div class="col-12 col-md-6 pr-0 pr-md-5">
           <span class="badge badge-info text-uppercase p-2">FEATURED DEALS</span>
           <h1 class="title-1 mt-4 mb-1 header-title">{{featuredDeals.name}}</h1>
-          <h1 class="title-1 header-subtitle">{{featuredDeals.shortDescription}}</h1>
+  
           <rating size="sm" space="mr-3" class="my-4" :value="featuredDeals.rating" />
-          <p>{{featuredDeals.longDescription}}</p>
+          <p>{{featuredDeals.shortDescription}}</p>
           <nuxt-link :to="`/${featuredDeals.uniqName}`" class="btn btn-primary btn-md px-5 mt-1">Learn More</nuxt-link>
         </div>
         <div class="col-12 col-md-6 text-md-right text-center mt-md-0 mt-5">

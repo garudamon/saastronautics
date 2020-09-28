@@ -7,7 +7,7 @@
           <h1 class="faq-title font-weight-bold d-md-block">Frequently Asked Questions</h1>
         </div>-->
         <div class="col-6 faq-img">
-          <img src="~/assets/images/saastrobot-working-01.png" alt />
+          <img src="~/assets/images/support/support_robo.svg" alt />
         </div>
         <div class="col-6 faq-title pl-md-2">
           <h1 class="title-1 d-md-block mb-3">Frequently Asked Questions</h1>
