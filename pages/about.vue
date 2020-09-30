@@ -113,14 +113,14 @@ export default {
         {
           imageUrl: require('~/assets/images/about/parker-casio.jpeg'),
           name: 'Parker Casio',
-          position: 'Co-Founder & Head of Growth',
+          position: 'Co-Founder & CMO',
           description:
             'Head of Marketing at Saastronautics, Casio is the founder and owner of DRBRAND, through which he has worked with over 350 businesses. Parker is a self-described growth hacker who understands how to reach a big audience.'
         },
         {
           imageUrl: require('~/assets/images/about/frank-valensco.jpeg'),
           name: 'Frank Valensco',
-          position: 'Head of Development',
+          position: 'Co-Founder & CTO',
           description:
             'Head of Development at Saastronautics. CEO and Co-founder of Sekawan Solution, a Creative IT Company based in Jakarta, Indonesia. Have been working on developing solutions and products for the last 7 years to help clients grow their business.'
         },
