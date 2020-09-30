@@ -67,7 +67,7 @@
           'We scout and hunt for the latest and greatest, next big deal, and secure exclusive lifetime deals and discounts for you. We have a rigorous vetting process for all SaaS tools that launch on Saastronautics, so you don’t have to. ',
           'We provide a launchpad for SaaS startups and developers to promote their tech solutions to early adopters. Our mission is to not only help SaaS startups establish their brand presence and generate MRR, but to help entrepreneurs grow by providing powerful tools at affordable prices.'
         ]"
-        fadeType = "fade-right"
+        fadeType="fade-right"
       />
     </div>
     <!-- why we're different -->
@@ -79,13 +79,11 @@
     <!-- <div class="container">
       <div class="row">
         <div class="col-12 text-center">
-          <h1 class="title-2 font-weight-bold mb-4">Best Selling Deals</h1>
+          <h1 class="title-2 font-weight-bold mb-4">Featured Deals</h1>
         </div>
         <div class="col-12 col-md-10 mx-auto text-center graphik-reg">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labo re et dolore magna aliqua. Ut enim
-            ad minim veniam quis nostrud exercitation ullamco.
+          Don’t miss out on these exclusive deals at an extraordinary low price. 
           </p>
         </div>
       </div>
@@ -131,7 +129,7 @@
           <LazyComingSoon />
         </div>
       </div>
-    </div> -->
+    </div>-->
     <!-- subscribe -->
     <LazySubscribePanel />
   </div>
@@ -189,32 +187,11 @@ export default {
       ],
       feedback: [
         {
-          name: 'Maharucha',
+          name: 'Keen Mo -  Founder and CEO Content Loop Digital',
           comment:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad miniveniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            'I’ve worked with Joon, the founder of Saastronautics, for numerous projects now. The thing about Joon is that he always does his best to over deliver and put his clients before himself. So when it comes to software deals, I have no doubt in his willingness to put the community’s interest first and listen to our feedback.',
           rating: 5,
-          photo: 'https://api.adorable.io/avatars/200/abott@adorable'
-        },
-        {
-          name: 'Mahardika',
-          comment:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad miniveniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-          rating: 4,
-          photo: 'https://api.adorable.io/avatars/200/abott@adorable'
-        },
-        {
-          name: 'Alan Abdurrahman',
-          comment:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad miniveniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.',
-          rating: 4.8,
-          photo: 'https://api.adorable.io/avatars/200/abott@adorable'
-        },
-        {
-          name: 'Rajj Ibn Abdillah',
-          comment:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad miniveniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-          rating: 5,
-          photo: 'https://api.adorable.io/avatars/200/abott@adorable'
+          photo: require('~/assets/images/feedback/kenmoo.jpeg')
         }
       ],
       imageWhatWeDo: require('~/assets/images/placeholder-homepage.svg'),
@@ -288,7 +265,7 @@ export default {
 .features {
   img {
     height: 70px;
-     border-radius: 10px;
+    border-radius: 10px;
   }
 }
 

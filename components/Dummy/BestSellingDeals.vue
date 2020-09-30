@@ -2,13 +2,11 @@
   <div class="container">
     <div class="row">
       <div class="col-12 text-center">
-        <h1 class="title-2 font-weight-bold mb-4">Best Selling Deals</h1>
+        <h1 class="title-2 font-weight-bold mb-4">Featured Deals</h1>
       </div>
       <div class="col-12 col-md-10 mx-auto text-center graphik-reg">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labo re et dolore magna aliqua. Ut enim
-          ad minim veniam quis nostrud exercitation ullamco.
+          Don’t miss out on these exclusive deals at an extraordinary low price. 
         </p>
       </div>
     </div>
