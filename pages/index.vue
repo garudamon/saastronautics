@@ -201,7 +201,7 @@ export default {
           photo: require('~/assets/images/feedback/rishi-jain.jpeg')
         },
         {
-          name: 'Niko Julius - Co-Founder, Digital Scholar',
+          name: 'Niko Julius - Owner, Kelbimedia',
           comment:
             'I worked with Parker as an agency partner in Indonesia. With his expertise in affiliate and referral marketing, we were able to 10x our campaigns easily. I’m excited to see Saastronautics grow. I fully trust Parker and his team and look forward to the coming deals.',
           rating: 5,
