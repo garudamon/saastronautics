@@ -52,7 +52,7 @@ export default {
   components: {},
   data() {
     return {
-      imageTechIs: require('~/assets/images/partners/partners.jpg'),
+      imageTechIs: require('~/assets/images/partners/placeholder-partners.svg'),
       offer: [
         {
           image: require('~/assets/images/partners/expect-1.png'),
