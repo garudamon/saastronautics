@@ -85,7 +85,7 @@ export default {
   data() {
     return {
       image1: require('~/assets/images/we-do.png'),
-      image2: require('~/assets/images/partners/technology-is.png'),
+      image2: require('~/assets/images/partners/partners.svg'),
       productdetail: {
         category: ['lead generation', 'marketing', 'sales'],
         name: 'Product Name',
