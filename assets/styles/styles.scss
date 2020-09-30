@@ -12,6 +12,10 @@ body,
 #__nuxt,
 #__layout {
   height: 100%;
+  > div {
+    position: relative;
+    min-height: 100%;
+  }
 }
 
 *,
@@ -128,6 +132,7 @@ img {
 #wrapper {
   padding-top: 80px;
   min-height: 100%;
+  padding-bottom: 295px;
   aside {
     width: 235px;
     min-width: 235px;
@@ -263,7 +268,10 @@ span {
 footer {
   background-color: #121538;
   font-size: 0.875rem;
-
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
   &.nuxt-link-active {
     color: #ff4370;
   }

@@ -195,7 +195,7 @@ export default {
     ...mapState(['isLogin', 'cart'])
   },
   mounted() {
-    if (this.isLogin) this.getProfile()
+    // if (this.isLogin) this.getProfile()
   },
   methods: {
     ...mapMutations(['setProfile']),
