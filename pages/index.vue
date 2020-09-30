@@ -216,7 +216,7 @@ export default {
           photo: 'https://api.adorable.io/avatars/200/abott@adorable'
         }
       ],
-      imageWhatWeDo: require('~/assets/images/we-do.png'),
+      imageWhatWeDo: require('~/assets/images/placeholder-homepage.svg'),
       email: '',
       error: {},
       bestSellingProduct: []
