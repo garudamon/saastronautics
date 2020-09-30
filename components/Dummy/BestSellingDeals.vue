@@ -16,7 +16,7 @@
       <div class="col-12 col-md-4 product mb-5 px-4 pb-3">
         <div class="product-image mb-3">
           <a href="https://saastro.ltd/retargetkit">
-            <img src="~/assets/dummy/product-capture-1.png" alt="Retarget Kit" />
+            <img src="~/assets/dummy/retargetkit-deals.png" alt="Retarget Kit" />
           </a>
         </div>
         <div class="mb-4">
