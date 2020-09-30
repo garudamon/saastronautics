@@ -74,7 +74,8 @@
     <!-- customer feedback -->
     <LazyCustomerFeedback :feedback="feedback" />
     <!-- best selling -->
-    <div class="container">
+    <LazyBestSellingDeals />
+    <!-- <div class="container">
       <div class="row">
         <div class="col-12 text-center">
           <h1 class="title-2 font-weight-bold mb-4">Best Selling Deals</h1>
@@ -129,7 +130,7 @@
           <LazyComingSoon />
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- subscribe -->
     <LazySubscribePanel />
   </div>

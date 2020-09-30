@@ -41,7 +41,7 @@
             </div>
           </ValidationProvider>
           <div class="d-flex align-items-center">
-            <button type="submit" class="btn btn-primary btn-md px-4">Sign Up</button>
+            <button type="submit" class="btn btn-primary btn-md px-4">Change Password</button>
           </div>
         </form>
       </ValidationObserver>

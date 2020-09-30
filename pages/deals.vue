@@ -1,7 +1,8 @@
 <template>
   <div>
     <!-- title -->
-    <div class="container" v-if="Object.keys(featuredDeals).length > 0">
+    <LazyFeaturedDeals />
+    <!-- <div class="container" v-if="Object.keys(featuredDeals).length > 0">
       <div class="row img-p-sbs pt-2 pb-5 d-flex px-md-4 my-5 header">
         <div class="col-12 col-md-6 pr-0 pr-md-5">
           <span class="badge badge-info text-uppercase p-2">FEATURED DEALS</span>
@@ -15,7 +16,7 @@
           <img :src="$getImage(featuredDeals.id)" />
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- live deals -->
     <div class="container">
       <div class="row px-md-4">
