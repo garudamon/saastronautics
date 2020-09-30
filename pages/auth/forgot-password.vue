@@ -54,7 +54,7 @@ export default {
         let {data: { data, success, message }} = response
         if(success) {
           this.$swal('Success', message, 'success').then(() => {
-            me.$router.push('/')
+            me.$router.push('/auth/signin')
           })
         } else {
           this.$swal('Failed', message, 'error')
