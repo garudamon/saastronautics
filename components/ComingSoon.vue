@@ -8,10 +8,18 @@
     </div>
     <div class="title-link">
       <a href="#" class="disabled">
-        <h5 class="maison-demi font-weight-bold">Product Name</h5>
+        <h5 class="maison-demi font-weight-bold">Upcoming Product</h5>
       </a>
     </div>
-    <rating size="sm" space="mr-1" class="mb-5" />
+    <rating size="sm" space="mr-1" class="mb-3" />
+    <div class="price row mb-5">
+          <div class="col-2 active-price font-weight-bold">
+            <span>$0</span>
+          </div>
+          <div class="col inactive-price">
+            <span>$0</span>
+          </div>
+        </div>
     <nuxt-link class="maison-demi disabled" :to="`/`">Learn More &#8594;</nuxt-link>
   </div>
 </template>

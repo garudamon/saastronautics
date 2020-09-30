@@ -16,37 +16,29 @@
       <div class="col-12 col-md-4 product mb-5 px-4 pb-3">
         <div class="product-image mb-3">
           <a href="https://saastro.ltd/retargetkit">
-            <img src="~/assets/dummy/retargetkit-deals.png" alt="Retarget Kit" />
+            <img src="~/assets/images/saastrobot-comingsoon-02.jpg" alt="Retarget Kit" />
           </a>
         </div>
-        <div class="mb-4">
-          <span class="badge badge-info text-uppercase mx-1 py-2 px-3"
-            >Productivity</span
-          >
+        <div class="mb-3">
+          <span class="badge badge-info text-uppercase mx-1 py-2 px-3">Productivity</span>
         </div>
         <div class="title-link">
           <a href="https://saastro.ltd/retargetkit">
-            <h5 class="maison-demi font-weight-bold">
-              Retarget Kit
-            </h5>
+            <h5 class="maison-demi font-weight-bold">Retargetkit</h5>
           </a>
         </div>
         <rating size="sm" space="mr-1" class="mb-3" :value="rating" />
         <div class="price row mb-5">
           <div class="col-2 active-price font-weight-bold">
-            <span>$99</span>
+            <span>$69</span>
           </div>
           <div class="col inactive-price">
-            <span>$499</span>
+            <span>$99</span>
           </div>
         </div>
         <a class="maison-demi" href="https://saastro.ltd/retargetkit">Learn More &#8594;</a>
       </div>
-      <div
-        v-for="n in 5"
-        :key="n"
-        class="col-12 col-md-4 product mb-5 px-4 pb-3"
-      >
+      <div v-for="n in 2" :key="n" class="col-12 col-md-4 product mb-5 px-4 pb-3">
         <LazyComingSoon />
       </div>
     </div>

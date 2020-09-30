@@ -22,8 +22,7 @@
               Sign Up and Launch Your Workflow into Hyperspace!
             </h3>
             <p class="py-2">
-              Stay in the loop of the latest innovations to manage and improve
-              your digital transformation.
+              Stay in the loop and keep up with our ventures. Be the first to know about our new deals.
             </p>
             <form class="row d-flex justify-content-center" @submit="subscribe">
               <div class="col-7 pr-0 mr-2">

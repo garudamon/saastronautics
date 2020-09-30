@@ -50,7 +50,7 @@
       <!-- main feature -->
       <div class="row features px-md-4 py-5">
         <div class="col-12 py-5">
-          <h1 class="title-1 text-center">What Can You Do with Saastronautics?</h1>
+          <h1 class="title-1 text-center">How Can Saastronautics Help You?</h1>
         </div>
         <div class="col-12 col-md-4 text-left px-4" v-for="item in features" :key="item.title">
           <img :src="item.image" :alt="item.title" />
@@ -61,16 +61,17 @@
       <!-- what we do -->
       <ImageParagraphSideBySide
         :imageUrl="imageWhatWeDo"
-        title="What We Do?"
+        title="What We Do"
         :descriptions="[
-          'Saastronautics gives SaaS tool developers and organizations a platform to promote their tech solutions to early adopters.',
-          'We provide the support in selecting, executing, and reviewing the SaaS tools on our platform. You get real-world feedback from our user base, allowing you to make adjustments to your tools to meet your customers’ expectations.'
+          'Saastronautics brings you exclusive deals on the hottest new SaaS tools to help you grow your business.',
+          'We scout and hunt for the latest and greatest, next big deal, and secure exclusive lifetime deals and discounts for you. We have a rigorous vetting process for all SaaS tools that launch on Saastronautics, so you don’t have to. ',
+          'We provide a launchpad for SaaS startups and developers to promote their tech solutions to early adopters. Our mission is to not only help SaaS startups establish their brand presence and generate MRR, but to help entrepreneurs grow by providing powerful tools at affordable prices.'
         ]"
         fadeType = "fade-right"
       />
     </div>
     <!-- why we're different -->
-    <LazyFeatureGray title="Why We Are Different?" :items="why" />
+    <LazyFeatureGray title="Why We Are Different" :items="why" />
     <!-- customer feedback -->
     <LazyCustomerFeedback :feedback="feedback" />
     <!-- best selling -->
@@ -165,13 +166,13 @@ export default {
           image: require('~/assets/images/different-new-deals.png'),
           title: 'Hot New Deals',
           description:
-            'We bring you the best deals, and exclusive offers on SaaS tools designed to boost your business.'
+            'We bring you exclusive offers on the best deals for SaaS tools designed to boost your business.'
         },
         {
           image: require('~/assets/images/different-best-prices.png'),
           title: 'Best Prices',
           description:
-            'Save money and take advantage of our exclusive pricing deals on the latest technology solutions.'
+            'Save money and take advantage of our exclusive lifetime deals and discounts on the latest software solutions.'
         },
         {
           image: require('~/assets/images/different-top-product.png'),
@@ -183,7 +184,7 @@ export default {
           image: require('~/assets/images/different-satisfaction.png'),
           title: 'Satisfaction Guarantee',
           description:
-            'Our 30-day money-back guarantee ensures you get the value you need or you don’t pay.'
+            'Our 30-day risk-free money-back guarantee ensures you get the value you need or you don’t pay.'
         }
       ],
       feedback: [
