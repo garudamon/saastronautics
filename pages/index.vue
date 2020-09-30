@@ -199,6 +199,13 @@ export default {
             'I have personally worked with Parker on various campaigns and the quality that he brings to table is commendable. Parker is an expert in utilizing SaaS tools to make the most out of marketing campaigns and I’m sure there’s no better person to understand the product and customer. I know Saastronautics will seamlessly bridge the gap between the two.',
           rating: 5,
           photo: require('~/assets/images/feedback/rishi-jain.jpeg')
+        },
+        {
+          name: 'Niko Julius - Co-Founder, Digital Scholar',
+          comment:
+            'I worked with Parker as an agency partner in Indonesia. With his expertise in affiliate and referral marketing, we were able to 10x our campaigns easily. I’m excited to see Saastronautics grow. I fully trust Parker and his team and look forward to the coming deals.',
+          rating: 5,
+          photo: require('~/assets/images/feedback/niko-julius.jpeg')
         }
       ],
       imageWhatWeDo: require('~/assets/images/placeholder-homepage.svg'),

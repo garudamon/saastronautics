@@ -18,7 +18,7 @@
         >
       </div>
       <div class="col-12 col-md-6 text-md-right text-center mt-md-0 mt-5">
-        <img src="~/assets/dummy/retargetkit-deals.png" alt="Retarget Kit" />
+        <img src="~/assets/dummy/RetargetKit.svg" alt="RetargetKit" />
       </div>
     </div>
   </div>
