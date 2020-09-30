@@ -5,7 +5,7 @@
       <div class="row">
         <div class="col-12 col-md-10 mx-auto text-center">
           <h1 class="title-1 display-5 font-weight-normal d-none d-md-block">
-            Reach More Users by Launching Your SaaS Tools with
+            Reach More Users by Launching Your SaaS with
             <span class="text-red title-1">Saastronautics</span>
           </h1>
           <h1 class="title-1 display-5 font-weight-normal d-block d-md-none">
@@ -15,9 +15,9 @@
         </div>
         <div class="col-12 col-md-10 mx-auto text-center">
           <p class="px-md-3 py-4">
-            Do you develop SaaS tools to help companies manage their digital
-            transformation of the workplace? At Saastronautics, we understand
-            that the future of business is automation and digitization.
+            Grow your core userbase, collect invaluable feedback,
+             gain funds for reinvestment, and leverage your campaign to grow your MRR.
+
           </p>
           <nuxt-link class="btn btn-primary btn-lg" to="/partners-apply"
             >Submit Your Product</nuxt-link
@@ -27,7 +27,7 @@
       <!-- what we do -->
       <LazyImageParagraphSideBySide
         :imageUrl="imageTechIs"
-        :title="['Technology Is', 'Changing The Way', 'We Do Business']"
+        :title="['Our Success Is Measured', 'in Our Partners’ Success']"
         :descriptions="[
           'That\'s why we put together this platform from both developers and end-users. We want to create a platform that adds value to digital marketers, organizations, and developers.',
           'When your organization registers with our partner program, your company gets access to early adopters that provide you with the feedback you need to optimize your SaaS offering.'
@@ -97,27 +97,6 @@ export default {
           name: 'Maharucha',
           comment:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad miniveniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-          rating: 5,
-          photo: 'https://api.adorable.io/avatars/200/abott@adorable'
-        },
-        {
-          name: 'Mahardika',
-          comment:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad miniveniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-          rating: 4,
-          photo: 'https://api.adorable.io/avatars/200/abott@adorable'
-        },
-        {
-          name: 'Alan Abdurrahman',
-          comment:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad miniveniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.',
-          rating: 4.8,
-          photo: 'https://api.adorable.io/avatars/200/abott@adorable'
-        },
-        {
-          name: 'Rajj Ibn Abdillah',
-          comment:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad miniveniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
           rating: 5,
           photo: 'https://api.adorable.io/avatars/200/abott@adorable'
         }

@@ -32,7 +32,7 @@
                   <img :src="item.photo" :alt="item.name" class="avatar d-none d-md-inline" />
                   <span class="font-weight-bold pl-2">{{ item.name }}</span>
                 </div>
-                <LazyRating class="d-none d-md-block" />
+                <LazyRating class="d-none d-md-block" :value="item.rating" />
               </div>
             </div>
           </div>

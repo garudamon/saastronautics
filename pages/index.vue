@@ -50,7 +50,7 @@
       <!-- main feature -->
       <div class="row features px-md-4 py-5">
         <div class="col-12 py-5">
-          <h1 class="title-1 text-center">What Can You Do with Saastronautics?</h1>
+          <h1 class="title-1 text-center">How Can Saastronautics Help You?</h1>
         </div>
         <div class="col-12 col-md-4 text-left px-4" v-for="item in features" :key="item.title">
           <img :src="item.image" :alt="item.title" />
@@ -61,16 +61,17 @@
       <!-- what we do -->
       <ImageParagraphSideBySide
         :imageUrl="imageWhatWeDo"
-        title="What We Do?"
+        title="What We Do"
         :descriptions="[
-          'Saastronautics gives SaaS tool developers and organizations a platform to promote their tech solutions to early adopters.',
-          'We provide the support in selecting, executing, and reviewing the SaaS tools on our platform. You get real-world feedback from our user base, allowing you to make adjustments to your tools to meet your customers’ expectations.'
+          'Saastronautics brings you exclusive deals on the hottest new SaaS tools to help you grow your business.',
+          'We scout and hunt for the latest and greatest, next big deal, and secure exclusive lifetime deals and discounts for you. We have a rigorous vetting process for all SaaS tools that launch on Saastronautics, so you don’t have to. ',
+          'We provide a launchpad for SaaS startups and developers to promote their tech solutions to early adopters. Our mission is to not only help SaaS startups establish their brand presence and generate MRR, but to help entrepreneurs grow by providing powerful tools at affordable prices.'
         ]"
-        fadeType = "fade-right"
+        fadeType="fade-right"
       />
     </div>
     <!-- why we're different -->
-    <LazyFeatureGray title="Why We Are Different?" :items="why" />
+    <LazyFeatureGray title="Why We Are Different" :items="why" />
     <!-- customer feedback -->
     <LazyCustomerFeedback :feedback="feedback" />
     <!-- best selling -->
@@ -78,13 +79,11 @@
     <!-- <div class="container">
       <div class="row">
         <div class="col-12 text-center">
-          <h1 class="title-2 font-weight-bold mb-4">Best Selling Deals</h1>
+          <h1 class="title-2 font-weight-bold mb-4">Featured Deals</h1>
         </div>
         <div class="col-12 col-md-10 mx-auto text-center graphik-reg">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labo re et dolore magna aliqua. Ut enim
-            ad minim veniam quis nostrud exercitation ullamco.
+          Don’t miss out on these exclusive deals at an extraordinary low price. 
           </p>
         </div>
       </div>
@@ -130,7 +129,7 @@
           <LazyComingSoon />
         </div>
       </div>
-    </div> -->
+    </div>-->
     <!-- subscribe -->
     <LazySubscribePanel />
   </div>
@@ -165,13 +164,13 @@ export default {
           image: require('~/assets/images/icon/hot-new-deals.svg'),
           title: 'Hot New Deals',
           description:
-            'We bring you the best deals, and exclusive offers on SaaS tools designed to boost your business.'
+            'We bring you exclusive offers on the best deals for SaaS tools designed to boost your business.'
         },
         {
           image: require('~/assets/images/icon/best-prices.svg'),
           title: 'Best Prices',
           description:
-            'Save money and take advantage of our exclusive pricing deals on the latest technology solutions.'
+            'Save money and take advantage of our exclusive lifetime deals and discounts on the latest software solutions.'
         },
         {
           image: require('~/assets/images/icon/top-notch-products.svg'),
@@ -183,37 +182,16 @@ export default {
           image: require('~/assets/images/icon/satisfaction-guarantee.svg'),
           title: 'Satisfaction Guarantee',
           description:
-            'Our 30-day money-back guarantee ensures you get the value you need or you don’t pay.'
+            'Our 30-day risk-free money-back guarantee ensures you get the value you need or you don’t pay.'
         }
       ],
       feedback: [
         {
-          name: 'Maharucha',
+          name: 'Keen Mo -  Founder and CEO Content Loop Digital',
           comment:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad miniveniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            'I’ve worked with Joon, the founder of Saastronautics, for numerous projects now. The thing about Joon is that he always does his best to over deliver and put his clients before himself. So when it comes to software deals, I have no doubt in his willingness to put the community’s interest first and listen to our feedback.',
           rating: 5,
-          photo: 'https://api.adorable.io/avatars/200/abott@adorable'
-        },
-        {
-          name: 'Mahardika',
-          comment:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad miniveniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-          rating: 4,
-          photo: 'https://api.adorable.io/avatars/200/abott@adorable'
-        },
-        {
-          name: 'Alan Abdurrahman',
-          comment:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad miniveniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.',
-          rating: 4.8,
-          photo: 'https://api.adorable.io/avatars/200/abott@adorable'
-        },
-        {
-          name: 'Rajj Ibn Abdillah',
-          comment:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad miniveniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-          rating: 5,
-          photo: 'https://api.adorable.io/avatars/200/abott@adorable'
+          photo: require('~/assets/images/feedback/kenmoo.jpeg')
         }
       ],
       imageWhatWeDo: require('~/assets/images/placeholder-homepage.svg'),
@@ -287,7 +265,7 @@ export default {
 .features {
   img {
     height: 70px;
-     border-radius: 10px;
+    border-radius: 10px;
   }
 }
 
