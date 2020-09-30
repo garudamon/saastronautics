@@ -16,7 +16,7 @@
           <img :src="$getImage(featuredDeals.id)" />
         </div>
       </div>
-    </div> -->
+    </div>-->
     <!-- live deals -->
     <div class="container">
       <div class="row px-md-4">
@@ -76,6 +76,13 @@
           </div>
           <nuxt-link class="maison-demi" :to="`/${item.uniqName}`">Learn More &#8594;</nuxt-link>
         </div>
+        <div
+          v-for="n in (6 - this.liveDealsProduct.length)"
+          :key="n"
+          class="col-12 col-md-4 product mb-5 px-4 pb-3"
+        >
+          <LazyComingSoon />
+        </div>
       </div>
     </div>
     <!-- subscribe -->
@@ -96,13 +103,13 @@ export default {
     this.loadLiveDealsProduct()
   },
   computed: {
-    featuredDeals: function(){ 
-      if(this.liveDealsProduct.length < 1) return {}
+    featuredDeals: function() {
+      if (this.liveDealsProduct.length < 1) return {}
       return this.liveDealsProduct.find(v => v.featuredDeals == true)
     }
   },
   mounted() {
-    this.$fetch();
+    this.$fetch()
   },
   methods: {
     loadLiveDealsProduct() {
