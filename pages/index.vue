@@ -142,19 +142,19 @@ export default {
     return {
       features: [
         {
-          image: require('~/assets/images/main-feature-drive.png'),
+          image: require('~/assets/images/icon/drive-a-digital-transformation.svg'),
           title: 'Drive a digital transformation',
           description:
             'Outdated legacy systems running your company are doing nothing to enhance your employee and customer experience.'
         },
         {
-          image: require('~/assets/images/main-feature-optimize.png'),
+          image: require('~/assets/images/icon/optimize-your-workflows.svg'),
           title: 'optimize your workflows',
           description:
             'Improve productivity and efficiency with your staff and eliminate bottlenecks and hurdles for your team and customers.'
         },
         {
-          image: require('~/assets/images/main-feature-automate.png'),
+          image: require('~/assets/images/icon/automate-your-workplace.svg'),
           title: 'automate your workplace',
           description:
             'Give your employees more time to deal with parts of your business that bring in more revenue and join the digital era'
@@ -162,25 +162,25 @@ export default {
       ],
       why: [
         {
-          image: require('~/assets/images/different-new-deals.png'),
+          image: require('~/assets/images/icon/hot-new-deals.svg'),
           title: 'Hot New Deals',
           description:
             'We bring you the best deals, and exclusive offers on SaaS tools designed to boost your business.'
         },
         {
-          image: require('~/assets/images/different-best-prices.png'),
+          image: require('~/assets/images/icon/best-prices.svg'),
           title: 'Best Prices',
           description:
             'Save money and take advantage of our exclusive pricing deals on the latest technology solutions.'
         },
         {
-          image: require('~/assets/images/different-top-product.png'),
+          image: require('~/assets/images/icon/top-notch-products.svg'),
           title: 'Top-Notch Products',
           description:
             'Our products go through a thorough testing phase to ensure that we add value to your business.'
         },
         {
-          image: require('~/assets/images/different-satisfaction.png'),
+          image: require('~/assets/images/icon/satisfaction-guarantee.svg'),
           title: 'Satisfaction Guarantee',
           description:
             'Our 30-day money-back guarantee ensures you get the value you need or you don’t pay.'
