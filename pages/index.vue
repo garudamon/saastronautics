@@ -73,7 +73,7 @@
     <!-- why we're different -->
     <LazyFeatureGray title="Why We Are Different" :items="why" />
     <!-- customer feedback -->
-    <LazyCustomerFeedback :feedback="feedback" />
+    <LazyCustomerFeedback :feedback="feedback" title="Our Customers Love What We Do" subtitle="Read what our fellow Saastronauts have to say about us."/>
     <!-- best selling -->
     <LazyBestSellingDeals />
     <!-- <div class="container">
@@ -168,7 +168,7 @@ export default {
         },
         {
           image: require('~/assets/images/icon/best-prices.svg'),
-          title: 'Best Prices',
+          title: 'Exclusive Prices',
           description:
             'Save money and take advantage of our exclusive lifetime deals and discounts on the latest software solutions.'
         },
@@ -176,7 +176,7 @@ export default {
           image: require('~/assets/images/icon/top-notch-products.svg'),
           title: 'Top-Notch Products',
           description:
-            'Our products go through a thorough testing phase to ensure that we add value to your business.'
+            'Trustworthy Products.'
         },
         {
           image: require('~/assets/images/icon/satisfaction-guarantee.svg'),
@@ -217,6 +217,7 @@ export default {
       ],
       imageWhatWeDo: require('~/assets/images/placeholder-homepage.svg'),
       email: '',
+     
       error: {},
       bestSellingProduct: []
     }

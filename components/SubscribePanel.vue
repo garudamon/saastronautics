@@ -2,10 +2,10 @@
   <div class="container">
     <div class="row">
       <div
-        class="col-12 col-md-7 mx-auto p-md-5 p-3 p-md- subscribe-panel my-5 d-flex align-items-center"
+        class="col-12 col-md-7 mx-auto p-md-5 p-3 p-md- subscribe-panel my-5 d-flex align-items-center "
       >
         <div class="row">
-          <div class="col-12 col-md-4 p-5 p-md-0">
+          <div class="col-12 col-md-4 p-5 p-md-0 " >
             <img
               src="~/assets/images/about/gift-icon.png"
               alt="Gift Illustrator"
