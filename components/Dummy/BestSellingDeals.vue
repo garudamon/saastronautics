@@ -31,7 +31,7 @@
             <span>$69</span>
           </div>
           <div class="col inactive-price">
-            <span>$99</span>
+            <span>$499</span>
           </div>
         </div>
         <a class="maison-demi" href="https://saastro.ltd/retargetkit">Learn More &#8594;</a>
