@@ -10,7 +10,7 @@
         </p>
       </div>
     </div>
-    <div class="row mt-5">
+    <div class="row my-5">
       <div class="col-12 col-md-4 product mb-5 px-4 pb-3">
         <div class="product-image mb-3">
           <a href="https://saastro.ltd/retargetkit">

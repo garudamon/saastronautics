@@ -13,7 +13,7 @@
       </div>
     </div>
     <client-only placeholder="Loading...">
-      <flickity class="comment py-5 mb-5" :options="flickityOptions">
+      <flickity class="comment pt-5 pb-3" :options="flickityOptions">
         <div
           class="comment-item my-5 mx-0 mx-md-5 p-3 p-md-0"
           v-for="item in feedback"

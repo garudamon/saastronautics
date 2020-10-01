@@ -65,6 +65,7 @@ h5 {
   letter-spacing: 1px;
 }
 .item {
+  min-height: 350px;
   border-radius: 20px;
   border: thin solid rgba($color: #bdbdbd, $alpha: 0.3);
   background: white;
