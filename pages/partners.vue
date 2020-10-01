@@ -50,7 +50,9 @@
           v-for="item in features"
           :key="item.title"
         >
+        <div class="text-center">
           <img :src="item.image" :alt="item.title" />
+        </div>
           <h5 class="title-2 text-capitalize font-weight-bold py-4">
             {{ item.title }}
           </h5>

@@ -53,7 +53,7 @@
           <h1 class="title-1 text-center">How Can Saastronautics Help You?</h1>
         </div>
         <div class="col-12 col-md-4 text-left px-4" v-for="item in features" :key="item.title">
-          <div class="img-center">
+          <div class="text-center">
             <img :src="item.image" :alt="item.title" />
           </div>
           <h5 class="title-2 text-capitalize font-weight-bold py-4">{{ item.title }}</h5>
@@ -286,15 +286,12 @@ export default {
     width: 100%;
   }
 }
+
 .features {
   img {
     height: 70px;
     border-radius: 10px;
   }
-}
-
-.img-center {
-  text-align: center !important;
 }
 
 .product {
