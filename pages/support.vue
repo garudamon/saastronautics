@@ -28,7 +28,7 @@
         </div>
       </div>
     </div>
-    <LazySubscribePanel />
+    <LazyCommunityPanel/>
   </div>
 </template>
 
