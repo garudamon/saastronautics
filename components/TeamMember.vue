@@ -1,8 +1,8 @@
 <template>
-  <div class="row">
+  <div class="row" >
     <div class="col-12 col-md-6 mb-5" v-for="item in member" :key="`${item.name}-${item.position}`">
-      <div class="h-100 team-member py-3 pt-md-4 mx-md-2 px-3 px-md-4">
-        <div class="row">
+      <div class="h-100 team-member py-3 pt-md-4 mx-md-2 px-3 px-md-4" data-aos="zoom-in" data-aos-duration="1000">
+        <div class="row" >
           <div class="col-4 text-center">
             <div>
               <img :src="item.imageUrl" :alt="`${item.name}'s photo`" />

@@ -5,7 +5,7 @@
     </div>
     <div class="col-12 col-md-5 card-bg-white py-4">
       <div class="px-4 pt-4">
-        <h1>Sign Up</h1>
+            <h1 class="title-1 display-5 font-weight-normal d-none d-md-block">Sign Up</h1>
         <p>
           Already have an account?
           <nuxt-link to="/auth/signin">Sign In</nuxt-link>

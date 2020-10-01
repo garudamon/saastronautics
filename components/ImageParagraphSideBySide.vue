@@ -10,15 +10,15 @@
       <h1 class="title-1 mb-4" v-else>{{ title }}</h1>
       <p v-for="(text, i) in descriptions" :key="i">{{ text }}</p>
     </div>
-    <div class="col-12 col-md-6 text-right">
+    <div class="col-12 col-md-6 text-right" >
       <video-embed :src="videoUrl" v-if="videoUrl" />
-      <img :src="imageUrl" :alt="title" v-else />
+      <img :src="imageUrl" :alt="title" :data-aos="fadeType" data-aos-duration="1000" v-else />
     </div>
   </div>
   <div class="row img-p-sbs py-5 d-flex align-items-center px-md-4 my-5" v-else>
     <div class="col-12 col-md-6">
       <video-embed :src="videoUrl" v-if="videoUrl" />
-      <img :src="imageUrl" :alt="title" v-else />
+      <img :src="imageUrl" :alt="title" :data-aos="fadeType" data-aos-duration="1000" v-else />
     </div>
     <div class="col-12 col-md-6">
       <h1 class="mb-4" v-if="typeof title == 'object'">
@@ -32,7 +32,7 @@
 
 <script>
 export default {
-  props: ['imageUrl', 'title', 'descriptions', 'rtl', 'videoUrl'],
+  props: ['imageUrl', 'title', 'descriptions', 'rtl', 'videoUrl', "fadeType"],
 }
 </script>
 

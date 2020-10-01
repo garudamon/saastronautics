@@ -309,7 +309,7 @@ footer {
 .gray-feature {
   background-color: #f5f4f8;
   img {
-    height: 70px;
+    height: 125px;
   }
 }
 
@@ -317,6 +317,7 @@ footer {
 .subscribe-panel {
   background-color: #f5f4f8;
   border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.33);
   img {
     width: 100%;
   }

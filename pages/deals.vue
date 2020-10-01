@@ -1,21 +1,22 @@
 <template>
   <div>
     <!-- title -->
-    <div class="container" v-if="Object.keys(featuredDeals).length > 0">
+    <LazyFeaturedDeals />
+    <!-- <div class="container" v-if="Object.keys(featuredDeals).length > 0">
       <div class="row img-p-sbs pt-2 pb-5 d-flex px-md-4 my-5 header">
         <div class="col-12 col-md-6 pr-0 pr-md-5">
           <span class="badge badge-info text-uppercase p-2">FEATURED DEALS</span>
           <h1 class="title-1 mt-4 mb-1 header-title">{{featuredDeals.name}}</h1>
-          <h1 class="title-1 header-subtitle">{{featuredDeals.shortDescription}}</h1>
+  
           <rating size="sm" space="mr-3" class="my-4" :value="featuredDeals.rating" />
-          <p>{{featuredDeals.longDescription}}</p>
+          <p>{{featuredDeals.shortDescription}}</p>
           <nuxt-link :to="`/${featuredDeals.uniqName}`" class="btn btn-primary btn-md px-5 mt-1">Learn More</nuxt-link>
         </div>
         <div class="col-12 col-md-6 text-md-right text-center mt-md-0 mt-5">
           <img :src="$getImage(featuredDeals.id)" />
         </div>
       </div>
-    </div>
+    </div>-->
     <!-- live deals -->
     <div class="container">
       <div class="row px-md-4">
@@ -39,7 +40,7 @@
           <h2 class="title-1 mb-4">Live Deals</h2>
         </div>
       </div>
-      <div class="row mt-5">
+      <div class="row my-5">
         <div
           class="col-12 col-md-4 product mb-5 px-4 pb-3"
           v-for="item in liveDealsProduct"
@@ -75,6 +76,13 @@
           </div>
           <nuxt-link class="maison-demi" :to="`/${item.uniqName}`">Learn More &#8594;</nuxt-link>
         </div>
+        <div
+          v-for="n in (6 - this.liveDealsProduct.length)"
+          :key="n"
+          class="col-12 col-md-4 product mb-5 px-4 pb-3"
+        >
+          <LazyComingSoon />
+        </div>
       </div>
     </div>
     <!-- subscribe -->
@@ -95,13 +103,13 @@ export default {
     this.loadLiveDealsProduct()
   },
   computed: {
-    featuredDeals: function(){ 
-      if(this.liveDealsProduct.length < 1) return {}
+    featuredDeals: function() {
+      if (this.liveDealsProduct.length < 1) return {}
       return this.liveDealsProduct.find(v => v.featuredDeals == true)
     }
   },
   mounted() {
-    this.$fetch();
+    this.$fetch()
   },
   methods: {
     loadLiveDealsProduct() {

@@ -1,41 +1,27 @@
 <template>
   <div class="container">
-    <div class="row pt-5">
+    <div class="row">
       <div
-        class="col-12 col-md-7 mx-auto p-md-5 p-3 p-md- subscribe-panel mb-5 d-flex align-items-center "
+        class="col-12 col-md-7 mx-auto p-md-5 p-3 p-md- subscribe-panel my-5 d-flex align-items-center"
       >
         <div class="row">
-          <div class="col-12 col-md-4 p-5 p-md-0 " >
+          <div class="col-12 col-md-4 p-5 p-md-0">
             <img
               src="~/assets/images/saastrobot/addemail.png"
-              alt="Gift Illustrator"
+              alt="Submit Your Product with Saastronautics"
             />
           </div>
           <div class="col-12 col-md-8 text-center">
             <h3 class="title-2">
-              Sign Up and Launch Your Workflow into Hyperspace!
+              Reach More Users by Launching Your SaaS with Saastronautics
             </h3>
             <p class="py-2">
-              Stay in the loop and keep up with our ventures. Be the first to know about our new deals.
+              Grow your core userbase, collect invaluable feedback, gain funds
+              for reinvestment, and leverage your campaign to grow your MRR.
             </p>
-            <form class="row d-flex justify-content-center" @submit="subscribe">
-              <div class="col-7 pr-0 mr-2">
-                <input
-                  type="email"
-                  :class="{
-                    'form-control form-round border-0 px-3': true,
-                    error: error.email ? true : false
-                  }"
-                  placeholder="Enter your email address"
-                  v-model="email"
-                />
-              </div>
-              <div class="col-3 px-0">
-                <button type="submit" class="btn btn-primary btn-md px-4">
-                  Submit
-                </button>
-              </div>
-            </form>
+            <nuxt-link class="btn btn-primary btn-lg" to="/partners-apply"
+              >Submit Your Product</nuxt-link
+            >
           </div>
         </div>
       </div>
