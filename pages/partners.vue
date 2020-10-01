@@ -39,8 +39,31 @@
       :items="offer"
       size="col-md-4 mb-3 mb-md-5 px-4"
     />
+    <!-- white background features -->
+    <div class="container">
+      <div class="row features px-md-4 py-5">
+        <div class="col-12 py-5">
+          <h1 class="title-1 text-center">Is Your Product Ready?</h1>
+        </div>
+        <div
+          class="col-12 col-md-4 text-left px-4"
+          v-for="item in features"
+          :key="item.title"
+        >
+          <img :src="item.image" :alt="item.title" />
+          <h5 class="title-2 text-capitalize font-weight-bold py-4">
+            {{ item.title }}
+          </h5>
+          <p class="py-0">{{ item.description }}</p>
+        </div>
+      </div>
+    </div>
 
-    <LazyCustomerFeedback :feedback="feedback"  title="Our Partners Love What We Do" subtitle="Read what our actual partners have to say about us." />
+    <LazyCustomerFeedback
+      :feedback="feedback"
+      title="Our Partners Love What We Do"
+      subtitle="Read what our actual partners have to say about us."
+    />
 
     <LazySubscribePanel />
   </div>
@@ -56,7 +79,7 @@ export default {
         {
           image: require('~/assets/images/partners/expect-1.png'),
           title: `Keep a Larger Share of
-<br/>the Sales You Make`,
+          <br/>the Sales You Make`,
           description:
             "We want to create an environment of prosperity for all parties. It's for this reason that we want to make our partners feel like they are part of a platform that offers them as much value as the end-user. Saastronautics gives our Partners the lion's share of the sale."
         },
@@ -71,12 +94,14 @@ export default {
           title: `Leverage the Power of the<br/>Saastronautics Community`,
           description:
             'As our partner, you have access to the Saastronautics community consisting of entrepreneurs, agency owners, digital marketers, and freelancers. Receive real-world feedback from our user base, allowing you to grow your SaaS offering in line with market expectations..'
-        },
+        }
+      ],
+      features: [
         {
           image: require('~/assets/images/partners/expect-4.png'),
           title: `Product is Live`,
           description:
-            "We are looking for partners with products that are live and not a beta application or program. We expect our partners to launch market-ready SaaS tools that offer real value to our community."
+            'We are looking for partners with products that are live and not a beta application or program. We expect our partners to launch market-ready SaaS tools that offer real value to our community.'
         },
         {
           image: require('~/assets/images/partners/expect-5.png'),
@@ -88,7 +113,7 @@ export default {
           image: require('~/assets/images/partners/expect-6.png'),
           title: `Product is Stable`,
           description:
-            "You can expect a massive influx of new users and we want to make sure your product can handle it. We want partners who are open to feedback and will continue to develop."
+            'You can expect a massive influx of new users and we want to make sure your product can handle it. We want partners who are open to feedback and will continue to develop.'
         }
       ],
       feedback: [
@@ -106,4 +131,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.features {
+  img {
+    height: 70px;
+    border-radius: 10px;
+  }
+}
 </style>
