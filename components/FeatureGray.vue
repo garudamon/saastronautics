@@ -7,7 +7,7 @@
           <p v-if="description">{{ description }}</p>
         </div>
         <div :class="['col-12', size]" v-for="item in items" :key="item.title">
-          <div class="text-center">
+          <div class="text-center mb-4">
             <img :src="item.image" :alt="item.title" />
           </div>
           <h5
@@ -32,4 +32,5 @@ export default {
 }
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+</style>

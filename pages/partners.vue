@@ -50,7 +50,7 @@
           v-for="item in features"
           :key="item.title"
         >
-        <div class="text-center">
+        <div class="text-center mb-4">
           <img :src="item.image" :alt="item.title" />
         </div>
           <h5 class="title-2 text-capitalize font-weight-bold py-4">
@@ -135,7 +135,7 @@ export default {
 <style lang="scss" scoped>
 .features {
   img {
-    height: 70px;
+    height: 125px;
     border-radius: 10px;
   }
 }
