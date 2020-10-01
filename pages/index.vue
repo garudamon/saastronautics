@@ -187,14 +187,14 @@ export default {
       ],
       feedback: [
         {
-          name: 'Keen Mo - Founder and CEO Content Loop Digital',
+          name: 'Ken Moo - Founder and CEO, Content-Loop Digital',
           comment:
             'I’ve worked with Joon, the founder of Saastronautics, for numerous projects now. The thing about Joon is that he always does his best to over deliver and put his clients before himself. So when it comes to software deals, I have no doubt in his willingness to put the community’s interest first and listen to our feedback.',
           rating: 5,
           photo: require('~/assets/images/feedback/kenmoo.jpeg')
         },
         {
-          name: 'Keen Mo - Co-Founder, Digital Scholar',
+          name: 'Rishi Jain - Co-Founder, Digital Scholar',
           comment:
             'I have personally worked with Parker on various campaigns and the quality that he brings to table is commendable. Parker is an expert in utilizing SaaS tools to make the most out of marketing campaigns and I’m sure there’s no better person to understand the product and customer. I know Saastronautics will seamlessly bridge the gap between the two.',
           rating: 5,
