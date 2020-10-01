@@ -118,7 +118,7 @@ export default {
           name: 'Frank Valensco',
           position: 'Co-Founder & CTO',
           description:
-            'CEO and Co-founder of Sekawan Solution, a Creative IT Company based in Jakarta, Indonesia. Have been working on developing solutions and products for the last 7 years to help clients grow their business.'
+            'CEO and Founder of Sekawan Solution, a Creative IT Company based in Jakarta, Indonesia. Have been working on developing solutions and products for the last 7 years to help clients grow their business.'
         },
         {
           imageUrl: require('~/assets/images/about/gerard-brand.jpeg'),
