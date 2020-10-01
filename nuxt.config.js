@@ -44,6 +44,8 @@ export default {
    ** Plugins to load before mounting the App
    */
   plugins: [
+    { src: '~/plugins/ga', ssr: false },
+    { src: '~/plugins/pixel', ssr: false },
     { src: '~/plugins/flickity', ssr: false },
     { src: '~/plugins/swal', ssr: false },
     { src: '~/plugins/video-embed', ssr: false },
@@ -80,8 +82,5 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
-  },
-  env: {
-    baseUrl: 'http://13.251.43.229:81/api'
   }
 }

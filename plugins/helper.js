@@ -4,13 +4,13 @@ const Cookie = require('js-cookie')
 const Helper = {
   install(Vue) {
     ;(Vue.prototype.$getImage = id => {
-      return `${process.env.baseUrl}/product/image/banner/${id}`
+      return `${process.env.API_URL}/product/image/banner/${id}`
     }),
       (Vue.prototype.$getProfile = id => {
-        return `${process.env.baseUrl}/customer/image/profile/${id}`
+        return `${process.env.API_URL}/customer/image/profile/${id}`
       }),
       (Vue.prototype.$getImageOther = (id, idx) => {
-        return `${process.env.baseUrl}/product/image/other/${id}/${idx}`
+        return `${process.env.API_URL}/product/image/other/${id}/${idx}`
       }),
       (Vue.prototype.$formattedDate = string => {
         return moment(string).format('MMM DD YYYY')

@@ -8,7 +8,7 @@ export default function({ $axios, redirect, store }) {
   $axios.onRequest(config => {
     if (store.state._token)
       config.headers['Authorization'] = 'Bearer ' + store.state._token
-    config.url = `${process.env.baseUrl}${config.url}`
+    config.url = `${process.env.API_URL}${config.url}`
   })
 
   $axios.onResponse(response => {
