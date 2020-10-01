@@ -118,11 +118,11 @@ export default {
       ],
       feedback: [
         {
-          name: 'Maharucha',
+          name: 'Fikry Fatullah - Founder, Kirim Email',
           comment:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad miniveniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            'Perhaps there is only a small group of people who can say they knew Parker from the beginning, and I’m glad that I’m one of them. Parker was, and still is, one of my company’s earliest clients; on the other hand, He’s also the one that I seek advice to discuss a product or marketing strategy on a global scale. When he recommended tools or services for my business, I’ve listened, and you should too.',
           rating: 5,
-          photo: 'https://api.adorable.io/avatars/200/abott@adorable'
+          photo: require('~/assets/images/partners/kirim-email-logo.jpg')
         }
       ]
     }
