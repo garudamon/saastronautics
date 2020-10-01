@@ -206,6 +206,13 @@ export default {
             'I worked with Parker as an agency partner in Indonesia. With his expertise in affiliate and referral marketing, we were able to 10x our campaigns easily. I’m excited to see Saastronautics grow. I fully trust Parker and his team and look forward to the coming deals.',
           rating: 5,
           photo: require('~/assets/images/feedback/niko-julius.jpeg')
+        },
+        {
+          name: 'Ari Eko Prasethio - Content Creator, AriEko.com',
+          comment:
+            'Parker he is a tough marketer and I know the Saastronautics team will be very successful. Parker and his team first got my attention when I saw his growth-hacking campaigns for his clients. And it was awesome. No many people go the extra mile for their clients. Parker is one of a kind. I also pay for his services and he is a trusted and recommended service provider. You can trust this team, enough said.',
+          rating: 5,
+          photo: require('~/assets/images/feedback/ari-eko.jpeg')
         }
       ],
       imageWhatWeDo: require('~/assets/images/placeholder-homepage.svg'),
