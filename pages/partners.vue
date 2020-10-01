@@ -66,8 +66,7 @@
       title="Our Partners Love What We Do"
       subtitle="Read what our actual partners have to say about us."
     />
-
-    <LazySubscribePanel />
+    <LazySubmitProduct />
   </div>
 </template>
 
