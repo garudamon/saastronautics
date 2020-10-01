@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="row">
+    <div class="row pt-5">
       <div
         class="col-12 col-md-7 mx-auto p-md-5 p-3 p-md- subscribe-panel mb-5 d-flex align-items-center "
       >

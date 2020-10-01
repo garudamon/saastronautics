@@ -40,7 +40,7 @@
           <h2 class="title-1 mb-4">Live Deals</h2>
         </div>
       </div>
-      <div class="row mt-5">
+      <div class="row my-5">
         <div
           class="col-12 col-md-4 product mb-5 px-4 pb-3"
           v-for="item in liveDealsProduct"
