@@ -5,7 +5,7 @@
     </div>
     <div class="col-12 col-md-5 card-bg-white py-4">
       <div class="px-4 pt-4">
-        <h1>Forgot Password</h1>
+        <h1 class="title-1 display-5 font-weight-normal  d-none d-md-block">Forgot Password</h1>
         <p>
           Enter your e-mail address and we will send you a link to reset password
         </p>
