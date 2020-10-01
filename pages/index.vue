@@ -44,7 +44,7 @@
       <!-- hero image -->
       <div class="row hero">
         <div class="col-12 text-center pt-5 pb-4">
-          <img src="~/assets/images/homepage.svg" alt="Hero Image" />
+          <img src="~/assets/images/homepage.svg" alt="Saastronautics Connecting People" />
         </div>
       </div>
       <!-- main feature -->
@@ -217,7 +217,7 @@ export default {
           photo: require('~/assets/images/feedback/ari-eko.jpeg')
         }
       ],
-      imageWhatWeDo: require('~/assets/images/placeholder-homepage.svg'),
+      imageWhatWeDo: require('~/assets/images/what-we-do.svg'),
       email: '',
       error: {},
       bestSellingProduct: []

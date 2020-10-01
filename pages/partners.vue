@@ -76,7 +76,7 @@ export default {
   components: {},
   data() {
     return {
-      imageTechIs: require('~/assets/images/partners/placeholder-partners.svg'),
+      imageTechIs: require('~/assets/images/partners/saastronautics-partners.svg'),
       offer: [
         {
           image: require('~/assets/images/partners/expect-1.png'),
