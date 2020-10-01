@@ -13,6 +13,7 @@
         </p>
         <a
           href="https://saastro.ltd/retargetkit"
+          target="_blank"
           class="btn btn-primary btn-md px-5 mt-1 text-white"
           >Learn More</a
         >
