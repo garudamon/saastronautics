@@ -207,7 +207,7 @@ export default {
           rating: 5,
           photo: require('~/assets/images/feedback/niko-julius.jpeg')
         },
-          {
+        {
           name: 'Ari Eko Prasethio - Content Creator, AriEko.com',
           comment:
             'Parker he is a tough marketer and I know the Saastronautics team will be very successful. Parker and his team first got my attention when I saw his growth-hacking campaigns for his clients. And it was awesome. No many people go the extra mile for their clients. Parker is one of a kind. I also pay for his services and he is a trusted and recommended service provider. You can trust this team, enough said.',
