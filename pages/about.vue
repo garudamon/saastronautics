@@ -5,31 +5,29 @@
       <div class="row">
         <div class="col-12 col-md-12 mx-auto text-center">
           <h1 class="title-1 display-5 font-weight-normal d-none d-md-block">
-            The tools you need to grow your business
+            Connecting Powerful Tools With
             <br />
-            <span class="text-red title-1">shouldn't put you out of business</span>
+            <span class="text-red title-1">Intrepid Businesses</span>
           </h1>
           <h1 class="title-1 display-5 font-weight-normal d-block d-md-none">
-            The tools you need to grow your business
+            Connecting Powerful Tools With
             <br />
-            <span class="text-red title-1">shouldn't put you out of business</span>
+            <span class="text-red title-1">Intrepid Businesses</span>
           </h1>
         </div>
         <div class="col-12 col-md-9 mx-auto text-center">
           <p class="px-md-4 py-4">
-            Out intuitive and dynamic platform provides SaaS startups with an
-            incredible opportunity to use as your launchpad for new SaaS
-            solutions.
+            Saastronautics was created with one goal in mind  – to get the best new SaaS tools into as many businesses as possible. Our customers get to enjoy great deals on the best new SaaS tools, while our SaaS partners get to use our platform as a launchpad for their product.
           </p>
         </div>
       </div>
       <!-- what we do -->
       <LazyImageParagraphSideBySide
         :imageUrl="imageWhyWeDo"
-        title="What We Do?"
+        title="What We Do"
         :descriptions="[
-          'Saastronautics is changing the way SaaS companies and providers are marketing and promoting their tools. Gain a core user base of people and companies interested in using your SaaS tools to boost their business. We provide early adopters with new tech that can help then automate workflows and processes.',
-          'We act as a conduit to connect SaaS tool providers with end-users of the technology. With our dedicated user-base, you get access to qualified prospects looking for your SaaS solution right now.'
+          'Saastronautics is changing the way SaaS companies and providers are marketing and promoting their tools. Gain a core user base of people and companies interested in using your SaaS tools to boost their business. We provide early adopters with new tech that can help them grow their business.',
+          'We scour the internet hunting for the latest and greatest SaaS tools. Our team puts new SaaS tools through a rigorous test and vetting process. Once we secure exclusive partnerships, we work closely with our partners to ultimately generate MRR and grow. '
         ]"
         
 
@@ -39,7 +37,7 @@
     <!-- What We Offer -->
     <LazyFeatureGray
       title="What We Offer"
-      description="Choose the tools that you think will benefit your business, and let us launch your workflow into hyperspace."
+      description="Exclusive deals and discounts on powerful SaaS tools that will help you launch your workflow into hyperspace!"
       :items="offer"
     />
     <div class="container">
@@ -49,9 +47,8 @@
         :imageUrl="imageWhatWeDo"
         :title="['Why We Do', 'What We Do']"
         :descriptions="[
-          'We understand that completing a digital transformation for your company is a challenging process, and we\'re here to help.',
-          'Our platform provides you with all the resources and tools you need to transform your workflows. Create a digital workspace that elevates your employee and customer experience by working with a platform that offers you the tools you need to succeed.',
-          'At Saastronautics, were always looking for innovations in technology that simplify the digital workplace.'
+          'We understand that finding the right tool for your company is a challenging and expensive process – and we\'re here to help.',
+          'The Saastronautics team has a passion for SaaS and digital transformations. We love technology solutions designed to simplify and enhance the way we do business, but we felt the best tools are often hidden amongst an ocean of mediocrity. This led us to create a platform that filters out the best from the rest, for the benefit of all our users.',
         ]"
         :rtl="true"
         fadeType = "fade-left"
@@ -64,8 +61,7 @@
         </div>
         <div class="col-12 col-md-7 mx-auto text-center">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Our team is made up of agency owners and digital marketers who actually utilize and work with a wide variety of SaaS applications everyday. We understand how SaaS tools can really launch your workflow into hyperspace. 
           </p>
         </div>
       </div>
@@ -85,51 +81,51 @@ export default {
       offer: [
         {
           image: require('~/assets/images/about/offer-3.png'),
-          title: 'Unique Platform',
+          title: 'Exclusive Deals',
           description:
-            'Promote your SaaS tools to users who are looking for solutions to their digital workplace and improve your offering by receiving real-world feedback from users through our platform.'
+            'We work hard to secure exclusive deals that you won’t find anywhere else. We sieve through and test hundreds of new SaaS products to find the best tools for our community. '
         },
         {
           image: require('~/assets/images/about/offer-2.png'),
-          title: 'Use Data Any Way You Want',
+          title: 'Powerful Community',
           description:
-            "Whether you're testing a new product or trying to boost sales, our platform allows you to tweak your tools, design new products and know what your audience demands from your offering."
+            'Our unique community of Saastronauts are comprised of digital entrepreneurs from diverse backgrounds. We bridge the gap between the SaaS company and user.'
         },
         {
           image: require('~/assets/images/about/offer-1.png'),
-          title: 'Boost Your Business',
+          title: 'Unrivaled Support',
           description:
-            'We have a comprehensive listing of the best SaaS solutions available with special pricing that allows you to benefit from savings on your SaaS tools.'
+            'We invest our time, resources, and passion into the success of not only the SaaS company but also our community members. We are here to grow with you.'
         }
       ],
       member: [
         {
           imageUrl: require('~/assets/images/about/joon-k-lee.jpeg'),
           name: 'Joon K Lee',
-          position: 'Co-Founder & CEO',
+          position: 'Founder & CEO',
           description:
-            'Joon is the founder and CEO of Saastronautics and has many successful business ventures under his belt, including Inquivix. Inquivix is Korea’s leading digital marketing agency that helps large-sized global enterprises enter the Korean market.'
+            'Joon is the owner and Managing Director of Inquivix, Korea’s leading digital marketing agency. He has helped build and implement marketing strategies and campaigns for large enterprises like The Economist, Freshworks, and Rhenus. '
         },
         {
           imageUrl: require('~/assets/images/about/parker-casio.jpeg'),
           name: 'Parker Casio',
           position: 'Co-Founder & CMO',
           description:
-            'Head of Marketing at Saastronautics, Casio is the founder and owner of DRBRAND, through which he has worked with over 350 businesses. Parker is a self-described growth hacker who understands how to reach a big audience.'
+            'Parker is the founder and owner of DRBRAND, through which he has worked with over 350 businesses. Parker is a self-described growth hacker who understands how to reach a big audience.'
         },
         {
           imageUrl: require('~/assets/images/about/frank-valensco.jpeg'),
           name: 'Frank Valensco',
           position: 'Co-Founder & CTO',
           description:
-            'Head of Development at Saastronautics. CEO and Co-founder of Sekawan Solution, a Creative IT Company based in Jakarta, Indonesia. Have been working on developing solutions and products for the last 7 years to help clients grow their business.'
+            'CEO and Co-founder of Sekawan Solution, a Creative IT Company based in Jakarta, Indonesia. Have been working on developing solutions and products for the last 7 years to help clients grow their business.'
         },
         {
           imageUrl: require('~/assets/images/about/gerard-brand.jpeg'),
           name: 'Gerard Brand',
-          position: 'Head of Design',
+          position: 'Design Director',
           description:
-            'Head of Design at Saastronautics. Gerard has over 10 years of experience in graphic design and videography. He won first place in the GO VIDEO national competition by Gojek for the Best Video Documentary award.'
+            'Gerard has over 10 years of experience in graphic design and videography. He won first place in the GO VIDEO national competition by Gojek for the Best Video Documentary award.'
         }
       ]
     }

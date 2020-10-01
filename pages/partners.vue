@@ -15,9 +15,8 @@
         </div>
         <div class="col-12 col-md-10 mx-auto text-center">
           <p class="px-md-3 py-4">
-            Grow your core userbase, collect invaluable feedback,
-             gain funds for reinvestment, and leverage your campaign to grow your MRR.
-
+            Grow your core userbase, collect invaluable feedback, gain funds for
+            reinvestment, and leverage your campaign to grow your MRR.
           </p>
           <nuxt-link class="btn btn-primary btn-lg" to="/partners-apply"
             >Submit Your Product</nuxt-link
@@ -29,19 +28,19 @@
         :imageUrl="imageTechIs"
         :title="['Our Success Is Measured', 'in Our Partners’ Success']"
         :descriptions="[
-          'That\'s why we put together this platform from both developers and end-users. We want to create a platform that adds value to digital marketers, organizations, and developers.',
-          'When your organization registers with our partner program, your company gets access to early adopters that provide you with the feedback you need to optimize your SaaS offering.'
+          'When you partner with Saastronautics, you have a dedicated team focused on your success. We’re not simply throwing your product on our site and saying our goodbyes when the campaign is over. We are actively involved throughout the entire project lifecycle.',
+          'We are with you from the awareness campaigns ramping up to the deal launch to the end of the campaign and beyond. We’re staying on board to help you shift gears and generate MRR. '
         ]"
       />
     </div>
     <!-- What We Offer -->
     <LazyFeatureGray
-      title="Here is what you can expect"
+      title="Why Choose Saastronautics?"
       :items="offer"
       size="col-md-4 mb-3 mb-md-5 px-4"
     />
 
-    <LazyCustomerFeedback :feedback="feedback" />
+    <LazyCustomerFeedback :feedback="feedback"  title="Our Partners Love What We Do" subtitle="Read what our actual partners have to say about us." />
 
     <LazySubscribePanel />
   </div>
@@ -71,25 +70,25 @@ export default {
           image: require('~/assets/images/partners/expect-3.png'),
           title: `Leverage the Power of the<br/>Saastronautics Community`,
           description:
-            'As a member of the platform, you have access to the Saastronautics community of more than 35,000 digital entrepreneurs.Receive real-world feedback from our user base, allowing you to grow your SaaS offering in line with market expectations.'
+            'As our partner, you have access to the Saastronautics community consisting of entrepreneurs, agency owners, digital marketers, and freelancers. Receive real-world feedback from our user base, allowing you to grow your SaaS offering in line with market expectations..'
         },
         {
           image: require('~/assets/images/partners/expect-4.png'),
-          title: `Launch a Live Product on<br/>the Platform`,
+          title: `Product is Live`,
           description:
-            "When you list your SaaS solution with Saastronautics, it's a live version and not a beta application or program. We expect our partners to launch market-ready SaaS tools that offer real value to our community."
+            "We are looking for partners with products that are live and not a beta application or program. We expect our partners to launch market-ready SaaS tools that offer real value to our community."
         },
         {
           image: require('~/assets/images/partners/expect-5.png'),
-          title: `Present the Right<br/>SaaS Solution`,
+          title: `Product Fits Our Audience`,
           description:
-            'We ensure that all of the SaaS tools available on our platform meet the needs of marketers, digital entrepreneurs, and marketing agencies. We vet all of the SaaS tools on our platform to ensure they add value to the community.'
+            'We ensure that all of the SaaS tools available on our platform meet the needs of our audience. We vet all of the SaaS tools on our platform to ensure they add value to the community.'
         },
         {
           image: require('~/assets/images/partners/expect-6.png'),
-          title: `Benefit from Stability`,
+          title: `Product is Stable`,
           description:
-            "You can expect a massive influx of new users to your product offering. Our platform of stable users is looking for the next SaaS tool that will revolutionize their digital transformation - Do you have a tool that can change the way people do business? We're interested."
+            "You can expect a massive influx of new users and we want to make sure your product can handle it. We want partners who are open to feedback and will continue to develop."
         }
       ],
       feedback: [

@@ -3,17 +3,11 @@
     <div class="gray-feature container-fluid py-5">
       <div class="row px-md-4 justify-content-md-center">
         <div class="col-12 my-3 text-center">
-          <h1 class="title-1 display-5 font-weight-normal">Become a Partner</h1>
+          <h1 class="title-1 display-5 font-weight-normal">Become an Official Partner</h1>
         </div>
         <div class="col-8 text-center mb-3">
           <p>
-            Get paid to be promoted to millions of tech-savvy marketers,
-            agencies, and entrepreneurs.
-            <span
-              class="quote-highlight"
-            >Saastronautics is the #1 marketplace</span>
-            for curated SaaS tools, educational content, and small business
-            resources. Are you a good fit for an Saastronautics launch?
+            Saastronautics is the best marketplace and community to get your product seen and grow your userbase. Partner with Saastronautics and have an expert team dedicated to your success for life. 
             <span
               class="quote-highlight"
             >Apply to become a partner below.</span>
@@ -43,7 +37,7 @@
         </div>
         <div class="col-12 text-center">
           <h3 class="title-1 py-2">Partners Application</h3>
-          <h5>Submit this form to begin the Saastronautics promotion process.</h5>
+          <h5>Fill out and submit this form to begin the Saastronautics Partnership program.</h5>
           <script id="jnqsmjrytsqlsw">
   ;(function(a, b, c, e, f) {
     var s = a.createElement('script')
