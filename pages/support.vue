@@ -22,7 +22,7 @@
           <div class="support-card card card-bg-white p-4">
             <div class="card-body graphik-reg">
               <h6 class="card-title font-weight-bold mb-3">{{ item.title }}</h6>
-              <p class="card-text">{{ item.description }}</p>
+              <p class="card-text" v-html="item.description"></p>
             </div>
           </div>
         </div>
@@ -39,34 +39,34 @@ export default {
     return {
       cardQuestion: [
         {
-          title: 'Lorem ipsum dolor sit amet adipiscing elit?',
+          title: 'What is a Lifetime Deal?',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit tempora vel sapiente consectetur dicta, quia deserunt exercitationem cupiditate fugiat corporis perspiciatis magnam veniam sit nulla ad ipsam quo laboriosam. Iste, sunt.'
+            'A lifetime deal (LTD) refers to some of the exclusive deals we have on our marketplace. Most of our deals are lifetime deals and that means, if you purchased the deal, you have lifetime access to the product. Lifetime refers to the lifetime of the product.'
         },
         {
-          title: 'Lorem ipsum dolor sit amet adipiscing elit?',
+          title: 'How do I redeem my purchases?',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit tempora vel sapiente consectetur dicta, quia deserunt exercitationem cupiditate fugiat corporis perspiciatis magnam veniam sit nulla ad ipsam quo laboriosam. Iste, sunt.'
+            'You can go to your account dashboard by clicking on the My Account button on the top right corner of our website. From your account dashboard, click on My Purchases and find the deal you wanted to redeem. Click on the ellipsis (3 dots), click Redeem, and follow the instructions.'
         },
         {
-          title: 'Lorem ipsum dolor sit amet adipiscing elit?',
+          title: 'What is your Refund Policy?',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit tempora vel sapiente consectetur dicta, quia deserunt exercitationem cupiditate fugiat corporis perspiciatis magnam veniam sit nulla ad ipsam quo laboriosam. Iste, sunt.'
+            'We offer a 30-day money-back guarantee. You can refund your purchase within 30 days for 100% of the purchase price. Some of our deals may not allow refunds, in which case, we will make note of it in the deal details clearly.'
         },
         {
-          title: 'Lorem ipsum dolor sit amet adipiscing elit?',
+          title: 'What are Expired Deals?',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit tempora vel sapiente consectetur dicta, quia deserunt exercitationem cupiditate fugiat corporis perspiciatis magnam veniam sit nulla ad ipsam quo laboriosam. Iste, sunt.'
+            'Our deals are exclusive from our partners and they have a time-limit on duration. Expired deals refer to our deals that have ended. These deals have ended and you will not be able to purchase them. Make sure you don’t miss out on our deals!'
         },
         {
-          title: 'Lorem ipsum dolor sit amet adipiscing elit?',
+          title: 'Who do I go to for product support?',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit tempora vel sapiente consectetur dicta, quia deserunt exercitationem cupiditate fugiat corporis perspiciatis magnam veniam sit nulla ad ipsam quo laboriosam. Iste, sunt.'
+            'For technical matters about the SaaS product itself, you should directly support the SaaS company’s support team. For questions about the deals, you can contact Saastronautics support at support@saastronautics.com. '
         },
         {
-          title: 'Lorem ipsum dolor sit amet adipiscing elit?',
+          title: 'Can I request a deal or submit my own product?',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit tempora vel sapiente consectetur dicta, quia deserunt exercitationem cupiditate fugiat corporis perspiciatis magnam veniam sit nulla ad ipsam quo laboriosam. Iste, sunt.'
+            'Yes! If you have any specific SaaS tools you want to see on Saastronautics, you can reach out to us at support@saastronautics.com. If you are looking to submit your own product, you can fill out our  <a href=\'/partners-apply\'>Partners Application.</a>'
         }
       ]
     }
@@ -102,5 +102,6 @@ export default {
 .support-card {
   box-shadow: 0px 3px 99px #7a7a7a29;
   border-radius: 10px;
+  min-height: 260px;
 }
 </style>
