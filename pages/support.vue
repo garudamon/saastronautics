@@ -102,6 +102,6 @@ export default {
 .support-card {
   box-shadow: 0px 3px 99px #7a7a7a29;
   border-radius: 10px;
-  min-height: 260px;
+  min-height: 270px;
 }
 </style>
