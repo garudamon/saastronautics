@@ -79,14 +79,14 @@ export default {
       imageTechIs: require('~/assets/images/partners/placeholder-partners.svg'),
       offer: [
         {
-          image: require('~/assets/images/partners/expect-1.png'),
+          image: require('~/assets/images/icon/keep-a-larger-share-of-the-sales.svg'),
           title: `Keep a Larger Share of
           <br/>the Sales You Make`,
           description:
             "We want to create an environment of prosperity for all parties. It's for this reason that we want to make our partners feel like they are part of a platform that offers them as much value as the end-user. Saastronautics gives our Partners the lion's share of the sale."
         },
         {
-          image: require('~/assets/images/partners/expect-2.png'),
+          image: require('~/assets/images/icon/get-a-dedicated-support.svg'),
           title: `Get Dedicated Support<br/>and Consultation`,
           description:
             "We'll never leave you alone in the digital environment. With Saastronautics, you get access to a platform, and a team, of SaaS professionals that understand your business. We consult with you on branding issues, marketing strategy, and generating more MRR for your company."
