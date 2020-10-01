@@ -100,6 +100,7 @@ export default {
   }),
   mounted() {
     if(this.$route.query.aff){
+      console.log('lllll')
       this.$affiliateSet(this.$route.query.aff)
     }
   },

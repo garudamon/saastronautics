@@ -8,97 +8,105 @@
             <div class="row">
               <div class="col-12 col-md-7 pr-5">
                 <p class="h4 mb-4">Payment Method</p>
-                <template v-if="data.grandTotal > 0">
-                  <div class="form-check mb-3 font-weight-bold">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="paymentMethod"
-                      id="payment-paypal"
-                      value="paypal"
-                      v-model="paymentMethod"
-                      disabled
-                    />
-                    <label class="form-check-label" for="payment-paypal">
-                      <img src="~/assets/images/payment/iconfinder_paypal_1220357.png" alt="Paypal Icon" class="icon">
-                      Paypal
-                    </label>
-                    <small>(Not Available)</small>
-                  </div>
-                  <div class="form-check mb-3 font-weight-bold">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="paymentMethod"
-                      id="payment-cc"
-                      value="cc"
-                      v-model="paymentMethod"
-                    />
-                    <label class="form-check-label" for="payment-cc">
-                      <img src="~/assets/images/payment/icons8-mastercard-credit-card-96.png" alt="Card Icon" class="icon">
-                      Credit or Debit Card
-                    </label>
-                  </div>
-                  <div class="card-list">
-                    <template v-if="data.cardViews && data.cardViews.length > 0">
-                      <label 
-                        v-for="(item, i) in data.cardViews"
-                        :key="i"
-                        :class="{'form-check mb-2 d-flex justify-content-between align-items-center': true, 'active-card': selectedCard==item.stripePaymentID}"
-                      >
-                        <input
-                          class="form-check-input"
-                          type="radio"
-                          name="selectedCard"
-                          :value="item.stripePaymentID"
-                          v-model="selectedCard"
-                        />
-                          <div class="available-card">
-                            <img v-if="item.brand == 'visa'" src="~/assets/images/payment/visa-logo.png" alt="">
-                            <img v-if="item.brand == 'mastercard'" src="~/assets/images/payment/visa-logo.png" alt="">
-                            <span>**** **** {{ item.lastFour }}</span>
-                            <span class="text-muted">{{ item.month }} / {{ item.year }}</span>
-                          </div>
-                          <span class="fa fa-check-circle"></span>
+                <template v-if="loading">
+                  <LazyLoading :fluid="true" />
+                </template>
+                <template v-else>
+                  <template v-if="data.grandTotal > 0">
+                    <div class="form-check mb-3 font-weight-bold">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="paymentMethod"
+                        id="payment-paypal"
+                        value="paypal"
+                        v-model="paymentMethod"
+                        disabled
+                      />
+                      <label class="form-check-label" for="payment-paypal">
+                        <img src="~/assets/images/payment/iconfinder_paypal_1220357.png" alt="Paypal Icon" class="icon">
+                        Paypal
                       </label>
-                    </template>
-                  </div>
-                  <div class="form-check mb-3 font-weight-bold">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="paymentMethod"
-                      id="payment-new"
-                      value="newCard"
-                      v-model="selectedCard"
-                    />
-                    <label class="form-check-label" for="payment-new"
+                      <small>(Not Available)</small>
+                    </div>
+                    <div class="form-check mb-3 font-weight-bold">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="paymentMethod"
+                        id="payment-cc"
+                        value="cc"
+                        v-model="paymentMethod"
+                      />
+                      <label class="form-check-label" for="payment-cc">
+                        <img src="~/assets/images/payment/icons8-mastercard-credit-card-96.png" alt="Card Icon" class="icon">
+                        Credit or Debit Card
+                      </label>
+                    </div>
+                    <div class="card-list">
+                      <template v-if="data.cardViews && data.cardViews.length > 0">
+                        <label 
+                          v-for="(item, i) in data.cardViews"
+                          :key="i"
+                          :class="{'form-check mb-2 d-flex justify-content-between align-items-center': true, 'active-card': selectedCard==item.stripePaymentID}"
+                        >
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="selectedCard"
+                            :value="item.stripePaymentID"
+                            v-model="selectedCard"
+                          />
+                            <div class="available-card">
+                              <img v-if="item.brand == 'visa'" src="~/assets/images/payment/visa-logo.png" alt="">
+                              <img v-if="item.brand == 'mastercard'" src="~/assets/images/payment/visa-logo.png" alt="">
+                              <span>**** **** {{ item.lastFour }}</span>
+                              <span class="text-muted">{{ item.month }} / {{ item.year }}</span>
+                            </div>
+                            <span class="fa fa-check-circle"></span>
+                        </label>
+                      </template>
+                    </div>
+                    <div class="form-check mb-3 font-weight-bold">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="paymentMethod"
+                        id="payment-new"
+                        value="newCard"
+                        v-model="selectedCard"
+                      />
+                      <label class="form-check-label" for="payment-new"
+                        >
+                        <img src="~/assets/images/payment/icons8-card-payment-96.png" alt="Card Icon" class="icon bigger">
+                        New Card</label
                       >
-                      <img src="~/assets/images/payment/icons8-card-payment-96.png" alt="Card Icon" class="icon bigger">
-                      New Card</label
-                    >
 
-                    <div
-                      v-show="selectedCard == 'newCard'"
-                      style="margin-left: 3px; margin-top: 5px;"
-                      ref="cardelement"
-                    />
-                  </div>
+                      <div
+                        v-show="selectedCard == 'newCard'"
+                        style="margin-left: 3px; margin-top: 5px;"
+                        ref="cardelement"
+                      />
+                    </div>
 
-                  <div class="confirmation-info">
-                    Your order confirmation will be email to: <br>
-                    <span class="text-red font-weight-bold">{{data.customer && data.customer.email}}</span>
+                    <div class="confirmation-info">
+                      Your order confirmation will be email to: <br>
+                      <span class="text-red font-weight-bold">{{data.customer && data.customer.email}}</span>
+                    </div>
+                  </template>
+                  <div class="form-check mb-3 font-weight-bold" v-else>
+                    <label class="form-check-label">
+                      None, it's a freebies
+                    </label>
                   </div>
                 </template>
-                <div class="form-check mb-3 font-weight-bold" v-else>
-                  <label class="form-check-label">
-                    None, it's a freebies
-                  </label>
-                </div>
               </div>
               <div class="col-12 col-md-5">
                 <p class="h4 mb-4">Summary</p>
-                <template v-if="Object.keys(data).length > 0">
+                <template v-if="loading">
+                  <LazyLoading :fluid="true" />
+                </template>
+                <template v-if="!loading && Object.keys(data).length > 0">
                   <div class="cart-line text-smaller">
                     <div class="row" v-for="(item, idx) in data.myCartLine" :key="idx">
                       <div class="col-8">
@@ -151,7 +159,8 @@ export default {
     clientSecret: null,
     data: {},
     paymentMethod: 'cc',
-    selectedCard: 'newCard'
+    selectedCard: 'newCard',
+    loading: true
   }),
   computed: {
     ...mapState(['profile'])
@@ -164,15 +173,20 @@ export default {
           data: { success, data }
         } = res
         if (success) {
+          this.loading = false
           this.data = { ...data }
           this.clientSecret = this.data.stripeSecretClientKey
 
           if (this.data.cardViews.length > 0) {
             this.selectedCard = this.data.cardViews[0].stripePaymentID
           }
-
-          this.generateStripeElement()
+          
+          setTimeout(() => {
+            this.generateStripeElement()
+          }, 500);
         }
+      }).then(() => {
+        this.loading = false
       })
     },
     generateStripeElement() {

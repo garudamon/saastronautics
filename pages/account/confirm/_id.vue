@@ -1,12 +1,7 @@
 <template>
-  <div class="row d-flex justify-content-center">
+  <div class="row d-flex justify-content-center pb-5">
     <template v-if="loading">
-      <div class="col-12 col-md-5 card-bg-white p-5 text-center">
-        <p class="pt-5">
-          <span class="fa fa-3x fa-spinner fa-spin"></span>
-        </p>
-        <p class="pb-5">Loading...</p>
-      </div>
+      <LazyLoading />
     </template>
     <template v-else>
       <template v-if="confirmed">
