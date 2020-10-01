@@ -92,7 +92,7 @@ export default {
             "We'll never leave you alone in the digital environment. With Saastronautics, you get access to a platform, and a team, of SaaS professionals that understand your business. We consult with you on branding issues, marketing strategy, and generating more MRR for your company."
         },
         {
-          image: require('~/assets/images/partners/expect-3.png'),
+          image: require('~/assets/images/icon/leverage-the-power.svg'),
           title: `Leverage the Power of the<br/>Saastronautics Community`,
           description:
             'As our partner, you have access to the Saastronautics community consisting of entrepreneurs, agency owners, digital marketers, and freelancers. Receive real-world feedback from our user base, allowing you to grow your SaaS offering in line with market expectations..'
