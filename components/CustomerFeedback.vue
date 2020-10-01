@@ -1,8 +1,8 @@
 <template>
-  <div class="feedback mt-5 pb-5">
+  <div class="feedback mt-5">
     <div class="container">
       <div class="row">
-        <div class="col-12 text-center mt-5 pt-5">
+        <div class="col-12 text-center mt-5">
           <h1 class="title-2 font-weight-bold mb-4">{{title}}</h1>
           <div class="row justify-content-center">
             <div class="col-7">
