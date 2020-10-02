@@ -176,9 +176,9 @@ export default {
         },
         {
           image: require('~/assets/images/icon/top-notch-products.svg'),
-          title: 'Top-Notch Products',
+          title: 'Trustworthy Products',
           description:
-            'Trustworthy Products.'
+            'We have a vigorous vetting process for all our tools. These are tried and tested tools you can trust.'
         },
         {
           image: require('~/assets/images/icon/satisfaction-guarantee.svg'),
