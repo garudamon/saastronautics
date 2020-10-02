@@ -12,7 +12,7 @@ body,
 #__nuxt,
 #__layout {
   height: 100%;
-  > div {
+  > div:not(.nuxt-progress) {
     position: relative;
     min-height: 100%;
   }
