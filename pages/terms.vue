@@ -4,15 +4,15 @@
     <div class="container">
       <div class="row pb-4 d-flex px-md-4 mb-5 header">
         <div class="col-12">
-          <h1 class="font-weight-bold mb-3">Terms Of Service</h1>
-          <p class="mb-3">Effective date:</p>
+          <h1 class="font-weight-bold mb-3">Terms Of Use</h1>
+          <p class="mb-3">Effective date : Jan 1, 2020</p>
           <p>
             The Saastronautics.com (Website) is operated by Saastronautics LLC (we, us), a company incorporated under the laws of Delaware. This document defines the services available through the Website. Please read it carefully before using our Website. We reserve the right to update this document and your continued use of Website acceptance of all updates. Please refer to our
             <a
               href="/privacy"
             >Privacy Policy</a> to find more about the processing of your personal data.
           </p>
-          <p>By completing a registration form and selectiong the &ldquo;i accept&rdquo; checkbox during account registration process or by using the website, you agree to be.</p>
+          <p>By completing a registration form and selecting the &ldquo;I accept&rdquo; checkbox during account registration process or by using the website, you agree to be.</p>
           <p>You assert that you are eithe legal age (18 years old) and have the power and competency to enter into and comply with these terms of service. This website is not for persons under the age of 18 years old. If you are under the age of 18 years old, do not use this website and exit immediately.</p>
           <ol>
             <li>
@@ -78,8 +78,7 @@
         </div>
       </div>
     </div>
-    <!-- subscribe -->
-    <LazySubscribePanel />
+
   </div>
 </template>
 

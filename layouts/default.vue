@@ -147,7 +147,7 @@ export default {
       ],
       accountLink: [
         {
-          text: 'Terms and Conditions',
+          text: 'Terms of Use',
           path: '/terms',
           isButton: false
         },
