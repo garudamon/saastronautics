@@ -110,7 +110,7 @@
           <nuxt-link :to="`#`">Sitemap</nuxt-link>
         </div>
         <div>
-          <nuxt-link :to="'/terms'">Terms Of Use</nuxt-link>
+          <nuxt-link :to="'/terms'">Terms of Use</nuxt-link>
         </div>
         <div>
           <nuxt-link :to="'/privacy'">Privacy Policy</nuxt-link>

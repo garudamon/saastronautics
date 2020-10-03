@@ -29,7 +29,7 @@
         </div>
       </div>
     </div>
-    <div class="table-fixed mt-4">
+    <div class="table-fixed mt-4 pb-5">
       <table>
         <thead>
           <tr class="gordita-bold">
