@@ -12,9 +12,17 @@ body,
 #__nuxt,
 #__layout {
   height: 100%;
-  > div:not(.nuxt-progress) {
-    position: relative;
-    min-height: 100%;
+  min-height: 100%;
+  position: relative;
+  > div {
+    &:not(.nuxt-progress),
+    &:not(.swal-overlay) {
+      min-height: 0;
+      height: auto;
+    }
+    &.swal-overlay {
+      position: fixed !important;
+    }
   }
 }
 

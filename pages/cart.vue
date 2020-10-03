@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h2 class="font-weight-bold mb-3">My Cart</h2>
-    <div class="row">
+    <div class="row pb-5">
       <div class="col-12 col-md-7">
         <div class="card">
           <div class="card-body p-0">
