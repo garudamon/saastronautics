@@ -3,12 +3,12 @@
     <span class="fa fa-2x fa-ellipsis-v text-red more-actions-trigger" @click="show = !show"></span>
     <transition name="slide-fade">
       <ul v-if="show" class="more-actions-list">
-        <!-- <li>
+        <li>
           <a href="#" @click="clicked('redeem')">
             <span class="fa fa-fw fa-trophy text-red"></span>
-            Redeem
+          Mark As Redeem
           </a>
-        </li> -->
+        </li> 
         <li>
           <a href="#" @click="clicked('refund')">
             <span class="fa fa-fw fa-long-arrow-right text-red"></span>
@@ -64,12 +64,12 @@ export default {
     margin: 0;
     position: absolute;
     padding: 0;
-    left: -140px;
+    left: -180px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.33);
     background: white;
     border-radius: 10px;
-    font-size: 16px;
-    width: 150px;
+    font-size: 14px;
+    width: 180px;
     a {
       color: rgba(0, 0, 0, 0.33);
       padding: 5px 10px;
