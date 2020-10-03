@@ -26,7 +26,7 @@ export default {
 <style lang="scss" scoped>
 .auth {
   background: #f6f4fc;
-  height: 100%;
+  width: 100vw;
 
   .nav-back {
     a {

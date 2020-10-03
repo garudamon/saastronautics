@@ -50,7 +50,7 @@
           v-for="item in features"
           :key="item.title"
         >
-        <div class="text-center mb-4">
+        <div class="text-center mb-3">
           <img :src="item.image" :alt="item.title" />
         </div>
           <h5 class="title-2 text-capitalize font-weight-bold py-4">
@@ -99,19 +99,19 @@ export default {
       ],
       features: [
         {
-          image: require('~/assets/images/partners/expect-4.png'),
+          image: require('~/assets/images/icon/product-is-live.svg'),
           title: `Product is Live`,
           description:
             'We are looking for partners with products that are live and not a beta application or program. We expect our partners to launch market-ready SaaS tools that offer real value to our community.'
         },
         {
-          image: require('~/assets/images/partners/expect-5.png'),
+          image: require('~/assets/images/icon/product-fits-our-audience.svg'),
           title: `Product Fits Our Audience`,
           description:
             'We ensure that all of the SaaS tools available on our platform meet the needs of our audience. We vet all of the SaaS tools on our platform to ensure they add value to the community.'
         },
         {
-          image: require('~/assets/images/partners/expect-6.png'),
+          image: require('~/assets/images/icon/product-is-stable.svg'),
           title: `Product is Stable`,
           description:
             'You can expect a massive influx of new users and we want to make sure your product can handle it. We want partners who are open to feedback and will continue to develop.'
@@ -134,7 +134,7 @@ export default {
 <style lang="scss" scoped>
 .features {
   img {
-    height: 125px;
+    width: 160px;
     border-radius: 10px;
   }
 }

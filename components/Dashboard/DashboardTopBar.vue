@@ -3,7 +3,7 @@
     <div :class="{'background-gift': true, 'giving': mascot == 'gift'}"></div>
     <div class="background-paw"></div>
     <div class="content h-100 d-flex flex-column align-items-center justify-content-center">
-      <h2 class="title-1 mb-4">Welcome, {{ name }}!</h2>
+      <h2 class="title-1 mb-4 text-capitalize">Welcome, {{ name }}!</h2>
       <div class="input-group" v-if="input">
         <input type="text" class="form-control pl-3" placeholder="Search Product" />
         <div class="input-group-append">

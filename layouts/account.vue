@@ -60,7 +60,7 @@
           class="d-flex align-items-center justify-content-center flex-column border-bottom pb-4 px-3 profile-info"
         >
           <img v-if="profile.customer" :src="$getProfile(profile.customer.id)" alt="profile photo" />
-          <h6 class="title-1 pt-3 my-0">{{ profile.customer && profile.customer.firstName }}</h6>
+          <h6 class="title-1 pt-3 my-0 text-capitalize">{{ profile.customer && profile.customer.firstName }}</h6>
           <p class="py-0 my-0">{{ profile.email }}</p>
         </div>
         <ul class="nav flex-column">
