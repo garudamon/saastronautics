@@ -13,13 +13,10 @@
             <p class="text-red m-0">{{ item.position }}</p>
             <div class="bottom-div">
               <p>
-                <a href="#">
-                  <i class="fa px-3 fa-facebook"></i>
+                <a :href="item.twitter" target="_blank">
+                  <i class="fa px-3 fa-twitter"></i>
                 </a>
-                <a href="#">
-                  <i class="fa px-3 fa-instagram"></i>
-                </a>
-                <a href="#">
+                <a :href="item.linkedin" target="_blank">
                   <i class="fa px-3 fa-linkedin"></i>
                 </a>
               </p>

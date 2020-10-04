@@ -103,6 +103,8 @@ export default {
           imageUrl: require('~/assets/images/about/joon-k-lee.jpeg'),
           name: 'Joon K Lee',
           position: 'Founder & CEO',
+          twitter: 'http://www.twitter.com/itsjoonklee',
+          linkedin: 'http://www.linkedin.com/in/inquivixjoon',
           description:
             'Joon is the owner and Managing Director of Inquivix, Korea’s leading digital marketing agency. He has helped build and implement marketing strategies and campaigns for large enterprises like The Economist, Freshworks, and Rhenus. '
         },
@@ -110,6 +112,8 @@ export default {
           imageUrl: require('~/assets/images/about/parker-casio.jpeg'),
           name: 'Parker Casio',
           position: 'Co-Founder & CMO',
+          twitter: 'http://www.twitter.com/parkercasio',
+          linkedin: 'http://www.linkedin.com/in/parkercasio',
           description:
             'Parker is the founder and owner of DRBRAND, through which he has worked with over 350 businesses. Parker is a self-described growth hacker who understands how to reach a big audience.'
         },
@@ -117,6 +121,8 @@ export default {
           imageUrl: require('~/assets/images/about/frank-valensco.jpeg'),
           name: 'Frank Valensco',
           position: 'Co-Founder & CTO',
+          twitter: 'http://www.twitter.com/valenscofrank',
+          linkedin: 'http://www.linkedin.com/in/valenscofrank',
           description:
             'CEO and Founder of Sekawan Solution, a Creative IT Company based in Jakarta, Indonesia. Have been working on developing solutions and products for the last 7 years to help clients grow their business.'
         },
@@ -124,6 +130,8 @@ export default {
           imageUrl: require('~/assets/images/about/gerard-brand.jpeg'),
           name: 'Gerard Brand',
           position: 'Design Director',
+          twitter: 'http://www.twitter.com/Gavin_Brand',
+          linkedin: 'www.linkedin.com/in/gerardjovian ',
           description:
             'Gerard has over 10 years of experience in graphic design and videography. He won first place in the GO VIDEO national competition by Gojek for the Best Video Documentary award.'
         }
