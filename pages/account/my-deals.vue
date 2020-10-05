@@ -81,7 +81,11 @@
       style="display: block;"
       v-show="showModalRedeemed"
     >
-      <div class="modal-dialog modal-dialog-centered" v-for="(item, key) in items" :key="key">
+      <div
+        class="modal-dialog modal-dialog-centered"
+        v-for="(item, key) in items"
+        :key="key"
+      >
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="redeemedLabel">
@@ -115,7 +119,7 @@
               Cancel
             </button>
             <a :href="item.linkredeem" target="_blank">
-              <button type="button" class="btn btn-primary">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">
                 {{ action.type }} Now
               </button>
             </a>
@@ -236,7 +240,6 @@ export default {
     selectData(type, selectedDeal) {
       this.codeSelected = []
       this.action = { ...this.action, type, selectedDeal }
-      console.log(this.action)
       if (type == 'redeemed') {
         this.showModalRedeemed = true
         this.showModal = false
@@ -277,7 +280,6 @@ export default {
           data: { success, data }
         } = res
         if (success) this.items = [...data]
-        console.log(data)
       })
     },
     toggleCode(key) {
