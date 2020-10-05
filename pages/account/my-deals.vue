@@ -104,7 +104,7 @@
           <div class="modal-body">
             <p>
               To redeem your code, please go to the link
-              <span>{{ item.linkredeem }}</span>
+              <span class="text-red">{{ item.linkredeem }}</span>
               You can copy and paste the link and open it in another tab or klik
               the button redeem bellow
             </p>
@@ -118,11 +118,18 @@
             >
               Cancel
             </button>
-            <a :href="item.linkredeem" target="_blank">
+            <!-- <a :href="item.linkredeem" target="_blank">
               <button type="button" class="btn btn-primary" data-dismiss="modal">
                 {{ action.type }} Now
               </button>
-            </a>
+            </a> -->
+            <button
+              type="button"
+              class="btn btn-primary"
+              @click="submitRedeemed(item)"
+            >
+              {{ action.type }} Now
+            </button>
           </div>
         </div>
       </div>
@@ -247,6 +254,10 @@ export default {
         this.showModal = true
         this.showModalRedeemed = false
       }
+    },
+    submitRedeemed(item) {
+      window.open(item.linkredeem, '_blank');
+      this.showModalRedeemed = false
     },
     submitRequest() {
       if (this.codeSelected.length < 1) {
