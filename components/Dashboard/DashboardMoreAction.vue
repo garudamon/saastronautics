@@ -16,10 +16,10 @@
           </a>
         </li>
         <li>
-          <nuxt-link to>
+          <a href="#" @click="clicked('redeemed')">
             <span class="fa fa-fw fa-check-circle text-red"></span>
             Redeemed
-          </nuxt-link>
+          </a>
         </li>
       </ul>
     </transition>
