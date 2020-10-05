@@ -118,11 +118,6 @@
             >
               Cancel
             </button>
-            <!-- <a :href="item.linkredeem" target="_blank">
-              <button type="button" class="btn btn-primary" data-dismiss="modal">
-                {{ action.type }} Now
-              </button>
-            </a> -->
             <button
               type="button"
               class="btn btn-primary"
