@@ -3,5 +3,6 @@
     "statusBar.background": "#1A1A1A",
     "statusBar.noFolderBackground": "#212121",
     "statusBar.debuggingBackground": "#263238"
-  }
+  },
+  "vue3snippets.enable-compile-vue-file-on-did-save-code": true
 }
