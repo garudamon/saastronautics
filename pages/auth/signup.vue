@@ -5,7 +5,9 @@
     </div>
     <div class="col-12 col-md-5 card-bg-white py-4">
       <div class="px-4 pt-4">
-            <h1 class="title-1 display-5 font-weight-normal d-none d-md-block">Sign Up</h1>
+        <h1 class="title-1 display-5 font-weight-normal d-none d-md-block">
+          Sign Up
+        </h1>
         <p>
           Already have an account?
           <nuxt-link to="/auth/signin">Sign In</nuxt-link>
@@ -13,7 +15,11 @@
       </div>
       <ValidationObserver v-slot="{ handleSubmit }">
         <form class="p-3" @submit.prevent="handleSubmit(signUp)">
-          <ValidationProvider name="Name" rules="required|alpha" v-slot="{ errors }">
+          <ValidationProvider
+            name="Name"
+            rules="required|alpha"
+            v-slot="{ errors }"
+          >
             <div class="form-group mb-4">
               <input
                 type="text"
@@ -21,10 +27,16 @@
                 placeholder="First name"
                 v-model="form.firstName"
               />
-              <span class="form-error" v-if="errors.length > 0">{{ errors[0] }}</span>
+              <span class="form-error" v-if="errors.length > 0">{{
+                errors[0]
+              }}</span>
             </div>
           </ValidationProvider>
-          <ValidationProvider name="E-mail" rules="required|email" v-slot="{ errors }">
+          <ValidationProvider
+            name="E-mail"
+            rules="required|email"
+            v-slot="{ errors }"
+          >
             <div class="form-group mb-4">
               <input
                 type="email"
@@ -32,10 +44,16 @@
                 placeholder="Email"
                 v-model="form.email"
               />
-              <span class="form-error" v-if="errors.length > 0">{{ errors[0] }}</span>
+              <span class="form-error" v-if="errors.length > 0">{{
+                errors[0]
+              }}</span>
             </div>
           </ValidationProvider>
-          <ValidationProvider name="Password" rules="required" v-slot="{ errors }">
+          <ValidationProvider
+            name="Password"
+            rules="required"
+            v-slot="{ errors }"
+          >
             <div class="form-group mb-4">
               <input
                 type="password"
@@ -44,7 +62,9 @@
                 v-model="form.Password"
                 ref="password"
               />
-              <span class="form-error" v-if="errors.length > 0">{{ errors[0] }}</span>
+              <span class="form-error" v-if="errors.length > 0">{{
+                errors[0]
+              }}</span>
             </div>
           </ValidationProvider>
           <ValidationProvider
@@ -60,11 +80,15 @@
                 v-model="form.newPassword"
                 data-vv-as="password"
               />
-              <span class="form-error" v-if="errors.length > 0">{{ errors[0] }}</span>
+              <span class="form-error" v-if="errors.length > 0">{{
+                errors[0]
+              }}</span>
             </div>
           </ValidationProvider>
           <div class="d-flex align-items-center">
-            <button type="submit" class="btn btn-primary btn-md px-4">Sign Up</button>
+            <button type="submit" class="btn btn-primary btn-md px-4">
+              Sign Up
+            </button>
           </div>
         </form>
       </ValidationObserver>
@@ -73,15 +97,19 @@
 </template>
 
 <script>
-import { ValidationProvider, ValidationObserver, extend } from 'vee-validate/dist/vee-validate.full.esm'
+import {
+  ValidationProvider,
+  ValidationObserver,
+  extend
+} from 'vee-validate/dist/vee-validate.full.esm'
 
 extend('password', {
   params: ['target'],
   validate(value, { target }) {
-    return value === target;
+    return value === target
   },
   message: 'Password confirmation does not match'
-});
+})
 
 export default {
   layout: 'auth',
@@ -99,10 +127,12 @@ export default {
     }
   }),
   mounted() {
-    if(this.$route.query.aff){
-      console.log('lllll')
-      this.$affiliateSet(this.$route.query.aff)
-    }
+    /* remark by frank
+          if(this.$route.query.aff){
+            console.log('lllll')
+            this.$affiliateSet(this.$route.query.aff)
+          }
+          */
   },
   methods: {
     callError(error = '') {
@@ -123,7 +153,9 @@ export default {
             .then(res => {
               //Perform Success Action
               if (res.data.success) {
-                window.refMonkeyClient.user(this.form.email)
+                window.refMonkeyClient
+                  .user(this.form.email)
+                  .then(res => console.log(res))
                 this.$swal('Success', res.data.message, 'success').then(() => {
                   this.$router.push('/auth/signin')
                 })
@@ -146,27 +178,34 @@ export default {
   }
 }
 </script>
+
 <style lang="scss" scoped>
 p {
   font-size: 0.8rem;
 }
+
 a {
   color: var(--primary-color-blue);
 }
-.form-error{
+
+.form-error {
   font-size: 0.6rem !important;
   padding-left: 0.8rem;
   color: tomato;
 }
+
 .swal-button--cancel {
   color: white;
 }
+
 img {
   max-width: 105%;
 }
+
 .card-bg-white {
   margin: 40px 0 100px 0;
 }
+
 .form-check {
   color: #8d8c8c;
 }

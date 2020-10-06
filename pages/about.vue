@@ -80,19 +80,19 @@ export default {
       imageWhyWeDo: require('~/assets/images/about/why-we-do.svg'),
       offer: [
         {
-          image: require('~/assets/images/about/offer-3.png'),
+          image: require('~/assets/images/icon/exclusive-deals.svg'),
           title: 'Exclusive Deals',
           description:
             'We work hard to secure exclusive deals that you won’t find anywhere else. We sieve through and test hundreds of new SaaS products to find the best tools for our community. '
         },
         {
-          image: require('~/assets/images/about/offer-2.png'),
+          image: require('~/assets/images/icon/powerful-community.svg'),
           title: 'Powerful Community',
           description:
             'Our unique community of Saastronauts are comprised of digital entrepreneurs from diverse backgrounds. We bridge the gap between the SaaS company and user.'
         },
         {
-          image: require('~/assets/images/about/offer-1.png'),
+          image: require('~/assets/images/icon/unrivaled-support.svg'),
           title: 'Unrivaled Support',
           description:
             'We invest our time, resources, and passion into the success of not only the SaaS company but also our community members. We are here to grow with you.'
