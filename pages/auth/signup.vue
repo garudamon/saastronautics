@@ -123,6 +123,7 @@ export default {
             .then(res => {
               //Perform Success Action
               if (res.data.success) {
+                window.refMonkeyClient.user(this.form.email)
                 this.$swal('Success', res.data.message, 'success').then(() => {
                   this.$router.push('/auth/signin')
                 })

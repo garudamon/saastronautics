@@ -14,6 +14,14 @@ export default {
         content: process.env.npm_package_description || ''
       }
     ],
+    script: [
+      {
+        src: 'https://cdn.refmonkey.com/refmonkey.js'
+      },
+      {
+        src: '/refmonkey.js'
+      }
+    ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
@@ -49,7 +57,7 @@ export default {
     { src: '~/plugins/flickity', ssr: false },
     { src: '~/plugins/swal', ssr: false },
     { src: '~/plugins/video-embed', ssr: false },
-    { src: "@/plugins/aos", ssr: false },
+    { src: '@/plugins/aos', ssr: false },
     '~/plugins/axios',
     '~/plugins/helper'
   ],

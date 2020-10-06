@@ -225,6 +225,7 @@ export default {
             data: { success, data, message }
           } = res
           if (success) {
+            me.refMonkey()
             me.$swal(
               'Success',
               'Your transaction successfully paid',
@@ -276,7 +277,7 @@ export default {
       this.stripe
         .retrievePaymentIntent(this.clientSecret)
         .then(function(result) {
-          console.log(result)
+          me.refMonkey()
           me.$swal(
             'Success',
             'Your transaction successfully paid',
@@ -286,6 +287,9 @@ export default {
             me.setCart({})
           })
         })
+    },
+    refMonkey() {
+      window.refMonkeyClient.user(this.profile.customer.email)
     }
   },
   mounted() {
