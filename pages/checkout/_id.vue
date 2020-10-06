@@ -24,7 +24,11 @@
                         disabled
                       />
                       <label class="form-check-label" for="payment-paypal">
-                        <img src="~/assets/images/payment/iconfinder_paypal_1220357.png" alt="Paypal Icon" class="icon">
+                        <img
+                          src="~/assets/images/payment/iconfinder_paypal_1220357.png"
+                          alt="Paypal Icon"
+                          class="icon"
+                        />
                         Paypal
                       </label>
                       <small>(Not Available)</small>
@@ -39,16 +43,25 @@
                         v-model="paymentMethod"
                       />
                       <label class="form-check-label" for="payment-cc">
-                        <img src="~/assets/images/payment/icons8-mastercard-credit-card-96.png" alt="Card Icon" class="icon">
+                        <img
+                          src="~/assets/images/payment/icons8-mastercard-credit-card-96.png"
+                          alt="Card Icon"
+                          class="icon"
+                        />
                         Credit or Debit Card
                       </label>
                     </div>
                     <div class="card-list">
-                      <template v-if="data.cardViews && data.cardViews.length > 0">
-                        <label 
+                      <template
+                        v-if="data.cardViews && data.cardViews.length > 0"
+                      >
+                        <label
                           v-for="(item, i) in data.cardViews"
                           :key="i"
-                          :class="{'form-check mb-2 d-flex justify-content-between align-items-center': true, 'active-card': selectedCard==item.stripePaymentID}"
+                          :class="{
+                            'form-check mb-2 d-flex justify-content-between align-items-center': true,
+                            'active-card': selectedCard == item.stripePaymentID
+                          }"
                         >
                           <input
                             class="form-check-input"
@@ -57,13 +70,23 @@
                             :value="item.stripePaymentID"
                             v-model="selectedCard"
                           />
-                            <div class="available-card">
-                              <img v-if="item.brand == 'visa'" src="~/assets/images/payment/visa-logo.png" alt="">
-                              <img v-if="item.brand == 'mastercard'" src="~/assets/images/payment/visa-logo.png" alt="">
-                              <span>**** **** {{ item.lastFour }}</span>
-                              <span class="text-muted">{{ item.month }} / {{ item.year }}</span>
-                            </div>
-                            <span class="fa fa-check-circle"></span>
+                          <div class="available-card">
+                            <img
+                              v-if="item.brand == 'visa'"
+                              src="~/assets/images/payment/visa-logo.png"
+                              alt=""
+                            />
+                            <img
+                              v-if="item.brand == 'mastercard'"
+                              src="~/assets/images/payment/visa-logo.png"
+                              alt=""
+                            />
+                            <span>**** **** {{ item.lastFour }}</span>
+                            <span class="text-muted"
+                              >{{ item.month }} / {{ item.year }}</span
+                            >
+                          </div>
+                          <span class="fa fa-check-circle"></span>
                         </label>
                       </template>
                     </div>
@@ -76,9 +99,12 @@
                         value="newCard"
                         v-model="selectedCard"
                       />
-                      <label class="form-check-label" for="payment-new"
-                        >
-                        <img src="~/assets/images/payment/icons8-card-payment-96.png" alt="Card Icon" class="icon bigger">
+                      <label class="form-check-label" for="payment-new">
+                        <img
+                          src="~/assets/images/payment/icons8-card-payment-96.png"
+                          alt="Card Icon"
+                          class="icon bigger"
+                        />
                         New Card</label
                       >
 
@@ -90,8 +116,10 @@
                     </div>
 
                     <div class="confirmation-info">
-                      Your order confirmation will be email to: <br>
-                      <span class="text-red font-weight-bold">{{data.customer && data.customer.email}}</span>
+                      Your order confirmation will be email to: <br />
+                      <span class="text-red font-weight-bold">{{
+                        data.customer && data.customer.email
+                      }}</span>
                     </div>
                   </template>
                   <div class="form-check mb-3 font-weight-bold" v-else>
@@ -108,12 +136,24 @@
                 </template>
                 <template v-if="!loading && Object.keys(data).length > 0">
                   <div class="cart-line text-smaller">
-                    <div class="row" v-for="(item, idx) in data.myCartLine" :key="idx">
+                    <div
+                      class="row"
+                      v-for="(item, idx) in data.myCartLine"
+                      :key="idx"
+                    >
                       <div class="col-8">
-                        <div class="font-weight-bold">{{item.productMaster.name}}</div>
-                        <div class="font-weight-light text-muted">{{`${item.productPriceMaster.title} (Qty ${item.productPriceMaster.codes})`}}</div>
+                        <div class="font-weight-bold">
+                          {{ item.productMaster.name }}
+                        </div>
+                        <div class="font-weight-light text-muted">
+                          {{
+                            `${item.productPriceMaster.title} (Qty ${item.productPriceMaster.codes})`
+                          }}
+                        </div>
                       </div>
-                      <div class="col-4 text-right">{{$formattedMoney(item.subTotal)}}</div>
+                      <div class="col-4 text-right">
+                        {{ $formattedMoney(item.subTotal) }}
+                      </div>
                     </div>
                   </div>
                   <div
@@ -168,26 +208,29 @@ export default {
   methods: {
     ...mapMutations(['setCart']),
     getDetail() {
-      this.$axios.get(`/payment/detail/${this.$route.params.id}`).then(res => {
-        let {
-          data: { success, data }
-        } = res
-        if (success) {
-          this.loading = false
-          this.data = { ...data }
-          this.clientSecret = this.data.stripeSecretClientKey
+      this.$axios
+        .get(`/payment/detail/${this.$route.params.id}`)
+        .then(res => {
+          let {
+            data: { success, data }
+          } = res
+          if (success) {
+            this.loading = false
+            this.data = { ...data }
+            this.clientSecret = this.data.stripeSecretClientKey
 
-          if (this.data.cardViews.length > 0) {
-            this.selectedCard = this.data.cardViews[0].stripePaymentID
+            if (this.data.cardViews.length > 0) {
+              this.selectedCard = this.data.cardViews[0].stripePaymentID
+            }
+
+            setTimeout(() => {
+              this.generateStripeElement()
+            }, 500)
           }
-          
-          setTimeout(() => {
-            this.generateStripeElement()
-          }, 500);
-        }
-      }).then(() => {
-        this.loading = false
-      })
+        })
+        .then(() => {
+          this.loading = false
+        })
     },
     generateStripeElement() {
       const publicKey = this.data.stripePublicKey
@@ -214,12 +257,13 @@ export default {
       this.card.mount(this.$refs.cardelement)
     },
     pay() {
-      if(this.data.grandTotal > 0) this.stripePay()
+      if (this.data.grandTotal > 0) this.stripePay()
       else this.freePay()
     },
     freePay() {
       let me = this
-      this.$axios.put(`/payment/approvefreepayment/${this.$route.params.id}`)
+      this.$axios
+        .put(`/payment/approvefreepayment/${this.$route.params.id}`)
         .then(res => {
           let {
             data: { success, data, message }
@@ -289,7 +333,9 @@ export default {
         })
     },
     refMonkey() {
-      window.refMonkeyClient.user(this.profile.customer.email)
+      window.refMonkeyClient
+        .user(this.profile.customer.email)
+        .then(res => console.log(res))
     }
   },
   mounted() {
@@ -304,54 +350,54 @@ small {
 }
 .card-list {
   padding-left: 1.6rem;
-  .form-check{
-    border: 1px solid #AFAFAF;
+  .form-check {
+    border: 1px solid #afafaf;
     border-radius: 10px;
     padding: 15px 20px;
     max-width: 400px;
     overflow: hidden;
-    .fa{
+    .fa {
       display: none;
     }
-    input{
+    input {
       visibility: hidden;
     }
-    &.active-card{
-      border: 1px solid #509CF5;
-      .fa{
-        color: #509CF5;
+    &.active-card {
+      border: 1px solid #509cf5;
+      .fa {
+        color: #509cf5;
         display: inline-block;
         float: right;
       }
     }
-    .available-card{
-      img{
+    .available-card {
+      img {
         width: 35px;
         margin-right: 10px;
       }
     }
   }
 }
-.icon{
+.icon {
   width: 25px;
   margin-right: 5px;
-  &.bigger{
+  &.bigger {
     width: 30px;
     margin-right: 0px;
   }
 }
-.card{
+.card {
   border-color: white !important;
   box-shadow: 0px 3px 99px #7a7a7a29;
 }
-.cart-line{
+.cart-line {
   min-height: 200px;
 }
-.text-smaller{
+.text-smaller {
   font-size: 0.9rem;
 }
-.confirmation-info{
-  background: #F2EDF7 0% 0% no-repeat padding-box;
+.confirmation-info {
+  background: #f2edf7 0% 0% no-repeat padding-box;
   border-radius: 20px;
   padding: 30px 20px;
   font-size: 0.9rem;
