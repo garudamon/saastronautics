@@ -120,7 +120,7 @@ export default {
                                 window.refMonkeyClient
                                     .user(this.form.email)
                                     .then(res => console.log(res))
-                                this.$swal('Ref Monkey : Success', res.data.message, 'success').then(() => {
+                                this.$swal('Success', res.data.message, 'success').then(() => {
                                     this.$router.push('/auth/signin')
                                 })
                             } else {
