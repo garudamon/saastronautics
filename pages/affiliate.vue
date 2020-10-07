@@ -26,18 +26,17 @@
       description="Enjoy the benefits of being a Saastronautics Affiliate. Signing up only takes a few minutes & it's free to join!"
       :items="whats"
     />
-    <div class="container py-5 text-center">
-        <h1 class="title-1 mt-4 mb-3">
-          Become A Saastronautics Affiliate
-        </h1>
-        <p>Sign up today and refer as many people as you'd like!</p>
-        <a
-            href="#"
-            target="_blank"
-            class="btn btn-primary btn-lg px-5 text-white my-3"
-            >Become a Saastronautics Affiliate</a
-          >
-      </div>
+    <div class="container pt-3 pb-5 text-center">
+      <h1 class="title-1 mt-4 mb-3">
+        Become A Saastronautics Affiliate
+      </h1>
+      <p>Sign up today and refer as many people as you'd like!</p>
+      <a
+        href="#"
+        target="_blank"
+        class="btn btn-primary btn-lg px-5 text-white mt-3 mb-5"
+        >Become a Saastronautics Affiliate</a
+      >
     </div>
   </div>
 </template>

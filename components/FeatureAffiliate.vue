@@ -42,7 +42,7 @@
               You LOVE Us
             </h3>
             <p>
-              You have used and love AppSumo deals and you’re able to
+              You have used and love Saastronautics deals and you’re able to
               confidently promote them to your audience.
             </p>
           </div>
