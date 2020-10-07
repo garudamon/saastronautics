@@ -78,7 +78,7 @@
             <p class="font-weight-bold">Hustle with Confidence</p>
             <ul>
               <li>* Try any product risk free. We offer an industry-best 60-day money-back guarantee — no matter the reason. So go ‘head and take any of our products for a spin to see if they’re a good fit for your business.  </li>
-              <li>* World-class customer support. There’s customer support, and then there’s AppSumo customer support. We take pride in going above and beyond to solve issues and keep our community happy.</li>
+              <li>* World-class customer support. There’s customer support, and then there’s Saastronautics customer support. We take pride in going above and beyond to solve issues and keep our community happy.</li>
               <li>* Access to founders and CEOs. As an early adopter, you have the CEO’s ear — ask your burning questions on any active deal and have them answered by the product founders themselves.</li>
             </ul>
           </div>

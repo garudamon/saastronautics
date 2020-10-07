@@ -80,7 +80,7 @@
               sitemap
             </div>
             <ul>
-              <li v-for="item in topLink" :key="item.text" class="py-1">
+              <li v-for="item in sitemapLink" :key="item.text" class="py-1">
                 <nuxt-link :to="item.path">{{ item.text }}</nuxt-link>
               </li>
             </ul>
@@ -142,6 +142,38 @@ export default {
         {
           text: 'Support',
           path: '/support',
+          isButton: false
+        }
+      ],
+      sitemapLink: [
+        {
+          text: 'Home',
+          path: '/',
+          isButton: false
+        },
+        {
+          text: 'Deals',
+          path: '/deals',
+          isButton: false
+        },
+        {
+          text: 'Partners',
+          path: '/partners',
+          isButton: false
+        },
+        {
+          text: 'About',
+          path: '/about',
+          isButton: false
+        },
+        {
+          text: 'Support',
+          path: '/support',
+          isButton: false
+        },
+        {
+          text: 'Affiliate',
+          path: '/affiliate',
           isButton: false
         }
       ],
