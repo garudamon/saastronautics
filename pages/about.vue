@@ -148,8 +148,8 @@ export default {
           imageUrl: require('~/assets/images/about/beatriz-tanasale.jpg'),
           name: 'Beatriz Tanasale',
           position: 'Social Media Manager',
-          twitter: 'http://www.twitter.com/',
-          linkedin: 'http://www.linkedin.com/in/',
+          twitter: 'http://www.twitter.com/beattbridge',
+          linkedin: 'http://www.linkedin.com/in/beatriztanasale',
           description:
             'A Communication post-grad student and passionate  doing work in the digital media. Love Music and a movie geek'
         }
