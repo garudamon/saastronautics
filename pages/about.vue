@@ -134,6 +134,24 @@ export default {
           linkedin: 'www.linkedin.com/in/gerardjovian ',
           description:
             'Gerard has over 10 years of experience in graphic design and videography. He won first place in the GO VIDEO national competition by Gojek for the Best Video Documentary award.'
+        },
+        {
+          imageUrl: require('~/assets/images/about/mohamad-ikbal.jpg'),
+          name: 'Mohamad Ikbal',
+          position: 'Developer',
+          twitter: 'http://www.twitter.com/mi_mohamadikbal',
+          linkedin: 'http://www.linkedin.com/in/mohamadikbal',
+          description:
+            'Having more than 5 years experience on several different roles as Developer in IT Consultant company. Understand end to end process of development product and deployment. Fast learner and having very good ability on adapting new technology.'
+        },
+        {
+          imageUrl: require('~/assets/images/about/beatriz-tanasale.jpg'),
+          name: 'Beatriz Tanasale',
+          position: 'Social Media Manager',
+          twitter: 'http://www.twitter.com/',
+          linkedin: 'http://www.linkedin.com/in/',
+          description:
+            'A Communication post-grad student and passionate  doing work in the digital media. Love Music and a movie geek'
         }
       ]
     }
