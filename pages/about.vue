@@ -142,7 +142,7 @@ export default {
           twitter: 'http://www.twitter.com/mi_mohamadikbal',
           linkedin: 'http://www.linkedin.com/in/mohamadikbal',
           description:
-            'Having more than 5 years experience on several different roles as Developer in IT Consultant company. Understand end to end process of development product and deployment. Fast learner and having very good ability on adapting new technology.'
+            'Ikbal has more than 5 years experience as a lead developer for an IT consulting agency. He fully understands the end-to-end process of product development and deployment. A fast learner and early adopter of new technology.'
         },
         {
           imageUrl: require('~/assets/images/about/beatriz-tanasale.jpg'),
