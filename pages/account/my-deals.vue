@@ -137,11 +137,11 @@
               deal name
             </th>
             <th class="text-uppercase text-grey-smooth" width="220"></th>
-            <th class="text-uppercase text-grey-smooth text-center" width="185">
+            <th class="text-uppercase text-grey-smooth text-center" width="15%%">
               purchase date
             </th>
-            <th class="text-uppercase text-grey-smooth text-center" width="120">status</th>
-            <th class="text-uppercase text-grey-smooth text-center" width="100">total</th>
+            <th class="text-uppercase text-grey-smooth text-center" width="12.5%">status</th>
+            <th class="text-uppercase text-grey-smooth text-center" width="12.5%">total</th>
             <th class="text-uppercase text-grey-smooth"></th>
           </tr>
         </thead>
