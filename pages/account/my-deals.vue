@@ -137,11 +137,11 @@
               deal name
             </th>
             <th class="text-uppercase text-grey-smooth" width="220"></th>
-            <th class="text-uppercase text-grey-smooth" width="185">
+            <th class="text-uppercase text-grey-smooth text-center" width="185">
               purchase date
             </th>
-            <th class="text-uppercase text-grey-smooth" width="120">status</th>
-            <th class="text-uppercase text-grey-smooth" width="100">total</th>
+            <th class="text-uppercase text-grey-smooth text-center" width="120">status</th>
+            <th class="text-uppercase text-grey-smooth text-center" width="100">total</th>
             <th class="text-uppercase text-grey-smooth"></th>
           </tr>
         </thead>
@@ -174,8 +174,8 @@
                 </ul>
               </ul>
             </td>
-            <td>{{ $formattedDate(item.mycartcreatedat) }}</td>
-            <td>
+            <td class="text-center">{{ $formattedDate(item.mycartcreatedat) }}</td>
+            <td class="text-center">
               <span
                 :class="{
                   badge: true,
@@ -185,8 +185,8 @@
                 >{{ item.status == 1 ? 'Active' : 'Inactive' }}</span
               >
             </td>
-            <td>{{ $formattedMoney(item.subtotal) }}</td>
-            <td>
+            <td class="text-center">{{ $formattedMoney(item.subtotal) }}</td>
+            <td class="text-center">
               <DashboardMoreAction :onClick="selectData" :data="item" />
             </td>
           </tr>
