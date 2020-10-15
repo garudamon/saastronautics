@@ -14,7 +14,7 @@
       <div class="col-12 col-md-4 product mb-5 px-4 pb-3">
         <div class="product-image mb-3">
           <a href="https://saastro.ltd/retargetkit">
-            <img src="~/assets/dummy/RetargetKit.svg" alt="RetargetKit" width="332" />
+            <img src="~/assets/images/RetargetKit.svg" alt="RetargetKit" width="332" />
           </a>
         </div>
         <div class="mb-3">
