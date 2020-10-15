@@ -151,7 +151,7 @@ export default {
           twitter: 'http://www.twitter.com/beattbridge',
           linkedin: 'http://www.linkedin.com/in/beatriztanasale',
           description:
-            'A postgraduate communication student. Experience working in various media companies. From conventional broadcast television media to the digital media field makes her adaptive to new environment. Always curious about learning new things to have a better understanding of the world she lived in.'
+            'A postgraduate communication student with experience working in various media companies, from conventional broadcast television to the digital media field. She is adaptive to new environments and always curious about learning new things in order to have a better understanding of the world.'
         }
       ]
     }
