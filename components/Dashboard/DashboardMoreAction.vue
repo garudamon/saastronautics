@@ -1,21 +1,24 @@
 <template>
   <div class="more-actions">
-    <span class="fa fa-2x fa-ellipsis-v text-red more-actions-trigger" @click="show = !show"></span>
+    <span
+      class="fa fa-2x fa-ellipsis-v text-red more-actions-trigger"
+      @click="show = !show"
+    ></span>
     <transition name="slide-fade">
       <ul v-if="show" class="more-actions-list">
-        <li>
+        <li class="text-left">
           <a href="#" @click="clicked('redeem')">
             <span class="fa fa-fw fa-trophy text-red"></span>
-          Mark As Redeem
+            Mark As Redeem
           </a>
-        </li> 
-        <li>
+        </li>
+        <li class="text-left">
           <a href="#" @click="clicked('refund')">
             <span class="fa fa-fw fa-long-arrow-right text-red"></span>
             Refund
           </a>
         </li>
-        <li>
+        <li class="text-left">
           <a href="#" @click="clicked('redeemed')">
             <span class="fa fa-fw fa-check-circle text-red"></span>
             Redeemed
@@ -33,7 +36,7 @@ export default {
       show: false
     }
   },
-  props: ["data", "onClick"],
+  props: ['data', 'onClick'],
   methods: {
     clicked(type) {
       this.onClick(type, this.data)
@@ -66,12 +69,13 @@ export default {
     margin: 0;
     position: absolute;
     padding: 0;
-    left: -180px;
+    left: -10%;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.33);
     background: white;
     border-radius: 10px;
     font-size: 14px;
     width: 180px;
+    z-index: 10;
     a {
       color: rgba(0, 0, 0, 0.33);
       padding: 5px 10px;
@@ -91,5 +95,13 @@ export default {
 /* .slide-fade-leave-active below version 2.1.8 */ {
   transform: translateX(10px);
   opacity: 0;
+}
+
+@media only screen and (max-width: 1280px) {
+  .more-actions {
+    ul {
+      left: -180px;
+    }
+  }
 }
 </style>
