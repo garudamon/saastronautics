@@ -65,7 +65,7 @@
                     class="btn btn-primary btn-block"
                     @click="checkout()"
                   >Check out</button>
-                  <nuxt-link to="/deals" class="btn btn-success btn-block">Continue Shooping</nuxt-link>
+                  <nuxt-link to="/deals" class="btn btn-success btn-block">Continue Shopping</nuxt-link>
                 </div>
               </div>
             </template>

@@ -142,7 +142,7 @@
             </th>
             <th class="text-uppercase text-grey-smooth text-center" width="12.5%">status</th>
             <th class="text-uppercase text-grey-smooth text-center" width="12.5%">total</th>
-            <th class="text-uppercase text-grey-smooth text-center">more</th>
+            <th class="text-uppercase text-grey-smooth text-center" width="5%">more</th>
           </tr>
         </thead>
         <tbody>
