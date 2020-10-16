@@ -17,7 +17,7 @@
           >
         </div>
         <div class="col-12 col-md-6 text-center align-self-center">
-          <img src="~/assets/images/gift-icon@2x.png" alt="gift affiliate" />
+          <img src="~/assets/images/gift-icon@2x.png" alt="Saastrobot Gift Affiliate" />
         </div>
       </div>
     </div>

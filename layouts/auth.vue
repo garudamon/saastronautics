@@ -3,7 +3,7 @@
     <div class="container">
       <nav class="navbar navbar-expand-sm navbar-light px-0 px-md-3 py-2">
         <a class="navbar-brand" href="/">
-          <img src="~/assets/images/logo.png" alt="logo saastronautics" />
+          <img src="~/assets/images/logo.png" alt="Saastronautics Logo" />
         </a>
       </nav>
       <!-- <div class="nav-back">

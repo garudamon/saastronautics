@@ -2,7 +2,7 @@
   <div class="comment">
     <div class="d-flex" v-for="(item, idx) in content" :key="item.id">
       <div class="d-none d-md-block pr-2 avatar">
-        <img :src="$getProfile(item.customer.id)" alt="profile photo" />
+        <img :src="$getProfile(item.customer.id)" alt="Profile Photo" />
       </div>
       <div class="flex-grow-1">
         <div class="d-flex justify-content-between align-items-center">
@@ -29,7 +29,7 @@
               <div class="d-none d-md-block pr-2 avatar">
                 <img
                   :src="$getProfile(reply.customer.id)"
-                  alt="profile photo"
+                  alt="Profile Photo"
                 />
               </div>
               <div class="flex-grow-1">

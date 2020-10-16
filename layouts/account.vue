@@ -59,7 +59,7 @@
         <div
           class="d-flex align-items-center justify-content-center flex-column border-bottom pb-4 px-3 profile-info"
         >
-          <img v-if="profile.customer" :src="$getProfile(profile.customer.id)" alt="profile photo" />
+          <img v-if="profile.customer" :src="$getProfile(profile.customer.id)" alt="Profile Photo" />
           <h6 class="title-1 pt-3 my-0 text-capitalize">{{ profile.customer && profile.customer.firstName }}</h6>
           <p class="py-0 my-0">{{ profile.email }}</p>
         </div>
@@ -104,7 +104,7 @@
     <footer class="p-3 fixed-bottom">
       <div class="d-flex justify-content-around align-items-center">
         <div>
-          <img class="ml-3" src="~/assets/images/white_logo.png" alt="logo-saastronautics" />
+          <img class="ml-3" src="~/assets/images/white_logo.png" alt="Saastronautics Logo" />
         </div>
         <div>
           <nuxt-link :to="`#`">Sitemap</nuxt-link>

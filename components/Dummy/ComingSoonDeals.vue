@@ -19,7 +19,7 @@
       <div class="col-12 col-md-6 text-md-right text-center mt-md-0 mt-5">
         <img
           src="~/assets/images/saastrobot-comingsoon-03.jpg"
-          alt="coming soon deals"
+          alt="Saastrobot Coming Soon Deals"
         />
       </div>
     </div>
