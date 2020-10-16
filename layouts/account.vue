@@ -15,7 +15,9 @@
         <img src="~/assets/images/logo_account.png" alt />
       </a>
 
-      <div :class="{ collapse: true, 'navbar-collapse': true, show: expandNav }">
+      <div
+        :class="{ collapse: true, 'navbar-collapse': true, show: expandNav }"
+      >
         <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
           <li
             :class="{
@@ -34,19 +36,20 @@
                 'mt-lg-1': link.isButton
               }"
               :to="link.path"
-            >{{ link.text }}</nuxt-link>
+              >{{ link.text }}</nuxt-link
+            >
           </li>
           <li class="nav-item mx-lg-3" v-if="!isLogin">
-            <nuxt-link class="btn btn-primary btn-sm mt-lg-1" to="/auth/signin">Get Started</nuxt-link>
+            <nuxt-link class="btn btn-primary btn-sm mt-lg-1" to="/auth/signin"
+              >Get Started</nuxt-link
+            >
           </li>
           <template v-else>
             <li class="nav-item mx-lg-3 d-flex align-items-center cart">
               <nuxt-link to="/cart">
                 <span class="fa fa-shopping-cart mr-2 fa-xl"></span>
                 <span class="count-buble" v-if="cart.quantity > 0">
-                  {{
-                  cart.quantity
-                  }}
+                  {{ cart.quantity }}
                 </span>
               </nuxt-link>
             </li>
@@ -59,8 +62,14 @@
         <div
           class="d-flex align-items-center justify-content-center flex-column border-bottom pb-4 px-3 profile-info"
         >
-          <img v-if="profile.customer" :src="$getProfile(profile.customer.id)" alt="Profile Photo" />
-          <h6 class="title-1 pt-3 my-0 text-capitalize">{{ profile.customer && profile.customer.firstName }}</h6>
+          <img
+            v-if="profile.customer"
+            :src="$getProfile(profile.customer.id)"
+            alt="Profile Photo"
+          />
+          <h6 class="title-1 pt-3 my-0 text-capitalize">
+            {{ profile.customer && profile.customer.firstName }}
+          </h6>
           <p class="py-0 my-0">{{ profile.email }}</p>
         </div>
         <ul class="nav flex-column">
@@ -90,7 +99,7 @@
           </li>
         </ul>
         <div class="text-center mb-5" v-if="isLogin">
-          <br>
+          <br />
           <button class="btn btn-red btn-md mt-lg-1" @click="signout">
             Sign out
             <i class="fa fa-sign-out pl-2"></i>
@@ -104,7 +113,11 @@
     <footer class="p-3 fixed-bottom">
       <div class="d-flex justify-content-around align-items-center">
         <div>
-          <img class="ml-3" src="~/assets/images/white_logo.png" alt="Saastronautics Logo" />
+          <img
+            class="ml-3"
+            src="~/assets/images/white_logo.png"
+            alt="Saastronautics Logo"
+          />
         </div>
         <div>
           <nuxt-link :to="`#`">Sitemap</nuxt-link>
@@ -119,18 +132,31 @@
           <nuxt-link :to="'support'">Frequently Ask Questions</nuxt-link>
         </div>
         <div>
-          <a href="https://web.facebook.com/saastronautics" target="_blank" class="px-3">
+          <a
+            href="https://web.facebook.com/saastronautics"
+            target="_blank"
+            class="px-3"
+          >
             <span class="fa fa-facebook"></span>
           </a>
-          <a href="https://twitter.com/saastronautics" target="_blank" class="px-3">
+          <a
+            href="https://twitter.com/saastronautics"
+            target="_blank"
+            class="px-3"
+          >
             <span class="fa fa-twitter"></span>
           </a>
-          <a href="https://www.instagram.com/saastronautics/" target="_blank" class="px-3">
+          <a
+            href="https://www.instagram.com/saastronautics/"
+            target="_blank"
+            class="px-3"
+          >
             <span class="fa fa-instagram"></span>
           </a>
         </div>
       </div>
     </footer>
+    <Cookie />
   </div>
 </template>
 

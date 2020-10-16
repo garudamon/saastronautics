@@ -13,6 +13,7 @@
     <div class="container px-3 px-md-0">
       <nuxt />
     </div>
+    <Cookie />
   </div>
 </template>
 
@@ -37,7 +38,6 @@ export default {
       color: var(--primary-color-red);
       text-decoration: none;
     }
-    
   }
 }
 </style>
