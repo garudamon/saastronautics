@@ -1,7 +1,7 @@
 <template>
   <div class="d-flex align-items-center class key-feature p-3 h-100">
     <div class="icon">
-      <img src="~/assets/images/detail/icon-check.png" alt="Checked" />
+      <img src="~/assets/images/detail/icon-check.png" alt="icon-checked" />
     </div>
     <div class="pl-3">{{ description }}</div>
   </div>

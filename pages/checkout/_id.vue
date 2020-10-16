@@ -36,8 +36,8 @@
                           }">
                                                 <input class="form-check-input" type="radio" name="selectedCard" :value="item.stripePaymentID" v-model="selectedCard" />
                                                 <div class="available-card">
-                                                    <img v-if="item.brand == 'visa'" src="~/assets/images/payment/visa-logo.png" alt="" />
-                                                    <img v-if="item.brand == 'mastercard'" src="~/assets/images/payment/visa-logo.png" alt="" />
+                                                    <img v-if="item.brand == 'visa'" src="~/assets/images/payment/visa-logo.png" alt="visa-logo" />
+                                                    <img v-if="item.brand == 'mastercard'" src="~/assets/images/payment/visa-logo.png" alt="visa-logo" />
                                                     <span>**** **** {{ item.lastFour }}</span>
                                                     <span class="text-muted">{{ item.month }} / {{ item.year }}</span>
                                                 </div>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="product-image mb-3">
-      <img src="~/assets/images/saastrobot-comingsoon-02.jpg" alt="comingsoon" />
+      <img src="~/assets/images/saastrobot-comingsoon-02.jpg" alt="saastrobot-comingsoon" />
     </div>
     <div class="mb-3">
       <span class="badge badge-info text-uppercase p-2">Coming Soon</span>

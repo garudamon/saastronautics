@@ -8,7 +8,7 @@
           <div class="col-12 col-md-4 p-5 p-md-0 " >
             <img
               src="~/assets/images/saastrobot/addemail.png"
-              alt="Gift Illustrator"
+              alt="saastrobot-addemail"
             />
           </div>
           <div class="col-12 col-md-8 text-center">

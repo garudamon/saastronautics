@@ -11,7 +11,7 @@
               alt="Community Illustrator"
               v-if="['/about', '/partners'].indexOf($route.path) > -1"
             />
-            <img src="~/assets/images/saastrobot/community.png" alt="Community Illustrator" v-else />
+            <img src="~/assets/images/saastrobot/community.png" alt="saastrobot-community" v-else />
           </div>
           <div class="col-12 col-md-8 text-center">
             <h3 class="title-2">Join Our Community and Grow Together!</h3>
