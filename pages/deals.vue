@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- title -->
-    <LazyFeaturedDeals />
+    <LazyComingSoonDeals />
     <!-- <div class="container" v-if="Object.keys(featuredDeals).length > 0">
       <div class="row img-p-sbs pt-2 pb-5 d-flex px-md-4 my-5 header">
         <div class="col-12 col-md-6 pr-0 pr-md-5">
