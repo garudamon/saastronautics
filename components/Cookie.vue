@@ -2,10 +2,9 @@
 <div class="cookie" v-if="agreed == false">
     <div class="container">
         <div class="row py-3 px-4 d-flex align-items-center">
-            <div class="col-12 col-md-10">
+            <div class="col-12 col-md-10 cookie-text">
                 This website uses Cookies in order to provide a more personalized user experience. By Continuing browse the site you are agreeing to our use of cookies.
                 Review our <a href="/privacy">cookies information</a> for more details.
-
             </div>
             <div class="col-12 col-md-2 text-right">
                 <button class="btn btn-primary" @click="agree"> Agree </button>
@@ -44,5 +43,8 @@ export default {
     right: 0px;
     border-top: solid 1px var(--primary-color-red);
     background: white;
+    .cookie-text {
+        font-size: 14px;
+    }
 }
 </style>

@@ -68,7 +68,7 @@ export default {
         margin: 0;
         position: absolute;
         padding: 0;
-        right: -5%;
+        right: 0;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.33);
         background: white;
         border-radius: 10px;

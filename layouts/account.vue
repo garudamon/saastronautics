@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid px-0 h-100">
-    <nav class="navbar navbar-expand-sm navbar-light px-5 fixed-top">
+    <nav class="navbar navbar-expand-sm navbar-light pr-5 fixed-top">
       <button
         class="navbar-toggler"
         type="button"
@@ -11,7 +11,7 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="/">
         <img src="~/assets/images/logo_account.png" alt />
       </a>
 
@@ -243,6 +243,11 @@ export default {
 nav {
   background: var(--primary-gray-smooth);
 }
+
+.navbar {
+  padding: 0rem 1rem 0 2rem;
+}
+
 aside {
   position: fixed;
   bottom: 0px;

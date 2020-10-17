@@ -67,11 +67,15 @@
       </div>
       <LazyTeamMember class="py-5 mb-0 mb-md-5" :member="member" />
     </div>
-    <LazySubscribePanel />
+    <div v-if="!isLogin">
+      <LazySubscribePanel />
+    </div>
+    <div v-else class="my-5"></div>
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   components: {},
   data() {
@@ -155,6 +159,9 @@ export default {
         }
       ]
     }
+  },
+  computed: {
+    ...mapState(['isLogin'])
   }
 }
 </script>

@@ -103,10 +103,7 @@
           </div>
           <div class="modal-body">
             <p>
-              To redeem your code, please go to the link
-              <a class="text-red external-link" :href="item.linkredeem" target="_blank">{{ item.linkredeem }}</a>
-              You can copy and paste the link and open it in another tab or klik
-              the button redeem bellow
+              {{ item.redeemdescription }}
             </p>
           </div>
           <div class="modal-footer">

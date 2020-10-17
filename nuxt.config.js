@@ -18,9 +18,9 @@ export default {
       {
         src: 'https://cdn.refmonkey.com/refmonkey.js'
       },
-      {
-        src: 'https://cdn.scaleflex.it/plugins/js-cloudimage-responsive/4.6.1/js-cloudimage-responsive.min.js'
-      },
+      // {
+      //   src: 'https://cdn.scaleflex.it/plugins/js-cloudimage-responsive/4.6.1/js-cloudimage-responsive.min.js'
+      // },
       {
         src: '/refmonkey.js'
       },

@@ -86,11 +86,15 @@
       </div>
     </div>
     <!-- subscribe -->
-    <LazySubscribePanel />
+    <div v-if="!isLogin">
+      <LazySubscribePanel />
+    </div>
+    <div v-else class="my-5"></div>
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   name: 'Deals',
   data() {
@@ -110,6 +114,9 @@ export default {
   },
   mounted() {
     this.$fetch()
+  },
+  computed: {
+    ...mapState(['isLogin'])
   },
   methods: {
     loadLiveDealsProduct() {
