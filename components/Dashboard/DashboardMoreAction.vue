@@ -100,7 +100,7 @@ export default {
 @media only screen and (max-width: 1280px) {
   .more-actions {
     ul {
-      left: -180px;
+      left: -750%;
     }
   }
 }
