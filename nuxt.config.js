@@ -24,9 +24,9 @@ export default {
       {
         src: '/refmonkey.js'
       },
-      {
-        src: '/cloudimage.js'
-      }
+      // {
+      //   src: '/cloudimage.js'
+      // }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
