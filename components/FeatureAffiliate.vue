@@ -22,38 +22,36 @@
       <div class="row text-center">
         <div class="col-12 mb-5 text-center">
           <h1 class="title-1 mb-3">Affiliate Commission Structure</h1>
-          <hr class="solid mb-5" width="10%">
-          <p class="pb-3">
-            Earn unlimited income. Up to 100% commission per referral.*
-          </p>
+          <hr class="solid mb-5" width="10%" />
           <p>
-            Earn 100% on new Saastronautics customer first transactions and 5%
-            on sales to existing customers (up to $50/order).
+            Earn a 25% commission on each and every sale attributed to your
+            unique affiliate link. Earn unlimited income as we have no limits or
+            caps on how much you can earn through our affiliate program.
           </p>
         </div>
       </div>
       <div class="row text-center py-5 mt-5 justify-content-around awesome-row">
         <div class="col-12 mb-5 text-center">
-          <h1 class="title-1 mb-4">What makes an awesome Support Affiliate?</h1>
-          <hr class="solid" width="10%">
+          <h1 class="title-1 mb-4">
+            Are you the right fit for Saastronautics?
+          </h1>
+          <hr class="solid" width="10%" />
         </div>
-        <div class="col-5">
-            <h3 class="title-1">
-              You LOVE Us
-            </h3>
-            <p>
-              You have used and love Saastronautics deals and you’re able to
-              confidently promote them to your audience.
-            </p>
-          </div>
-          <div class="col-5">
-            <h3 class="title-1">
-              It's WHO you know
-            </h3>
-            <p>
-              You have an audience of entrepreneurs, bloggers, designers, freelancers, or business consultants
-            </p>
-          </div>
+        <p>
+          Regardless of whether you are an experienced affiliate marketer or a
+          total beginner, as long as you are a true Saastronaut, you can apply
+          to become a Saastronautics affiliate. Saastronautics will help you
+          with your affiliate marketing journey by onboarding you and providing
+          strategies and content for you to get a jumpstart.
+        </p>
+        <p>
+          Our affiliate applications are open to everyone, but there is a
+          vetting process. We look to see you have an audience of entrepreneurs,
+          business owners, agency owners, digital marketers, freelancers,
+          designers, and/or consultants. So, if you’re a true Saastronaut and
+          you love the deals we bring and can promote to your audience, sign up
+          for our affiliate program today!
+        </p>
       </div>
     </div>
   </div>

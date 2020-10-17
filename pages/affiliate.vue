@@ -4,7 +4,7 @@
       <div class="row img-header pt-2 pb-5 d-flex px-md-4 header">
         <div class="col-12 col-md-6 pr-0 pr-md-5 align-self-center">
           <h1 class="title-1 mt-4 mb-3">
-            Get paid every time you send us a customer!
+            Boost your income and grow with us!
           </h1>
           <p>
             Sign up for Saastronautics's Affiliate Program
@@ -23,14 +23,14 @@
     </div>
     <LazyFeatureAffiliate
       title="What's in it for you?"
-      description="Enjoy the benefits of being a Saastronautics Affiliate. Signing up only takes a few minutes & it's free to join!"
+      description="Get paid to grow with Saastronautics. Enjoy high commission rates with no limits on how much you can get paid. It’s free to join!"
       :items="whats"
     />
     <div class="container pt-3 pb-5 text-center">
       <h1 class="title-1 mt-4 mb-3">
         Become A Saastronautics Affiliate
       </h1>
-      <p>Sign up today and refer as many people as you'd like!</p>
+      <p>Sign up and boost your income!</p>
       <a
         href="#"
         target="_blank"

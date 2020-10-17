@@ -72,18 +72,16 @@
             <p class="text-center font-italic pt-4" v-else>Your cart empty</p>
           </div>
         </div>
-
         <div class="card soft-purple d-none d-lg-block mt-4 cart-supplement">
           <div class="card-body">
-            <p class="font-weight-bold">Hustle with Confidence</p>
+            <p class="font-weight-bold">Saastronaut’s Promise</p>
             <ul>
-              <li>* Try any product risk free. We offer an industry-best 60-day money-back guarantee — no matter the reason. So go ‘head and take any of our products for a spin to see if they’re a good fit for your business.  </li>
-              <li>* World-class customer support. There’s customer support, and then there’s Saastronautics customer support. We take pride in going above and beyond to solve issues and keep our community happy.</li>
-              <li>* Access to founders and CEOs. As an early adopter, you have the CEO’s ear — ask your burning questions on any active deal and have them answered by the product founders themselves.</li>
+              <li>* Purchase any deal risk-free with the assurance that we offer a 30-day refund policy. Whatever the reason, you can refund any purchases within the 30-day refund period unless otherwise stated. </li>
+              <li>* Top-notch support for all Saastronauts. We understand and appreciate that there is no Saastronautics without our Saastronauts. We make every effort to provide the best customer support and keep our community happy.</li>
+              <li>* Access to our community and SaaS founders. Our community is comprised of fellow entrepreneurs and all of the founders and team members of our partner SaaS companies. Get your questions answered by the founders themselves.</li>
             </ul>
           </div>
         </div>
-
       </div>
     </div>
   </div>
