@@ -80,23 +80,23 @@ export default {
   components: {},
   data() {
     return {
-      imageWhatWeDo: require('~/assets/images/about/what-we-do.svg'),
-      imageWhyWeDo: require('~/assets/images/about/why-we-do.svg'),
+      imageWhatWeDo: 'about/what-we-do.svg',
+      imageWhyWeDo: 'about/why-we-do.svg',
       offer: [
         {
-          image: require('~/assets/images/icon/exclusive-deals.svg'),
+          image: 'icon/exclusive-deals.svg',
           title: 'Exclusive Deals',
           description:
             'We work hard to secure exclusive deals that you won’t find anywhere else. We sieve through and test hundreds of new SaaS products to find the best tools for our community. '
         },
         {
-          image: require('~/assets/images/icon/powerful-community.svg'),
+          image: 'icon/powerful-community.svg',
           title: 'Powerful Community',
           description:
             'Our unique community of Saastronauts are comprised of digital entrepreneurs from diverse backgrounds. We bridge the gap between the SaaS company and user.'
         },
         {
-          image: require('~/assets/images/icon/unrivaled-support.svg'),
+          image: 'icon/unrivaled-support.svg',
           title: 'Unrivaled Support',
           description:
             'We invest our time, resources, and passion into the success of not only the SaaS company but also our community members. We are here to grow with you.'
@@ -104,7 +104,7 @@ export default {
       ],
       member: [
         {
-          imageUrl: require('~/assets/images/about/joon-k-lee.jpeg'),
+          imageUrl: 'about/joon-k-lee.jpeg',
           name: 'Joon K Lee',
           position: 'Founder & CEO',
           twitter: 'http://www.twitter.com/itsjoonklee',
@@ -113,7 +113,7 @@ export default {
             'Joon is the owner and Managing Director of Inquivix, Korea’s leading digital marketing agency. He has helped build and implement marketing strategies and campaigns for large enterprises like The Economist, Freshworks, and Rhenus. '
         },
         {
-          imageUrl: require('~/assets/images/about/parker-casio.jpeg'),
+          imageUrl: 'about/parker-casio.jpeg',
           name: 'Parker Casio',
           position: 'Co-Founder & CMO',
           twitter: 'http://www.twitter.com/parkercasio',
@@ -122,7 +122,7 @@ export default {
             'Parker is the founder and owner of DRBRAND, through which he has worked with over 350 businesses. Parker is a self-described growth hacker who understands how to reach a big audience.'
         },
         {
-          imageUrl: require('~/assets/images/about/frank-valensco.jpeg'),
+          imageUrl: 'about/frank-valensco.jpeg',
           name: 'Frank Valensco',
           position: 'Co-Founder & CTO',
           twitter: 'http://www.twitter.com/valenscofrank',
@@ -131,7 +131,7 @@ export default {
             'CEO and Founder of Sekawan Solution, a Creative IT Company based in Jakarta, Indonesia. Have been working on developing solutions and products for the last 7 years to help clients grow their business.'
         },
         {
-          imageUrl: require('~/assets/images/about/gerard-brand.jpeg'),
+          imageUrl: 'about/gerard-brand.jpeg',
           name: 'Gerard Brand',
           position: 'Design Director',
           twitter: 'http://www.twitter.com/Gavin_Brand',
@@ -140,7 +140,7 @@ export default {
             'Gerard has over 10 years of experience in graphic design and videography. He won first place in the GO VIDEO national competition by Gojek for the Best Video Documentary award.'
         },
         {
-          imageUrl: require('~/assets/images/about/mohamad-ikbal.jpg'),
+          imageUrl: 'about/mohamad-ikbal.jpg',
           name: 'Mohamad Ikbal',
           position: 'Developer',
           twitter: 'http://www.twitter.com/mi_mohamadikbal',
@@ -149,7 +149,7 @@ export default {
             'Ikbal has more than 5 years experience as a lead developer for an IT consulting agency. He fully understands the end-to-end process of product development and deployment. A fast learner and early adopter of new technology.'
         },
         {
-          imageUrl: require('~/assets/images/about/beatriz-tanasale.jpg'),
+          imageUrl: 'about/beatriz-tanasale.jpg',
           name: 'Beatriz Tanasale',
           position: 'Social Media Manager',
           twitter: 'http://www.twitter.com/beattbridge',

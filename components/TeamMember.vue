@@ -5,7 +5,7 @@
         <div class="row" >
           <div class="col-4 text-center">
             <div>
-              <img :src="item.imageUrl" :alt="`${item.name}'s photo`" />
+              <img :src="$getStaticImage(item.imageUrl)" :alt="`${item.name}'s photo`" />
             </div>
           </div>
           <div class="col">

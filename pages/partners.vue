@@ -51,7 +51,7 @@
           :key="item.title"
         >
         <div class="text-center mb-3">
-          <img :src="item.image" :alt="item.title" />
+          <img :src="$getStaticImage(item.image)" :alt="item.title" />
         </div>
           <h5 class="title-2 text-capitalize font-weight-bold py-4">
             {{ item.title }}
@@ -75,23 +75,23 @@ export default {
   components: {},
   data() {
     return {
-      imageTechIs: require('~/assets/images/partners/saastronautics-partners.svg'),
+      imageTechIs: 'partners/saastronautics-partners.svg',
       offer: [
         {
-          image: require('~/assets/images/icon/keep-a-larger-share-of-the-sales.svg'),
+          image: 'icon/keep-a-larger-share-of-the-sales.svg',
           title: `Keep a Larger Share of
           <br/>the Sales You Make`,
           description:
             "We want to create an environment of prosperity for all parties. It's for this reason that we want to make our partners feel like they are part of a platform that offers them as much value as the end-user. Saastronautics gives our Partners the lion's share of the sale."
         },
         {
-          image: require('~/assets/images/icon/get-a-dedicated-support.svg'),
+          image: 'icon/get-a-dedicated-support.svg',
           title: `Get Dedicated Support<br/>and Consultation`,
           description:
             "We'll never leave you alone in the digital environment. With Saastronautics, you get access to a platform, and a team, of SaaS professionals that understand your business. We consult with you on branding issues, marketing strategy, and generating more MRR for your company."
         },
         {
-          image: require('~/assets/images/icon/leverage-the-power.svg'),
+          image: 'icon/leverage-the-power.svg',
           title: `Leverage the Power of the<br/>Saastronautics Community`,
           description:
             'As our partner, you have access to the Saastronautics community consisting of entrepreneurs, agency owners, digital marketers, and freelancers. Receive real-world feedback from our user base, allowing you to grow your SaaS offering in line with market expectations..'
@@ -99,19 +99,19 @@ export default {
       ],
       features: [
         {
-          image: require('~/assets/images/icon/product-is-live.svg'),
+          image: 'icon/product-is-live.svg',
           title: `Product is Live`,
           description:
             'We are looking for partners with products that are live and not a beta application or program. We expect our partners to launch market-ready SaaS tools that offer real value to our community.'
         },
         {
-          image: require('~/assets/images/icon/product-fits-our-audience.svg'),
+          image: 'icon/product-fits-our-audience.svg',
           title: `Product Fits Our Audience`,
           description:
             'We ensure that all of the SaaS tools available on our platform meet the needs of our audience. We vet all of the SaaS tools on our platform to ensure they add value to the community.'
         },
         {
-          image: require('~/assets/images/icon/product-is-stable.svg'),
+          image: 'icon/product-is-stable.svg',
           title: `Product is Stable`,
           description:
             'You can expect a massive influx of new users and we want to make sure your product can handle it. We want partners who are open to feedback and will continue to develop.'
@@ -123,7 +123,7 @@ export default {
           comment:
             'Perhaps there is only a small group of people who can say they knew Parker from the beginning, and I’m glad that I’m one of them. Parker was, and still is, one of my company’s earliest clients; on the other hand, He’s also the one that I seek advice to discuss a product or marketing strategy on a global scale. When he recommended tools or services for my business, I’ve listened, and you should too.',
           rating: 5,
-          photo: require('~/assets/images/partners/kirim-email-logo.jpg')
+          photo: 'partners/kirim-email-logo.jpg'
         }
       ]
     }

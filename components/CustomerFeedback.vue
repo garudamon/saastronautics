@@ -26,7 +26,7 @@
               </div>
               <div class="col-12 d-flex justify-content-between align-items-center pb-md-4">
                 <div class="customer-info pb-3 pb-md-0">
-                  <img :src="item.photo" :alt="item.name" class="avatar d-none d-md-inline" />
+                  <img :src="$getStaticImage(item.photo)" :alt="item.name" class="avatar d-none d-md-inline" />
                   <span class="font-weight-bold pl-2">{{ item.name }}</span>
                 </div>
                 <LazyRating class="d-none d-md-block" :value="item.rating" />

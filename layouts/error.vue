@@ -1,6 +1,6 @@
 <template>
   <div class="error d-flex justify-content-center align-items-center flex-column">
-    <img src="~/assets/images/error-404-01.png" alt="404">
+    <img :src="$getStaticImage('error-404-01.png')" alt="404">
     <h3 v-if="error.statusCode === 404">Page not found</h3>
     <h3 v-else>An error occurred</h3>
     <nuxt-link :to="'/'" class="btn btn-primary btn-lg">Back to Home</nuxt-link>

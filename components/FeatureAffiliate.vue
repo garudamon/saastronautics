@@ -12,7 +12,7 @@
           :key="item.title"
         >
           <div class="mb-5">
-            <img :src="item.image" :alt="item.title" />
+            <img :src="$getStaticImage(item.image)" :alt="item.title" />
           </div>
           <p class="py-0">{{ item.description }}</p>
         </div>

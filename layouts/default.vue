@@ -6,7 +6,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand" href="/">
-                <img src="~/assets/images/logo.png" alt />
+                <img :src="$getStaticImage('logo.png')" alt />
             </a>
 
             <div :class="{ collapse: true, 'navbar-collapse': true, show: expandNav }">
@@ -50,7 +50,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-3 pb-5 px-2 px-md-3">
-                    <img src="~/assets/images/logo-white.png" alt />
+                    <img :src="$getStaticImage('logo-white.png')" alt />
                 </div>
                 <div class="col-12 col-md-2">
                     <div class="text-uppercase text-white font-weight-bold pb-3">
