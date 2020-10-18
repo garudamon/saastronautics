@@ -11,7 +11,6 @@ const Helper = {
       } else {
         return `/images/${imageName}`
       }
-
     })
       ,
       (Vue.prototype.$getProfile = id => {
