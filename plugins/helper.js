@@ -6,7 +6,7 @@ const Helper = {
     ; (Vue.prototype.$getImage = id => {
       return `${process.env.API_URL}/product/image/banner/${id}`
     })(Vue.prototype.$getStaticImage = imageName => {
-      if (process.env.IS_CLOUDFRONT == true) {
+      if (process.env.IS_CLOUDFRONT == 'true') {
         return `${process.env.CLOUD_FRONT_URL}/${imageName}`
       } else {
         return `/images/${imageName}`
