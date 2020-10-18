@@ -3,9 +3,12 @@ import moment from 'moment'
 const Cookie = require('js-cookie')
 const Helper = {
   install(Vue) {
-    ;(Vue.prototype.$getImage = id => {
+    ; (Vue.prototype.$getImage = id => {
       return `${process.env.API_URL}/product/image/banner/${id}`
-    }),
+    })(Vue.prototype.$getStaticImage = imageName => {
+      return `${process.env.CLOUD_FRONT_URL}/${imageName}`
+    })
+      ,
       (Vue.prototype.$getProfile = id => {
         return `${process.env.API_URL}/customer/image/profile/${id}`
       }),
