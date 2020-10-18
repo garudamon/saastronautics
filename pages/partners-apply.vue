@@ -55,23 +55,7 @@
             Fill out and submit this form to begin the Saastronautics
             Partnership program.
           </h5>
-          <script id="jnqsmjrytsqlsw">
-            ;(function(a, b, c, e, f) {
-              var s = a.createElement('script')
-              s.src = b
-              s.setAttribute('data-form-id', e)
-              s.setAttribute('data-runner-id', c)
-              s.setAttribute('data-url-params', f)
-              s.setAttribute('data-scale', true)
-              a.head.appendChild(s)
-            })(
-              window.document,
-              'https://form.questionscout.com/qs-form-script.min.js',
-              'jnqsmjrytsqlsw',
-              '5f70323ffcba5123d97ed8bd',
-              '[]'
-            )
-          </script>
+          <div ref="questionscoutPanel"></div>
         </div>
       </div>
     </div>
@@ -79,6 +63,17 @@
 </template>
 
 <script>
+export default {
+  name: 'PartnerApply',
+  mounted() {
+    setTimeout(() => {
+      let questionscoutScript = document.createElement('script')
+      questionscoutScript.setAttribute('id', 'jnqsmjrytsqlsw')
+      questionscoutScript.setAttribute('src', '/questionscout.js')
+      this.$refs.questionscoutPanel.appendChild(questionscoutScript)
+    }, 500)
+  }
+}
 </script>
 
 <style lang="scss" scoped>
