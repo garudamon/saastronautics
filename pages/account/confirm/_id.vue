@@ -6,7 +6,7 @@
     <template v-else>
       <template v-if="confirmed">
         <div class="col-md-3 px-0">
-          <img src="~/assets/images/saastro-welcome.png" alt />
+          <img :src="$getStaticImage('saastro-welcome.png')" alt />
         </div>
         <div class="col-12 col-md-5 card-bg-white py-4">
           <div class="px-4 pt-4">
@@ -22,7 +22,7 @@
       </template>
       <template v-else>
         <div class="col-md-3 px-0">
-          <img src="~/assets/images/error.png" alt />
+          <img :src="$getStaticImage('error.png')" alt />
         </div>
         <div class="col-12 col-md-5 card-bg-white py-4">
           <div class="px-4 pt-4">

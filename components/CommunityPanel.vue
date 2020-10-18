@@ -7,11 +7,11 @@
         <div class="row">
           <div class="col-12 col-md-4 p-5 p-md-0">
             <img
-              src="~/assets/images/saastrobot/community.png"
+              :src="$getStaticImage('saastrobot/community.png')"
               alt="Saastrobot Community Illustrator"
               v-if="['/about', '/partners'].indexOf($route.path) > -1"
             />
-            <img src="~/assets/images/saastrobot/community.png" alt="Saastrobot Community Illustrator" v-else />
+            <img :src="$getStaticImage('saastrobot/community.png')" alt="Saastrobot Community Illustrator" v-else />
           </div>
           <div class="col-12 col-md-8 text-center">
             <h3 class="title-2">Join Our Community and Grow Together!</h3>

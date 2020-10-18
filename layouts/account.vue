@@ -12,7 +12,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <a class="navbar-brand" href="/">
-        <img src="~/assets/images/logo_account.png" alt />
+        <img :src="$getStaticImage('logo_account.png')" alt="Logo Account" />
       </a>
 
       <div
@@ -115,7 +115,7 @@
         <div>
           <img
             class="ml-3"
-            src="~/assets/images/white_logo.png"
+            :src="$getStaticImage('white_logo.png')"
             alt="Saastronautics Logo"
           />
         </div>

@@ -1,7 +1,7 @@
 <template>
   <div class="row">
     <div class="col-md-6 px-0">
-      <img src="~/assets/images/sign-in.png" alt />
+      <img :src="$getStaticImage('sign-in.png')" alt="Saastrobot Sign In" />
     </div>
     <div class="col-12 col-md-5 card-bg-white py-4">
       <div class="px-4 pt-4">

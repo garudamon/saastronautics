@@ -9,7 +9,7 @@
           <div
             class="item py-5 px-3 d-flex flex-column justify-content-center align-items-center"
           >
-            <img :src="item.image" :alt="item.header" />
+            <img :src="$getStaticImage(item.image)" :alt="item.header" />
             <h5 class="gordita-bold text-capitalize pt-4">{{ item.header }}</h5>
             <p class="text-center">{{ item.desc }}</p>
           </div>
@@ -27,19 +27,19 @@ export default {
     return {
       items: [
         {
-          image: require('~/assets/images/analytic.svg'),
+          image: 'analytic.svg',
           header: 'profile setting',
           desc: 'Edit Name, Password and Profile Picture',
           link: '/account/profile'
         },
         {
-          image: require('~/assets/images/disk.svg'),
+          image: 'disk.svg',
           header: 'my deals',
           desc: 'Track, Redeem and Refund Deals',
           link: '/account/my-deals'
         },
         {
-          image: require('~/assets/images/nfc-card.svg'),
+          image: 'nfc-card.svg',
           header: 'payment setting',
           desc: 'Manage Your Payment Method',
           link: '/account/payment'

@@ -51,7 +51,7 @@
           <div class="card-body">
             <template v-if="Object.keys(cart).length > 0">
               <div class="row cart-summary d-flex flex-row-reverse">
-                <img src="~/assets/images/cart-mascot.png" alt="Saastrobot Cart Mascot">
+                <img :src="$getStaticImage('cart-mascot.png')" alt="Saastrobot Cart Mascot">
                 <div class="summary-action">
                   <div class="d-flex flex-column font-weight-bold">
                     <div class="label">Total</div>

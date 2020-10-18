@@ -16,7 +16,7 @@
                                     <div class="form-check mb-3 font-weight-bold">
                                         <input class="form-check-input" type="radio" name="paymentMethod" id="payment-paypal" value="paypal" v-model="paymentMethod" disabled />
                                         <label class="form-check-label" for="payment-paypal">
-                                            <img src="~/assets/images/payment/iconfinder_paypal_1220357.png" alt="Paypal Icon" class="icon" />
+                                            <img :src="$getStaticImage('payment/iconfinder_paypal_1220357.png')" alt="Paypal Icon" class="icon" />
                                             Paypal
                                         </label>
                                         <small>(Not Available)</small>
@@ -24,7 +24,7 @@
                                     <div class="form-check mb-3 font-weight-bold">
                                         <input class="form-check-input" type="radio" name="paymentMethod" id="payment-cc" value="cc" v-model="paymentMethod" />
                                         <label class="form-check-label" for="payment-cc">
-                                            <img src="~/assets/images/payment/icons8-mastercard-credit-card-96.png" alt="Card Icon" class="icon" />
+                                            <img :src="$getStaticImage('payment/icons8-mastercard-credit-card-96.png')" alt="Card Icon" class="icon" />
                                             Credit or Debit Card
                                         </label>
                                     </div>
@@ -36,8 +36,8 @@
                           }">
                                                 <input class="form-check-input" type="radio" name="selectedCard" :value="item.stripePaymentID" v-model="selectedCard" />
                                                 <div class="available-card">
-                                                    <img v-if="item.brand == 'visa'" src="~/assets/images/payment/visa-logo.png" alt="Visa Icon" />
-                                                    <img v-if="item.brand == 'mastercard'" src="~/assets/images/payment/visa-logo.png" alt="Visa Icon" />
+                                                    <img v-if="item.brand == 'visa'" :src="$getStaticImage('payment/visa-logo.png')" alt="Visa Icon" />
+                                                    <img v-if="item.brand == 'mastercard'" :src="$getStaticImage('payment/visa-logo.png')" alt="Visa Icon" />
                                                     <span>**** **** {{ item.lastFour }}</span>
                                                     <span class="text-muted">{{ item.month }} / {{ item.year }}</span>
                                                 </div>
@@ -48,7 +48,7 @@
                                     <div class="form-check mb-3 font-weight-bold">
                                         <input class="form-check-input" type="radio" name="paymentMethod" id="payment-new" value="newCard" v-model="selectedCard" />
                                         <label class="form-check-label" for="payment-new">
-                                            <img src="~/assets/images/payment/icons8-card-payment-96.png" alt="Card Icon" class="icon bigger" />
+                                            <img :src="$getStaticImage('payment/icons8-card-payment-96.png')" alt="Card Icon" class="icon bigger" />
                                             New Card</label>
 
                                         <div v-show="selectedCard == 'newCard'" style="margin-left: 3px; margin-top: 5px;" ref="cardelement" />

@@ -8,7 +8,7 @@
         </div>
         <div :class="['col-12', size]" v-for="item in items" :key="item.title">
           <div class="text-center mb-4">
-            <img :src="item.image" :alt="item.title" />
+            <img :src="$getStaticImage(item.image)" :alt="item.title" />
           </div>
           <h5
             class="title-2 text-capitalize font-weight-bold pt-4 pb-2"

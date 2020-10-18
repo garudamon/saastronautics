@@ -17,7 +17,7 @@
           >
         </div>
         <div class="col-12 col-md-6 text-center align-self-center">
-          <img src="~/assets/images/gift-icon@2x.png" alt="Saastrobot Gift Affiliate" />
+          <img :src="$getStaticImage('gift-icon@2x.png')" alt="Saastrobot Gift Affiliate" />
         </div>
       </div>
     </div>
@@ -46,21 +46,21 @@ export default {
     return {
       whats: [
         {
-          image: require('~/assets/images/icon/hot-new-deals.svg'),
+          image: 'icon/hot-new-deals.svg',
           description:
             'Pay-Per-Sale for each initial transaction sale you deliver'
         },
         {
-          image: require('~/assets/images/icon/best-prices.svg'),
+          image: 'icon/best-prices.svg',
           description: 'Unlimited commissions. 30-Day Cookie'
         },
         {
-          image: require('~/assets/images/icon/top-notch-products.svg'),
+          image: 'icon/top-notch-products.svg',
           description:
             'A unique affiliate URL for tracking all of your referrals and sales so we can pay you'
         },
         {
-          image: require('~/assets/images/icon/satisfaction-guarantee.svg'),
+          image: 'icon/satisfaction-guarantee.svg',
           description:
             'A custom dashboard you can log in to 24 hours a day to check your stats'
         }
