@@ -156,6 +156,7 @@ export default {
     img {
       border-radius: 10px;
       width: 100%;
+      box-shadow: 4px 8px 5px rgba(0, 0, 0, 0.33);
     }
   }
   .title-link {
