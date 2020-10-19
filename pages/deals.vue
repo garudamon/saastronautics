@@ -46,7 +46,7 @@
           v-for="item in liveDealsProduct"
           :key="item.id"
         >
-          <div class="product-image mb-6">
+          <div class="product-image mb-3">
             <a :href="'/' + item.uniqName">
               <img :src="$getImage(item.id)" :alt="item.name" />
             </a>
@@ -57,12 +57,13 @@
                 class="badge badge-info text-uppercase mx-1 py-2 px-3"
                 v-for="tag in item.productTagMaster"
                 :key="tag.id"
-              >{{ tag.tagMaster && tag.tagMaster.name }}</span>
+                >{{ tag.tagMaster && tag.tagMaster.name }}</span
+              >
             </h6>
           </div>
           <div class="title-link">
             <a :href="'/' + item.uniqName">
-              <h6 class="maison-demi font-weight-bold">{{ item.name }}</h6>
+              <h5 class="maison-demi font-weight-bold">{{ item.name }}</h5>
             </a>
           </div>
           <rating size="sm" space="mr-1" class="mb-3" :value="item.rating" />
@@ -74,10 +75,12 @@
               <span>${{ item.inActivePrice }}</span>
             </div>
           </div>
-          <nuxt-link class="maison-demi" :to="`/${item.uniqName}`">Learn More &#8594;</nuxt-link>
+          <nuxt-link class="maison-demi" :to="`/${item.uniqName}`"
+            >Learn More &#8594;</nuxt-link
+          >
         </div>
         <div
-          v-for="n in (6 - this.liveDealsProduct.length)"
+          v-for="n in 6 - this.liveDealsProduct.length"
           :key="n"
           class="col-12 col-md-4 product mb-5 px-4 pb-3"
         >
@@ -152,10 +155,12 @@ export default {
   .product-image {
     overflow: hidden;
     height: 215px;
-
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
     img {
-      border-radius: 10px;
-      width: 100%;
+      max-width: 99% !important;
+      border-radius: 5px;
       box-shadow: 4px 8px 5px rgba(0, 0, 0, 0.33);
     }
   }
