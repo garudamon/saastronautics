@@ -18,7 +18,7 @@
       </div>
       <div class="col-12 col-md-6 text-md-right text-center mt-md-0 mt-5">
         <img
-          :src="$getStaticImage('saastrobot-comingsoon-03.jpg')"
+          :src="$getStaticImage('comingsoon-03.svg')"
           alt="Saastrobot Coming Soon Deals"
         />
       </div>
