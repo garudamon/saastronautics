@@ -53,21 +53,21 @@ export default {
         {
           image: 'icon/hot-new-deals.svg',
           description:
-            'Pay-Per-Sale for each initial transaction sale you deliver'
+            'Earn money on each and every sale you make'
         },
         {
           image: 'icon/best-prices.svg',
-          description: 'Unlimited commissions. 30-Day Cookie'
+          description: 'Unlimited commissions with 60-day cookies'
         },
         {
           image: 'icon/top-notch-products.svg',
           description:
-            'A unique affiliate URL for tracking all of your referrals and sales so we can pay you'
+            'Track all of your clicks and conversions through your unique affiliate link'
         },
         {
           image: 'icon/satisfaction-guarantee.svg',
           description:
-            'A custom dashboard you can log in to 24 hours a day to check your stats'
+            'Watch your earnings grow from your own personalized dashboard'
         }
       ]
     }
