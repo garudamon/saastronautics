@@ -7,7 +7,7 @@
         <div class="row">
           <div class="col-12 col-md-4 p-5 p-md-0">
             <img
-              :src="$getStaticImage('saastrobot/addemail.png')"
+              :src="$getStaticImage('saastrobot/saastrobot-add-email.svg')"
               alt="Saastrobot Add Email"
             />
           </div>

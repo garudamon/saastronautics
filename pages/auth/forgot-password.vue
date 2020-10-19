@@ -1,7 +1,7 @@
 <template>
   <div class="row">
-    <div class="col-md-6 px-0">
-      <img :src="$getStaticImage('forgot-password.png')" alt="Saastrobot Forgot Password" />
+    <div class="col-md-6 pt-3 px-0 text-center justify-content-center align-self-center">
+      <img :src="$getStaticImage('saastrobot/saastrobot-forgot-password.svg')" alt="Saastrobot Forgot Password" />
     </div>
     <div class="col-12 col-md-5 card-bg-white py-4">
       <div class="px-4 pt-4">
@@ -73,7 +73,7 @@ a {
   color: var(--primary-color-blue);
 }
 img {
-  max-width: 105%;
+  max-width: 80%;
 }
 .card-bg-white {
   margin: 40px 0 100px 0;
