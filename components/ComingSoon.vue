@@ -51,7 +51,7 @@ export default {
     img {
       width: 95%;
       border-radius: 5px;
-      box-shadow: 4px 8px 5px rgba(0, 0, 0, 0.33);
+      box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.33);
     }
   }
   a {

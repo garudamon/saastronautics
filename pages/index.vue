@@ -301,7 +301,7 @@ export default {
         img {
             max-width: 99% !important;
             border-radius: 5px;
-            box-shadow: 4px 8px 5px rgba(0, 0, 0, 0.33);
+            box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.33);
         }
     }
 
