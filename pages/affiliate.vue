@@ -10,14 +10,16 @@
             Sign up for Saastronautics's Affiliate Program
           </p>
           <a
-            href="#"
-            target="_blank"
+            href="#affiliateform"
             class="btn btn-primary btn-lg px-5 text-white mb-3"
             >Become a Saastronautics Affiliate</a
           >
         </div>
         <div class="col-12 col-md-6 text-center align-self-center">
-          <img :src="$getStaticImage('gift-icon@2x.png')" alt="Saastrobot Gift Affiliate" />
+          <img
+            :src="$getStaticImage('gift-icon@2x.png')"
+            alt="Saastrobot Gift Affiliate"
+          />
         </div>
       </div>
     </div>
@@ -26,22 +28,25 @@
       description="Get paid to grow with Saastronautics. Enjoy high commission rates with no limits on how much you can get paid. It’s free to join!"
       :items="whats"
     />
-    <div class="container pt-3 pb-5 text-center">
+    <div id="affiliateform" class="container pt-3 pb-5 text-center">
       <h1 class="title-1 mt-4 mb-3">
         Become A Saastronautics Affiliate
       </h1>
       <p>Sign up and boost your income!</p>
-      <a
-        href="#"
-        target="_blank"
-        class="btn btn-primary btn-lg px-5 text-white mt-3 mb-5"
-        >Become a Saastronautics Affiliate</a
-      >
+      <div ref="questionscoutPanel"></div>
     </div>
   </div>
 </template>
 <script>
 export default {
+  mounted() {
+    setTimeout(() => {
+      let questionscoutScript = document.createElement('script')
+      questionscoutScript.setAttribute('id', 'ubygvcszuhsnqwbujcu')
+      questionscoutScript.setAttribute('src', '/questionscoutaffiliate.js')
+      this.$refs.questionscoutPanel.appendChild(questionscoutScript)
+    }, 500)
+  },
   data() {
     return {
       whats: [
