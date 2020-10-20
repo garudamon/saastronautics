@@ -457,4 +457,14 @@ a {
   footer {
     position: unset;
   }
+
+  .nav-item {
+    .btn {
+      margin-top: 0.5rem;
+    }
+  }
+
+  .cart {
+    padding-top: 1rem;
+  };
 }
