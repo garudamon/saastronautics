@@ -30,7 +30,7 @@ export const actions = {
       const parsed = cookieparser.parse(req.headers.cookie)
       try {
         auth = parsed._token
-        if (auth != 'undefined') {
+        if (typeof auth != 'undefined') {
           commit('setLogin', true)
           commit('setToken', auth)
         }
