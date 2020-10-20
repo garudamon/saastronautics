@@ -41,4 +41,10 @@ export default {
   border-radius: 5px;
   background-color: #12e3ff;
 }
+
+.img-p-sbs {
+  img {
+    box-shadow: 7px 8px 8px rgba(0, 0, 0, 0.33);
+  }
+}
 </style>

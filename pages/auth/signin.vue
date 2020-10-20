@@ -79,7 +79,7 @@ export default {
             Cookie.set('_token', data)
             this.setLogin(true)
             this.setToken(data)
-            this.$router.push('/account')
+            this.$router.push('/deals')
           } else {
             this.callError('Your email or password were incorrect.')
           }
