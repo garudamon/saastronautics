@@ -3,13 +3,10 @@
     <div class="container">
       <!-- lead -->
       <div class="row">
-        <!-- <div class="col-12 col-md-12 mx-auto text-center">
-          <h1 class="faq-title font-weight-bold d-md-block">Frequently Asked Questions</h1>
-        </div>-->
-        <div class="col-6 faq-img">
+        <div class="col-md-6 faq-img">
           <img :src="$getStaticImage('support/support_robo.svg')" alt />
         </div>
-        <div class="col-6 faq-title pl-md-2">
+        <div class="col-md-6 faq-title pl-md-2 text-center text-md-left">
           <h1 class="title-1 d-md-block mb-3">Frequently Asked Questions</h1>
           <h2
             class="title-1 d-md-block"
