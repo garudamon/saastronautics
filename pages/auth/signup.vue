@@ -1,7 +1,7 @@
 <template>
 <div class="row">
-    <div class="col-md-6 px-0">
-        <img :src="$getStaticImage('saastro-welcome.png')" alt="Saastrobot Welcome" />
+    <div class="col-md-6 px-0 text-center justify-content-center align-self-center">
+        <img :src="$getStaticImage('saastrobot/saastrobot-welcome.svg')" alt="Saastrobot Welcome" />
     </div>
     <div class="col-12 col-md-5 card-bg-white py-4">
         <div class="px-4 pt-4">
@@ -163,7 +163,7 @@ a {
 }
 
 img {
-    max-width: 105%;
+    max-width: 80%;
 }
 
 .card-bg-white {

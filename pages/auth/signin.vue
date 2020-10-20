@@ -1,7 +1,7 @@
 <template>
   <div class="row">
-    <div class="col-md-6 px-0">
-      <img :src="$getStaticImage('sign-in.png')" alt="Saastrobot Sign In" />
+    <div class="col-md-6 px-0 text-center justify-content-center align-self-center">
+      <img :src="$getStaticImage('saastrobot/saastrobot-sign-in.svg')" alt="Saastrobot Sign In" />
     </div>
     <div class="col-12 col-md-5 card-bg-white py-4">
       <div class="px-4 pt-4">
@@ -79,7 +79,7 @@ export default {
             Cookie.set('_token', data)
             this.setLogin(true)
             this.setToken(data)
-            this.$router.push('/account')
+            this.$router.push('/deals')
           } else {
             this.callError('Your email or password were incorrect.')
           }
@@ -99,7 +99,7 @@ a {
   color: var(--primary-color-blue);
 }
 img {
-  max-width: 105%;
+  max-width: 85%;
 }
 .card-bg-white {
   margin: 40px 0 100px 0;

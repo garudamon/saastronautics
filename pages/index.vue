@@ -299,8 +299,9 @@ export default {
         align-items: center;
 
         img {
-            max-width: 100% !important;
+            max-width: 99% !important;
             border-radius: 5px;
+            box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.33);
         }
     }
 

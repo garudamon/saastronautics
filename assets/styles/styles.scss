@@ -446,3 +446,25 @@ a {
   font-weight: 300;
   line-height: 1.2;
 }
+
+
+//MOBILE RESPONSIVE
+
+@media (max-width: 768px) {
+  #wrapper {
+    padding-bottom: 1rem;
+  }
+  footer {
+    position: unset;
+  }
+
+  .nav-item {
+    .btn {
+      margin-top: 0.5rem;
+    }
+  }
+
+  .cart {
+    padding-top: 1rem;
+  };
+}

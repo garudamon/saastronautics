@@ -11,11 +11,13 @@
           <p>
             Become a Saastronautics Partner Saastronautics is the launchpad to
             get your product to the next level of its journey. Reach the early
-            adopters that you need to grow your product. Become an official
-            partner with Saastronautics and have a dedicated team of experts
-            focused on your campaign’s success. The Saastronautics team stays on
-            board even after your campaign ends and we help you shift gears and
-            focus on generating MRR.
+            adopters that you need to grow your product.
+          </p>
+          <p>
+            Become an official partner with Saastronautics and have a dedicated
+            team of experts focused on your campaign’s success. The
+            Saastronautics team stays on board even after your campaign ends and
+            we help you shift gears and focus on generating MRR.
           </p>
           <span class="quote-highlight">Apply to become a partner below. </span>
           <div class="social-media pt-5">

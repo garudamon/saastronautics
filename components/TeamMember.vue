@@ -23,7 +23,6 @@
             </div>
           </div>
         </div>
-
         <p class="py-4">{{ item.description }}</p>
       </div>
     </div>
@@ -58,6 +57,19 @@ export default {
     margin-right: auto;
     p {
       margin-bottom: 0 !important;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .team-member {
+    .bottom-div {
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 }

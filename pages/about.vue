@@ -65,7 +65,7 @@
           </p>
         </div>
       </div>
-      <LazyTeamMember class="py-5 mb-0 mb-md-5" :member="member" />
+      <LazyTeamMember class="py-md-5 pt-5 pb-0 mb-0 mb-md-5" :member="member" />
     </div>
     <div v-if="!isLogin">
       <LazySubscribePanel />
