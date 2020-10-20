@@ -54,7 +54,7 @@ export default {
           data: { success, data, message }
         } = res
         if (success) this.items = [...data]
-        else this.$swal('Oopss!', message, 'failed')
+        // else this.$swal('Oopss!', message, 'failed')
       })
     },
     deleteMethod(item) {
