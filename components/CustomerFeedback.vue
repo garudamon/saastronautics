@@ -3,10 +3,10 @@
     <div class="container">
       <div class="row">
         <div class="col-12 text-center mt-5">
-          <h1 class="title-2 font-weight-bold mb-4">{{title}}</h1>
+          <h1 class="title-2 font-weight-bold mb-4">{{ title }}</h1>
           <div class="row justify-content-center">
             <div class="col-7">
-              <p>{{subtitle}}</p>
+              <p>{{ subtitle }}</p>
             </div>
           </div>
         </div>
@@ -19,15 +19,23 @@
           v-for="item in feedback"
           :key="item.name"
         >
-          <div class="inner d-flex align-items-center justify-content-center pt-5 px-5">
+          <div
+            class="inner d-flex align-items-center justify-content-center pt-3 px-3 pt-md-5 px-md-5"
+          >
             <div class="row">
               <div class="col-11">
                 <p class="border-bottom pb-5">{{ item.comment }}</p>
               </div>
-              <div class="col-12 d-flex justify-content-between align-items-center pb-md-4">
+              <div
+                class="col-12 d-flex justify-content-between align-items-center pb-md-4"
+              >
                 <div class="customer-info pb-3 pb-md-0">
-                  <img :src="$getStaticImage(item.photo)" :alt="item.name" class="avatar d-none d-md-inline" />
-                  <span class="font-weight-bold pl-2">{{ item.name }}</span>
+                  <img
+                    :src="$getStaticImage(item.photo)"
+                    :alt="item.name"
+                    class="avatar d-none d-md-inline"
+                  />
+                  <span class="font-weight-bold pl-md-2">{{ item.name }}</span>
                 </div>
                 <LazyRating class="d-none d-md-block" :value="item.rating" />
               </div>
@@ -47,7 +55,8 @@ export default {
         initialIndex: 1,
         prevNextButtons: false,
         pageDots: false,
-        wrapAround: true
+        wrapAround: true,
+        watchCSS: true
       }
     }
   },
@@ -84,6 +93,23 @@ export default {
         }
       }
     }
+  }
+}
+.comment:after {
+  content: 'flickity';
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .feedback {
+    .comment {
+      .comment-item {
+        width: 100%;
+      }
+    }
+  }
+  .comment:after {
+    content: '';
   }
 }
 </style>
