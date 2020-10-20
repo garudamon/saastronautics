@@ -1,8 +1,8 @@
 {
   "name": "saastronautics",
   "version": "1.0.0",
-  "description": "saastronautics, saas e-commerce",
-  "author": "@m_aliimron",
+  "description": "Saastronautics is a launchpad for SaaS startups. Join our community of entrepreneurs and enjoy lifetime deals on SaaS tools that help grow your business.",
+  "author": "@saastronautics",
   "private": true,
   "scripts": {
     "dev": "nuxt",
