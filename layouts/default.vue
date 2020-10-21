@@ -170,6 +170,11 @@ export default {
                     text: 'Frequently Asked Questions',
                     path: '/support',
                     isButton: false
+                },
+                {
+                    text: 'Affiliate Terms',
+                    path: '/affiliate-terms',
+                    isButton: false
                 }
             ],
             sosmedLink: [{
