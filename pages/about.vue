@@ -135,7 +135,7 @@ export default {
           name: 'Gerard Brand',
           position: 'Design Director',
           twitter: 'http://www.twitter.com/Gavin_Brand',
-          linkedin: 'www.linkedin.com/in/gerardjovian ',
+          linkedin: 'http://www.linkedin.com/in/gerardjovian ',
           description:
             'Gerard has over 10 years of experience in graphic design and videography. He won first place in the GO VIDEO national competition by Gojek for the Best Video Documentary award.'
         },
