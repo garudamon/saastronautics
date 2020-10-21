@@ -14,7 +14,7 @@
             <li class="font-weight-bold">
               DEFINITIONS
               <p class="my-2">The parties referred to in this Agreement shall be defined as follows:</p>
-              <ol>
+              <ol type="a">
                 <li>Company, Us, We: As we describe above, we'll be referred to as the Company. Us, we, our, ours and other first-person pronouns will also refer to the Company, as well as all employees or legal agents of the Company.</li>
                 <li>You, the Affiliate: You will be referred to as the "Affiliate." You'll also be referred to throughout this Agreement with second-person pronouns such as You, Your, or Yours.</li>
                 <li>Parties: Collectively, the parties to this Agreement (the Company and You) will be referred to as "Parties" or individually as "Party."</li>
@@ -53,7 +53,7 @@
               <p class="my-2">We will determine whether payout is permissible in our sole and exclusive discretion. We reserve the right to reject clicks and/or sales that do not comply with the terms of this Agreement.</p>
               <p class="my-2">Processing and fulfillment of orders will be our responsibility. We will also provide real-time data regarding your account with us through the portal on which you log into the website.</p>
               <p class="my2">As described above, in order to be eligible for payout, user purchases must be "Qualified Purchases." Qualified Purchases:</p>
-              <ol>
+              <ol type="a">
                 <li>Must not be referred by any other partner or affiliate links of the Company (in other words, Qualified Purchases are only available through your specific Affiliate Link;</li>
                 <li>May not be purchased by an already-existing partner or affiliate of the Company;</li>
                 <li>May not be purchased prior to the Affiliate joining the Affiliate Program;</li>
@@ -67,7 +67,7 @@
                 PAYOUT INFORMATION
                 <p class="my-2">Payouts will only be available when the Company has your current address information as well as accounting and tax documentation. You will be asked to submit a W8/W9 tax form. Accounting information may include the routing and account number of a bank where you wish to post a direct deposit or may include an email address for an online method of payment.</p>
                 <p class="my-2">Currently, the Company employs the following methods of payout:</p>
-                <ul class="my-2">
+                <ul class="my-2 no-bullets">
                     <li>Direct Deposit</li>
                     <li>Paypal</li>
                 </ul>
@@ -75,7 +75,7 @@
                 <p class="my-2">Payouts will be available the month or period after they accrue. For example, if payouts are made every 15 days, an entire 15 day period must finish for the payout of that period to be available in the following period.</p>
                 <p class="my-2">We explicitly reserve the right to change payout information in our sole and exclusive discretion. If we do so, you will be notified.</p>
                 <p class="my-2">Payouts are also subject to the following restriction:</p>
-                <ol class="my-2">
+                <ol class="my-2" type="a">
                     <li>Payouts are only available when a threshold of the following amount is met: $50 (fifty US dollars).</li>
                 </ol>
                 <p class="my-2">For any disputes as to payout, the Company must be notified within thirty days of your receipt of the payout. We will review each dispute notification as well as the underlying payout transaction to which it is related. Disputes filed after thirty days of payout will not be addressed.</p>
@@ -104,7 +104,7 @@
             <li class="font-weight-bold">
                 MODIFICATION & VARIATION
                 <p class="my-2">The Company may, from time to time and at any time, modify this Agreement. You agree that the Company has the right to modify this Agreement or revise anything contained herein. You further agree that all modifications to this Agreement are in full force and effect immediately upon posting on the Website and that modifications or variations will replace any prior version of this Agreement, unless prior versions are specifically referred to or incorporated into the latest modification or variation of this Agreement. If we update or replace the terms of this Agreement, we will let you know via electronic means, which may include an email. If you don't agree to the update or replacement, you can choose to terminate this Agreement as described below.</p>
-                <ol>
+                <ol type="a">
                     <li>To the extent any part or subpart of this Agreement is held ineffective or invalid by any court of law, you agree that the prior, effective version of this Agreement shall be considered enforceable and valid to the fullest extent.</li>
                     <li>You agree to routinely monitor this Agreement and refer to the Effective Date posted at the top of this Agreement to note modifications or variations. You further agree to clear your cache when doing so to avoid accessing a prior version of this Agreement.</li>
                 </ol>
@@ -116,17 +116,17 @@
             <li class="font-weight-bold">
                 ACCEPTABLE USE
                 <p class="my-2">You agree not to use the Affiliate Program or our Company for any unlawful purpose or any purpose prohibited under this clause. You agree not to use the Affiliate Program in any way that could damage our websites, products, services, or the general business of the Company.</p>
-                <ol>
+                <ol type="a">
                     <li>You further agree not to use the Affiliate Program:
-                        <ol>
-                            <li>To harass, abuse, or threaten others or otherwise violate any person's legal rights;</li>
-                            <li>To violate any intellectual property rights of the Company or any third party;</li>
-                            <li>To upload or otherwise disseminate any computer viruses or other software that may damage the property of another;</li>
-                            <li>To perpetrate any fraud;</li>
-                            <li>To engage in or create any unlawful gambling, sweepstakes, or pyramid scheme;</li>
-                            <li>To publish or distribute any obscene or defamatory material;</li>
-                            <li>To publish or distribute any material that incites violence, hate, or discrimination towards any group;</li>
-                            <li>To unlawfully gather information about others</li>
+                        <ol type="I">
+                          <li>To harass, abuse, or threaten others or otherwise violate any person's legal rights;</li>
+                          <li>To violate any intellectual property rights of the Company or any third party;</li>
+                          <li>To upload or otherwise disseminate any computer viruses or other software that may damage the property of another;</li>
+                          <li>To perpetrate any fraud;</li>
+                          <li>To engage in or create any unlawful gambling, sweepstakes, or pyramid scheme;</li>
+                          <li>To publish or distribute any obscene or defamatory material;</li>
+                          <li>To publish or distribute any material that incites violence, hate, or discrimination towards any group;</li>
+                          <li>To unlawfully gather information about others</li>
                         </ol>
                     </li>
                 </ol>
@@ -145,7 +145,7 @@
             <li class="font-weight-bold">
                 REVERSE ENGINEERING & SECURITY
                 <p class="my-2">You agree not to undertake any of the following actions:</p>
-                <ol>
+                <ol type="a">
                     <li>Reverse engineer, or attempt to reverse engineer or disassemble any code or software from or on any of our websites or services;</li>
                     <li>Violate the security of any of our websites or services through any unauthorized access, circumvention of encryption or other security tools, data mining or interference to any host, user or network.</li>
                 </ol>
@@ -180,7 +180,7 @@
             </li>
             <li class="font-weight-bold">
                 GENERAL PROVISIONS:
-                <ol class="mt-2">
+                <ol class="mt-2" type="A">
                     <li>LANGUAGE: All communications made or notices given pursuant to this Agreement shall be in the English language.</li>
                     <li>JURISDICTION, VENUE & CHOICE OF LAW: Through your participation in the Affiliate Program, you agree that Delaware shall govern any matter or dispute relating to or arising out of this Agreement, as well as any dispute of any kind that may arise between you and the Company, with the exception of its conflict of law provisions. In case any litigation specifically permitted under this Agreement is initiated, the Parties agree to submit to the personal jurisdiction of the state and federal courts of the following county: New Castle, Delaware. The Parties agree that this choice of law, venue, and jurisdiction provision is not permissive, but rather mandatory in nature. You hereby waive the right to any objection of venue, including assertion of the doctrine of forum non conveniens or similar doctrine.</li>
                     <li>ARBITRATION: In case of a dispute between the Parties relating to or arising out of this Agreement, the Parties shall first attempt to resolve the dispute personally and in good faith. If these personal resolution attempts fail, the Parties shall then submit the dispute to binding arbitration. The arbitration shall be conducted in the following county: New Castle. The arbitration shall be conducted by a single arbitrator, and such arbitrator shall have no authority to add Parties, vary the provisions of this Agreement, award punitive damages, or certify a class. The arbitrator shall be bound by applicable and governing Federal law as well as the law of Delaware. Each Party shall pay their own costs and fees. Claims necessitating arbitration under this section include, but are not limited to: contract claims, tort claims, claims based on Federal and state law, and claims based on local laws, ordinances, statutes or regulations. Intellectual property claims by the Company will not be subject to arbitration and may, as an exception to this subpart, be litigated. The Parties, in agreement with this subpart of this Agreement, waive any rights they may have to a jury trial in regard to arbitral claims.</li>
@@ -206,34 +206,38 @@ export default {}
 
 <style lang="scss" scoped>
 ol {
-  list-style-type: none;
-  counter-reset: item;
-  margin: 0;
-  padding: 0;
+  // list-style-type: none;
+  // counter-reset: item;
+  // margin: 0;
+  // padding: 0;
   font-weight: 300;
 }
 
 ol > li {
-  display: table;
-  counter-increment: item;
+  // display: table;
+  // counter-increment: item;
   margin-bottom: 0.6em;
 }
 
-ol > li:before {
-  content: counters(item, '.') '. ';
-  display: table-cell;
-  padding-right: 0.6em;
-}
+// ol > li:before {
+//   content: counters(item, '.') '. ';
+//   display: table-cell;
+//   padding-right: 0.6em;
+// }
 
-li ol > li {
-  margin: 0;
-}
+// li ol > li {
+//   margin: 0;
+// }
 
-li ol > li:before {
-  content: counters(item, '.') ' ';
-}
+// li ol > li:before {
+//   content: counters(item, '.') ' ';
+// }
 
 ul {
   font-weight: 300;
+}
+
+.no-bullets {
+  list-style-type: none;
 }
 </style>
