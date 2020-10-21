@@ -1,6 +1,6 @@
 # saastronautics
 
-> saastronautics, saas e-commerce
+> saastronautics, Saastronautics is a launchpad for SaaS startups. Join our community of entrepreneurs and enjoy lifetime deals on SaaS tools that help grow your business.
 
 ## Build Setup
 
