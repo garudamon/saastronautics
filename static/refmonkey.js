@@ -1,3 +1,3 @@
 window.refMonkeyClient = RefMonkey.client(
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZyYW5rQHNhYXN0cm9uYXV0aWNzLmNvbSIsImlhdCI6MTYwMTk1NTE4Mn0.uoFnaSk7Kkcv1_rTYxRiofBzP2vdacntLouA7WNpws8'
+  `${process.env.API_URL}`
 )
