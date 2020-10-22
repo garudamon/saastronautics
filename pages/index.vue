@@ -89,7 +89,7 @@
                     </a>
                 </div>
                 <div class="mb-4">
-                    <span class="badge badge-info text-uppercase mx-1 py-2 px-3" v-for="tag in item.productMaster.productTagMaster" :key="tag.id">{{ tag.tagMaster && tag.tagMaster.name }}</span>
+                    <span class="badge badge-deals text-uppercase mx-1 py-2 px-3" v-for="tag in item.productMaster.productTagMaster" :key="tag.id">{{ tag.tagMaster && tag.tagMaster.name }}</span>
                 </div>
                 <div class="title-link">
                     <a :href="'/' + item.productMaster.uniqName">
@@ -322,11 +322,6 @@ export default {
         &:hover {
             text-decoration: underline;
         }
-    }
-
-    .badge-info {
-        border-radius: 5px;
-        background-color: #12e3ff;
     }
 }
 

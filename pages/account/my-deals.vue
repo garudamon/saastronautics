@@ -177,7 +177,7 @@
                 :class="{
                   badge: true,
                   'badge-secondary': item.status != 1,
-                  'badge-info': item.status == 1
+                  'badge-deals': item.status == 1
                 }"
                 >{{ item.status == 1 ? 'Active' : 'Inactive' }}</span
               >

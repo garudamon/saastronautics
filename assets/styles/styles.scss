@@ -198,6 +198,14 @@ img {
 .modal {
   background: rgba(0, 0, 0, 0.5);
 }
+
+.badge-deals {
+  color: #fff;
+  background-color: #FF437080;
+  border-color: #FF4370;
+  border-radius: 5px;
+}
+
 .btn {
   border: none;
   border-radius: 20px;
@@ -206,9 +214,9 @@ img {
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
-  box-shadow: 0 4px #999 !important;
+  box-shadow: 0 2.5px #999 !important;
   &.btn:hover {
-    box-shadow: 0 3px #666 !important;
+    box-shadow: 0 1.3px #666 !important;
     transform: translateY(1.5px);
   }
   &.btn-primary {

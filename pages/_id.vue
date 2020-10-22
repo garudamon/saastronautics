@@ -7,7 +7,7 @@
           <Rating :value="productMaster.rating" />
           <h6 class="mb-4 mt-5">
             <span
-              class="badge badge-primary text-uppercase mx-2 py-2 px-3"
+              class="badge badge-deals text-uppercase mx-2 py-2 px-3"
               v-for="tag in productMaster.productTagMaster"
               :key="tag.id"
               >{{ tag.tagMaster && tag.tagMaster.name }}</span

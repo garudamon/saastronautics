@@ -5,7 +5,7 @@
     <!-- <div class="container" v-if="Object.keys(featuredDeals).length > 0">
       <div class="row img-p-sbs pt-2 pb-5 d-flex px-md-4 my-5 header">
         <div class="col-12 col-md-6 pr-0 pr-md-5">
-          <span class="badge badge-info text-uppercase p-2">FEATURED DEALS</span>
+          <span class="badge badge-deals text-uppercase p-2">FEATURED DEALS</span>
           <h1 class="title-1 mt-4 mb-1 header-title">{{featuredDeals.name}}</h1>
   
           <rating size="sm" space="mr-3" class="my-4" :value="featuredDeals.rating" />
@@ -54,7 +54,7 @@
           <div>
             <h6 class="mb-4">
               <span
-                class="badge badge-info text-uppercase mx-1 py-2 px-3"
+                class="badge badge-deals text-uppercase mx-1 py-2 px-3"
                 v-for="tag in item.productTagMaster"
                 :key="tag.id"
                 >{{ tag.tagMaster && tag.tagMaster.name }}</span
@@ -179,11 +179,6 @@ export default {
       text-decoration: underline;
     }
   }
-}
-
-.badge-info {
-  border-radius: 5px;
-  background-color: #12e3ff;
 }
 
 .input-group {

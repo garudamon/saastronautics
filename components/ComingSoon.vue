@@ -7,7 +7,7 @@
       />
     </div>
     <div class="mb-3">
-      <span class="badge badge-info text-uppercase p-2">Coming Soon</span>
+      <span class="badge badge-deals text-uppercase p-2">Coming Soon</span>
     </div>
     <div class="title-link">
       <a href="#" class="disabled">
@@ -59,10 +59,6 @@ export default {
     &:hover {
       text-decoration: underline;
     }
-  }
-  .badge-info {
-    border-radius: 5px;
-    background-color: #12e3ff;
   }
 }
 .title-link {
