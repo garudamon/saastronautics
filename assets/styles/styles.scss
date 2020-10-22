@@ -201,7 +201,7 @@ img {
 
 .badge-deals {
   color: #fff;
-  background-color: #4B028C80;
+  background-color: #4B028C;
   border: .5px #4B028C;
   border-radius: 5px;
 }
@@ -214,11 +214,6 @@ img {
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
-  box-shadow: 0 2.5px #999 !important;
-  &.btn:hover {
-    box-shadow: 0 1.3px #666 !important;
-    transform: translateY(1.5px);
-  }
   &.btn-primary {
     background: transparent
       linear-gradient(
