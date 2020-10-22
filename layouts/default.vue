@@ -24,11 +24,11 @@
                 }" :to="link.path">{{ link.text }}</nuxt-link>
                     </li>
                     <li class="nav-item mx-lg-3" v-if="!isLogin">
-                        <nuxt-link class="btn btn-primary btn-sm mt-lg-1" to="/auth/signin">Get Started</nuxt-link>
+                        <nuxt-link class="btn btn-primary btn-sm mt-lg-1 shadow-none" to="/auth/signin">Get Started</nuxt-link>
                     </li>
                     <template v-else>
                         <li class="nav-item mx-lg-3">
-                            <nuxt-link class="btn btn-primary btn-sm mt-lg-1" to="/account">my account</nuxt-link>
+                            <nuxt-link class="btn btn-primary btn-sm mt-lg-1 shadow-none" to="/account">my account</nuxt-link>
                         </li>
                         <li class="nav-item mx-lg-3 d-flex align-items-center cart">
                             <nuxt-link to="/cart">
