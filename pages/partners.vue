@@ -25,7 +25,7 @@
       </div>
       <!-- what we do -->
       <LazyImageParagraphSideBySide
-        :imageUrl="imageTechIs"
+        :imageUrl="$getStaticImage(imageTechIs)"
         :title="['Our Success Is Measured', 'in Our Partners’ Success']"
         :descriptions="[
           'When you partner with Saastronautics, you have a dedicated team focused on your success. We’re not simply throwing your product on our site and saying our goodbyes when the campaign is over. We are actively involved throughout the entire project lifecycle.',

@@ -23,7 +23,7 @@
       </div>
       <!-- what we do -->
       <LazyImageParagraphSideBySide
-        :imageUrl="imageWhyWeDo"
+        :imageUrl="$getStaticImage(imageWhyWeDo)"
         title="What We Do"
         :descriptions="[
           'Saastronautics is changing the way SaaS companies and providers are marketing and promoting their tools. Gain a core user base of people and companies interested in using your SaaS tools to boost their business. We provide early adopters with new tech that can help them grow their business.',
@@ -44,7 +44,7 @@
       <!-- why we do what we do -->
 
       <LazyImageParagraphSideBySide
-        :imageUrl="imageWhatWeDo"
+        :imageUrl="$getStaticImage(imageWhatWeDo)"
         :title="['Why We Do', 'What We Do']"
         :descriptions="[
           'We understand that finding the right tool for your company is a challenging and expensive process – and we\'re here to help.',

@@ -58,7 +58,7 @@
             </div>
         </div>
         <!-- what we do -->
-        <ImageParagraphSideBySide :imageUrl="imageWhatWeDo" title="What We Do" :descriptions="[
+        <ImageParagraphSideBySide :imageUrl="$getStaticImage(imageWhatWeDo)" title="What We Do" :descriptions="[
           'Saastronautics brings you exclusive deals on the hottest new SaaS tools to help you grow your business.',
           'We scout and hunt for the latest and greatest, next big deal, and secure exclusive lifetime deals and discounts for you. We have a rigorous vetting process for all SaaS tools that launch on Saastronautics, so you don’t have to. ',
           'We provide a launchpad for SaaS startups and developers to promote their tech solutions to early adopters. Our mission is to not only help SaaS startups establish their brand presence and generate MRR, but to help entrepreneurs grow by providing powerful tools at affordable prices.'
