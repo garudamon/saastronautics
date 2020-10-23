@@ -102,6 +102,12 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="d-flex justify-content-between font-weight-bold py-3 border-top text-smaller">
+                                    <span>Coupon</span>
+                                    <span>
+                                        -
+                                    </span>
+                                </div>
                                 <div class="d-flex justify-content-between font-weight-bold py-3 border-top border-bottom text-smaller">
                                     <span>Total</span>
                                     <span>
