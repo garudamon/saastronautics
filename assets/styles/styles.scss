@@ -214,6 +214,7 @@ img {
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
   &.btn-primary {
     background: transparent
       linear-gradient(
@@ -225,9 +226,11 @@ img {
     background: transparent linear-gradient(238deg, #ff4370 0%, #4b028c 100%) 0%
       0% no-repeat padding-box;
     opacity: 1;
-    transition: all 0.5s ease-in-out;
   }
   &.btn-primary:hover {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  &.btn:hover {
     color: rgba(255, 255, 255, 0.6);
   }
 }
