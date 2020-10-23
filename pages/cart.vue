@@ -44,28 +44,6 @@
             </table>
             <p class="text-center font-italic pt-4" v-else>Your cart empty</p>
           </div>
-          <div class="card-footer">
-            <form>
-              <div class="row align-items-center">
-                <div class="col-6">
-                  <input class="form-control form-round form-primary-purple" type="text" placeholder="Coupon Code">
-                </div>
-                <div class="col">
-                  <input class="btn btn-sm btn-primary" type="submit" value="Apply Coupon">
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-        <div class="row mt-3">
-          <div class="offset-6 col-6">
-            <table class="table table-borderless">
-              <tr>
-                <td class="font-weight-bold">Coupon :</td>
-                <td>Voucher Code</td>
-              </tr>
-            </table>
-          </div>
         </div>
       </div>
       <div class="col-12 col-md-5">

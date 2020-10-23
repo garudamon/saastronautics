@@ -53,6 +53,17 @@
 
                                         <div v-show="selectedCard == 'newCard'" style="margin-left: 3px; margin-top: 5px;" ref="cardelement" />
                                     </div>
+                                    <p class="h4 mt-5 mb-4">Apply Voucher</p>
+                                    <form>
+              <div class="row align-items-center">
+                <div class="col-6">
+                  <input class="form-control form-round form-primary-purple" type="text" placeholder="Coupon Code">
+                </div>
+                <div class="col">
+                  <input class="btn btn-sm btn-primary" type="submit" value="Apply Coupon">
+                </div>
+              </div>
+            </form>
 
                                     <div class="confirmation-info">
                                         Your order confirmation will be email to: <br />
