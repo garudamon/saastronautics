@@ -409,8 +409,8 @@ export default {
         })
     },
     refMonkey() {
-    console.log('email cust : ', this.data.customer.email);
-    console.log('total : ', this.data.subTotal);
+  //  console.log('email cust : ', this.data.customer.email);
+  //  console.log('total : ', this.data.subTotal);
       window.refMonkeyClient
         .purchase(this.data.customer.email, this.data.subTotal)
         .then(res => console.log('Ref Monkey  : ', res))
