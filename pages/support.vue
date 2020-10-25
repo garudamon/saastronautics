@@ -31,6 +31,16 @@
 
 <script>
 export default {
+head: {
+      title: 'Support',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'We always provide the best service for our customers'
+        }
+      ],
+    },
   components: {},
   data() {
     return {

@@ -77,6 +77,16 @@
 <script>
 import { mapState } from 'vuex'
 export default {
+head: {
+      title: 'About Us',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Connecting Powerful Tools With Intrepid Businesses'
+        }
+      ],
+    },
   components: {},
   data() {
     return {

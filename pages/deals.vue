@@ -99,6 +99,16 @@
 <script>
 import { mapState } from 'vuex'
 export default {
+  head: {
+      title: 'Deals',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Our Exclusive deals and discounts on powerful SaaS tools that will help you launch your workflow into hyperspace!'
+        }
+      ],
+    },
   name: 'Deals',
   data() {
     return {

@@ -39,6 +39,17 @@
 </template>
 <script>
 export default {
+ head:
+ {
+  title: 'Affiliate',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Boost your income and grow with us'
+        }
+      ],
+    },
   mounted() {
     setTimeout(() => {
       let questionscoutScript = document.createElement('script')

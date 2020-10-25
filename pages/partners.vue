@@ -72,6 +72,16 @@
 
 <script>
 export default {
+  head: {
+      title: 'Partners',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Reach More Users by Launching Your SaaS with Saastronautics'
+        }
+      ],
+    },
   components: {},
   data() {
     return {
