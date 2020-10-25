@@ -23,7 +23,7 @@ export default {
       // },
       {
         src: '/refmonkey.js'
-      },
+      }
       // {
       //   src: '/cloudimage.js'
       // }
@@ -60,6 +60,7 @@ export default {
   plugins: [
     { src: '~/plugins/ga', ssr: false },
     { src: '~/plugins/pixel', ssr: false },
+    { src: '~/plugins/mt', ssr: false },
     { src: '~/plugins/flickity', ssr: false },
     { src: '~/plugins/swal', ssr: false },
     { src: '~/plugins/video-embed', ssr: false },
