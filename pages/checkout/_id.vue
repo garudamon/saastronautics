@@ -344,7 +344,7 @@ export default {
             data: { success, data, message }
           } = res
           if (success) {
-            me.refMonkey()
+      
             me.$swal(
               'Success',
               'Your transaction successfully paid',
@@ -353,6 +353,7 @@ export default {
               me.$router.push('/account/my-deals')
               me.setCart({})
             })
+            me.refMonkey()
           } else {
             me.$swal('Failed', message, 'error')
           }
@@ -408,8 +409,10 @@ export default {
         })
     },
     refMonkey() {
+    console.log('email cust : ', this.data.customer.email);
+    console.log('total : ', this.data.subTotal);
       window.refMonkeyClient
-        .purchase(this.profile.customer.email)
+        .purchase(this.data.customer.email, this.data.subTotal)
         .then(res => console.log('Ref Monkey  : ', res))
     }
   },
