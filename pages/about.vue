@@ -156,6 +156,15 @@ export default {
           linkedin: 'http://www.linkedin.com/in/beatriztanasale',
           description:
             'A postgraduate communication student with experience working in various media companies, from conventional broadcast television to the digital media field. She is adaptive to new environments and always curious about learning new things in order to have a better understanding of the world.'
+        },
+        {
+          imageUrl: 'about/phem-alabata.jpg',
+          name: 'Phem Alabata',
+          position: 'Copywriter',
+          twitter: 'www.twitter.com/alabataphem',
+          linkedin: 'http://www.linkedin.com/in/philameraalabata',
+          description:
+            'Phem is an experienced copywriter with a demonstrated history of working in the publishing industry. She is a dynamic entrepreneur and specialized in HR. Her enthusiasm fuels her to perform tasks with a high degree of skill and professionalism.'
         }
       ]
     }
