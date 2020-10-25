@@ -14,33 +14,80 @@
           <div class="row">
             <div
               class="col-12 col-md-4 px-4 pt-5 item"
-              v-for="(data, idx) in product.productPriceMaster"
+              v-for="(data, idx) in product.productPriceMaster.slice(0, 3)"
               :key="data.title"
               :class="{
                 'border-right': data.title.toLowerCase() == 'single',
                 border: data.title.toLowerCase() == 'multiple'
               }"
             >
-              <div class="ribbon" v-if="idx == product.productPriceMaster.length - 1"></div>
+              <div
+                class="ribbon"
+                v-if="idx == product.productPriceMaster.length - 1"
+              ></div>
               <p
                 class="h6 text-uppercase text-center pkg font-weight-bold my-0"
-              >{{ data.title.toLowerCase() }}</p>
+              >
+                {{ data.title.toLowerCase() }}
+              </p>
               <p
                 class="h1 text-uppercase font-weight-bold pb-4 text-center border-bottom price"
-              >{{ $formattedMoney(data.activePrice) }}</p>
+              >
+                <template
+                  v-if="idx >= 2 && product.productPriceMaster.length > 3"
+                >
+                  {{
+                    customSelected == null
+                      ? $formattedMoney(data.activePrice)
+                      : $formattedMoney(customSelected.activePrice)
+                  }}
+                </template>
+                <template v-else>
+                  {{ $formattedMoney(data.activePrice) }}
+                </template>
+              </p>
               <div
                 v-for="feature in data.productPriceFeatureMaster"
                 :key="feature.id"
                 class="py-3 d-flex align-items-center border-bottom"
               >
                 <span class="fa fa-check text-success d-block"></span>
-                <div class="flex-grow-1 pl-2 font-weight-light">{{ feature.description }}</div>
+                <div class="flex-grow-1 pl-2 font-weight-light">
+                  {{ feature.description }}
+                </div>
+              </div>
+              <div
+                class="py-3 d-flex align-items-center border-bottom"
+                v-if="idx >= 2 && product.productPriceMaster.length > 3"
+              >
+                <select
+                  class="form-control form-inline"
+                  v-model="customSelected"
+                >
+                  <option :value="null">Select More Codes</option>
+                  <option
+                    v-for="(code, idx) in product.productPriceMaster.slice(2)"
+                    :value="code"
+                    :key="idx"
+                    >{{ `${code.codes} Codes` }}</option
+                  >
+                </select>
               </div>
               <div class="pt-4 text-center action">
-                <button class="btn btn-primary" @click="buy(data)">
-                  {{
-                  `Buy ${data.codes} ${data.codes > 1 ? 'codes' : 'code'}`
-                  }}
+                <button
+                  :class="{
+                    btn: true,
+                    'btn-primary': customSelected != null,
+                    'btn-dark': customSelected == null
+                  }"
+                  @click="buyMore"
+                  v-if="idx >= 2 && product.productPriceMaster.length > 3"
+                  :disabled="customSelected == null"
+                >
+                  Buy
+                </button>
+                <button class="btn btn-primary" @click="buy(data)" v-else>
+                  {{ `Buy ${data.codes} ${data.codes > 1 ? 'codes' : 'code'}` }}
                 </button>
               </div>
             </div>
@@ -57,10 +104,17 @@ export default {
   name: 'PricingTable',
   props: ['product'],
   data() {
-    return {}
+    return {
+      customSelected: null
+    }
   },
   computed: { ...mapState(['isLogin']) },
   methods: {
+    buyMore() {
+      if (this.customSelected != null) {
+        this.buy(this.customSelected)
+      }
+    },
     buy(selectedPrice) {
       if (!this.isLogin) {
         this.$router.push('/auth/signin')
@@ -99,6 +153,10 @@ export default {
   .item {
     position: relative;
     padding-bottom: 60px;
+    .form-inline {
+      width: auto;
+      margin: auto;
+    }
     .action {
       position: absolute;
       bottom: 15px;
