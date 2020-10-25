@@ -126,7 +126,7 @@
                         ref="cardelement"
                       />
                     </div>
-                    <p class="h4 mt-5 mb-4">Apply Voucher</p>
+                    <p class="h4 mt-5 mb-4">Voucher</p>
                     <form @submit.prevent="applyVoucher">
                       <div class="row align-items-center">
                         <div class="col-6">
@@ -141,7 +141,7 @@
                           <input
                             class="btn btn-sm btn-primary"
                             type="submit"
-                            value="Apply Coupon"
+                            value="Apply"
                           />
                         </div>
                       </div>
@@ -188,12 +188,21 @@
                       </div>
                     </div>
                   </div>
+                             <div
+                    class="d-flex justify-content-between font-weight-bold py-3 border-top text-smaller"
+                  >
+                    <span>Subtotal</span>
+                    <span>
+                       {{ $formattedMoney(data.subTotal) }}
+                    </span>
+                  </div>
+                  <div
                   <div
                     class="d-flex justify-content-between font-weight-bold py-3 border-top text-smaller"
                   >
-                    <span>Coupon</span>
+                    <span>Discount</span>
                     <span>
-                      -
+                        {{ $formattedMoney(data.discount) }}
                     </span>
                   </div>
                   <div
