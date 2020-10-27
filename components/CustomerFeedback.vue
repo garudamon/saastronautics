@@ -5,7 +5,7 @@
         <div class="col-12 text-center mt-5">
           <h1 class="title-2 font-weight-bold mb-4">{{ title }}</h1>
           <div class="row justify-content-center">
-            <div class="col-7">
+            <div class="col-10 col-md-7">
               <p>{{ subtitle }}</p>
             </div>
           </div>
@@ -13,7 +13,7 @@
       </div>
     </div>
     <client-only placeholder="Loading...">
-      <flickity class="comment pt-5 pb-3" :options="flickityOptions">
+      <flickity class="comment pt-0 pt-md-5 pb-3" :options="flickityOptions">
         <div
           class="comment-item my-5 mx-0 mx-md-5 p-3 p-md-0"
           v-for="item in feedback"
@@ -24,7 +24,7 @@
           >
             <div class="row">
               <div class="col-11">
-                <p class="border-bottom pb-5">{{ item.comment }}</p>
+                <p class="border-bottom pt-md-0 pt-3 pb-5">{{ item.comment }}</p>
               </div>
               <div
                 class="col-12 d-flex justify-content-between align-items-center pb-md-4"

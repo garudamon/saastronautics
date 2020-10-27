@@ -1,11 +1,11 @@
 <template>
   <div class="container">
-    <div class="row py-5">
+    <div class="row py-3 py-md-5">
       <div
-        class="col-12 col-md-7 mx-auto p-md-5 p-3 p-md- subscribe-panel mb-5 d-flex align-items-center "
+        class="col-12 col-md-7 mx-auto p-md-5 p-3 pb-5 subscribe-panel mb-5 d-flex align-items-center "
       >
         <div class="row">
-          <div class="col-12 col-md-4 p-5 p-md-0 " >
+          <div class="col-12 col-md-4 p-3 p-md-0 text-center" >
             <img
               :src="$getStaticImage('saastrobot/saastrobot-add-email.svg')"
               alt="Saastrobot Add Email"
@@ -30,7 +30,7 @@
                   v-model="email"
                 />
               </div>
-              <div class="col-3 px-0">
+              <div class="col-3 px-0 my-auto">
                 <button type="submit" class="btn btn-primary btn-md px-4">
                   Submit
                 </button>

@@ -2,7 +2,7 @@
   <div>
     <div class="container">
       <!-- lead -->
-      <div class="row">
+      <div class="row main-title">
         <div class="col-md-6 faq-img">
           <img :src="$getStaticImage('support/support_robo.svg')" alt />
         </div>
@@ -110,5 +110,17 @@ head: {
   box-shadow: 0px 3px 99px #7a7a7a29;
   border-radius: 10px;
   min-height: 270px;
+}
+
+@media (max-width: 768px) {
+  .faq-title {
+    h1 {
+      font-size: 18px;
+    }
+    h2 {
+      font-size: 16px;
+    }
+    padding: 20px 0px;
+  }
 }
 </style>

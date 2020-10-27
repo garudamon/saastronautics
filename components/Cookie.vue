@@ -9,8 +9,8 @@
           <nuxt-link to="/privacy">cookies information</nuxt-link> for more
           details.
         </div>
-        <div class="col-12 col-md-2 text-right">
-          <button class="btn btn-primary" @click="agree">Agree</button>
+        <div class="col-12 col-md-2 text-right pt-1 pt-md-0">
+          <button class="btn btn-primary btn-sm btn-md-md" @click="agree">Agree</button>
         </div>
       </div>
     </div>
@@ -49,5 +49,16 @@ export default {
   .cookie-text {
     font-size: 14px;
   }
+}
+
+@media (max-width: 768px) {
+.cookie {
+  .cookie-text {
+    font-size: 10px;
+  }
+  .btn {
+    font-size: 10px;
+  }
+}
 }
 </style>

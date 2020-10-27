@@ -201,8 +201,8 @@ img {
 
 .badge-deals {
   color: #fff;
-  background-color: #4B028C;
-  border: .5px #4B028C;
+  background-color: #4b028c;
+  border: 0.5px #4b028c;
   border-radius: 5px;
 }
 
@@ -468,8 +468,34 @@ a {
   #wrapper {
     padding-bottom: 1rem;
   }
+
+  h1 {
+    font-size: 18px;
+    font-weight: bold !important;
+  }
+
+  h4 {
+    font-size: 14px;
+  }
+
+  h5 {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  span {
+    font-size: 12px;
+  }
+
   footer {
     position: unset;
+  }
+
+  .navbar-brand {
+    margin-right: 0;
   }
 
   .nav-item {
@@ -478,7 +504,44 @@ a {
     }
   }
 
+  .main-title {
+    h1 {
+      font-size: 18px;
+      font-weight: bold !important;
+    }
+
+    span {
+      font-size: 18px;
+    }
+  }
+
+  .gray-feature {
+    img {
+      height: 100px !important;
+    }
+  }
+
   .cart {
     padding-top: 1rem;
+  }
+
+  // subscribe panel
+  .subscribe-panel {
+    img {
+      width: 40%;
+    }
+    h3 {
+      font-size: 16px;
+      color: #4b028c;
+    }
+    p {
+      font-size: 14px;
+    }
+    input::-webkit-input-placeholder {
+      font-size: 12px;
+    }
+    .btn {
+      font-size: 10px;
+    }
   }
 }

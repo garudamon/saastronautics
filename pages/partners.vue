@@ -2,13 +2,13 @@
   <div>
     <div class="container">
       <!-- lead -->
-      <div class="row">
+      <div class="row main-title">
         <div class="col-12 col-md-10 mx-auto text-center">
-          <h1 class="title-1 display-5 font-weight-normal d-none d-md-block">
+          <h1 class="title-1 display-md-5 font-weight-normal d-none d-md-block">
             Reach More Users by Launching Your SaaS with
             <span class="text-red title-1">Saastronautics</span>
           </h1>
-          <h1 class="title-1 display-5 font-weight-normal d-block d-md-none">
+          <h1 class="title-1 display-md-5 font-weight-normal d-block d-md-none">
             Reach More Users by Launching Your SaaS Tools with
             <span class="text-red title-1">Saastronautics</span>
           </h1>
@@ -18,7 +18,7 @@
             Grow your core userbase, collect invaluable feedback, gain funds for
             reinvestment, and leverage your campaign to grow your MRR.
           </p>
-          <nuxt-link class="btn btn-primary btn-lg" to="/partners-apply"
+          <nuxt-link class="btn btn-primary btn-md-lg btn-md" to="/partners-apply"
             >Submit Your Product</nuxt-link
           >
         </div>
@@ -41,8 +41,8 @@
     />
     <!-- white background features -->
     <div class="container">
-      <div class="row features px-md-4 py-5">
-        <div class="col-12 py-5">
+      <div class="row features px-md-4 pt-5 pb-md-5">
+        <div class="col-12 py-3 py-md-5">
           <h1 class="title-1 text-center">Is Your Product Ready?</h1>
         </div>
         <div
@@ -53,7 +53,7 @@
         <div class="text-center mb-3">
           <img :src="$getStaticImage(item.image)" :alt="item.title" />
         </div>
-          <h5 class="title-2 text-capitalize font-weight-bold py-4">
+          <h5 class="title-2 text-capitalize font-weight-bold pb-4 pt-md-4">
             {{ item.title }}
           </h5>
           <p class="py-0">{{ item.description }}</p>

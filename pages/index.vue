@@ -2,39 +2,22 @@
 <div>
     <div class="container">
         <!-- lead -->
-        <div class="row">
+        <div class="row main-title">
             <div class="col-12 col-md-11 mx-auto text-center">
                 <h1 class="title-1 display-5 font-weight-normal d-none d-md-block">
                     Launch Your Workflow into Hyperspace with
                     <span class="text-red title-1">Saastronautics</span>
                 </h1>
-                <h1 class="display-5 font-weight-normal d-block d-md-none">
+                <h1 class="display-md-5 font-weight-normal d-block d-md-none">
                     Launch Your Workflow into Hyperspace with
                     <span class="text-red title-1 font-weight-bold">Saastronautics</span>
                 </h1>
             </div>
             <div class="col-12 col-md-10 mx-auto text-center">
-                <p class="px-md-4 py-4">
-                    Join our online community of entrepreneurs and digital marketers to
-                    receive the best deals on software solutions designed to grow your
-                    business.
-                </p>
-            </div>
-            <div class="col-12 col-md-5 mx-auto" v-if="!isLogin">
-                <form class="row" @submit="subscribe">
-                    <div class="col-8">
-                        <input type="email" :class="{
-                  'form-control form-round form-gray border-0 px-3': true,
-                  error: error.email ? true : false
-                }" placeholder="Enter your email address" v-model="email" />
-                    </div>
-                    <div class="col px-0">
-                        <button type="submit" class="btn btn-primary btn-md px-4">
-                            Submit
-                        </button>
-                    </div>
-                </form>
-            </div>
+                <h4 class="px-md-4 pb-4 pt-1 pt-md-4">
+                    We connect powerful tools with intrepid businesses.
+                </h4>
+            </div>    
         </div>
         <!-- hero image -->
         <div class="row hero">
@@ -42,16 +25,38 @@
                 <img :src="$getStaticImage('homepage.svg')" alt="Saastronautics Connecting People" />
             </div>
         </div>
+        <div class="row mt-5 subscribe">
+            <div class="col-12 text-center mb-3">
+                <h4>
+                    Sign up for our latest insights and exclusive deals sent directly to your inbox.
+                </h4>
+            </div>
+             <div class="col-12 col-md-5 mx-auto" v-if="!isLogin">
+                <form class="row" @submit="subscribe">
+                    <div class="col-8">
+                        <input type="email" :class="{
+                  'form-control form-round form-gray border-0 px-3': true,
+                  error: error.email ? true : false
+                }" placeholder="Enter your email address" v-model="email" />
+                    </div>
+                    <div class="col px-0 my-auto">
+                        <button type="submit" class="btn btn-primary btn-md px-4">
+                            Send Me Email
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
         <!-- main feature -->
-        <div class="row features px-md-4 py-5">
-            <div class="col-12 py-5">
+        <div class="row features px-md-4 pt-5 pb-0 pb-md-5 ">
+            <div class="col-12 py-3 py-md-5">
                 <h1 class="title-1 text-center">How Can Saastronautics Help You?</h1>
             </div>
             <div class="col-12 col-md-4 text-left px-4" v-for="item in features" :key="item.title">
                 <div class="text-center mb-4">
                     <img :src="$getStaticImage(item.image)" :alt="item.title" />
                 </div>
-                <h5 class="title-2 text-capitalize font-weight-bold py-4">
+                <h5 class="title-2 text-capitalize font-weight-bold pb-4 pt-md-4">
                     {{ item.title }}
                 </h5>
                 <p class="py-0">{{ item.description }}</p>
@@ -119,7 +124,7 @@
     <div v-if="!isLogin">
         <LazySubscribePanel />
     </div>
-    <div v-else class="my-5"></div>
+    <div v-else class="my-3 my-md-5"></div>
 </div>
 </template>
 
@@ -332,6 +337,26 @@ export default {
 
     .feedback .comment .comment-item {
         width: 80%;
+    }
+
+    .features {
+        img {
+            height: 100px !important;
+        }
+    }
+
+    .subscribe {
+        h4 {
+            font-size: 14px;
+        }
+
+        input::-webkit-input-placeholder {
+        font-size: 12px;
+        }
+
+        .btn {
+            font-size: 10px;
+        }
     }
 }
 </style>

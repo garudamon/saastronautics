@@ -11,7 +11,7 @@
             <img :src="$getStaticImage(item.image)" :alt="item.title" />
           </div>
           <h5
-            class="title-2 text-capitalize font-weight-bold pt-4 pb-2"
+            class="title-2 text-capitalize font-weight-bold pt-md-4 pb-2"
             v-html="item.title"
           />
           <p class="py-0">{{ item.description }}</p>

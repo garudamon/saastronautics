@@ -2,7 +2,7 @@
   <div>
     <div class="container">
       <!-- lead -->
-      <div class="row">
+      <div class="row main-title">
         <div class="col-12 col-md-12 mx-auto text-center">
           <h1 class="title-1 display-5 font-weight-normal d-none d-md-block">
             Connecting Powerful Tools With
@@ -16,7 +16,7 @@
           </h1>
         </div>
         <div class="col-12 col-md-9 mx-auto text-center">
-          <p class="px-md-4 py-4">
+          <p class="px-md-4 pt-4 pb-md-4">
             Saastronautics was created with one goal in mind  – to get the best new SaaS tools into as many businesses as possible. Our customers get to enjoy great deals on the best new SaaS tools, while our SaaS partners get to use our platform as a launchpad for their product.
           </p>
         </div>
@@ -56,7 +56,7 @@
 
       <!-- meet the teams -->
       <div class="row">
-        <div class="col-12 text-center mt-5 pt-5">
+        <div class="col-12 text-center mt-md-5 pt-md-5">
           <h2 class="title-1 mb-4">Meet The Team</h2>
         </div>
         <div class="col-12 col-md-7 mx-auto text-center">

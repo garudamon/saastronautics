@@ -1,11 +1,11 @@
 <template>
   <div class="container">
-    <div class="row pb-5">
+    <div class="row pb-3 pb-md-5">
       <div
-        class="col-12 col-md-7 mx-auto p-md-5 p-3 p-md- subscribe-panel my-5 d-flex align-items-center"
+        class="col-12 col-md-7 mx-auto p-md-5 p-3 subscribe-panel my-5 d-flex align-items-center"
       >
         <div class="row">
-          <div class="col-12 col-md-4 p-5 p-md-0">
+          <div class="col-12 col-md-4 p-3 p-md-0 text-center">
             <img
               :src="$getStaticImage('saastrobot/community.png')"
               alt="Saastrobot Community Illustrator"
