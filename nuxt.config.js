@@ -1,4 +1,3 @@
-import ogImage from '@/static/images/opengraph-image.jpg';
 export default {
   mode: 'universal',
   /*
@@ -15,7 +14,7 @@ export default {
         //content: process.env.npm_package_description || ''
         content: process.env.npm_package_description || 'Saastronautics is a launchpad for SaaS startups. Join our community of entrepreneurs and enjoy lifetime deals on SaaS tools that help grow your business.'
       },
-      { hid: 'og:image', property: 'og:image', content: process.env.BASE_URL + ogImage }
+      { hid: 'og:image', property: 'og:image', content: process.env.BASE_URL + '@/static/images/opengraph-image' }
     ],
     script: [
       {
