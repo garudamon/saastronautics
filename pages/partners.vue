@@ -134,6 +134,13 @@ export default {
             'Perhaps there is only a small group of people who can say they knew Parker from the beginning, and I’m glad that I’m one of them. Parker was, and still is, one of my company’s earliest clients; on the other hand, He’s also the one that I seek advice to discuss a product or marketing strategy on a global scale. When he recommended tools or services for my business, I’ve listened, and you should too.',
           rating: 5,
           photo: 'partners/kirim-email-logo.jpg'
+        },
+        {
+          name: 'Iftekher Islam Sunny, Founder of RetargetKit',
+          comment:
+            'Launching RetargetKit LTD on saastronautics is one of the best decisions of my life. Great deal, super enthusiastic team, and I got complete dedication and support. Highly appreciated and I absolutely recommend Saastronautics for any SaaS startup.',
+          rating: 5,
+          photo: 'partners/retarget-kit-logo.png'
         }
       ]
     }

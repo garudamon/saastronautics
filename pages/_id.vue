@@ -13,23 +13,25 @@
               >{{ tag.tagMaster && tag.tagMaster.name }}</span
             >
           </h6>
-
           <h1 class="title-1 display-4 d-none d-md-block">
-            {{ productMaster.name }}
+            {{ productMaster.title }}
           </h1>
           <h1 class="display-5 font-weight-normal d-block d-md-none">
-            {{ productMaster.name }}
+            {{ productMaster.title }}
           </h1>
         </div>
         <div class="col-12 col-md-10 mx-auto text-center">
-          <p class="px-md-4 py-4">{{ productMaster.longDescription }}</p>
+          <h4 class="px-md-4 py-1">{{ productMaster.subtitle }}</h4>
         </div>
-        <div class="col-12 col-md-9 mx-auto py-4 text-center hero-image">
+        <div class="col-12 mx-auto py-4 text-center hero-image">
           <img
             :src="$getImage(productMaster.id)"
             :alt="`Overview ${productMaster.name}`"
           />
         </div>
+      </div>
+      <div class="row text-center">
+          <p class="px-md-4 py-4">{{ productMaster.longDescription }}</p>
       </div>
       <div class="row pt-5">
         <div
@@ -39,6 +41,22 @@
         >
           <LazyKeyFeature :description="feature.description" />
         </div>
+      </div>
+      <LazyVideoEmbedDescription
+        :title="productMaster.videoDescription"
+        :videoUrl="productMaster.videoURL"
+      />
+      <!-- Product Expect  -->
+      <div class="row product-expect">
+          <p class="px-md-4">{{ productMaster.featureExpect }}</p>
+          <div v-for="featureExpectList in productMaster.productFeatureExpectMaster"
+          :key="featureExpectList.id">
+            <ul>
+              <li class="font-weight-bold">{{ featureExpectList.title }}
+                <p>{{ featureExpectList.description }}</p>
+              </li>
+            </ul>
+          </div>
       </div>
       <LazyImageParagraphSideBySide
         :title="productMaster.title2"
@@ -51,13 +69,9 @@
         :imageUrl="$getImageOther(productMaster.id, 3)"
         :descriptions="[productMaster.description3]"
       />
-      <LazyVideoEmbedDescription
-        :title="productMaster.videoTitle"
-        :videoUrl="productMaster.videoURL"
-        :descriptions="[productMaster.videoDescription]"
-      />
+      <!-- Plans and Features -->
       <div class="border-plansfeature"></div>
-      <div class="row px-md-4 mb-5 pt-5">
+      <div class="row px-md-4 mb-5 pt-5 plans-feature">
         <div class="col">
           <h1 class="title-1">Plans and Features</h1>
           <h5 class="title-1">Deal Terms</h5>
@@ -152,6 +166,7 @@ export default {
               this.productMaster = {
                 ...data
               }
+              console.log(data);
           })
       }
     }
@@ -166,25 +181,33 @@ export default {
   }
 }
 
-ul {
-  list-style: none;
+.product-expect {
+  ul {
+    list-style: round !important;
+  }
 }
 
-li {
-  padding-left: 0.3em;
-}
+.plans-feature {
+  ul {
+    list-style: none;
+  }
 
-li:before {
-  content: '\f00c';
-  /* FontAwesome Unicode */
-  font-family: FontAwesome;
-  display: inline-block;
-  margin-right: 0.5em;
-  margin-left: -1.3em;
-  /* same as padding-left set on li */
-  width: 1.3em;
-  /* same as padding-left set on li */
-  color: var(--primary-color-red);
+  li {
+    padding-left: 0.3em;
+  }
+
+  li:before {
+    content: '\f00c';
+    /* FontAwesome Unicode */
+    font-family: FontAwesome;
+    display: inline-block;
+    margin-right: 0.5em;
+    margin-left: -1.3em;
+    /* same as padding-left set on li */
+    width: 1.3em;
+    /* same as padding-left set on li */
+    color: var(--primary-color-red);
+  }
 }
 
 .border-plansfeature {
