@@ -3,9 +3,6 @@ export default {
   /*
    ** Headers of the page
    */
-  env: {
-    baseUrl: process.env.BASE_URL || 'http://localhost:3000'
-  },
   head: {
     title: 'Saastronautics',
     meta: [
@@ -17,7 +14,7 @@ export default {
         //content: process.env.npm_package_description || ''
         content: process.env.npm_package_description || 'Saastronautics is a launchpad for SaaS startups. Join our community of entrepreneurs and enjoy lifetime deals on SaaS tools that help grow your business.'
       },
-      { hid: 'og:image', property: 'og:image', content: process.env.baseUrl + '/static/images/opengraph-image.jpg' }
+      { hid: 'og:image', property: 'og:image', content: process.env.BASE_URL+ '/images/opengraph-image.jpg' }
     ],
     script: [
       {
