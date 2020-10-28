@@ -30,7 +30,7 @@
           </p>
         </div>
       </div>
-      <div class="row text-center py-5 mt-5 justify-content-around awesome-row">
+      <div class="row text-center py-3 py-md-5 mt-md-3 justify-content-around awesome-row">
         <div class="col-12 mb-5 text-center">
           <h1 class="title-1 mb-4">
             Are you the right fit for Saastronautics?
@@ -82,5 +82,12 @@ export default {
 hr.solid {
   margin: 0 auto;
   border-top: 5px solid #ff4370;
+}
+
+
+@media (max-width: 768px) {
+  .awesome-row {
+    padding: 0 1rem;
+  }
 }
 </style>

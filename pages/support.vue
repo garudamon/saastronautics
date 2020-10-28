@@ -14,9 +14,9 @@
         </div>
       </div>
       <!-- card FAQ -->
-      <div class="row px-4 mb-5">
-        <div class="col-12 col-sm-6 mb-5 px-md-3" v-for="item in cardQuestion" :key="item.id">
-          <div class="support-card card card-bg-white p-4">
+      <div class="row px-md-4 mb-5">
+        <div class="col-12 col-md-6 mb-5 px-md-3" v-for="item in cardQuestion" :key="item.id">
+          <div class="support-card card card-bg-white p-md-4 p-1">
             <div class="card-body graphik-reg">
               <h6 class="card-title font-weight-bold mb-3">{{ item.title }}</h6>
               <p class="card-text" v-html="item.description"></p>
