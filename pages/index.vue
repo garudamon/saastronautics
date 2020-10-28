@@ -25,13 +25,13 @@
                 <img :src="$getStaticImage('homepage.svg')" alt="Saastronautics Connecting People" />
             </div>
         </div>
-        <div class="row mt-5 subscribe">
+        <div class="row mt-5 subscribe" v-if="!isLogin">
             <div class="col-12 text-center mb-3">
                 <h4>
                     Sign up for our latest insights and exclusive deals sent directly to your inbox.
                 </h4>
             </div>
-             <div class="col-12 col-md-5 mx-auto" v-if="!isLogin">
+             <div class="col-12 col-md-5 mx-auto">
                 <form class="row" @submit="subscribe">
                     <div class="col-8">
                         <input type="email" :class="{
