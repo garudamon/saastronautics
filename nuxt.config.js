@@ -14,6 +14,11 @@ export default {
         //content: process.env.npm_package_description || ''
         content: process.env.npm_package_description || 'Saastronautics is a launchpad for SaaS startups. Join our community of entrepreneurs and enjoy lifetime deals on SaaS tools that help grow your business.'
       },
+      { hid: 'og:title', property: 'og:title', content: 'Saastronautics' },
+      { hid: 'og:site_name', property: 'og:site_name', content: 'Saastronautics' },
+      { hid: 'og:url', property: 'og:url', content: process.env.BASE_URL },
+      { hid: 'og:type', property: 'og:type', content: website },
+      { hid: 'og:email', property: 'og:email', content: 'support@saastronautics.com' },
       { hid: 'og:image', property: 'og:image', content: process.env.BASE_URL+ '/images/saastronautics-website-preview.png' }
     ],
     script: [
