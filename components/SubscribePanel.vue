@@ -19,7 +19,7 @@
               Stay in the loop and keep up with our ventures. Be the first to know about our new deals.
             </p>
             <form class="row d-flex justify-content-center" @submit="subscribe">
-              <div class="col-7 pr-0 mr-2">
+              <div class="col-6 pr-0 mr-2">
                 <input
                   type="email"
                   :class="{
@@ -30,9 +30,9 @@
                   v-model="email"
                 />
               </div>
-              <div class="col-3 px-0 my-auto">
-                <button type="submit" class="btn btn-primary btn-md px-4">
-                  Submit
+              <div class="col-5 px-0 my-auto">
+                <button type="submit" class="btn btn-primary btn-md-md btn-sm px-4">
+                  Send Me Email
                 </button>
               </div>
             </form>
