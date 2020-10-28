@@ -15,7 +15,7 @@
         </div>
         <ValidationObserver v-slot="{ handleSubmit }">
             <form class="p-3" @submit.prevent="handleSubmit(signUp)">
-                <ValidationProvider name="Name" rules="required|alpha" v-slot="{ errors }">
+                <ValidationProvider name="Name" rules="required|alpha_spaces" v-slot="{ errors }">
                     <div class="form-group mb-4">
                         <input type="text" class="form-control form-round form-primary-purple" placeholder="First name" v-model="form.firstName" />
                         <span class="form-error" v-if="errors.length > 0">{{
