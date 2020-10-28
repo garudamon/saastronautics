@@ -14,9 +14,9 @@
                 </h1>
             </div>
             <div class="col-12 col-md-10 mx-auto text-center">
-                <h4 class="px-md-4 pb-4 pt-1 pt-md-4">
+                <p class="px-md-4 pb-4 pt-1 pt-md-4">
                     We connect powerful tools with intrepid businesses.
-                </h4>
+                </p>
             </div>    
         </div>
         <!-- hero image -->
