@@ -9,14 +9,14 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       // Primary Meta Tags
-      { hid: 'title', property: 'title', content: 'Saastronautics' },
+      { hid: 'title', property: 'title', content: 'Saastronautics | We connect powerful tools with intrepid businesses' },
       {
         hid: 'description',
         name: 'description',
         content: process.env.npm_package_description || 'Saastronautics is a launchpad for SaaS startups. Join our community of entrepreneurs and enjoy lifetime deals on SaaS tools that help grow your business.'
       },
       // Open Graph / Facebook
-      { hid: 'og:title', property: 'og:title', content: 'Saastronautics' },
+      { hid: 'og:title', property: 'og:title', content: 'Saastronautics | We connect powerful tools with intrepid businesses' },
       { hid: 'og:description', property: 'og:description', content: process.env.npm_package_description || 'Saastronautics is a launchpad for SaaS startups. Join our community of entrepreneurs and enjoy lifetime deals on SaaS tools that help grow your business.' },
       { hid: 'og:site_name', property: 'og:site_name', content: 'Saastronautics' },
       { hid: 'og:url', property: 'og:url', content: process.env.BASE_URL },
@@ -25,8 +25,8 @@ export default {
       { hid: 'og:image', property: 'og:image', content: process.env.BASE_URL + '/images/saastronautics-website-preview.png' },
       // Twitter
       { hid: 'twitter:card', property: 'twitter:card', content: 'summary_large_image' },
-      { hid: 'twitter:url', property: 'twitter:url', content: 'process.env.BASE_URL' },
-      { hid: 'twitter:title', property: 'twitter:title', content: 'Saastronautics' },
+      { hid: 'twitter:url', property: 'twitter:url', content: process.env.BASE_URL },
+      { hid: 'twitter:title', property: 'twitter:title', content: 'Saastronautics | We connect powerful tools with intrepid businesses' },
       { hid: 'twitter:description', property: 'twitter:description', content: 'Saastronautics is a launchpad for SaaS startups. Join our community of entrepreneurs and enjoy lifetime deals on SaaS tools that help grow your business.' },
       { hid: 'twitter:image', property: 'twitter:image', content: process.env.BASE_URL + '/images/saastronautics-website-preview.png' },
     ],
