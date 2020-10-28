@@ -13,15 +13,15 @@
               >{{ tag.tagMaster && tag.tagMaster.name }}</span
             >
           </h6>
-          <h1 class="title-1 display-4 d-none d-md-block">
+          <h1 class="title-1 display-md-5 d-none d-md-block">
             {{ productMaster.title }}
           </h1>
-          <h1 class="display-5 font-weight-normal d-block d-md-none">
+          <h1 class="title-1 display-md-5 font-weight-normal d-block d-md-none">
             {{ productMaster.title }}
           </h1>
         </div>
         <div class="col-12 col-md-10 mx-auto text-center">
-          <h4 class="px-md-4 py-1">{{ productMaster.subtitle }}</h4>
+          <p class="px-md-4 py-1">{{ productMaster.subtitle }}</p>
         </div>
         <div class="col-12 mx-auto py-4 text-center hero-image">
           <img

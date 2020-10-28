@@ -13,14 +13,14 @@
         <VEmojiPicker v-if="showEmoji" @select="selectEmoji" />
       </client-only>
     </div>
-    <div class="d-flex justify-content-between pt-3">
+    <div class="d-md-flex justify-content-between pt-3">
       <button class="btn btn-primary" v-if="isLogin" @click="submit">
         Post your {{ `${question ? 'question' : 'review'}` }}
       </button>
       <nuxt-link v-else to="/auth/signin" class="btn btn-primary"
         >Login To Post {{ `${question ? 'question' : 'review'}` }}</nuxt-link
       >
-      <div class="d-flex align-items-center" v-if="!question">
+      <div class="d-md-flex align-items-center mt-3 mt-md-0" v-if="!question">
         <h6 class="title-1 m-0 pr-2">Rate Our Product</h6>
         <LazyRating
           size="sm"
