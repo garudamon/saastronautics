@@ -24,11 +24,11 @@ export default {
       { hid: 'og:email', property: 'og:email', content: 'support@saastronautics.com' },
       { hid: 'og:image', property: 'og:image', content: process.env.BASE_URL + '/images/saastronautics-website-preview.png' },
       // Twitter
-      { property='twitter:card', content='summary_large_image' },
-      { property='twitter:url', content='process.env.BASE_URL' },
-      { property='twitter:title', content='Saastronautics' },
-      { property='twitter:description', content='Saastronautics is a launchpad for SaaS startups. Join our community of entrepreneurs and enjoy lifetime deals on SaaS tools that help grow your business.' },
-      { property='twitter:image', content=process.env.BASE_URL + '/images/saastronautics-website-preview.png' },
+      { hid: 'twitter:card', property: 'twitter:card', content: 'summary_large_image' },
+      { hid: 'twitter:url', property: 'twitter:url', content: 'process.env.BASE_URL' },
+      { hid: 'twitter:title', property: 'twitter:title', content: 'Saastronautics' },
+      { hid: 'twitter:description', property: 'twitter:description', content: 'Saastronautics is a launchpad for SaaS startups. Join our community of entrepreneurs and enjoy lifetime deals on SaaS tools that help grow your business.' },
+      { hid: 'twitter:image', property: 'twitter:image', content: process.env.BASE_URL + '/images/saastronautics-website-preview.png' },
     ],
     script: [
       {
