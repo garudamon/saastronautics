@@ -84,7 +84,6 @@ hr.solid {
   border-top: 5px solid #ff4370;
 }
 
-
 @media (max-width: 768px) {
   .awesome-row {
     padding: 0 1rem;

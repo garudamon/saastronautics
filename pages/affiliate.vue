@@ -2,7 +2,7 @@
   <div class="gray-background py-3">
     <div class="container">
       <div class="row img-header pt-2 pb-5 d-flex px-md-4 header">
-        <div class="col-12 col-md-6 pr-0 pr-md-5 align-self-center">
+        <div class="col-12 col-md-6 pr-0 pr-md-5 align-self-center text-center text-md-left">
           <h1 class="title-1 mt-4 mb-3">
             Boost your income and grow with us!
           </h1>
@@ -99,6 +99,13 @@ export default {
       width: 55%;
       border-radius: 10px;
     }
+  }
+}
+
+@media (max-width: 768px) {
+   .btn {
+    font-size: 10px !important;
+    padding: 0.5rem 2rem;
   }
 }
 </style>
