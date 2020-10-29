@@ -170,7 +170,7 @@ head: {
         {
           imageUrl: 'about/phem-alabata.jpg',
           name: 'Phem Alabata',
-          position: 'Copywriter',
+          position: 'Content Specialist',
           twitter: 'www.twitter.com/alabataphem',
           linkedin: 'http://www.linkedin.com/in/philameraalabata',
           description:

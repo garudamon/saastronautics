@@ -33,7 +33,7 @@
             </div>
              <div class="col-12 col-md-5 mx-auto">
                 <form class="row" @submit="subscribe">
-                    <div class="col-8">
+                    <div class="col-md-8 col-7">
                         <input type="email" :class="{
                   'form-control form-round form-gray border-0 px-3': true,
                   error: error.email ? true : false
