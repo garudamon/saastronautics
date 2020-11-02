@@ -62,12 +62,40 @@
         :title="productMaster.title2"
         :imageUrl="$getImageOther(productMaster.id, 2)"
         :descriptions="[productMaster.description2]"
+        v-if="productMaster.title2.length > 0"
       />
       <LazyImageParagraphSideBySide
         :rtl="true"
         :title="productMaster.title3"
         :imageUrl="$getImageOther(productMaster.id, 3)"
         :descriptions="[productMaster.description3]"
+        v-if="productMaster.title3.length > 0"
+      />
+      <LazyImageParagraphSideBySide
+        :title="productMaster.title4"
+        :imageUrl="$getImageOther(productMaster.id, 4)"
+        :descriptions="[productMaster.description4]"
+        v-if="productMaster.title4.length > 0"
+      />
+      <LazyImageParagraphSideBySide
+        :rtl="true"
+        :title="productMaster.title5"
+        :imageUrl="$getImageOther(productMaster.id, 5)"
+        :descriptions="[productMaster.description5]"
+        v-if="productMaster.title5.length > 0"
+      />
+      <LazyImageParagraphSideBySide
+        :title="productMaster.title6"
+        :imageUrl="$getImageOther(productMaster.id, 6)"
+        :descriptions="[productMaster.description6]"
+        v-if="productMaster.title6.length > 0"
+      />
+      <LazyImageParagraphSideBySide
+        :rtl="true"
+        :title="productMaster.title7"
+        :imageUrl="$getImageOther(productMaster.id, 7)"
+        :descriptions="[productMaster.description7]"
+        v-if="productMaster.title7.length > 0"
       />
       <!-- Plans and Features -->
       <div class="border-plansfeature"></div>
