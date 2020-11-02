@@ -45,7 +45,7 @@
 
       <LazyImageParagraphSideBySide
         :imageUrl="$getStaticImage(imageWhatWeDo)"
-        :title="['Why We Do', 'What We Do']"
+        title="Why We Do"
         :descriptions="[
           'We understand that finding the right tool for your company is a challenging and expensive process – and we\'re here to help.',
           'The Saastronautics team has a passion for SaaS and digital transformations. We love technology solutions designed to simplify and enhance the way we do business, but we felt the best tools are often hidden amongst an ocean of mediocrity. This led us to create a platform that filters out the best from the rest, for the benefit of all our users.',
