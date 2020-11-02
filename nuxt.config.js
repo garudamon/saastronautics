@@ -80,7 +80,7 @@ export default {
     { src: '~/plugins/flickity', ssr: false },
     { src: '~/plugins/swal', ssr: false },
     { src: '~/plugins/video-embed', ssr: false },
-    { src: '@/plugins/aos', ssr: false },
+    { src: '@/plugins/aos', mode: "client", ssr: false },
     '~/plugins/axios',
     '~/plugins/helper'
   ],
