@@ -133,7 +133,7 @@ export default {
   },
   methods: {
     loadLiveDealsProduct() {
-      let url = `/product/all?limit=50`
+      let url = `/product/all?limit=50&status=1`
 
       if (this.keyword.trim() != '') url += `&keyword=${this.keyword}`
 
