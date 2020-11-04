@@ -11,14 +11,16 @@
       </div>
       <div class="row">
         <div class="col-12 col-lg-10 mx-auto mt-5">
-          <div class="row">
+          <div class="row justify-content-center">
             <div
-              class="col-12 col-md-4 px-4 pt-5 item"
+              class="col-12 px-4 pt-5 item"
               v-for="(data, idx) in product.productPriceMaster.slice(0, 3)"
               :key="data.title"
               :class="{
                 'border-right': data.title.toLowerCase() == 'single',
-                border: data.title.toLowerCase() == 'multiple'
+                border: data.title.toLowerCase() == 'multiple',
+                'col-md-12' : idx == product.productPriceMaster.length - 1,
+                'col-md-4' : product.productPriceMaster.length = 1,
               }"
             >
               <div
