@@ -46,18 +46,6 @@
         :title="productMaster.videoDescription"
         :videoUrl="productMaster.videoURL"
       />
-      <!-- Product Expect  -->
-      <div class="row product-expect">
-          <p class="px-md-4">{{ productMaster.featureExpect }}</p>
-          <div v-for="featureExpectList in productMaster.productFeatureExpectMaster"
-          :key="featureExpectList.id">
-            <ul>
-              <li class="font-weight-bold">{{ featureExpectList.title }}
-                <p>{{ featureExpectList.description }}</p>
-              </li>
-            </ul>
-          </div>
-      </div>
       <LazyImageParagraphSideBySide
         :title="productMaster.title2"
         :imageUrl="$getImageOther(productMaster.id, 2)"
@@ -97,6 +85,18 @@
         :descriptions="[productMaster.description7]"
         v-if="productMaster.title7.length > 0"
       />
+      <!-- Product Expect  -->
+      <div class="row product-expect">
+          <p class="px-md-4">{{ productMaster.featureExpect }}</p>
+          <div v-for="featureExpectList in productMaster.productFeatureExpectMaster"
+          :key="featureExpectList.id">
+            <ul>
+              <li class="font-weight-bold">{{ featureExpectList.title }}
+                <p>{{ featureExpectList.description }}</p>
+              </li>
+            </ul>
+          </div>
+      </div>
       <!-- Plans and Features -->
       <div class="border-plansfeature"></div>
       <div class="row px-md-4 mb-5 pt-5 plans-feature">

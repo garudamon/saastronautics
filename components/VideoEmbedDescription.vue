@@ -6,7 +6,7 @@
       </h2>
       <p class="title-1 mb-4" v-else>{{ title }}</p>
     </div>
-    <div class="col-12 mb-4">
+    <div class="col-12">
       <video-embed :src="videoUrl" />
     </div>
   </div>
