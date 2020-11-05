@@ -316,6 +316,9 @@ export default {
         case 7:
           return 'Refund'
           break
+        case 8:
+          return 'Partial Refund'
+          break
         default:
           return 'Unknown'
           break
