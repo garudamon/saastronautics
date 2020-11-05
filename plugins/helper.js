@@ -22,6 +22,9 @@ const Helper = {
       (Vue.prototype.$formattedDate = string => {
         return moment(string).format('MMM DD YYYY')
       }),
+      (Vue.prototype.$formattedDateHour = string => {
+        return moment(string).format('MMM DD YYYY, hh:mm a')
+      }),
       (Vue.prototype.$formattedMoney = number => {
         if (number == null) number = 0
         return '$' + number.toLocaleString()

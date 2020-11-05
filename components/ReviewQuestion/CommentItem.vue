@@ -9,7 +9,7 @@
           <h5 class="title-1 m-0">{{ item.customer.firstName }}</h5>
           <LazyRating size="sm" v-if="!question" :value="item.star" />
         </div>
-        <p class="sub pb-2">{{ $formattedDate(item.createdAt) }} | Member Since: {{ $formattedDate(item.customer.createdAt) }}</p>
+        <p class="sub pb-2">{{ $formattedDateHour(item.createdAt) }} | Member Since: {{ $formattedDate(item.customer.createdAt) }}</p>
         <p class v-html="item.description" v-if="question" />
         <p class v-html="item.review" v-else />
         <div class="reply mt-3">
@@ -36,7 +36,7 @@
                 <div class="d-flex justify-content-between align-items-center">
                   <h5 class="font-weight-bold m-0">{{reply.customer.firstName}}</h5>
                 </div>
-                <p class="sub pb-2">{{ $formattedDate(reply.createdAt) }} | Member Since: {{ $formattedDate(reply.customer.createdAt) }}</p>
+                <p class="sub pb-2">{{ $formattedDateHour(reply.createdAt) }} | Member Since: {{ $formattedDate(reply.customer.createdAt) }}</p>
                 <p class>{{reply.reply}}</p>
               </div>
             </div>
