@@ -9,7 +9,7 @@
           <h5 class="title-1 m-0">{{ item.customer.firstName }}</h5>
           <LazyRating size="sm" v-if="!question" :value="item.star" />
         </div>
-        <p>{{ $formattedDate(item.createdAt) }}</p>
+        <p class="sub">{{ $formattedDate(item.createdAt) }} | Member Since: {{ $formattedDate(item.customer.createdAt) }}</p>
         <p class v-html="item.description" v-if="question" />
         <p class v-html="item.review" v-else />
         <div class="reply mt-3">
@@ -166,6 +166,10 @@ export default {
   }
   .show-replies {
     cursor: pointer;
+  }
+  .sub {
+    font-size: 12px;
+    color: #8c8c8c;
   }
   p {
     margin-bottom: 0px;

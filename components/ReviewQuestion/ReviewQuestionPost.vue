@@ -83,6 +83,8 @@ export default {
               this.comment = ''
               this.afterPost()
               this.$swal('Success!', `${response.data.message}`, 'success')
+            } else {
+              this.$swal('Failed', `${response.data.message}`, 'error')
             }
           })
       } else {

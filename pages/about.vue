@@ -150,6 +150,15 @@ head: {
             'Gerard has over 10 years of experience in graphic design and videography. He won first place in the GO VIDEO national competition by Gojek for the Best Video Documentary award.'
         },
         {
+          imageUrl: 'about/zach-john.jpg',
+          name: 'Zach John',
+          position: 'Content Director',
+          twitter: '#',
+          linkedin: '#',
+          description:
+            'Zach got his first writing job when he was 11-years-old, doing movie reviews for a children’s newspaper in Singapore. 17 years later, Zach still writes for children, but also does work for advertising and government agencies. In his free time, Zach will either be found walking dogs at his local shelter or sleeping.'
+        },
+        {
           imageUrl: 'about/mohamad-ikbal.jpg',
           name: 'Mohamad Ikbal',
           position: 'Developer',
