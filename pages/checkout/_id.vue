@@ -285,7 +285,7 @@ export default {
         })
     },
     applyVoucher() {
-      if (this.couponCode.trim() == '') return this.$swal('Failed', 'Coupon code is empty', 'error')
+      // if (this.couponCode.trim() == '') return false
       this.$axios
         .post('/payment/applyvoucher', {
           cartID: this.data.id,
