@@ -146,7 +146,6 @@
                         </div>
                       </div>
                     </form>
-
                     <div class="confirmation-info">
                       Your order confirmation will be email to: <br />
                       <span class="text-red font-weight-bold">{{
@@ -188,15 +187,14 @@
                       </div>
                     </div>
                   </div>
-                             <div
+                  <div
                     class="d-flex justify-content-between font-weight-bold py-3 border-top text-smaller"
                   >
                     <span>Subtotal</span>
                     <span>
-                       {{ $formattedMoney(data.subTotal) }}
+                      {{ $formattedMoney(data.subTotal) }}
                     </span>
                   </div>
-                  <div
                   <div
                     class="d-flex justify-content-between font-weight-bold py-3 border-top text-smaller"
                   >

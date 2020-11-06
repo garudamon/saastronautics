@@ -13,7 +13,7 @@
         <div class="col-12 col-lg-10 mx-auto mt-5">
           <div class="row justify-content-center">
             <div
-              class="col-12 col-md-4 px-4 pt-5 item"
+              class="col-12 col-md px-4 pt-5 item"
               v-for="(data, idx) in product.productPriceMaster.slice(0, 3)"
               :key="data.title"
               :class="{
