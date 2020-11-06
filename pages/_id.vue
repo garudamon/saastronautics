@@ -46,14 +46,14 @@
         :title="productMaster.videoDescription"
         :videoUrl="productMaster.videoURL"
       />
-      <LazyImageParagraphSideBySide
+      <LazyImageParagraphSideBySideDeals
         :title="productMaster.title2"
         :imageUrl="$getImageOther(productMaster.id, 2)"
         :descriptions="[productMaster.description2]"
         v-if="productMaster.title2.length > 0"
         fadeType = "fade-right"
       />
-      <LazyImageParagraphSideBySide
+      <LazyImageParagraphSideBySideDeals
         :rtl="true"
         :title="productMaster.title3"
         :imageUrl="$getImageOther(productMaster.id, 3)"
@@ -61,14 +61,14 @@
         v-if="productMaster.title3.length > 0"
         fadeType = "fade-left"
       />
-      <LazyImageParagraphSideBySide
+      <LazyImageParagraphSideBySideDeals
         :title="productMaster.title4"
         :imageUrl="$getImageOther(productMaster.id, 4)"
         :descriptions="[productMaster.description4]"
         v-if="productMaster.title4.length > 0"
         fadeType = "fade-right"
       />
-      <LazyImageParagraphSideBySide
+      <LazyImageParagraphSideBySideDeals
         :rtl="true"
         :title="productMaster.title5"
         :imageUrl="$getImageOther(productMaster.id, 5)"
@@ -76,14 +76,14 @@
         v-if="productMaster.title5.length > 0"
         fadeType = "fade-left"
       />
-      <LazyImageParagraphSideBySide
+      <LazyImageParagraphSideBySideDeals
         :title="productMaster.title6"
         :imageUrl="$getImageOther(productMaster.id, 6)"
         :descriptions="[productMaster.description6]"
         v-if="productMaster.title6.length > 0"
         fadeType = "fade-right"
       />
-      <LazyImageParagraphSideBySide
+      <LazyImageParagraphSideBySideDeals
         :rtl="true"
         :title="productMaster.title7"
         :imageUrl="$getImageOther(productMaster.id, 7)"
