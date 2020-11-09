@@ -51,7 +51,6 @@
         :imageUrl="$getImageOther(productMaster.id, 2)"
         :descriptions="[productMaster.description2]"
         v-if="productMaster.title2.length > 0"
-        fadeType = "fade-right"
       />
       <LazyImageParagraphSideBySideDeals
         :rtl="true"
@@ -59,14 +58,12 @@
         :imageUrl="$getImageOther(productMaster.id, 3)"
         :descriptions="[productMaster.description3]"
         v-if="productMaster.title3.length > 0"
-        fadeType = "fade-left"
       />
       <LazyImageParagraphSideBySideDeals
         :title="productMaster.title4"
         :imageUrl="$getImageOther(productMaster.id, 4)"
         :descriptions="[productMaster.description4]"
         v-if="productMaster.title4.length > 0"
-        fadeType = "fade-right"
       />
       <LazyImageParagraphSideBySideDeals
         :rtl="true"
@@ -74,14 +71,12 @@
         :imageUrl="$getImageOther(productMaster.id, 5)"
         :descriptions="[productMaster.description5]"
         v-if="productMaster.title5.length > 0"
-        fadeType = "fade-left"
       />
       <LazyImageParagraphSideBySideDeals
         :title="productMaster.title6"
         :imageUrl="$getImageOther(productMaster.id, 6)"
         :descriptions="[productMaster.description6]"
         v-if="productMaster.title6.length > 0"
-        fadeType = "fade-right"
       />
       <LazyImageParagraphSideBySideDeals
         :rtl="true"
@@ -89,7 +84,6 @@
         :imageUrl="$getImageOther(productMaster.id, 7)"
         :descriptions="[productMaster.description7]"
         v-if="productMaster.title7.length > 0"
-        fadeType = "fade-left"
       />
       <!-- Product Expect  -->
       <div class="row product-expect">
