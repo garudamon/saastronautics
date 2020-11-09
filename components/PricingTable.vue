@@ -47,7 +47,9 @@
                 </template>
               </p>
               <div
-                v-for="feature in data.productPriceFeatureMaster"
+                v-for="feature in customSelected == null
+                  ? data.productPriceFeatureMaster
+                  : customSelected.productPriceFeatureMaster"
                 :key="feature.id"
                 class="py-3 d-flex align-items-center border-bottom"
               >
