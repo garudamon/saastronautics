@@ -31,7 +31,7 @@
         </div>
       </div>
       <div class="row text-center">
-          <p class="px-md-4 py-4">{{ productMaster.longDescription }}</p>
+        <p class="px-md-4 py-4">{{ productMaster.longDescription }}</p>
       </div>
       <div class="row pt-5">
         <div
@@ -87,15 +87,21 @@
       />
       <!-- Product Expect  -->
       <div class="row product-expect">
+        <div class="col-12">
           <p class="px-md-4">{{ productMaster.featureExpect }}</p>
-          <div v-for="featureExpectList in productMaster.productFeatureExpectMaster"
-          :key="featureExpectList.id">
-            <ul>
-              <li class="font-weight-bold">{{ featureExpectList.title }}
-                <p>{{ featureExpectList.description }}</p>
-              </li>
-            </ul>
-          </div>
+        </div>
+        <div
+          class="col-12"
+          v-for="featureExpectList in productMaster.productFeatureExpectMaster"
+          :key="featureExpectList.id"
+        >
+          <ul>
+            <li class="font-weight-bold">
+              {{ featureExpectList.title }}
+              <p>{{ featureExpectList.description }}</p>
+            </li>
+          </ul>
+        </div>
       </div>
       <!-- Plans and Features -->
       <div class="border-plansfeature"></div>
@@ -194,6 +200,7 @@ export default {
               this.productMaster = {
                 ...data
               }
+              console.log(data);
           })
       }
     }
