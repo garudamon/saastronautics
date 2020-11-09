@@ -30,8 +30,8 @@
           />
         </div>
       </div>
-      <div class="row text-center">
-        <p class="px-md-4 py-4">{{ productMaster.longDescription }}</p>
+      <div class="row">
+        <div v-html="productMaster.longDescription" class="px-md-4 py-4"></div>
       </div>
       <div class="row pt-5">
         <div

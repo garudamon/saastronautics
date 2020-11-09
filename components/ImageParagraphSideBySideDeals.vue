@@ -10,7 +10,7 @@
         <div class="title-1" v-for="text in title" :key="text">{{ text }}</div>
       </h1>
       <h1 class="title-1 mb-4" v-else>{{ title }}</h1>
-      <p v-for="(text, i) in descriptions" :key="i">{{ text }}</p>
+      <div v-html="text" v-for="(text, i) in descriptions" :key="i"></div>
     </div>
     <div class="col-12 col-md-6 text-center text-md-right pt-md-0 pt-3 order-first aos">
       <video-embed :src="videoUrl" v-if="videoUrl" />
@@ -40,7 +40,7 @@
         <div class="title-1" v-for="text in title" :key="text">{{ text }}</div>
       </h1>
       <h1 class="title-1 mb-4" v-else>{{ title }}</h1>
-      <p v-for="(text, i) in descriptions" :key="i">{{ text }}</p>
+      <div v-html="text" v-for="(text, i) in descriptions" :key="i"></div>
     </div>
   </div>
 </template>
